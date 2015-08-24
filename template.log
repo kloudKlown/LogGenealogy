@@ -1,0 +1,693 @@
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  24 AUG 2015 10:21
+entering extended mode
+**template.tex
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
+LaTeX2e <2011/06/27>
+Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
+abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
+croatian, czech, danish, dutch, esperanto, estonian, farsi, finnish, french, ga
+lician, german, german-x-2013-05-26, greek, gujarati, hindi, hungarian, iceland
+ic, indonesian, interlingua, irish, italian, kannada, kurmanji, latin, latvian,
+ lithuanian, malayalam, marathi, mongolian, mongolianlmc, monogreek, ngerman, n
+german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
+ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
+an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
+ishmax, welsh, loaded.
+("C:\Program Files (x86)\Latex\tex\latex\base\fix-cm.sty"
+Package: fix-cm 2014/09/29 v1.1s fixes to LaTeX
+
+("C:\Program Files (x86)\Latex\tex\latex\base\ts1enc.def"
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+))
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\svjour3.cls"
+Document Class: svjour3 2010/11/25 v3.3 
+LaTeX document class for Springer journals
+Class Springer-SVJour3 Info: extra/valid Springer sub-package (-> *.clo) 
+(Springer-SVJour3)           not found in option list of \documentclass
+(Springer-SVJour3)           - autoactivating "global" style.
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\svglov3.clo"
+File: svglov3.clo 2009/12/18 v3.2 style option for standardised journals
+
+SVJour Class option: svglov3.clo for standardised journals
+)
+LaTeX Font Info:    Redeclaring math symbol \Gamma on input line 147.
+LaTeX Font Info:    Redeclaring math symbol \Delta on input line 148.
+LaTeX Font Info:    Redeclaring math symbol \Theta on input line 149.
+LaTeX Font Info:    Redeclaring math symbol \Lambda on input line 150.
+LaTeX Font Info:    Redeclaring math symbol \Xi on input line 151.
+LaTeX Font Info:    Redeclaring math symbol \Pi on input line 152.
+LaTeX Font Info:    Redeclaring math symbol \Sigma on input line 153.
+LaTeX Font Info:    Redeclaring math symbol \Upsilon on input line 154.
+LaTeX Font Info:    Redeclaring math symbol \Phi on input line 155.
+LaTeX Font Info:    Redeclaring math symbol \Psi on input line 156.
+LaTeX Font Info:    Redeclaring math symbol \Omega on input line 157.
+\logodepth=\dimen102
+\headerboxheight=\dimen103
+\betweenumberspace=\dimen104
+\aftertext=\dimen105
+\headlineindent=\dimen106
+\c@inst=\count79
+\c@auth=\count80
+\instindent=\dimen107
+\authrun=\box26
+\authorrunning=\toks14
+\titrun=\box27
+\titlerunning=\toks15
+\combirun=\box28
+\c@lastpage=\count81
+\rubricwidth=\dimen108
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\spthmsep=\dimen109
+\c@theorem=\count87
+\c@case=\count88
+\c@conjecture=\count89
+\c@corollary=\count90
+\c@definition=\count91
+\c@example=\count92
+\c@exercise=\count93
+\c@lemma=\count94
+\c@note=\count95
+\c@problem=\count96
+\c@property=\count97
+\c@proposition=\count98
+\c@question=\count99
+\c@solution=\count100
+\c@remark=\count101
+\c@figure=\count102
+\c@table=\count103
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\figcapgap=\dimen110
+\tabcapgap=\dimen111
+\figgap=\dimen112
+\bibindent=\dimen113
+\@tempcntc=\count104
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\setup.tex"
+("C:\Program Files (x86)\Latex\tex\latex\multirow\multirow.sty"
+\bigstrutjot=\dimen114
+)
+("C:\Program Files (x86)\Latex\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+\LTleft=\skip43
+\LTright=\skip44
+\LTpre=\skip45
+\LTpost=\skip46
+\LTchunksize=\count105
+\LTcapwidth=\dimen115
+\LT@head=\box29
+\LT@firsthead=\box30
+\LT@foot=\box31
+\LT@lastfoot=\box32
+\LT@cols=\count106
+\LT@rows=\count107
+\c@LT@tables=\count108
+\c@LT@chunks=\count109
+\LT@p@ftn=\toks16
+)
+("C:\Program Files (x86)\Latex\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\Latex\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+("C:\Program Files (x86)\Latex\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files (x86)\Latex\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+("C:\Program Files (x86)\Latex\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 91.
+
+("C:\Program Files (x86)\Latex\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files (x86)\Latex\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files (x86)\Latex\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count110
+))
+\Gin@req@height=\dimen116
+\Gin@req@width=\dimen117
+)
+("C:\Program Files (x86)\Latex\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files (x86)\Latex\tex\latex\ltxmisc\relsize.sty"
+Package: relsize 2003/07/04 ver 3.1
+
+
+Package relsize Warning: Failed to get list of font sizes.
+(relsize)                Falling back to old definition. on input line 81.
+
+) ("C:\Program Files (x86)\Latex\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen118
+\lightrulewidth=\dimen119
+\cmidrulewidth=\dimen120
+\belowrulesep=\dimen121
+\belowbottomsep=\dimen122
+\aboverulesep=\dimen123
+\abovetopsep=\dimen124
+\cmidrulesep=\dimen125
+\cmidrulekern=\dimen126
+\defaultaddspace=\dimen127
+\@cmidla=\count111
+\@cmidlb=\count112
+\@aboverulesep=\dimen128
+\@belowrulesep=\dimen129
+\@thisruleclass=\count113
+\@lastruleclass=\count114
+\@thisrulewidth=\dimen130
+)
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsmath.sty"
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip47
+
+For additional information on amsmath, use the `?' option.
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amstext.sty"
+Package: amstext 2000/06/29 v2.01
+
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsgen.sty"
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks18
+\ex@=\dimen131
+))
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsbsy.sty"
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen132
+)
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsopn.sty"
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count115
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count116
+\leftroot@=\count117
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count118
+\DOTSCASE@=\count119
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box33
+\strutbox@=\box34
+\big@size=\dimen133
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+
+
+Package amsmath Warning: Unable to redefine math accent \vec.
+
+\macc@depth=\count120
+\c@MaxMatrixCols=\count121
+\dotsspace@=\muskip10
+\c@parentequation=\count122
+\dspbrk@lvl=\count123
+\tag@help=\toks19
+\row@=\count124
+\column@=\count125
+\maxfields@=\count126
+\andhelp@=\toks20
+\eqnshift@=\dimen134
+\alignsep@=\dimen135
+\tagshift@=\dimen136
+\tagwidth@=\dimen137
+\totwidth@=\dimen138
+\lineht@=\dimen139
+\@envbody=\toks21
+\multlinegap=\skip48
+\multlinetaggap=\skip49
+\mathdisplay@stack=\toks22
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+) ("C:\Program Files (x86)\Latex\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks23
+\verbatim@line=\toks24
+\verbatim@in@stream=\read1
+)
+("C:\Program Files (x86)\Latex\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+("C:\Program Files (x86)\Latex\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+("C:\Program Files (x86)\Latex\tex\latex\colortbl\colortbl.sty"
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+
+("C:\Program Files (x86)\Latex\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+\col@sep=\dimen140
+\extrarowheight=\dimen141
+\NC@list=\toks25
+\extratabsurround=\skip50
+\backup@length=\skip51
+)
+\everycr=\toks26
+\minrowclearance=\skip52
+)
+\rownum=\count127
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+("C:\Program Files (x86)\Latex\tex\latex\subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Program Files (x86)\Latex\tex\latex\caption\caption.sty"
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+("C:\Program Files (x86)\Latex\tex\latex\caption\caption3.sty"
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen142
+\captionmargin@=\dimen143
+\captionwidth=\dimen144
+\caption@tempdima=\dimen145
+\caption@indent=\dimen146
+\caption@parindent=\dimen147
+\caption@hangindent=\dimen148
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\captionstyle \ifx \@ca
+ptype \fig@type \vskip \figcapgap \fi \setbox \@tempboxa \hbox {{\floatlegendst
+yle #1\floatcounterend }\capstrut #2}\ifdim \wd \@tempboxa >\hsize {\floatlegen
+dstyle #1\floatcounterend }\capstrut #2\par \else \hbox to\hsize {\leftlegendgl
+ue \unhbox \@tempboxa \hfil }\fi \ifx \@captype \fig@type \else \vskip \tabcapg
+ap \fi .
+\c@ContinuedFloat=\count128
+Package caption Info: longtable package is loaded.
+("C:\Program Files (x86)\Latex\tex\latex\caption\ltcaption.sty"
+Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
+))
+\c@KVtest=\count129
+\sf@farskip=\skip53
+\sf@captopadj=\dimen149
+\sf@capskip=\skip54
+\sf@nearskip=\skip55
+\c@subfigure=\count130
+\c@subfigure@save=\count131
+\c@lofdepth=\count132
+\c@subtable=\count133
+\c@subtable@save=\count134
+\c@lotdepth=\count135
+\sf@top=\skip56
+\sf@bottom=\skip57
+)
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amsfonts.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amssymb.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+)
+("C:\Program Files (x86)\Latex\tex\latex\float\float.sty"
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count136
+\float@exts=\toks27
+\float@box=\box35
+\@float@everytoks=\toks28
+\@floatcapt=\box36
+)
+("C:\Program Files (x86)\Latex\tex\latex\url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+("C:\Program Files (x86)\Latex\tex\latex\fancybox\fancybox.sty"
+Package: fancybox 2010/05/15 1.4
+
+Style option: `fancybox' v1.4 <2010/05/15> (tvz)
+\@fancybox=\box37
+\shadowsize=\dimen150
+\@Sbox=\box38
+\do@VerbBox=\toks29
+\the@fancyput=\toks30
+\this@fancyput=\toks31
+\EndVerbatimTokens=\toks32
+\Verbatim@Outfile=\write3
+\Verbatim@Infile=\read2
+) ("C:\Program Files (x86)\Latex\tex\latex\listings\listings.sty"
+\lst@mode=\count137
+\lst@gtempboxa=\box39
+\lst@token=\toks33
+\lst@length=\count138
+\lst@currlwidth=\dimen151
+\lst@column=\count139
+\lst@pos=\count140
+\lst@lostspace=\dimen152
+\lst@width=\dimen153
+\lst@newlines=\count141
+\lst@lineno=\count142
+\lst@maxwidth=\dimen154
+
+("C:\Program Files (x86)\Latex\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count143
+\lst@skipnumbers=\count144
+\lst@framebox=\box40
+)
+("C:\Program Files (x86)\Latex\tex\latex\listings\listings.cfg"
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+("C:\Program Files (x86)\Latex\tex\latex\framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip58
+\fb@frw=\dimen155
+\fb@frh=\dimen156
+\FrameRule=\dimen157
+\FrameSep=\dimen158
+)
+("C:\Program Files (x86)\Latex\tex\latex\tools\hhline.sty"
+Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
+)
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\pifont.sty"
+Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
+LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
+
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\upzd.fd"
+File: upzd.fd 2001/06/04 font definitions for U/pzd.
+)
+LaTeX Font Info:    Try loading font information for U+psy on input line 64.
+
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\upsy.fd"
+File: upsy.fd 2001/06/04 font definitions for U/psy.
+))
+\qdx=\dimen159
+\qda=\dimen160
+\qdb=\dimen161
+)
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+
+Unknown journal: specify \journalname{<name of your journal>} in preambel
+
+("C:\Program Files (x86)\Latex\tex\context\base\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count145
+\scratchdimen=\dimen162
+\scratchbox=\box41
+\nofMPsegments=\count146
+\nofMParguments=\count147
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count148
+\MPscratchDim=\dimen163
+\MPnumerator=\count149
+\makeMPintoPDFobject=\count150
+\everyMPtoPDFconversion=\toks35
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count151
+
+SVJour3 warning: Missing \journalname
+LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+
+("C:\Program Files (x86)\Latex\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Abstract.tex")
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Introduction.tex"
+Underfull \vbox (badness 1917) has occurred while \output is active []
+
+ [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 3.
+
+[2]
+Overfull \hbox (0.1118pt too wide) in paragraph at lines 26--27
+\OT1/cmr/m/n/10 method-ol-ogy for gath-er-ing and ex-tract-ing data for our stu
+dy. Sec-tion 3[] presents
+ []
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Methodology.tex"
+<LogGenalogyMethdology.pdf, id=17, 1004.75375pt x 255.95625pt>
+File: LogGenalogyMethdology.pdf Graphic file (type pdf)
+
+<use LogGenalogyMethdology.pdf>
+Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 34.
+(pdftex.def)             Requested size: 337.99358pt x 98.01814pt.
+ [3] [4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 57.
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 61.
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 71.
+
+[5]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--3
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--6
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--10
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 13--14
+
+ []
+
+[6]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 18.
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 20.
+
+<Flowchart2v2.png, id=35, 886.31125pt x 556.0775pt>
+File: Flowchart2v2.png Graphic file (type png)
+ <use Flowchart2v2.png>
+Package pdftex.def Info: Flowchart2v2.png used on input line 27.
+(pdftex.def)             Requested size: 253.5pt x 159.04375pt.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 38.
+
+[7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Flowchart2v2.png>]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 88.
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex" [8]
+Overfull \hbox (101.26305pt too wide) in paragraph at lines 10--69
+[][] 
+ []
+
+
+Overfull \hbox (3.23848pt too wide) in paragraph at lines 79--79
+[]|[]|  
+ []
+
+
+Overfull \hbox (135.39038pt too wide) in paragraph at lines 74--115
+[][] 
+ []
+
+<ModelCreationLogGeanology.png, id=45, 815.045pt x 112.42pt>
+File: ModelCreationLogGeanology.png Graphic file (type png)
+
+<use ModelCreationLogGeanology.png>
+Package pdftex.def Info: ModelCreationLogGeanology.png used on input line 124.
+(pdftex.def)             Requested size: 304.19794pt x 41.9584pt.
+
+<SpearmanActiveMQ.png, id=46, 603.25375pt x 567.11874pt>
+File: SpearmanActiveMQ.png Graphic file (type png)
+
+<use SpearmanActiveMQ.png>
+Package pdftex.def Info: SpearmanActiveMQ.png used on input line 137.
+(pdftex.def)             Requested size: 253.49371pt x 202.80399pt.
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+Missing character: There is no â in font cmr10!
+Missing character: There is no € in font cmr10!
+Missing character: There is no ™ in font cmr10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 143--144
+
+ []
+
+[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.png> <
+C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.png>] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+
+ []
+
+[11]
+Overfull \hbox (46.81012pt too wide) in paragraph at lines 177--184
+[][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 193--194
+
+ []
+
+[12]
+Underfull \hbox (badness 10000) in paragraph at lines 228--230
+
+ []
+
+[13] [14] [15]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 346.
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [16])
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--2
+
+ []
+
+[17]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex" [18]
+Overfull \hbox (2.44495pt too wide) in paragraph at lines 8--9
+[]\OT1/cmr/m/n/10 We find a neg-a-tive cor-re-la-tion be-tween de-vel-oper ex-p
+e-ri-ence and log changes
+ []
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl" [19]
+Underfull \hbox (badness 10000) in paragraph at lines 83--85
+[]\OT1/cmr/m/n/8 ``Liferay gart-ner re-port - https://www.liferay.com/web/bryan
+.cheung/blog/-
+ []
+
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ­ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¡ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ­ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ³ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¶ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ³ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ³ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ­ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ± in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ³ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¼ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¡ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¤ in font cmr8!
+Missing character: There is no Ã in font cmr8!
+Missing character: There is no ¤ in font cmr8!
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21])
+[22] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
+Here is how much of TeX's memory you used:
+ 6503 strings out of 493921
+ 94186 string characters out of 3146880
+ 176251 words of memory out of 3000000
+ 9659 multiletter control sequences out of 15000+200000
+ 14210 words of font info for 52 fonts, out of 3000000 for 9000
+ 841 hyphenation exceptions out of 8191
+ 46i,13n,42p,1831b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program F
+iles (x86)/Latex/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files (
+x86)/Latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/La
+tex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/Latex/fon
+ts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/Latex/fonts/type1
+/public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files (x86)/Latex/fonts/type1/publ
+ic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsf
+onts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/
+cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb
+><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
+ram Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
+ (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/
+Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/f
+onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/Latex/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Latex/fonts/type1/publ
+ic/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfo
+nts/latxfont/lcirclew.pfb>
+Output written on template.pdf (22 pages, 458398 bytes).
+PDF statistics:
+ 152 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

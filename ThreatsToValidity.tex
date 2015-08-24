@@ -1,0 +1,29 @@
+In this section, we present the threats to the validity to our findings. \\
+
+
+\noindent \textbf{External Validity}
+
+Our case study is performed on Liferay, ActiveMQ, Camel and CloudStack. Though these studied systems have years of history and large user bases, these systems are all Java based platform softwares.  Software in other domains may not rely on logs and may not use log processing tools. Our projects are all open source and we do not verify the results on any commercial platform systems. More case studies on other domains and commercial platforms, with other programming languages are needed to see whether our findings can be generalized. 
+
+
+
+\noindent \textbf{Construct Validity}
+
+
+Our heuristics to extract logging source code may not be able to extract every log in the source code. Even though the studied systems-leverage logging libraries to generate logs at runtime, there still exist user-defined logs. By manually examining the source code, we believe that we extract most of the logs. Evaluation on the coverage of our extracted logs can address this threat.
+
+
+We use keywords to identify bug fixing commits when the JIRA issue ID is not included in the commit messages. Although such keywords are used extensively in prior research~\cite{EMSEIAN}, we may still fail to identify bug fixing commits or branching and merging commits.
+
+We use Levenshtein ratio and choose a threshold to identify modifications to logs. However, such threshold may not accurately identify modifications to logs. Further sensitivity analysis on such threshold is needed to better understand the impact of the threshold to our findings.
+
+Our models are incomplete, i.e., we have not measured all potential dimensions that impact logging stability. However, we feel that our metrics are good and additional new dimensions can compliment our dimension to improve the explanation. 
+
+\noindent \textbf{Internal Validity}
+
+Our study is based on the data obtained from Git and JIRA for all the studied systems. The quality of the data contained in the repositories can impact the internal validity of our study.
+
+Our analysis of the relationship between metrics that are important factors in predicting the stability of logs cannot claim causal effects, as we are investigating correlation and not causation. The important factors from our random forest models only indicate that there exists a relationship which should be studied in depth in future studies. 
+
+
+

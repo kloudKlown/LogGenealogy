@@ -1,0 +1,147 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{array}
+\usepackage{multirow}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+\begin{table}
+\begin{raggedright}
+\begin{tabular}{|c|c|c|>{\raggedright}p{0.6\columnwidth}|}
+\hline 
+Dimension & Metrics & Values & Definition (d) -- Rationale (r)\tabularnewline
+\hline 
+\hline 
+\multirow{12}{*}{Code Metrics} & \multirow{2}{*}{Log revision count} & \multirow{2}{*}{Numeric } & d: The number of commits prior which had log statement changes. \tabularnewline
+\cline{4-4} 
+ &  &  & r: This helps to identify if the file is prune to log statement changes.\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{New File} & \multirow{2}{*}{Boolean (0 -1)} & d: Check if the log is added in a new file (i.e., newly comitted )\tabularnewline
+\cline{4-4} 
+ &  &  & r: This helps to identify which log statements where added later in
+subsequent commits from the inital commit logs\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Total Revision Count} & \multirow{2}{*}{Numeric} & d: Total number of commits made to the file since log statement is
+added. \tabularnewline
+\cline{4-4} 
+ &  &  & r: This helps to find out if the file is changed heavily which can
+result in log changes ( cite paper on after thoughts )\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Code churn in commit} & \multirow{2}{*}{Numeric} & d: The code churn of the commit in which log is added. \tabularnewline
+\cline{4-4} 
+ &  &  & r: Log changes are correlated to code churn in files. ( Ian's paper
+EMSE )\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Variables declared} & \multirow{2}{*}{Numeric} & d: The number of variables which are declared before the log statement.
+(we limit to 20 lines before log statement)\tabularnewline
+\cline{4-4} 
+ &  &  & r: When new variables are declared, developers may log the new variables
+to obtain more information ( Afterthouhgs paper cite )\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{SLOC} & \multirow{2}{*}{Numeric} & d: The number of lines of code in the file.\tabularnewline
+\cline{4-4} 
+ &  &  & r: Large files have more functionality and are more prune to changes
+( paper3 ) and more log changes. ( after thoughts and field debugging
+EMSE)\tabularnewline
+\hline 
+\multirow{10}{*}{Log Metrics} & \multirow{2}{*}{Log Context} & \multirow{2}{*}{Categorical} & d: Identify the block in which log statement is added. (i.e., `if',
+`if-else', `try-catch', `exception', `throw', `new function' )\tabularnewline
+\cline{4-4} 
+ &  &  & r: Prior research find that logs are used in assertion checks, logical
+brancing, return value checking, assertion checking ( Where do developers
+log )\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Log Level} & \multirow{2}{*}{Categorical} & d: Identify the log level (verbosity) of the added log. ( i.e., `info',
+`error', `warn', `debug', `trace' and `trace')\tabularnewline
+\cline{4-4} 
+ &  &  & r: Developers spend signifcant amount of time in adjusting the verboisty
+of logging statemetns ( Characteriging logs )\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Log variable count} & \multirow{2}{*}{Numerical} & d: Number of variables logged.\tabularnewline
+\cline{4-4} 
+ &  &  & r: Over 62\% of logging statemetns end adding new variables ( Characteriging
+logs ) . Hence fewer variables in inital log statement might result
+in addition later. \tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Log text length} & \multirow{2}{*}{Numerical} & d: Number of text phrases logged (i.e., we count all text present
+between a pair of colons as one phrase )\tabularnewline
+\cline{4-4} 
+ &  &  & r: Over 45\% of logging statemetns have modifications to static context
+(Characteriging logs). Logs with fewer phrases might be subject to
+changes later to provide better explanation\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Log density} & \multirow{2}{*}{Numerical} & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
+\cline{4-4} 
+ &  &  & r: Research has found that there is one log line per 30 lines of code.
+(Charaterzing logs). If its less it suggests there may be additions
+in later commits.\tabularnewline
+\hline 
+\end{tabular}
+\par\end{raggedright}
+
+\raggedright{}\protect\caption{}
+\end{table}
+
+
+\begin{table}
+\begin{tabular}{|>{\centering}p{0.045\columnwidth}|c|c|>{\raggedright}p{0.6\columnwidth}|}
+\hline 
+Dimension & Metrics & Values & Definition (d) -- Rationale (r)\tabularnewline
+\hline 
+\multirow{12}{0.045\columnwidth}{Developer Metrics} & \multirow{2}{*}{Resolution time} & \multirow{2}{*}{Numerical} & d: The time it takes for the issue to get fixed. It is defined as
+the time it takes since an issue is opened till its closed. \tabularnewline
+\cline{4-4} 
+ &  &  & r: More resolution time might suggest more complex fix with more code
+churn resulting in more log churn. \tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Number of developers involved} & \multirow{2}{*}{Numeric} & d: Total number of unique developers who comment on the issue report
+on JIRA\tabularnewline
+\cline{4-4} 
+ &  &  & r: Components with many unique authors likely lack strong ownership,
+which in turn may lead to more defects (paper4) and change logging
+statemetns (EMSE Ian). \tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Number of Comments} & \multirow{2}{*}{Numeric} & d: Total number of discussion posts on the issue. \tabularnewline
+\cline{4-4} 
+ &  &  & r: Number of comments is correlated to the resolution time of issue
+reports (Predicting the fix time of bugs. In RSSE Giger). More comments
+may also indicate the issue is more complex requiring more code churn
+and logging statement changes. \tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Devloper experience} & \multirow{2}{*}{Numeric} & d: The number of commits the developer has made prior this commit. \tabularnewline
+\cline{4-4} 
+ &  &  & r: Research has shown that experienced developers might take up more
+complex issues(Ownership, experience and defects: a fine-grained study
+of authorship) and therefore may leverage logging statemetns more
+(EMSE IAN). \tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Issue type} & \multirow{2}{*}{Categorical} & d: Identify the type of issue i.e., `Bug', `Improvement', `Task',
+`New Feature', `Sub-Task', `Test' \tabularnewline
+\cline{4-4} 
+ &  &  & r: Some issue types might have higher code churn than others (example:
+Bug and New features might have more code churn when compared to Sub-Tasks)
+and are committed faster.\tabularnewline
+\cline{2-4} 
+ & \multirow{2}{*}{Priority type} & \multirow{2}{*}{Categorical} & d: Identigy the priority of the issue i.e., `Critical', `Blocker',
+`Major', `Minor' and `Trivial'\tabularnewline
+\cline{4-4} 
+ &  &  & r: Research has shown that priority of issue effects resolution time
+of bug fixes (Studying the Fix-Time for Bugs in Large Open Source
+Projects). Higher the priorityindicates the issue will be fixed faster
+with logging statement changes. \tabularnewline
+\hline 
+\end{tabular}\protect\caption{}
+\end{table}
+
+\end{document}
