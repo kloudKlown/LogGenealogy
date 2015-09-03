@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  24 AUG 2015 10:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  3 SEP 2015 09:54
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -446,56 +446,61 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count151
 
 SVJour3 warning: Missing \journalname
-LaTeX Font Info:    Try loading font information for U+msa on input line 83.
+LaTeX Font Info:    Try loading font information for U+msa on input line 87.
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 83.
+LaTeX Font Info:    Try loading font information for U+msb on input line 87.
 
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 83.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 87.
 
 ("C:\Program Files (x86)\Latex\tex\latex\base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 83.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 87.
 
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Abstract.tex")
+Underfull \hbox (badness 10000) in paragraph at lines 87--87
+
+ []
+
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Abstract.tex") [1{C:/Users/Suhas/A
+ppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Introduction.tex"
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 3.
 
 [2]
-Overfull \hbox (0.1118pt too wide) in paragraph at lines 26--27
+Overfull \hbox (0.1118pt too wide) in paragraph at lines 25--26
 \OT1/cmr/m/n/10 method-ol-ogy for gath-er-ing and ex-tract-ing data for our stu
 dy. Sec-tion 3[] presents
  []
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Methodology.tex"
-<LogGenalogyMethdology.pdf, id=17, 1004.75375pt x 255.95625pt>
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+ [3]
+<LogGenalogyMethdology.pdf, id=20, 1004.75375pt x 255.95625pt>
 File: LogGenalogyMethdology.pdf Graphic file (type pdf)
 
 <use LogGenalogyMethdology.pdf>
-Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 34.
+Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 36.
 (pdftex.def)             Requested size: 337.99358pt x 98.01814pt.
- [3] [4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
+ [4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 59.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 57.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 63.
 
+[5]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 61.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 75.
 
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 71.
-
-[5]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
 
  []
@@ -528,41 +533,64 @@ File: Flowchart2v2.png Graphic file (type png)
 Package pdftex.def Info: Flowchart2v2.png used on input line 27.
 (pdftex.def)             Requested size: 253.5pt x 159.04375pt.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 38.
-
 [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Flowchart2v2.png>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 88.
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 40.
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex" [8]
-Overfull \hbox (101.26305pt too wide) in paragraph at lines 10--69
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 89.
+
+[8]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 1--4
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 7--10
+
+ []
+
+
+Overfull \hbox (101.26305pt too wide) in paragraph at lines 17--76
 [][] 
  []
 
 
-Overfull \hbox (3.23848pt too wide) in paragraph at lines 79--79
+Overfull \hbox (3.23848pt too wide) in paragraph at lines 86--86
 []|[]|  
  []
 
 
-Overfull \hbox (135.39038pt too wide) in paragraph at lines 74--115
+Overfull \hbox (135.39038pt too wide) in paragraph at lines 81--121
 [][] 
  []
 
-<ModelCreationLogGeanology.png, id=45, 815.045pt x 112.42pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 142--143
+
+ []
+
+[9] [10]
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+<ModelCreationLogGeanology.png, id=52, 815.045pt x 112.42pt>
 File: ModelCreationLogGeanology.png Graphic file (type png)
 
 <use ModelCreationLogGeanology.png>
-Package pdftex.def Info: ModelCreationLogGeanology.png used on input line 124.
+Package pdftex.def Info: ModelCreationLogGeanology.png used on input line 154.
 (pdftex.def)             Requested size: 304.19794pt x 41.9584pt.
 
-<SpearmanActiveMQ.png, id=46, 603.25375pt x 567.11874pt>
+Underfull \vbox (badness 1708) has occurred while \output is active []
+
+ [11]
+<SpearmanActiveMQ.png, id=59, 603.25375pt x 567.11874pt>
 File: SpearmanActiveMQ.png Graphic file (type png)
 
 <use SpearmanActiveMQ.png>
-Package pdftex.def Info: SpearmanActiveMQ.png used on input line 137.
+Package pdftex.def Info: SpearmanActiveMQ.png used on input line 164.
 (pdftex.def)             Requested size: 253.49371pt x 202.80399pt.
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
@@ -571,53 +599,45 @@ Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
 
-Underfull \hbox (badness 10000) in paragraph at lines 143--144
+<BootRandomForest.pdf, id=60, 603.25375pt x 306.14375pt>
+File: BootRandomForest.pdf Graphic file (type pdf)
 
- []
-
-[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.png> <
-C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.png>] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-
- []
-
-[11]
-Overfull \hbox (46.81012pt too wide) in paragraph at lines 177--184
+<use BootRandomForest.pdf>
+Package pdftex.def Info: BootRandomForest.pdf used on input line 175.
+(pdftex.def)             Requested size: 253.49371pt x 135.19882pt.
+ [12 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.png>
+ <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.png>]
+Overfull \hbox (3.05672pt too wide) in paragraph at lines 197--205
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 193--194
+Underfull \hbox (badness 10000) in paragraph at lines 231--232
 
  []
 
-[12]
-Underfull \hbox (badness 10000) in paragraph at lines 228--230
+[13 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 266--268
 
  []
 
-[13] [14] [15]
+[14] [15] [16]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 346.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 382.
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [16])
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [17])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[17]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex" [18]
-Overfull \hbox (2.44495pt too wide) in paragraph at lines 8--9
-[]\OT1/cmr/m/n/10 We find a neg-a-tive cor-re-la-tion be-tween de-vel-oper ex-p
-e-ri-ence and log changes
+[18]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex" [19]
+Overfull \hbox (2.41718pt too wide) in paragraph at lines 7--8
+[]\OT1/cmr/m/n/10 Our ran-dom for-est clas-si-fier for pre-dict-ing whether a l
+og will change achieves
  []
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl" [19]
-Underfull \hbox (badness 10000) in paragraph at lines 83--85
-[]\OT1/cmr/m/n/8 ``Liferay gart-ner re-port - https://www.liferay.com/web/bryan
-.cheung/blog/-
- []
-
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl" [20]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
@@ -655,39 +675,40 @@ Missing character: There is no ¤ in font cmr8!
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [21]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21])
-[22] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
+ [22])
+[23] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
 Here is how much of TeX's memory you used:
- 6503 strings out of 493921
- 94186 string characters out of 3146880
- 176251 words of memory out of 3000000
- 9659 multiletter control sequences out of 15000+200000
- 14210 words of font info for 52 fonts, out of 3000000 for 9000
+ 6508 strings out of 493921
+ 94321 string characters out of 3146880
+ 177252 words of memory out of 3000000
+ 9662 multiletter control sequences out of 15000+200000
+ 14569 words of font info for 53 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,13n,42p,1831b,344s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,13n,42p,1185b,342s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program F
 iles (x86)/Latex/fonts/type1/public/amsfonts/cm/cmbsy10.pfb><C:/Program Files (
 x86)/Latex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files (x86)/La
 tex/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x86)/Latex/fon
 ts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/Latex/fonts/type1
 /public/amsfonts/cm/cmbxsl10.pfb><C:/Program Files (x86)/Latex/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsf
-onts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/
-cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb
-><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Prog
-ram Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files
- (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/
-Latex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/Latex/fonts/typ
-e1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Latex/fonts/type1/publ
-ic/amsfonts/cm/cmti8.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfo
-nts/latxfont/lcirclew.pfb>
-Output written on template.pdf (22 pages, 458398 bytes).
+ic/amsfonts/cm/cmbxti10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr10
+.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr6.pfb><C:/
+Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program F
+iles (x86)/Latex/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86
+)/Latex/fonts/type1/public/amsfonts/cm/cmsl10.pfb><C:/Program Files (x86)/Latex
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/Latex/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/am
+sfonts/cm/cmti8.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/l
+atxfont/lcirclew.pfb>
+Output written on template.pdf (23 pages, 520320 bytes).
 PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
+ 163 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

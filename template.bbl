@@ -54,6 +54,16 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
   about the execution of large software systems,'' \emph{Journal of Software:
   Evolution and Process}, vol.~26, no.~1, pp. 3--26, 2014.
 
+\bibitem{carasso2012exploring}
+D.~Carasso, ``Exploring splunk,'' \emph{published by CITO Research, New York,
+  USA, ISBN}, pp. 978--0, 2012.
+
+\bibitem{xu2013detecting}
+X.~Xu, I.~Weber, L.~Bass, L.~Zhu, H.~Wada, and F.~Teng, ``Detecting cloud
+  provisioning errors using an annotated process model,'' in \emph{Proceedings
+  of the 8th Workshop on Middleware for Next Generation Internet
+  Computing}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, p.~5.
+
 \bibitem{hassan2008industrial}
 A.~E. Hassan, D.~J. Martin, P.~Flora, P.~Mansfield, and D.~Dietz, ``An
   industrial case study of customizing operational profiles using log
@@ -79,20 +89,12 @@ Z.~M. Jiang, A.~Hassan, G.~Hamann, and P.~Flora, ``Automatic identification of
   load testing problems,'' in \emph{ICSM '08: Proceedings of theIEEE
   International Conference on Software Maintenance}, Sept 2008, pp. 307--316.
 
-\bibitem{LiferayGartner}
-``Liferay gartner report -
-  https://www.liferay.com/web/bryan.cheung/blog/-/blogs/liferay-s-thoughts-on-the-2014-gartner-magic-quadrant-for-horizontal-portals.''
-
-\bibitem{LiferayUser}
-``Liferay user report - http://trends.builtwith.com/cms/liferay.''
-
-\bibitem{AMQm}
-``Activemq monitors -
-  http://activemq.apache.org/how-can-i-monitor-activemq.html.''
-
-\bibitem{CloudStack}
-``Cloudstack -
-  http://www.datacenterknowledge.com/archives/2015/02/23/openstack-vs-cloudstack-the-platforms-and-the-cloud-apis/.''
+\bibitem{EMSEIAN}
+W.~Shang, M.~Nagappan, and A.~E. Hassan,
+  ``\BIBforeignlanguage{English}{Studying the relationship between logging
+  characteristics and the code quality of platform software},''
+  \emph{\BIBforeignlanguage{English}{Empirical Software Engineering}}, vol.~20,
+  no.~1, pp. 1--27, 2015.
 
 \bibitem{levenshteinratio}
 M.~Mednis and M.~K. Aurich, ``Application of string similarity ratio and edit
@@ -118,13 +120,6 @@ D.~Yuan, S.~Park, and Y.~Zhou, ``Characterizing logging practices in
   open-source software,'' in \emph{ICSE '12: Proceedings of the 34th
   International Conference on Software Engineering}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE Press, 2012, pp. 102--112.
-
-\bibitem{EMSEIAN}
-W.~Shang, M.~Nagappan, and A.~E. Hassan,
-  ``\BIBforeignlanguage{English}{Studying the relationship between logging
-  characteristics and the code quality of platform software},''
-  \emph{\BIBforeignlanguage{English}{Empirical Software Engineering}}, vol.~20,
-  no.~1, pp. 1--27, 2015.
 
 \bibitem{zhang2009investigation}
 D.~Zhang, K.~El~Emam, H.~Liu \emph{et~al.}, ``An investigation into the
@@ -163,22 +158,6 @@ L.~Marks, Y.~Zou, and A.~E. Hassan, ``Studying the fix-time for bugs in large
   Conference on Predictive Models in Software Engineering}.\hskip 1em plus
   0.5em minus 0.4em\relax ACM, 2011, p.~11.
 
-\bibitem{spearmanbook}
-\BIBentryALTinterwordspacing
-J.~H. Zar, \emph{Spearman Rank Correlation}.\hskip 1em plus 0.5em minus
-  0.4em\relax John Wiley \& Sons, Ltd, 2005. [Online]. Available:
-  \url{http://dx.doi.org/10.1002/0470011815.b2a15150}
-\BIBentrySTDinterwordspacing
-
-\bibitem{pearsonbook}
-R.~J. Serfling, \emph{Approximation theorems of mathematical statistics}.\hskip
-  1em plus 0.5em minus 0.4em\relax John Wiley \& Sons, 2009, vol. 162.
-
-\bibitem{ShaneOLS}
-S.~McIntosh, Y.~Kamei, B.~Adams, and A.~E. Hassan, ``An empirical study of the
-  impact of modern code review practices on software quality,'' \emph{Empirical
-  Software Engineering}, p. To appear, 2015.
-
 \bibitem{Albert2008424}
 \BIBentryALTinterwordspacing
 J.~Albert, E.~Aliu, H.~Anderhub, P.~Antoranz, A.~Armada, M.~Asensio,
@@ -212,6 +191,22 @@ J.~Albert, E.~Aliu, H.~Anderhub, P.~Antoranz, A.~Armada, M.~Asensio,
   \url{http://www.sciencedirect.com/science/article/pii/S0168900207024059}
 \BIBentrySTDinterwordspacing
 
+\bibitem{spearmanbook}
+\BIBentryALTinterwordspacing
+J.~H. Zar, \emph{Spearman Rank Correlation}.\hskip 1em plus 0.5em minus
+  0.4em\relax John Wiley \& Sons, Ltd, 2005. [Online]. Available:
+  \url{http://dx.doi.org/10.1002/0470011815.b2a15150}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pearsonbook}
+R.~J. Serfling, \emph{Approximation theorems of mathematical statistics}.\hskip
+  1em plus 0.5em minus 0.4em\relax John Wiley \& Sons, 2009, vol. 162.
+
+\bibitem{ShaneOLS}
+S.~McIntosh, Y.~Kamei, B.~Adams, and A.~E. Hassan, ``An empirical study of the
+  impact of modern code review practices on software quality,'' \emph{Empirical
+  Software Engineering}, p. To appear, 2015.
+
 \bibitem{breiman1996bagging}
 L.~Breiman, ``Bagging predictors,'' \emph{Machine learning}, vol.~24, no.~2,
   pp. 123--140, 1996.
@@ -224,12 +219,6 @@ G.~Hripcsak and A.~S. Rothschild, ``Agreement, the f-measure, and reliability
 \bibitem{wilks2011statistical}
 D.~S. Wilks, \emph{Statistical methods in the atmospheric sciences}.\hskip 1em
   plus 0.5em minus 0.4em\relax Academic press, 2011, vol. 100.
-
-\bibitem{RFoutofbag}
-V.~Svetnik, A.~Liaw, C.~Tong, J.~C. Culberson, R.~P. Sheridan, and B.~P.
-  Feuston, ``Random forest: a classification and regression tool for compound
-  classification and qsar modeling,'' \emph{Journal of chemical information and
-  computer sciences}, vol.~43, no.~6, pp. 1947--1958, 2003.
 
 \bibitem{Cluster1}
 A.~Scott and M.~Knott, ``A cluster analysis method for grouping means in the
