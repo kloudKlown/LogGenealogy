@@ -12,7 +12,7 @@ Research has shown that logs evolve along with the code~\cite{IanContextinformat
 
 To find the frequency of log changes, we conduct a quantitative analysis on our studied systems. We use the tracked log data for each studied system as explained in Section~\ref{Methodology}. From each project, we select a random sample with 95\% confidence interval. We follow the same iterative process as in prior research~\cite{IanIcesm} to find how frequently logs change in our studied systems. \\
 
-When logs are changed, they can be changed are several reasons. To understand the different types of log changes we perform a manual analysis on the changed logs. We select a random sample from each project such that the sample achieves 95\% confidence interval. After identifying the different types of log changes we automate the process of identification using our scripts. Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes. For example, 
+When logs are changed, they can be changed for several reasons. To understand the different types of log changes we perform a manual analysis on the changed logs. We select a random sample from each project such that the sample achieves 95\% confidence interval. After identifying the different types of log changes we automate the process of identification using our scripts. Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes. For example, 
 consider the logs shown below. 
 
 \hypobox {+ LOG.info(``starting HBase HsHA Thrift server on " + Integer.toString(listenPort)); }
@@ -24,7 +24,7 @@ To identify the type of log change we first remove the logging method (i.e, LOG)
 
 \begin{figure}[tb]
 	\centering
-	\includegraphics[width=0.75\linewidth]{Flowchart2v2}
+	\includegraphics[width=0.75\linewidth]{Flowchart2}
 	\caption{Flowchart to categorize the different types of log changes that occur}
 	\label{fig:Flowchart2}
 \end{figure}
@@ -32,7 +32,8 @@ To identify the type of log change we first remove the logging method (i.e, LOG)
 
 \noindent \textbf{Results}
 
-\textbf{We find that developers change 20-80\% of the logs across our studied systems as shown in Table~\ref{tba:logchangeDistribution}}. Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed. If a log is changed more than three times it is categorized as `Frequently Changed'. If it is changed fewer 1-3 times it is categorized under `changed' and if there is no changes made it is categorized under `Never Changed'. We see that a majority of logs never change in HBase and that the majority of logs in ActiveMQ and CloudStack change at-least once. and that only in Liferay and Camel but is lesser than `Changed' in ActiveMQ and CloudStack, as seen in Table~\ref{tba:logchangeDistribution}. This may be because Camel and Liferay have fewer logs per source code (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}.
+\textbf{We find that developers change 20-80\% of the logs across our studied systems as shown in Table~\ref{tba:logchangeDistribution}}. Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed. If a log is changed more than three times it is categorized as `Frequently Changed'. If it is changed fewer 1 to 3 times it is categorized under `changed' and if there is no changes made it is categorized under `Never Changed'. We see that a majority of logs never change in HBase and Life Ray and the logs in ActiveMQ and CloudStack are changed at-least once. This may be because Camel and Liferay have fewer logs per source code (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
+%{\suhas{ I have question Can i tell here that in RQ2 we find log density to be imporatnt factor in stability of logs ?? }}
 
 % are application layer software which  rely less on logs as they are middle-ware/application software, whereas ActiveMQ and CloudStack are service software.
 
@@ -77,12 +78,12 @@ Log relocation occurs more often than other types of log changes. We find that i
 		\cline{1-5}  	\multicolumn{1}{|c}{Projects}    & \multicolumn{1}{|c}{ Life Ray }  &  \multicolumn{1}{|c}{ Cloud Stack}	   &  \multicolumn{1}{|c}{ Active-MQ }  & 
 		 \multicolumn{1}{|c|}{ Camel } \\ \cline{1-5}   
 		
-		Log Relocation (\%)       & 73.5     & 78.85 &  63.27  & 49.72         \\
+		Log relocation (\%)       & 73.5     & 78.85 &  63.27  & 49.72         \\
 		
-		Log Text Change (\%)      & 20.11    & 6.37 & 5.97    & 7.59       \\
-		Log Variable Change (\%)   & 3.10     & 7.21 & 6.91 &  8.29     \\
-		Change of Log Level (\%) & 0.87   & 1.15 & 1.76  &  3.79       \\ 
-		Text and Variable Change (\%) & 2.33     & 6.39 & 22.0   &  30.59    \\ \cline{1-5}
+		Log text change (\%)      & 20.11    & 6.37 & 5.97    & 7.59       \\
+		Log variable change (\%)   & 3.10     & 7.21 & 6.91 &  8.29     \\
+		Change of log level (\%) & 0.87   & 1.15 & 1.76  &  3.79       \\ 
+		Text and variable change (\%) & 2.33     & 6.39 & 22.0   &  30.59    \\ \cline{1-5}
 	\end{tabular}
 \end{table}
 

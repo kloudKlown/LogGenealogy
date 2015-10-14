@@ -2,7 +2,7 @@
 	\\\\
 \noindent \textbf{Motivation}
 
-In RQ1, we find that 45\% of logs are changed at-least once in our studied systems. This affects the log processing tools which run on these studied systems, making developers spend more time on maintenance of those tools. Hence, there is a need to identify these non-stable logs to simplify the job of developers. It can also benefit log processing tool developers to develop more robust applications making them more stable.
+In RQ1, we find that 45\% of logs are changed at-least once in three of out studied systems. This affects the log processing tools which run on these studied systems, making developers spend more time on maintenance of those tools. Hence, there is a need to identify these non-stable logs to simplify the job of developers. It can also benefit log processing tool developers to develop more robust applications making them more stable.
 
 To identify these non-stable logs we use code, log and developer metrics. We use these metrics because this data can be extracted from control version systems (CVS) easily by developers. It also benefits log processing tool developers as do not need domain knowledge about the system to understand these metrics.\\
 %
@@ -10,11 +10,12 @@ To identify these non-stable logs we use code, log and developer metrics. We use
 
 
 \noindent \textbf{Approach}
-\begin{table}
+\begin{table*}
+\centering
 	\caption{Taxonomy of metrics considered for model construction}
 	
 	\label{tba:Taxonomy}
-		\begin{tabular}{|c|c|c|>{\raggedright}p{0.6\columnwidth}|}
+		\begin{tabular}{|c|c|c|>{\raggedright}p{1\columnwidth}|}
 			\hline 
 			Dimension & Metrics & Values & Definition (d) -- Rationale (r)\tabularnewline
 			\hline 
@@ -47,7 +48,7 @@ To identify these non-stable logs we use code, log and developer metrics. We use
 			\cline{4-4} 
 			&  &  & r: Large files have more functionality and are more prone to changes~\cite{zhang2009investigation} and more log changes~\cite{Characterizinglogs,EMSEIAN}. \tabularnewline
 			\hline 
-			\multirow{10}{*}{Log metrics} & \multirow{2}{*}{Log Context} & \multirow{2}{*}{Categorical} & d: Identify the block in which a log is added. (i.e., `if',
+			\multirow{10}{*}{Log metrics} & \multirow{2}{*}{Log context} & \multirow{2}{*}{Categorical} & d: Identify the block in which a log is added. (i.e., `if',
 			`if-=else', `try-catch', `exception', `throw', `new function').\tabularnewline
 			\cline{4-4} 
 			&  &  & r: Prior research finds that logs are mostly used in assertion checks, logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
@@ -71,17 +72,6 @@ To identify these non-stable logs we use code, log and developer metrics. We use
 			& \multirow{2}{*}{Log density} & \multirow{2}{*}{Numerical} & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
 			\cline{4-4} 
 			&  &  & r: Research has found that there is on average one log line per 30 lines of code~\cite{Characterizinglogs}. If it is less it suggests there may be additions in later commits.\tabularnewline
-			\hline 
-		\end{tabular}
-		\par
-	
-\end{table}
-
-\begin{table}
-		\begin{tabular}{|>{\raggedright}p{0.19\columnwidth}|c|c|>{\raggedright}p{0.6\columnwidth}|}
-			\hline 
-			Dimension & Metrics & Values & Definition (d) -- Rationale (r)\tabularnewline
-			\hline 
 			\hline 
 		\multirow{12}{*}{Developer Metrics} & \multirow{2}{*}{Resolution time} & \multirow{2}{*}{Numerical} & d: The time it takes for the issue to get fixed. It is defined as
 		the time it takes since an issue is opened until closed. \tabularnewline
@@ -119,13 +109,13 @@ reports~\cite{giger2010predicting}. More comments	may also indicate the issue is
 		\hline 
 	\end{tabular}\protect
 
-\end{table}
+\end{table*}
 
 
 
 To find the stability of logs in our studied systems, we extract code and log churn metrics from the Git repository and developer metrics from JIRA. We use code churn metrics because prior work has linked logs to development knowledge and issue reports~\cite{IanIcesm}.
 
-Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We define each metric and the rationale behind the choice of each metric.  We collect the code and log churn metrics when a log is added into the studied system and track the log statement. If it is changed in subsequent revisions we flag the log as changed and record it. 
+Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We define each metric and the rationale behind the choice of each metric.  We collect the code and log churn metrics when a log is added into the studied system and track the log. If it is changed in subsequent revisions we flag the log as changed and record it. 
 
 
 %To build prediction models it is necessary to track the changes to logs within the time frame of our study. To achieve this we built a tool which tracks the changes made to each log.  
@@ -139,7 +129,7 @@ Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We
 
 We build random forest models to explain the stability of logs in our studied systems. A random forest is a collection of largely uncorrelated decision trees in which the results of all trees are combined to form a generalized predictor~\cite{Albert2008424}. In our model the code, log and developer metrics are the explanatory variables and the dependent class variable is if the log is changed or not (i.e., 'False' for not changed and 'True' for changed).
 
-Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the four steps in our model construction approach. We adopt the statistical tool R to model our data and use the `RandomForest' package to generate the random forests.\\
+Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the four construction steps (C1 to C4) for building a random forest model and evaluating the model. We adopt the statistical tool R to model our data and use the `RandomForest' package to generate the random forests.\\
 
 \textbf{\textsl{(C1 - Correlation analysis) }}
 
@@ -151,7 +141,7 @@ Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.9\linewidth]{ModelCreationLogGeanology}
+	\includegraphics[width=1\columnwidth]{ModelCreationLogGeanology}
 	\caption{Overview of Model construction(C) and Evaluation}
 	\label{fig:ModelCreationLogGeanology}
 \end{figure}  
@@ -161,8 +151,8 @@ Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\
 
 \begin{figure}
 	\centering
-	\includegraphics[height=0.6\textwidth,width=0.75\linewidth]{SpearmanActiveMQ}
-	\caption{Hierarchical clustering of variables according to Spearman’s $\rho$ in ActiveMQ}
+	\includegraphics[height=1\columnwidth,width=0.9\columnwidth]{SpearmanActiveMQ}
+ \vspace*{-1cm}	\caption{Hierarchical clustering of variables according to Spearman’s $\rho$ in ActiveMQ}
 	\label{fig:SpearmanActiveMQ}
 \end{figure}
 
@@ -172,7 +162,7 @@ Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\
 After we eliminate the correlated metrics from our datasets, we construct the random forest model.`Random forest' is a black-box ensemble classifier, which operates by constructing a multitude of decision trees on the training set and uses this to classify the testing set.
 \begin{figure}
 	\centering
-	\includegraphics[height=0.4\textwidth,width=0.75\linewidth]{BootRandomForest}
+	\includegraphics[height=.7\columnwidth,width=1\columnwidth]{BootRandomForest}
 	\caption{ Overview of random forest generation in C2}
 	\label{fig:BootRF}
 \end{figure}
@@ -184,7 +174,7 @@ Given a dataset of \textsl{n} logs for training, $ D = \{ (X_{1}Y_{1},...,(X_{n}
 
 We use the `boot' function from the `boot' package in R to generate bootstrap samples. The boot function generates a set of random indices, with replacement from the integers 1:\emph{n}.
 
-\item From the sampled selection, a tree is grown with one difference compared to normal decision trees. The random forest is split at each node using the best among subset of predictors, rather than all. This counterintuitive strategy helps to make the random forests more robust against over-fitting~\cite{breiman1996bagging}.
+\item From the sampled selection, a tree is grown with one difference compared to normal decision trees. The random forest is split at each node using the best among subset of predictors, rather than all. This strategy helps to make the random forests more robust against over-fitting~\cite{breiman1996bagging}.
 
  We use the `randomForest' function from the `randomForest' package in R to generate the random forest model. 
 
@@ -193,21 +183,21 @@ We use the `boot' function from the `boot' package in R to generate bootstrap sa
 \item Predict new data by aggregating the prediction of the $M$ models generated.
 \end{enumerate}  
 
-\begin{table}[tb]
-	\begin{tabular}{|>{\raggedright}p{0.45\columnwidth}|ll}
+\begin{table}[t]
+\centering
+	\begin{tabular}{|>{\raggedright}p{0.1\columnwidth}>{\raggedright}p{0.2\columnwidth}|l>{\raggedright}p{0.2\columnwidth}|}
 		\hline 
-		\multirow{2}{0.13\columnwidth}{Actual} & \multicolumn{2}{c}{Predicted}\tabularnewline
-		& Log has changed & Log has not-changed\tabularnewline
-		\cline{2-3} 		\hline 
-		Log has changed  & TP (True Positive)  & FN (False Negative ) \tabularnewline
-		Log has not-Changed  & FP (False Positive )  & TN (True Negative) \tabularnewline
+		\multicolumn{1}{|>{\raggedright}p{0.03\columnwidth}}{\multirow{2}{0.03\columnwidth}{}} &  & \multicolumn{2}{c|}{Predicted}\tabularnewline
+		&  & Log has changed & Log has not-changed\tabularnewline
+		\hline 
+		\multirow{2}{0.03\columnwidth}{Actual} & Log has changed  & TP (True Positive)  & FN (False Negative ) \tabularnewline
+		& Log has not-Changed  & FP (False Positive )  & TN (True Negative) \tabularnewline
 		\hline 
 	\end{tabular}\protect\caption{Confusion Matrix}
 	
 	
 	\label{tba:ConfusionMatrix} 
 \end{table}
-
 
 %\begin{table}[tb]
 %	
@@ -277,7 +267,7 @@ As we obtain 1000 data sets for each metric because of bootstrapping process, we
 \begin{table}
 	\caption{The optimism reduced performance measures of the four projects}
 	\centering
-	\resizebox*{0.8\textwidth}{0.2\textwidth}{
+	\resizebox*{1\columnwidth}{0.3\columnwidth}{
 \begin{tabular}{|lllll|}
 	\hline 
 	Projects & Life Ray & ActiveMQ & Camel & CloudStack\tabularnewline
@@ -311,7 +301,7 @@ We find that `Developer experience' is the most important factor for developer m
 
 %% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-	\begin{table}[t]
+	\begin{table*}[t]
 		\protect\caption{The important values of the metrics (top 10), divided into homogeneous
 			groups by Scott-Knott clustering. The `+' and `-' signs signify positive
 			and negative correlation of the metric on log stability. }
@@ -363,7 +353,7 @@ We find that `Developer experience' is the most important factor for developer m
 \end{tabular}
 	}
 		\label{tba:Scott} 
-	\end{table}
+	\end{table*}
 	
 
 

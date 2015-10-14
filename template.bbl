@@ -89,6 +89,11 @@ Z.~M. Jiang, A.~Hassan, G.~Hamann, and P.~Flora, ``Automatic identification of
   load testing problems,'' in \emph{ICSM '08: Proceedings of theIEEE
   International Conference on Software Maintenance}, Sept 2008, pp. 307--316.
 
+\bibitem{ihaka1996r}
+R.~Ihaka and R.~Gentleman, ``R: a language for data analysis and graphics,''
+  \emph{Journal of computational and graphical statistics}, vol.~5, no.~3, pp.
+  299--314, 1996.
+
 \bibitem{EMSEIAN}
 W.~Shang, M.~Nagappan, and A.~E. Hassan,
   ``\BIBforeignlanguage{English}{Studying the relationship between logging
@@ -229,17 +234,6 @@ E.~G. Jelihovschi, J.~C. Faria, and I.~B. Allaman, ``Scottknott: a package for
   performing the scott-knott clustering algorithm in r,'' \emph{TEMA (S{\~a}o
   Carlos)}, vol.~15, no.~1, pp. 3--17, 2014.
 
-\bibitem{hassan2008road}
-A.~E. Hassan, ``The road ahead for mining software repositories,'' in
-  \emph{Frontiers of Software Maintenance, 2008. FoSM 2008.}\hskip 1em plus
-  0.5em minus 0.4em\relax IEEE, 2008, pp. 48--57.
-
-\bibitem{TanSalsa}
-J.~Tan, X.~Pan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan, ``Salsa: Analyzing
-  logs as state machines,'' in \emph{WASL'08: Proceedings of the 1st USENIX
-  Conference on Analysis of System Logs}.\hskip 1em plus 0.5em minus
-  0.4em\relax USENIX Association, 2008, pp. 6--6.
-
 \bibitem{Jiang:2009:UCP:1525908.1525912}
 W.~Jiang, C.~Hu, S.~Pasupathy, A.~Kanevsky, Z.~Li, and Y.~Zhou, ``Understanding
   customer problem troubleshooting from storage system logs,'' in \emph{FAST
@@ -291,5 +285,11 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
   P.~Flora, ``An exploratory study of the evolution of communicated information
   about the execution of large software systems,'' \emph{Journal of Software:
   Evolution and Process}, vol.~26, no.~1, pp. 3--26, 2014.
+
+\bibitem{TanSalsa}
+J.~Tan, X.~Pan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan, ``Salsa: Analyzing
+  logs as state machines,'' in \emph{WASL'08: Proceedings of the 1st USENIX
+  Conference on Analysis of System Logs}.\hskip 1em plus 0.5em minus
+  0.4em\relax USENIX Association, 2008, pp. 6--6.
 
 \end{thebibliography}

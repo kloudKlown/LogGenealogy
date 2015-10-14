@@ -28,11 +28,12 @@
 %
 %\documentclass{svjour3}                     % onecolumn (standard format)
 %\documentclass[smallcondensed]{svjour3}     % onecolumn (ditto)
-\documentclass[smallextended]{svjour3}       % onecolumn (second format)
+%\documentclass[smallextended]{svjour3}       % onecolumn (second format)
 %\documentclass[twocolumn]{svjour3}          % twocolumn
 %
-\smartqed  % flush right qed marks, e.g. at end of proof
+%\smartqed  % flush right qed marks, e.g. at end of proof
 %
+\documentclass[conference]{IEEEtran}
 \input{setup}
 \usepackage{graphicx}
 %
@@ -59,26 +60,38 @@
 
 %\titlerunning{Short form of title}        % if too long for running head
 
-\author{Suhas Kabinna         \and
-	Weiyi Shang \and
-	Cor-Paul Bezemer \and
-	Ahmed E. Hassan
-}
-
-%\authorrunning{Short form of author list} % if too long for running head
-
-\institute{Suhas. Kabinna,  Cor-Paul. Bezemer and Ahmed E.Hassan \at
-	Software Analysis and Intelligence Lab (SAIL) \\
+%\author{Suhas Kabinna         \and
+%	Weiyi Shang \and
+%	Cor-Paul Bezemer \and
+%	Ahmed E. Hassan
+%}
+\author{\IEEEauthorblockN{Suhas Kabinna, 	Cor-Paul Bezemer and Ahmed E.Hassan}
+\IEEEauthorblockA{	Software Analysis and Intelligence Lab (SAIL) \\
 	Queen's University \\
 	Kingston, Ontario \\
-	\email{ \{kabinna,bezemer,ahmed\}@cs.queensu.ca }  \\\\
-	Weiyi Shang \at
-	Department of Computer Science and Software Engineering \\
-	Concordia University\\
-	Montreal, Quebec \\
-	\email{ shang@encs.concordia.ca}  
-	%             \emph{Present address:} of F. Author  %  if needed
+	Email:{\{kabinna,bezemer,ahmed\}@cs.queensu.ca} \\ \\}
+\and
+\IEEEauthorblockN{Weiyi Shang }
+\IEEEauthorblockA{	Department of Computer Science and Software Engineering \\
+		Concordia University\\
+		Montreal, Quebec \\
+		Email: {shang@encs.concordia.ca}
 }
+}
+%\authorrunning{Short form of author list} % if too long for running head
+%
+%\institute{Suhas. Kabinna,  Cor-Paul. Bezemer and Ahmed E.Hassan \at
+%	Software Analysis and Intelligence Lab (SAIL) \\
+%	Queen's University \\
+%	Kingston, Ontario \\
+%	\email{ \{kabinna,bezemer,ahmed\}@cs.queensu.ca }  \\
+%	Weiyi Shang \at
+%	Department of Computer Science and Software Engineering \\
+%	Concordia University\\
+%	Montreal, Quebec \\
+%	\email{ shang@encs.concordia.ca}  
+%	%             \emph{Present address:} of F. Author  %  if needed
+%}
 
 \date{Received: date / Accepted: date}
 % The correct dates will be entered by the editor
