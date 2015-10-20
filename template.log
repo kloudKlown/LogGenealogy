@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.11)  13 OCT 2015 23:54
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.11)  20 OCT 2015 14:17
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -504,61 +504,65 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 3.
 
+<ExampleOfLogChange_LPA.pdf, id=1, 495.8525pt x 181.67876pt>
+File: ExampleOfLogChange_LPA.pdf Graphic file (type pdf)
 
-Underfull \hbox (badness 10000) in paragraph at lines 8--9
+<use ExampleOfLogChange_LPA.pdf>
+Package pdftex.def Info: ExampleOfLogChange_LPA.pdf used on input line 12.
+(pdftex.def)             Requested size: 252.0pt x 92.33336pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 14--16
+Underfull \vbox (badness 1132) has occurred while \output is active []
 
- []
-
-[1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
-])
+ <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Methodology.tex"
-<LogGenalogyMethdology.pdf, id=12, 1004.75375pt x 255.95625pt>
+<LogGenalogyMethdology.pdf, id=16, 1004.75375pt x 255.95625pt>
 File: LogGenalogyMethdology.pdf Graphic file (type pdf)
 
 <use LogGenalogyMethdology.pdf>
-Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 36.
+Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 37.
 (pdftex.def)             Requested size: 428.38686pt x 125.99768pt.
+ [2]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 63.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 62.
-
-[2]
-Underfull \hbox (badness 10000) in paragraph at lines 66--66
+Underfull \hbox (badness 10000) in paragraph at lines 67--67
 [][]\OT1/ptm/m/it/10 logger.warn(``Timed out: " + build-Com-man-d-
  []
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 66.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 67.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
+Underfull \hbox (badness 10000) in paragraph at lines 69--70
 []\OT1/ptm/m/n/10 As projects can have mul-ti-ple log-ging li-braries
  []
 
 
-Underfull \hbox (badness 7451) in paragraph at lines 68--69
+Underfull \hbox (badness 7451) in paragraph at lines 69--70
 \OT1/ptm/m/n/10 through-out its life-cycle, we use reg-u-lar ex-pres-sions
  []
 
 
-Underfull \hbox (badness 1629) in paragraph at lines 68--69
+Underfull \hbox (badness 1629) in paragraph at lines 69--70
 \OT1/ptm/m/n/10 to match all the com-mon log in-vo-ca-tion pat-terns (i.e.,
  []
 
 
-Underfull \hbox (badness 3492) in paragraph at lines 68--69
+Underfull \hbox (badness 3492) in paragraph at lines 69--70
 \OT1/ptm/m/n/10 `LOG',`log',`[]logger',`LOGGER',`Log'). We count ev-ery
  []
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 78.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 84.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--3
@@ -575,12 +579,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 9--10
 
  []
 
-
+[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 13--14
 
  []
 
-[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 18.
 
@@ -597,40 +600,108 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--20
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 20.
 
-<Flowchart2.png, id=22, 665.48625pt x 551.05875pt>
+<RQ1_Liferay_Camel_Logchangefreq.pdf, id=26, 614.295pt x 794.97pt>
+File: RQ1_Liferay_Camel_Logchangefreq.pdf Graphic file (type pdf)
+
+<use RQ1_Liferay_Camel_Logchangefreq.pdf>
+Package pdftex.def Info: RQ1_Liferay_Camel_Logchangefreq.pdf used on input line
+ 58.
+(pdftex.def)             Requested size: 176.39923pt x 228.27916pt.
+
+<RQ1_Cloud_Active_Logchangefreq.pdf, id=27, 614.295pt x 794.97pt>
+File: RQ1_Cloud_Active_Logchangefreq.pdf Graphic file (type pdf)
+
+<use RQ1_Cloud_Active_Logchangefreq.pdf>
+Package pdftex.def Info: RQ1_Cloud_Active_Logchangefreq.pdf used on input line 
+59.
+(pdftex.def)             Requested size: 176.39923pt x 228.27916pt.
+
+<Flowchart2.png, id=28, 665.48625pt x 551.05875pt>
 File: Flowchart2.png Graphic file (type png)
  <use Flowchart2.png>
-Package pdftex.def Info: Flowchart2.png used on input line 27.
+Package pdftex.def Info: Flowchart2.png used on input line 65.
 (pdftex.def)             Requested size: 189.0pt x 156.49841pt.
 
-
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 41.
-
-
-Overfull \hbox (24.11877pt too wide) in paragraph at lines 45--54
- [][] 
+[4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/RQ1_Liferay_Camel_Logchangefreq.
+pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/RQ1_Cloud_Active_Logchangefreq
+.pdf>]
+Overfull \hbox (15.48138pt too wide) in paragraph at lines 88--88
+ []|\OT1/ptm/m/n/8 19.66| 
  []
 
 
-Overfull \hbox (33.95041pt too wide) in paragraph at lines 77--88
- [][] 
+Overfull \hbox (11.48138pt too wide) in paragraph at lines 88--89
+[]|\OT1/ptm/m/n/8 1.66| 
  []
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 90.
+Overfull \hbox (15.48138pt too wide) in paragraph at lines 90--90
+ []|\OT1/ptm/m/n/8 37.32| 
+ []
+
+
+Overfull \hbox (11.48138pt too wide) in paragraph at lines 90--91
+[]|\OT1/ptm/m/n/8 7.25| 
+ []
+
+
+Overfull \hbox (15.48138pt too wide) in paragraph at lines 91--91
+ []|\OT1/ptm/m/n/8 62.02| 
+ []
+
+
+Overfull \hbox (11.48138pt too wide) in paragraph at lines 91--92
+[]|\OT1/ptm/m/n/8 3.20| 
+ []
+
+
+Overfull \hbox (15.48138pt too wide) in paragraph at lines 92--92
+ []|\OT1/ptm/m/n/8 68.61| 
+ []
+
+
+Overfull \hbox (15.48138pt too wide) in paragraph at lines 92--92
+[]|\OT1/ptm/m/n/8 11.71| 
+ []
+
+<CA_numberofDevelopers.pdf, id=45, 341.275pt x 578.16pt>
+File: CA_numberofDevelopers.pdf Graphic file (type pdf)
+
+<use CA_numberofDevelopers.pdf>
+Package pdftex.def Info: CA_numberofDevelopers.pdf used on input line 99.
+(pdftex.def)             Requested size: 126.0pt x 213.4571pt.
+
+<CL_numberofDevelopers.pdf, id=46, 341.275pt x 578.16pt>
+File: CL_numberofDevelopers.pdf Graphic file (type pdf)
+
+<use CL_numberofDevelopers.pdf>
+Package pdftex.def Info: CL_numberofDevelopers.pdf used on input line 101.
+(pdftex.def)             Requested size: 126.0pt x 213.4571pt.
+
+<ChangedvsUnchangedlogs.pdf, id=47, 505.89pt x 300.12125pt>
+File: ChangedvsUnchangedlogs.pdf Graphic file (type pdf)
+
+<use ChangedvsUnchangedlogs.pdf>
+Package pdftex.def Info: ChangedvsUnchangedlogs.pdf used on input line 112.
+(pdftex.def)             Requested size: 252.0pt x 149.50156pt.
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 137.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--4
 
  []
 
-[4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Flowchart2.png>]
+
 Underfull \hbox (badness 10000) in paragraph at lines 7--10
 
  []
 
-
+[5 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Flowchart2.png> <C:/Users/Suhas/
+Dropbox/Log Genealogy/Paper/CA_numberofDevelopers.pdf> <C:/Users/Suhas/Dropbox/
+Log Genealogy/Paper/CL_numberofDevelopers.pdf> <C:/Users/Suhas/Dropbox/Log Gene
+alogy/Paper/ChangedvsUnchangedlogs.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 132--133
 
  []
@@ -639,7 +710,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/sl' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/sl' tried instead on input line 134.
 
 Underfull \hbox (badness 1430) in paragraph at lines 140--141
-[]\OT1/ptm/m/n/10 Figure 4[] shows the hi-er-ar-chi-cally clus-tered Spear-man
+[]\OT1/ptm/m/n/10 Figure 8[] shows the hi-er-ar-chi-cally clus-tered Spear-man
  []
 
 
@@ -647,14 +718,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 140--141
 
  []
 
-<ModelCreationLogGeanology.pdf, id=28, 830.10126pt x 215.80624pt>
+<ModelCreationLogGeanology.pdf, id=69, 830.10126pt x 215.80624pt>
 File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 
 <use ModelCreationLogGeanology.pdf>
 Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 144.
 (pdftex.def)             Requested size: 252.0pt x 65.51291pt.
 
-<SpearmanActiveMQ.pdf, id=29, 451.6875pt x 424.58624pt>
+<SpearmanActiveMQ.pdf, id=70, 451.6875pt x 424.58624pt>
 File: SpearmanActiveMQ.pdf Graphic file (type pdf)
 
 <use SpearmanActiveMQ.pdf>
@@ -667,7 +738,7 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-<BootRandomForest.pdf, id=30, 603.25375pt x 306.14375pt>
+<BootRandomForest.pdf, id=71, 603.25375pt x 306.14375pt>
 File: BootRandomForest.pdf Graphic file (type pdf)
 
 <use BootRandomForest.pdf>
@@ -679,8 +750,8 @@ Underfull \hbox (badness 7595) in paragraph at lines 171--173
 r train-ing, $\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 =$
  []
 
-[5 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf> <
-C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf>] [6]
+[6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf> <
+C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf>] [7]
 Overfull \hbox (13.76804pt too wide) in paragraph at lines 193--193
 []|\OT1/ptm/m/n/8 Actual|  
  []
@@ -705,14 +776,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 256--258
 
  []
 
-[7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
+[8 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 372.
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [8]
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [9]
 Underfull \vbox (badness 6047) has occurred while \output is active []
 
- [9])
+ [10])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
@@ -728,8 +799,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--23
 
  []
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex")
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl" [10]
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex" [11])
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl"
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
@@ -765,11 +836,11 @@ Missing character: There is no ¤ in font ptmr7t!
 Missing character: There is no Ã in font ptmr7t!
 Missing character: There is no ¤ in font ptmr7t!
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 193.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 179.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [11])
+ [12])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -781,17 +852,17 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[12
+[13
 
 ] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
 Here is how much of TeX's memory you used:
- 7038 strings out of 493921
- 108563 string characters out of 3144875
- 191971 words of memory out of 3000000
- 10188 multiletter control sequences out of 15000+200000
+ 7076 strings out of 493921
+ 109681 string characters out of 3144875
+ 195034 words of memory out of 3000000
+ 10220 multiletter control sequences out of 15000+200000
  48932 words of font info for 95 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,13n,42p,1275b,304s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,13n,42p,1275b,321s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program File
 s (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/MiKT
 eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX
@@ -807,9 +878,9 @@ mes/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a
 .pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pr
 ogram Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files
  (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 447729 bytes).
+Output written on template.pdf (13 pages, 598517 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
+ 162 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

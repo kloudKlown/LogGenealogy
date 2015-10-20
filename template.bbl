@@ -64,30 +64,16 @@ X.~Xu, I.~Weber, L.~Bass, L.~Zhu, H.~Wada, and F.~Teng, ``Detecting cloud
   of the 8th Workshop on Middleware for Next Generation Internet
   Computing}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, p.~5.
 
-\bibitem{hassan2008industrial}
-A.~E. Hassan, D.~J. Martin, P.~Flora, P.~Mansfield, and D.~Dietz, ``An
-  industrial case study of customizing operational profiles using log
-  compression,'' in \emph{Software Engineering, 2008. ICSE'08. ACM/IEEE 30th
-  International Conference on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE,
-  2008, pp. 713--723.
+\bibitem{TanSalsa}
+J.~Tan, X.~Pan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan, ``Salsa: Analyzing
+  logs as state machines,'' in \emph{WASL'08: Proceedings of the 1st USENIX
+  Conference on Analysis of System Logs}.\hskip 1em plus 0.5em minus
+  0.4em\relax USENIX Association, 2008, pp. 6--6.
 
-\bibitem{nagappan2009efficiently}
-M.~Nagappan, K.~Wu, M.~Vouk \emph{et~al.}, ``Efficiently extracting operational
-  profiles from execution logs using suffix arrays,'' in \emph{Software
-  Reliability Engineering, 2009. ISSRE'09. 20th International Symposium
-  on}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 41--50.
-
-\bibitem{bitincka2010optimizing}
-L.~Bitincka, A.~Ganapathi, S.~Sorkin, S.~Zhang \emph{et~al.}, ``Optimizing data
-  analysis with a semi-structured time series database,'' in \emph{Proceedings
-  of the 2010 workshop on Managing systems via log analysis and machine
-  learning techniques}.\hskip 1em plus 0.5em minus 0.4em\relax USENIX
-  Association, 2010, pp. 7--7.
-
-\bibitem{JiangICSM2008}
-Z.~M. Jiang, A.~Hassan, G.~Hamann, and P.~Flora, ``Automatic identification of
-  load testing problems,'' in \emph{ICSM '08: Proceedings of theIEEE
-  International Conference on Software Maintenance}, Sept 2008, pp. 307--316.
+\bibitem{chukwa}
+J.~Boulon, A.~Konwinski, R.~Qi, A.~Rabkin, E.~Yang, and M.~Yang, ``Chukwa, a
+  large-scale monitoring system,'' in \emph{Proceedings of CCA}, vol.~8, 2008,
+  pp. 1--5.
 
 \bibitem{ihaka1996r}
 R.~Ihaka and R.~Gentleman, ``R: a language for data analysis and graphics,''
@@ -234,6 +220,37 @@ E.~G. Jelihovschi, J.~C. Faria, and I.~B. Allaman, ``Scottknott: a package for
   performing the scott-knott clustering algorithm in r,'' \emph{TEMA (S{\~a}o
   Carlos)}, vol.~15, no.~1, pp. 3--17, 2014.
 
+\bibitem{Yuan:2010:SED:1736020.1736038}
+D.~Yuan, H.~Mai, W.~Xiong, L.~Tan, Y.~Zhou, and S.~Pasupathy, ``Sherlog: Error
+  diagnosis by connecting clues from run-time logs,'' in \emph{ASPLOS '10:
+  Proceedings of the 15th Edition of ASPLOS on Architectural Support for
+  Programming Languages and Operating Systems}.\hskip 1em plus 0.5em minus
+  0.4em\relax New York, NY, USA: ACM, 2010, pp. 143--154.
+
+\bibitem{Jiang:2008:AAA:1400155.1400158}
+Z.~M. Jiang, A.~E. Hassan, G.~Hamann, and P.~Flora, ``An automated approach for
+  abstracting execution logs to execution events,'' \emph{Journal of Software
+  Maintenance Evolution}, vol.~20, no.~4, pp. 249--267, Jul. 2008.
+
+\bibitem{JiangICSM2008}
+Z.~M. Jiang, A.~Hassan, G.~Hamann, and P.~Flora, ``Automatic identification of
+  load testing problems,'' in \emph{ICSM '08: Proceedings of theIEEE
+  International Conference on Software Maintenance}, Sept 2008, pp. 307--316.
+
+\bibitem{JiangICSM20092}
+Z.~M. Jiang, A.~E. Hassan, G.~Hamann, and P.~Flora, ``Automated performance
+  analysis of load tests,'' in \emph{ICSM '09: Proceedings of the IEEE
+  International Conference on Software Maintenance}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2009, pp. 125--134.
+
+\bibitem{Jiang:2010:ICS:1850000.1850068}
+Z.~M. Jiang, A.~Avritzer, E.~Shihab, A.~E. Hassan, and P.~Flora, ``An
+  industrial case study on speeding up user acceptance testing by mining
+  execution logs,'' in \emph{SSIRI '10: Proceedings of the 4th International
+  Conference on Secure Software Integration and Reliability Improvement}.\hskip
+  1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
+  pp. 131--140, 2010.
+
 \bibitem{Jiang:2009:UCP:1525908.1525912}
 W.~Jiang, C.~Hu, S.~Pasupathy, A.~Kanevsky, Z.~Li, and Y.~Zhou, ``Understanding
   customer problem troubleshooting from storage system logs,'' in \emph{FAST
@@ -249,47 +266,15 @@ I.~Beschastnikh, Y.~Brun, S.~Schneider, M.~Sloan, and M.~D. Ernst, ``Leveraging
   '11.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2011, pp.
   267--277.
 
-\bibitem{Yuan:2010:SED:1736020.1736038}
-D.~Yuan, H.~Mai, W.~Xiong, L.~Tan, Y.~Zhou, and S.~Pasupathy, ``Sherlog: Error
-  diagnosis by connecting clues from run-time logs,'' in \emph{ASPLOS '10:
-  Proceedings of the 15th Edition of ASPLOS on Architectural Support for
-  Programming Languages and Operating Systems}.\hskip 1em plus 0.5em minus
-  0.4em\relax New York, NY, USA: ACM, 2010, pp. 143--154.
-
-\bibitem{Jiang:2008:AAA:1400155.1400158}
-Z.~M. Jiang, A.~E. Hassan, G.~Hamann, and P.~Flora, ``An automated approach for
-  abstracting execution logs to execution events,'' \emph{Journal of Software
-  Maintenance Evolution}, vol.~20, no.~4, pp. 249--267, Jul. 2008.
-
-\bibitem{JiangICSM20092}
-------, ``Automated performance analysis of load tests,'' in \emph{ICSM '09:
-  Proceedings of the IEEE International Conference on Software
-  Maintenance}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp.
-  125--134.
-
-\bibitem{Jiang:2010:ICS:1850000.1850068}
-Z.~M. Jiang, A.~Avritzer, E.~Shihab, A.~E. Hassan, and P.~Flora, ``An
-  industrial case study on speeding up user acceptance testing by mining
-  execution logs,'' in \emph{SSIRI '10: Proceedings of the 4th International
-  Conference on Secure Software Integration and Reliability Improvement}.\hskip
-  1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
-  pp. 131--140, 2010.
-
-\bibitem{IanGap}
-W.~Shang, ``Bridging the divide between software developers and operators using
-  logs,'' in \emph{ICSE '12 :Proceedings of the 34th International Conference
-  on Software Engineering}.
-
 \bibitem{PaperIanCIIII}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
   P.~Flora, ``An exploratory study of the evolution of communicated information
   about the execution of large software systems,'' \emph{Journal of Software:
   Evolution and Process}, vol.~26, no.~1, pp. 3--26, 2014.
 
-\bibitem{TanSalsa}
-J.~Tan, X.~Pan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan, ``Salsa: Analyzing
-  logs as state machines,'' in \emph{WASL'08: Proceedings of the 1st USENIX
-  Conference on Analysis of System Logs}.\hskip 1em plus 0.5em minus
-  0.4em\relax USENIX Association, 2008, pp. 6--6.
+\bibitem{IanGap}
+W.~Shang, ``Bridging the divide between software developers and operators using
+  logs,'' in \emph{ICSE '12 :Proceedings of the 34th International Conference
+  on Software Engineering}.
 
 \end{thebibliography}
