@@ -1,0 +1,60 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[latin9]{inputenc}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\begin{document}
+\begin{table*}[t]
+\protect\protect\caption{The important values of the metrics (top 10), divided into homogeneous
+groups by Scott-Knott clustering. The `+' and `-' signs signify positive
+and negative correlation of the metric on log stability. }
+
+
+\centering \resizebox*{1\textwidth}{0.26\textwidth}{ %
+\begin{tabular}{|lll|lll|}
+\hline 
+ & \textbf{ Active MQ}  &  &  & \textbf{CloudStack}  & \tabularnewline
+\hline 
+\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+\hline 
+1  & SLOC & 0.174 +  & 1  & Code churn in commit & 0.138 + \tabularnewline
+2  & Ownership of file & 0.162 +  & 2 & Ownership of file & 0.136 + \tabularnewline
+ & Log variable count & 0.161 +  &  & Developer experience & 0.135 - \tabularnewline
+3 & Developer experience & 0.140 +  & 1  & Log density  & 0.122 - \tabularnewline
+4  & Log density & 0.120 -  & 2  & SLOC & 0.122 + \tabularnewline
+5  & Variable Declared  & 0.090 -  & 3  & Log variable count & 0.113 + \tabularnewline
+6  & Deleted count & 0.082 -  & 1  & Log text length & 0.102 + \tabularnewline
+7  & Log level & 0.078 -  & 2  & Variable Declared  & 0.076 + \tabularnewline
+8  & Log churn in commit & 0.060 +  & 3  & Type of log change & 0.063 + \tabularnewline
+\hline 
+\end{tabular}} \resizebox*{1\textwidth}{0.26\textwidth}{ \centering
+
+\begin{tabular}{|lll|lll|}
+\hline 
+ & \textbf{Life Ray}  &  &  & \textbf{Camel}  & \tabularnewline
+\hline 
+\hline 
+\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+\hline 
+1  & Log density  & 0.152 -  & 1  & Ownership of file & 0.207 + \tabularnewline
+2  & Ownership of file & 0.137 -  & 2  & Log density  & 0.175 - \tabularnewline
+ & Developer experience & 0.137 +  &   & Developer experience & 0.174 - \tabularnewline
+3 & SLOC & 0.127 +  & 3  & SLOC & 0.168 + \tabularnewline
+4  & Issue Id & 0.096 -  & 4 & Log variable count & 0.124 + \tabularnewline
+5  & Variable Declared  & 0.093 +  & 5  & Log level & 0.116 - \tabularnewline
+  & Log variable count & 0.091 +  & 6  & Elapsed time & 0.109 - \tabularnewline
+6  & Log level & 0.081 -  &   & Issue type & 0.108 + \tabularnewline
+7 & Elapsed time & 0.072 + &   & Variable Declared  & 0.108 + \tabularnewline
+\hline 
+\end{tabular}} \label{tba:Scott} 
+\end{table*}
+
+\end{document}

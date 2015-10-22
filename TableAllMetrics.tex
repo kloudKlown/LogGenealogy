@@ -1,0 +1,135 @@
+%% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass{article}
+\usepackage[latin9]{inputenc}
+\usepackage{array}
+\usepackage{rotating}
+\usepackage{multirow}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\begin{document}
+\begin{table*}
+\centering \protect\caption{Taxonomy of metrics considered for model construction}
+
+
+\label{tba:Taxonomy} %
+\begin{tabular}{|c|l|c|>{\raggedright}p{1\columnwidth}|}
+\hline 
+Dimension  & Metrics  & Values  & Definition (d) -- Rationale (r)\tabularnewline
+\hline 
+\hline 
+\multirow{12}{*}{Change Metrics} & \begin{turn}{90}
+Log revision count
+\end{turn} & Numeric & d: The number of prior commits which had log changes. \tabularnewline
+\cline{2-4} 
+ &  &  & r: This helps to identify if the file is prone to log changes.\tabularnewline
+\cline{2-4} 
+ & New File & Boolean (0 -1) & d: Check if the log is added in a new file (i.e., newly committed
+)\tabularnewline
+\cline{2-4} 
+ &  &  & r: This helps to identify which logs where added later in subsequent
+commits.\tabularnewline
+\cline{2-4} 
+ & Total revision count & Numeric & d: Total number of commits made to the file before the log is added.
+This value is 0 for logs added in the initial commit but not for logs
+added overtime. \tabularnewline
+\cline{2-4} 
+ &  &  & r: This helps to find out if the file is changed heavily which can
+result in log changes~\cite{Characterizinglogs}. \tabularnewline
+\cline{2-4} 
+ & Code churn in commit & Numeric & d: The code churn of the commit in which a log is added. \tabularnewline
+\cline{2-4} 
+ &  &  & r: Log changes are correlated to code churn in files~\cite{EMSEIAN}. \tabularnewline
+\cline{2-4} 
+ & Variables declared & Numeric & d: The number of variables which are declared before the log statement.
+(we limit to 20 lines before log statement).\tabularnewline
+\cline{2-4} 
+ &  &  & r: When new variables are declared, developers may log the new variables
+to obtain more information~\cite{Characterizinglogs}. \tabularnewline
+\cline{2-4} 
+ & SLOC & Numeric & d: The number of lines of code in the file.\tabularnewline
+\cline{2-4} 
+ &  &  & r: Large files have more functionality and are more prone to changes~\cite{zhang2009investigation}
+and more log changes~\cite{Characterizinglogs,EMSEIAN}. \tabularnewline
+\hline 
+\multirow{22}{*}{Product Metrics} & Log context & Categorical & d: Identify the block in which a log is added. (i.e., `if', `if-=else',
+`try-catch', `exception', `throw', `new function').\tabularnewline
+\cline{2-4} 
+ &  &  & r: Prior research finds that logs are mostly used in assertion checks,
+logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
+\cline{2-4} 
+ & Log variable count & Numerical & d: Number of variables logged.\tabularnewline
+\cline{2-4} 
+ &  &  & r: Over 62\% of logs add new variables~\cite{Characterizinglogs}.
+Hence fewer variables in the initial log statement might result in
+addition later. \tabularnewline
+\cline{2-4} 
+ & Log density & Numerical & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
+\cline{2-4} 
+ &  &  & r: Research has found that there is on average one log line per 30
+lines of code~\cite{Characterizinglogs}. If it is less it suggests
+there may be additions in later commits.\tabularnewline
+\cline{2-4} 
+ & Log level & Categorical & d: Identify the log level (verbosity) of the added log (i.e., `info',
+`error', `warn', `debug', `trace' and `trace').\tabularnewline
+\cline{2-4} 
+ &  &  & r: Developers spend significant amount of time in adjusting the verbosity
+of logs~\cite{Characterizinglogs}. \tabularnewline
+\cline{2-4} 
+ & Log text length & Numerical & d: Number of text phrases logged (i.e., we count all text present
+between a pair of quotes as one phrase).\tabularnewline
+\cline{2-4} 
+ &  &  & r: Over 45\% of logs have modifications to static context~\cite{Characterizinglogs}.
+Logs with fewer phrases might be subject to changes later to provide
+better explanation.\tabularnewline
+\cline{2-4} 
+ & Resolution time & Numerical & d: The time it takes for the issue to get fixed. It is defined as
+the time it takes since an issue is opened until closed. \tabularnewline
+\cline{2-4} 
+ &  &  & r: More resolution time might suggest a more complex fix with more
+log churn. \tabularnewline
+\cline{2-4} 
+ & Number of developers involved & Numerical & d: Total number of unique developers who comment on the issue report
+on JIRA.\tabularnewline
+\cline{2-4} 
+ &  &  & r: Components with many unique authors likely lack strong ownership,
+which in turn may lead to more defects~\cite{mcintosh2014impact}
+and change logs~\cite{EMSEIAN}. \tabularnewline
+\cline{2-4} 
+ & Number of comments & Numericl & d: Total number of discussion posts on the issue. \tabularnewline
+\cline{2-4} 
+ &  &  & r: Number of comments is correlated to the resolution time of issue
+reports~\cite{giger2010predicting}. More comments may also indicate
+the issue is more complex resulting in more code churn and log changes. \tabularnewline
+\cline{2-4} 
+ & Developer experience & Numericl & d: The number of commits the developer has made prior to this commit. \tabularnewline
+\cline{2-4} 
+ &  &  & r: Research has shown that experienced developers might take up more
+complex issues~\cite{rahman2011ownership} and therefore may leverage
+logs more~\cite{EMSEIAN}. \tabularnewline
+\cline{2-4} 
+ & Issue type  & Categorical & d: Identify the type of issue, i.e., `Bug', `Improvement', `Task',
+`New Feature', `Sub-Task', `Test'. \tabularnewline
+\cline{2-4} 
+ &  &  & r: Some issue types might have higher code churn than others (example:
+Bug and New features might have more code churn when compared to Sub-Tasks)
+and are committed faster.\tabularnewline
+\cline{2-4} 
+ & Priority type & Categorical & d: Identify the priority of the issue i.e., `Critical', `Blocker',
+`Major', `Minor' and `Trivial'\tabularnewline
+\cline{2-4} 
+ &  &  & r: Research has shown that priority of issue affects resolution time
+of bug fixes~\cite{MarkFixTime}. A Higher priority indicates the
+issue will be fixed faster with log changes. \tabularnewline
+\hline 
+\end{tabular}\protect
+\end{table*}
+
+\end{document}
