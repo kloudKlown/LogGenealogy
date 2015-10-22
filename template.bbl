@@ -151,34 +151,11 @@ L.~Marks, Y.~Zou, and A.~E. Hassan, ``Studying the fix-time for bugs in large
 
 \bibitem{Albert2008424}
 \BIBentryALTinterwordspacing
-J.~Albert, E.~Aliu, H.~Anderhub, P.~Antoranz, A.~Armada, M.~Asensio,
-  C.~Baixeras, J.~Barrio, H.~Bartko, D.~Bastieri, J.~Becker, W.~Bednarek,
-  K.~Berger, C.~Bigongiari, A.~Biland, R.~Bock, P.~Bordas, V.~Bosch-Ramon,
-  T.~Bretz, I.~Britvitch, M.~Camara, E.~Carmona, A.~Chilingarian, S.~Ciprini,
-  J.~Coarasa, S.~Commichau, J.~Contreras, J.~Cortina, M.~Costado, V.~Curtef,
-  V.~Danielyan, F.~Dazzi, A.~D. Angelis, C.~Delgado, R.~de~los Reyes, B.~D.
-  Lotto, E.~Domingo-Santamaría, D.~Dorner, M.~Doro, M.~Errando, M.~Fagiolini,
-  D.~Ferenc, E.~Fernández, R.~Firpo, J.~Flix, M.~Fonseca, L.~Font, M.~Fuchs,
-  N.~Galante, R.~García-López, M.~Garczarczyk, M.~Gaug, M.~Giller, F.~Goebel,
-  D.~Hakobyan, M.~Hayashida, T.~Hengstebeck, A.~Herrero, D.~Höhne, J.~Hose,
-  S.~Huber, C.~Hsu, P.~Jacon, T.~Jogler, R.~Kosyra, D.~Kranich, R.~Kritzer,
-  A.~Laille, E.~Lindfors, S.~Lombardi, F.~Longo, J.~López, M.~López,
-  E.~Lorenz, P.~Majumdar, G.~Maneva, K.~Mannheim, M.~Mariotti, M.~Martínez,
-  D.~Mazin, C.~Merck, M.~Meucci, M.~Meyer, J.~Miranda, R.~Mirzoyan,
-  S.~Mizobuchi, A.~Moralejo, D.~Nieto, K.~Nilsson, J.~Ninkovic,
-  E.~Oña-Wilhelmi, N.~Otte, I.~Oya, M.~Panniello, R.~Paoletti, J.~Paredes,
-  M.~Pasanen, D.~Pascoli, F.~Pauss, R.~Pegna, M.~Persic, L.~Peruzzo,
-  A.~Piccioli, N.~Puchades, E.~Prandini, A.~Raymers, W.~Rhode, M.~Ribó,
-  J.~Rico, M.~Rissi, A.~Robert, S.~Rügamer, A.~Saggion, T.~Saito, A.~Sánchez,
-  P.~Sartori, V.~Scalzotto, V.~Scapin, R.~Schmitt, T.~Schweizer, M.~Shayduk,
-  K.~Shinozaki, S.~Shore, N.~Sidro, A.~Sillanpää, D.~Sobczynska, F.~Spanier,
-  A.~Stamerra, L.~Stark, L.~Takalo, P.~Temnikov, D.~Tescaro, M.~Teshima,
-  D.~Torres, N.~Turini, H.~Vankov, A.~Venturini, V.~Vitale, R.~Wagner,
-  T.~Wibig, W.~Wittek, F.~Zandanel, R.~Zanin, and J.~Zapatero, ``Implementation
-  of the random forest method for the imaging atmospheric cherenkov telescope
-  \{MAGIC\},'' \emph{Nuclear Instruments and Methods in Physics Research
-  Section A: Accelerators, Spectrometers, Detectors and Associated Equipment},
-  vol. 588, no.~3, pp. 424 -- 432, 2008. [Online]. Available:
+J.~Albert and E.~Aliu, ``Implementation of the random forest method for the
+  imaging atmospheric cherenkov telescope \{MAGIC\},'' \emph{Nuclear
+  Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment}, vol. 588, no.~3, pp. 424
+  -- 432, 2008. [Online]. Available:
   \url{http://www.sciencedirect.com/science/article/pii/S0168900207024059}
 \BIBentrySTDinterwordspacing
 

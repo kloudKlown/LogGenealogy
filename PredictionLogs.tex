@@ -1,121 +1,140 @@
-	\noindent \textbf{RQ2:}\textbf{ Can code, log and developer related metrics help in explaining the stability of logs?}
+	\noindent \textbf{RQ2:}\textbf{ Can metrics from code, log and developer dimension help in explaining the stability of logs?}
 	\\\\
 \noindent \textbf{Motivation}
 
 In RQ1, we find that 45\% of logs are changed at-least once in three of out studied systems. This affects the log processing tools which run on these studied systems, making developers spend more time on maintenance of those tools. Hence, there is a need to identify these non-stable logs to simplify the job of developers. It can also benefit log processing tool developers to develop more robust applications making them more stable.
 
-To identify these non-stable logs we use code, log and developer metrics. We use these metrics because this data can be extracted from control version systems (CVS) easily by developers. It also benefits log processing tool developers as do not need domain knowledge about the system to understand these metrics.\\
 %
 %can be extracted from control versions systems by developersthem.  \\
 
 
 \noindent \textbf{Approach}
+
+
+To identify the stability of logs we use product and change metrics collected from code, log and developer dimensions. Change metrics measure the changes to the system at the time of introduction of the log and product metrics measure the source code of the system. We use the git repository to extract the change metrics and product metrics for the studied systems. Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We define each metric and the rationale behind the choice of each metric.  We use the product and process metrics because this data can be extracted from control version systems (CVS) easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the system to understand these metrics.\\
 \begin{table*}
-\centering
-	\caption{Taxonomy of metrics considered for model construction}
+	\centering \protect\caption{Taxonomy of metrics considered for model construction}
 	
-	\label{tba:Taxonomy}
-		\begin{tabular}{|c|c|c|>{\raggedright}p{1\columnwidth}|}
-			\hline 
-			Dimension & Metrics & Values & Definition (d) -- Rationale (r)\tabularnewline
-			\hline 
-			\hline 
-			\multirow{12}{*}{Code Metrics} & \multirow{2}{*}{Log revision count} & \multirow{2}{*}{Numeric } & d: The number of prior commits which had log changes. \tabularnewline
-			\cline{4-4} 
-			&  &  & r: This helps to identify if the file is prone to log changes.\tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{New file} & \multirow{2}{*}{Boolean (0 -1)} & d: Check if the log is added in a new file (i.e., newly committed )\tabularnewline
-			\cline{4-4} 
-			&  &  & r: This helps to identify which logs where added later in subsequent commits.\tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Total revision count} & \multirow{2}{*}{Numeric} & d: Total number of commits made to the file before the log is
-			added. This value is 0 for logs added in the initial commit but not for logs added overtime. \tabularnewline
-			\cline{4-4} 
-			&  &  & r: This helps to find out if the file is changed heavily which can
-			result in log changes~\cite{Characterizinglogs}. \tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Code churn in commit} & \multirow{2}{*}{Numeric} & d: The code churn of the commit in which a log is added. \tabularnewline
-			\cline{4-4} 
-			&  &  & r: Log changes are correlated to code churn in files~\cite{EMSEIAN}. \tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Variables declared} & \multirow{2}{*}{Numeric} & d: The number of variables which are declared before the log statement.
-			(we limit to 20 lines before log statement).\tabularnewline
-			\cline{4-4} 
-			&  &  & r: When new variables are declared, developers may log the new variables to obtain more information~\cite{Characterizinglogs}. \tabularnewline
-			\cline{2-4} 
-		 			
-			& \multirow{2}{*}{SLOC} & \multirow{2}{*}{Numeric} & d: The number of lines of code in the file.\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Large files have more functionality and are more prone to changes~\cite{zhang2009investigation} and more log changes~\cite{Characterizinglogs,EMSEIAN}. \tabularnewline
-			\hline 
-			\multirow{10}{*}{Log metrics} & \multirow{2}{*}{Log context} & \multirow{2}{*}{Categorical} & d: Identify the block in which a log is added. (i.e., `if',
-			`if-=else', `try-catch', `exception', `throw', `new function').\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Prior research finds that logs are mostly used in assertion checks, logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Log level} & \multirow{2}{*}{Categorical} & d: Identify the log level (verbosity) of the added log (i.e., `info',
-			`error', `warn', `debug', `trace' and `trace').\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Developers spend significant amount of time in adjusting the verbosity
-			of logs~\cite{Characterizinglogs}. \tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Log variable count} & \multirow{2}{*}{Numerical} & d: Number of variables logged.\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Over 62\% of logs add new variables~\cite{Characterizinglogs}. Hence fewer variables in the initial log statement might result
-			in addition later. \tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Log text length} & \multirow{2}{*}{Numerical} & d: Number of text phrases logged (i.e., we count all text present
-			between a pair of quotes as one phrase).\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Over 45\% of logs have modifications to static context~\cite{Characterizinglogs}. Logs with fewer phrases might be subject to changes later to provide better explanation.\tabularnewline
-			\cline{2-4} 
-			& \multirow{2}{*}{Log density} & \multirow{2}{*}{Numerical} & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
-			\cline{4-4} 
-			&  &  & r: Research has found that there is on average one log line per 30 lines of code~\cite{Characterizinglogs}. If it is less it suggests there may be additions in later commits.\tabularnewline
-			\hline 
-		\multirow{12}{*}{Developer Metrics} & \multirow{2}{*}{Resolution time} & \multirow{2}{*}{Numerical} & d: The time it takes for the issue to get fixed. It is defined as
+	
+	\label{tba:Taxonomy} %
+	\begin{tabular}{|c|l|c|>{\raggedright}p{1\columnwidth}|}
+		\hline 
+		Dimension  & Metrics  & Values  & Definition (d) -- Rationale (r)\tabularnewline
+		\hline 
+		\hline 
+		\multirow{12}{*}{Change Metrics} & 
+			Log revision count
+	 & Numeric & d: The number of prior commits which had log changes. \tabularnewline
+		\cline{2-4} 
+		&  &  & r: This helps to identify if the file is prone to log changes.\tabularnewline
+		\cline{2-4} 
+			 & New File & Boolean (0 -1) & d: Check if the log is added in a new file (i.e., newly committed)\tabularnewline
+		\cline{2-4} 
+		&  &  & r: This helps to identify which logs where added later in subsequent
+		commits.\tabularnewline
+		\cline{2-4} 
+		& Total revision count & Numeric & d: Total number of commits made to the file before the log is added.
+		This value is 0 for logs added in the initial commit but not for logs
+		added overtime. \tabularnewline
+		\cline{2-4} 
+		&  &  & r: This helps to find out if the file is changed heavily which can
+		result in log changes~\cite{Characterizinglogs}. \tabularnewline
+		\cline{2-4} 
+		& Code churn in commit & Numeric & d: The code churn of the commit in which a log is added. \tabularnewline
+		\cline{2-4} 
+		&  &  & r: Log changes are correlated to code churn in files~\cite{EMSEIAN}. \tabularnewline
+		\cline{2-4} 
+		& Variables declared & Numeric & d: The number of variables which are declared before the log statement.
+		(we limit to 20 lines before log statement).\tabularnewline
+		\cline{2-4} 
+		&  &  & r: When new variables are declared, developers may log the new variables
+		to obtain more information~\cite{Characterizinglogs}. \tabularnewline
+		\cline{2-4} 
+		& SLOC & Numeric & d: The number of lines of code in the file.\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Large files have more functionality and are more prone to changes~\cite{zhang2009investigation}
+		and more log changes~\cite{Characterizinglogs,EMSEIAN}. \tabularnewline
+		\hline 
+		\multirow{22}{*}{Product Metrics} & Log context & Categorical & d: Identify the block in which a log is added. (i.e., `if', `if-=else',
+		`try-catch', `exception', `throw', `new function').\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Prior research finds that logs are mostly used in assertion checks,
+		logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
+		\cline{2-4} 
+		& Log variable count & Numerical & d: Number of variables logged.\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Over 62\% of logs add new variables~\cite{Characterizinglogs}.
+		Hence fewer variables in the initial log statement might result in
+		addition later. \tabularnewline
+		\cline{2-4} 
+		& Log density & Numerical & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Research has found that there is on average one log line per 30
+		lines of code~\cite{Characterizinglogs}. If it is less it suggests
+		there may be additions in later commits.\tabularnewline
+		\cline{2-4} 
+		& Log level & Categorical & d: Identify the log level (verbosity) of the added log (i.e., `info',
+		`error', `warn', `debug', `trace' and `trace').\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Developers spend significant amount of time in adjusting the verbosity
+		of logs~\cite{Characterizinglogs}. \tabularnewline
+		\cline{2-4} 
+		& Log text length & Numerical & d: Number of text phrases logged (i.e., we count all text present
+		between a pair of quotes as one phrase).\tabularnewline
+		\cline{2-4} 
+		&  &  & r: Over 45\% of logs have modifications to static context~\cite{Characterizinglogs}.
+		Logs with fewer phrases might be subject to changes later to provide
+		better explanation.\tabularnewline
+		\cline{2-4} 
+		& Resolution time & Numerical & d: The time it takes for the issue to get fixed. It is defined as
 		the time it takes since an issue is opened until closed. \tabularnewline
-		\cline{4-4} 
-		&  &  & r: More resolution time might suggest a more complex fix with more log churn. \tabularnewline
 		\cline{2-4} 
-		& \multirow{2}{*}{Number of developers involved} & \multirow{2}{*}{Numeric} & d: Total number of unique developers who comment on the issue report
+		&  &  & r: More resolution time might suggest a more complex fix with more
+		log churn. \tabularnewline
+		\cline{2-4} 
+		& Number of developers involved & Numerical & d: Total number of unique developers who comment on the issue report
 		on JIRA.\tabularnewline
-		\cline{4-4} 
+		\cline{2-4} 
 		&  &  & r: Components with many unique authors likely lack strong ownership,
-		which in turn may lead to more defects~\cite{mcintosh2014impact} and change logs~\cite{EMSEIAN}. \tabularnewline
+		which in turn may lead to more defects~\cite{mcintosh2014impact}
+		and change logs~\cite{EMSEIAN}. \tabularnewline
 		\cline{2-4} 
-& \multirow{2}{*}{Number of comments} & \multirow{2}{*}{Numeric} & d: Total number of discussion posts on the issue. \tabularnewline
-\cline{4-4} 
-&  &  & r: Number of comments is correlated to the resolution time of issue
-reports~\cite{giger2010predicting}. More comments	may also indicate the issue is more complex resulting in more code churn and log changes. \tabularnewline
-\cline{2-4}
-		& \multirow{2}{*}{Developer experience} & \multirow{2}{*}{Numeric} & d: The number of commits the developer has made prior to this commit. \tabularnewline
-		\cline{4-4} 
+		& Number of comments & Numericl & d: Total number of discussion posts on the issue. \tabularnewline
+		\cline{2-4} 
+		&  &  & r: Number of comments is correlated to the resolution time of issue
+		reports~\cite{giger2010predicting}. More comments may also indicate
+		the issue is more complex resulting in more code churn and log changes. \tabularnewline
+		\cline{2-4} 
+		& Developer experience & Numericl & d: The number of commits the developer has made prior to this commit. \tabularnewline
+		\cline{2-4} 
 		&  &  & r: Research has shown that experienced developers might take up more
-		complex issues~\cite{rahman2011ownership} and therefore may leverage logs more~\cite{EMSEIAN}. \tabularnewline
+		complex issues~\cite{rahman2011ownership} and therefore may leverage
+		logs more~\cite{EMSEIAN}. \tabularnewline
 		\cline{2-4} 
-		& \multirow{2}{*}{Issue type} & \multirow{2}{*}{Categorical} & d: Identify the type of issue, i.e., `Bug', `Improvement', `Task',
+		& Issue type  & Categorical & d: Identify the type of issue, i.e., `Bug', `Improvement', `Task',
 		`New Feature', `Sub-Task', `Test'. \tabularnewline
-		\cline{4-4} 
-		&  &  & r: Some issue types might have higher code churn than others (example:
-		Bug and New features might have more code churn when compared to Sub-Tasks) and are committed faster.\tabularnewline
 		\cline{2-4} 
-		& \multirow{2}{*}{Priority type} & \multirow{2}{*}{Categorical} & d: Identify the priority of the issue i.e., `Critical', `Blocker',
+		&  &  & r: Some issue types might have higher code churn than others (example:
+		Bug and New features might have more code churn when compared to Sub-Tasks)
+		and are committed faster.\tabularnewline
+		\cline{2-4} 
+		& Priority type & Categorical & d: Identify the priority of the issue i.e., `Critical', `Blocker',
 		`Major', `Minor' and `Trivial'\tabularnewline
-		\cline{4-4} 
+		\cline{2-4} 
 		&  &  & r: Research has shown that priority of issue affects resolution time
-		of bug fixes~\cite{MarkFixTime}. A Higher priority indicates the issue will be fixed faster
-		with log changes. \tabularnewline
+		of bug fixes~\cite{MarkFixTime}. A Higher priority indicates the
+		issue will be fixed faster with log changes. \tabularnewline
+		\hline 
+		& File ownership  & Numerical (0-1) & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
+		\cline{2-4} 
+		&  &  & r: The owner of the file is more likely to introduce stable logs than developers who have not edited the file before. \tabularnewline
 		\hline 
 	\end{tabular}\protect
-
 \end{table*}
 
+%To find the stability of logs in our studied systems, we extract code and log churn metrics from the Git repository and developer metrics from JIRA. We use code churn metrics because prior work has linked logs to development knowledge and issue reports~\cite{IanIcesm}.
 
 
-To find the stability of logs in our studied systems, we extract code and log churn metrics from the Git repository and developer metrics from JIRA. We use code churn metrics because prior work has linked logs to development knowledge and issue reports~\cite{IanIcesm}.
-
-Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We define each metric and the rationale behind the choice of each metric.  We collect the code and log churn metrics when a log is added into the studied system and track the log. If it is changed in subsequent revisions we flag the log as changed and record it. 
 
 
 %To build prediction models it is necessary to track the changes to logs within the time frame of our study. To achieve this we built a tool which tracks the changes made to each log.  
@@ -127,7 +146,7 @@ Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We
 
 \subsubsection*{\textbf{Model construction}}
 
-We build random forest models to explain the stability of logs in our studied systems. A random forest is a collection of largely uncorrelated decision trees in which the results of all trees are combined to form a generalized predictor~\cite{Albert2008424}. In our model the code, log and developer metrics are the explanatory variables and the dependent class variable is if the log is changed or not (i.e., 'False' for not changed and 'True' for changed).
+We build random forest models to explain the stability of logs in our studied systems. A random forest is a collection of largely uncorrelated decision trees in which the results of all trees are combined to form a generalized predictor~\cite{Albert2008424}. In our model the product and change metrics are the explanatory variables and the dependent class variable is if the log is changed or not (i.e., 'False' for not changed and 'True' for changed).
 
 Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the four construction steps (C1 to C4) for building a random forest model and evaluating the model. We adopt the statistical tool R to model our data and use the `RandomForest' package to generate the random forests.\\
 
@@ -199,20 +218,6 @@ We use the `boot' function from the `boot' package in R to generate bootstrap sa
 	\label{tba:ConfusionMatrix} 
 \end{table}
 
-%\begin{table}[tb]
-%	
-%	
-%	\begin{tabular}{>{\raggedright}p{0.45\columnwidth}|ll}
-%		\cline{1-3}     & \multicolumn{1}{c}{Predicted log is changed}  &  \multicolumn{1}{c}{Predicted log is not-changed}	   \\ \cline{1-3}   
-%		
-%		Actual log is changed      & TP (True Positive)       &  FN (False Negative )     \\
-%		
-%		Actual log is not-Changed    & FP (False Positive )      &    TN (True Negative)   \\ \cline{1-3}
-%	\end{tabular}
-%	\caption{Confusion Matrix}
-%	\label{tba:ConfusionMatrix}
-%\end{table}
-
 \textbf{
 \noindent \textsl{(C3 - Model evaluation)}}
 
@@ -264,112 +269,126 @@ Then, the values of the $X_{i}$th metric of which we want to find importance for
 We use the `importance' function defined in `RandomForest' package of R, to calculate the importance of each metric. We call the `importance' function each time during the bootstrapping process to obtain 1000 importance scores for each metric in our dataset. 	
 
 As we obtain 1000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are strong predictors of likelihood of log change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the `SK' function in the `ScottKnott' package of R and set significance threshold of 0.05 to cluster the metrics into different groups. 
-\begin{table}
-	\caption{The optimism reduced performance measures of the four projects}
+%\begin{table}
+
+%	\centering
+
+\begin{figure}[tb]
+	
 	\centering
-	\resizebox*{1\columnwidth}{0.3\columnwidth}{
-\begin{tabular}{|lllll|}
-	\hline 
-	Projects & Life Ray & ActiveMQ & Camel & CloudStack\tabularnewline
-	\hline 
-	\hline 
-	Precision & 0.91 & 0.90 & 0.93 & 0.89\tabularnewline
+	\subfloat{\includegraphics[width=0.49\columnwidth]{ActiveMQResults}\label{fig:f4}}
+	\hfill
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{CamelResults} }
+	\hfill
+		\centering
+		\subfloat{\includegraphics[width=0.49\columnwidth]{CloudStackResults}
+			\label{fig:f4}}
+		\hfill
+			\centering
+			\subfloat{\includegraphics[width=0.49\columnwidth]{LiferayResults}\label{fig:f4}}
+			\hfill
+%	\caption{Distribution of the number of developers responsible for changing a log}
+		\caption{The optimism reduced performance measures of the four projects}
+	\label{fig:optmisim}
 
-	Recall & 0.76 & 0.67 & 0.89 & 0.92\tabularnewline
+\end{figure}
 
-	F-Measure & 0.83 & 0.77 & 0.91 & 0.90\tabularnewline
 
-	Brier Score & 0.06 & 0.04 & 0.06 & 0.07\tabularnewline
-	\hline 
-\end{tabular}
-}
-\label{tba:optmisim}
-\end{table}
+%\label{tba:optmisim}
+%\end{table}
 
 
 \noindent \textbf{Results}
 
-\textbf{The random forest classifier achieves a precision of 0.89-0.93 and recall of 0.76-0.92 for our studied systems.} Table~\ref{tba:optmisim} shows the optimism-reduced values of	\textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. We find the recall for random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
+\textbf{The random forest classifier achieves a precision of 0.89-0.91 and recall of 0.71-0.91 for our studied systems.} Figure~\ref{fig:optmisim} shows the optimism-reduced values of	\textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. We find the recall for random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 \textbf{The random forest classifier outperforms random guessing.} The classifier achieves Brier scores between 0.04 and 0.07 across all projects. As the Brier score measure the total difference between the event and the forecast probability of the event, a perfect classifier  will have Brier score of 0 and perfect misfit classifier will have Brier score of 1 (predicts probability of log change when log not changed). This means lower the Brier score value, the better our random forest classifier. 
 
 \subsubsection*{\textbf{Important metrics for log stability}}
 
 
-We find that `Developer experience' is the most important factor for developer metrics. From Code Metrics we find that `SLOC', `Code Churn in Commit' and `\# of comments' are the important factors and from log metrics we find that `log density' is the important factor. Table~\ref{tba:Scott} shows the important factors of the predictor metrics, divided into distinct groups. If two or more metrics have similar importance values they are grouped together. The `+' or `-' sign following the predictor metric indicates if the metric has positive or negative effect on the stability of logs. 
+From Table~\ref{tba:Scott} we see that `file ownership', `SLOC', `log density', and `developer experience' are common across all the projects in our studied systems. 
 %The high importance of \emph{SLOC}, \emph{code churn in commit} and \emph{\# of comments} indicate that log stability 
 
 %% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-	\begin{table*}[t]
-		\protect\caption{The important values of the metrics (top 10), divided into homogeneous
-			groups by Scott-Knott clustering. The `+' and `-' signs signify positive
-			and negative correlation of the metric on log stability. }
-		
-		
-		\centering %
-			\resizebox*{1\textwidth}{0.26\textwidth}{
-\begin{tabular}{|llll|llll|}
-	\hline 
-	&  & \textbf{ Active MQ}  &  &  &  & \textbf{CloudStack} & \tabularnewline
-	\hline 
-	\textbf{Groups} & \textbf{Rank} & \textbf{Factors}  & \textbf{Importance}  & \textbf{Groups} & \textbf{Rank} & \textbf{Factors}  & \textbf{Importance} \tabularnewline
-	\hline 
-	\multirow{3}{*}{Developer Metrics} & 1  & \textbf{Developer experience}  & 0.144 -  & Developer Metrics & 1  & \textbf{Developer Experience}  & 0.073 - \tabularnewline
-	& 2  & Developer number  & 0.098 +  &  & 2  & \# of comments  & 0.064 - \tabularnewline
-	& 3  & Priority list  & 0.076 -  &  & 3  & Priority list  & 0.067 + \tabularnewline
-	\hline
-	\multirow{3}{*}{Log Metrics} & 1  & \textbf{Log text length}  & 0.103 +  & Log Metrics & 1  & \textbf{Log density}  & 0.063 - \tabularnewline
-	& 2  & \textbf{Log density}  & 0.082 +  &  & 2  & \textbf{Log text length}  & 0.039 + \tabularnewline
-	& 3  & Log revision count  & 0.067 +  &  & 3  & Log context  & 0.037 - \tabularnewline
-		\hline
-	\multirow{3}{*}{Code Metrics} & 1  & \textbf{SLOC}  & 0.097 +  & Code Metrics & 1  & \textbf{SLOC}  & 0.078 + \tabularnewline
-	& 2 & \textbf{Code churn in commit}  & 0.067 +  &  & 2 & \textbf{Code churn in commit}  & 0.056 + \tabularnewline
-	& 3 & \textbf{Variable Declared} & 0.023 +  &  & 3 &\textbf{ Variable declared}  & 0.042 + \tabularnewline
-	\hline 
-\end{tabular}
-	}
-				\resizebox*{1\textwidth}{0.26\textwidth}{
-			\centering %
-\begin{tabular}{|llll|llll|}
-	\hline 
-	&  & \textbf{Life Ray}  &  &  &  & \textbf{Camel}  & \tabularnewline
-	\hline 
-	\hline 
-	\textbf{Groups} & \textbf{Rank} & \textbf{Factors}  & \textbf{Importance}  & \textbf{Groups} & \textbf{Rank} & \textbf{Factors}  & \textbf{Importance} \tabularnewline
-	\hline 
-	\multirow{3}{*}{Developer Metrics} & 1  & Resolution time  & 0.162 -  & Developer Metrics & 1  & \textbf{ Developer experience}  & 0.147 - \tabularnewline
-	& 2  & \textbf{Developer experience}  & 0.156 -  &  & 2  & \# of comments  & 0.081 - \tabularnewline
-	& 3  & \# of comments  & 0.089 -  &  & 3  & Resolution time  & 0.078 - \tabularnewline
-		\hline
-	\multirow{3}{*} {Log Metric} & 1  & Log context  & 0.276 -  & Log Metrics & 1  & \textbf{Log text length} & 0.157 + \tabularnewline
-	& 2  & \textbf{Log density}  & 0.270 +  &  & 2  & Log variable count  & 0.086 + \tabularnewline
-	& 3  & Log level  & 0.097 -  &  & 3  & \textbf{Log density}  & 0.082 + \tabularnewline
-		\hline
-	\multirow{3}{*}{Code Metrics} & 1  & \textbf{SLOC}  & 0.143 +  & Code Metrics & 1  & \textbf{Code churn in commit} & 0.079 - \tabularnewline
-	& 2 & \textbf{Variable Declared} & 0.04+  &  & 2 & \textbf{SLOC}  & 0.077 + \tabularnewline
-	&  &  &  &  & 3 & \textbf{Variable Declared}  & 0.046 + \tabularnewline
-	\hline 
-\end{tabular}
-	}
-		\label{tba:Scott} 
+\begin{table*}[t]
+	\protect\protect\caption{The important values of the metrics (top 8), divided into homogeneous
+		groups by Scott-Knott clustering. The `+' sign signify positive
+		correlation of the metric on log stability i.e., increase in metric increases the likelhood of log change and vice-versa.  }
+	\centering
+		\begin{tabular}{|lll|lll|}
+			\hline 
+			& \textbf{ Active MQ}  &  &  & \textbf{CloudStack}  & \tabularnewline
+			\hline 
+			\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+			\hline 
+			1  & SLOC & 0.174 +  & 1  & Code churn in commit & 0.138 + \tabularnewline
+			2  & File ownership   & 0.162 +  & 2 & File ownership  & 0.136 + \tabularnewline
+			& Log variable count & 0.161 +  &  & Developer experience & 0.135 - \tabularnewline
+			3 & Developer experience & 0.140 +  & 3  & Log density  & 0.122 - \tabularnewline
+			4  & Log density & 0.120 -  & 4  & SLOC & 0.122 + \tabularnewline
+			5  & Variable Declared  & 0.090 -  & 5  & Log variable count & 0.113 + \tabularnewline
+			6  & Deleted count & 0.082 -  & 6  & Log text length & 0.102 + \tabularnewline
+			7  & Log level & 0.078 -  & 7  & Variable Declared  & 0.076 + \tabularnewline
+			8  & Log churn in commit & 0.060 +  & 8  & Type of log change & 0.063 + \tabularnewline
+			\hline 
+		\end{tabular} \\	
+			\centering	
+		\begin{tabular}{|lll|lll|}
+			\hline 
+			& \textbf{Life Ray}  &  &  & \textbf{Camel}  & \tabularnewline
+			\hline 
+			\hline 
+			\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+			\hline 
+			1  & Log density  & 0.152 -  & 1  & File ownership  & 0.207 + \tabularnewline
+			2  & File ownership  & 0.137 -  & 2  & Log density  & 0.175 - \tabularnewline
+			& Developer experience & 0.137 +  &   & Developer experience & 0.174 - \tabularnewline
+			3 & SLOC & 0.127 +  & 3  & SLOC & 0.168 + \tabularnewline
+			4  & Issue Id & 0.096 -  & 4 & Log variable count & 0.124 + \tabularnewline
+			5  & Variable Declared  & 0.093 +  & 5  & Log level & 0.116 - \tabularnewline
+			& Log variable count & 0.091 +  & 6  & Elapsed time & 0.109 - \tabularnewline
+			6  & Log level & 0.081 -  &   & Issue type & 0.108 + \tabularnewline
+			7 & Elapsed time & 0.072 + &   & Variable Declared  & 0.108 + \tabularnewline
+			\hline 
+		\end{tabular} \label{tba:Scott} 
 	\end{table*}
-	
 
 
 
-We find that \emph{log density} and \emph{log text length} are important metrics in our studied systems as shown in Table~\ref{tba:Scott}. We find \emph{log text length} has a positive correlation, implying that more text in a log results in a higher likelihood that a log will be changed. This may be because there are inconsistencies between logs and the actual needed information intended as shown by prior research~\cite{Characterizinglogs} and developers have to update logs to resolve the inconsistencies.
+We find that \emph{log density} and \emph{log variable count} are important metrics in our studied systems as shown in Table~\ref{tba:Scott}. We find that log density has negative correlation in all the studied systems. This suggests that when source code is well logged i.e., more logs per lines of code, the logs may communicate the necessary information making them more stable. Whereas, in files with fewer logs per lines of code, the logs have to be changed more to convey the necessary information.  We also find \emph{log variable count} has a positive correlation, implying that more text in a log results in a higher likelihood that a log will be changed. This may be because there are inconsistencies between logs and the actual needed information intended as shown by prior research~\cite{Characterizinglogs} and developers have to update logs to resolve the inconsistencies.
 
 
-% \emph{Log density} has a positive correlation on log change, in three of the studied systems. This is because, if a log in a file is changed often, there is higher chance of it getting changed again, than logs in file with no prior changes~\cite{hassan2008road}. 
-
-We find that \emph{SLOC}(source lines of code), \emph{Variable declared} and \emph{Code churn in commit} are strong predictors of log change, from \emph{Code churn} dimension across all projects. \emph{SLOC}  has positive correlation suggesting that logs in larger files have higher likelihood of getting changed. We find that \emph{Variable declared} has positive correlation which suggests that when developers add new variables in the commit there is a higher likelihood of log change as they may add or modify the log to output the new data.
+We find that \emph{SLOC}(source lines of code), \emph{Variable declared} are strong predictors of log change across all projects. \emph{SLOC}  has positive correlation suggesting that logs in larger files have higher likelihood of getting changed. We find that \emph{Variable declared} has positive correlation in three of the studied systems, which suggests that when developers add new variables in the commit there is a higher likelihood of log change as they may add or modify the log to output the new data.
 %, logs around those comments are less likely to get changed. 
 
-We find that \emph{developer experience} is a strong predictor of log change in all our models and it has negative correlation across all projects. This implies that logs are more likely to be changed by less experienced developers. We find that other metrics from the developer dimension are not consistent among the studied systems. This may be because each project might have different philosophy of development, for example we find that \emph{resolution time} has negative effect in Liferay and Camel but has positive effect in ActiveMQ. This suggests that logs are more likely to change in ActiveMQ when the resolution time of issue increases, but less likely in Liferay and Camel. 
+
+We find that \emph{file ownership} is a strong predict of log change and has positive correlation in three of the studied systems. This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. 
+
+We find that \emph{developer experience} is also a strong predictor of log change in all our models but the correlation is split within the projects. We find that in Cloudstack and Camel, developer experience has negative correlation on log change, where as in ActiveMQ and Liferay developer experience has positive correlation. The positive correlation may be because of strong code ownership seen ActiveMQ and liferay where two developer are responsible for over 50\% of the total commits within the projects. 
+
+%We find that positive correlation might be due strong code ownership in ActiveMQ and Liferay where two developers are responsible for over 50\% of the total commits, within these projects. The negative effect in ActiveMQ and Cloudstack suggests that logs written by more experienced developers are less likely to be changed. 
 
 
-\hypobox {Our Random Forest classifier achieves a precision of 0.89-0.93 and a recall of 0.76-0.92 across all studied systems. We find developer experience, SLOC, \# of comments and log density to be strong predictors of log change in our studied systems.}
+
+% This suggests that either (1) more experienced developers have logged the file increasing the stability of the logs or (2) less experienced developers have logged the file making logs unstable. 
+%
+%In these systems we find that, more logs are introduced by developers with less experience than developers greater experience. 
+
+
+%This may be because (1) logs that are added by less experience developers are less stable or (2) more experienced developers might not be as careful about logging as new developers.
+
+ 
+
+%
+% This implies that logs introduced by more experienced developers and are more likely to be changed.  This may be because the experienced developers may be more complacent than less experienced developers, who thoroughly log the code. 
+
+%We find that other metrics from the developer dimension are not consistent among the studied systems. This may be because each project might have different philosophy of development, for example we find that \emph{resolution time} has negative effect in Liferay and Camel but has positive effect in ActiveMQ. This suggests that logs are more likely to change in ActiveMQ when the resolution time of issue increases, but less likely in Liferay and Camel. 
+
+
+\hypobox {Our Random Forest classifier achieves a precision of0.89-0.91 and recall of 0.71-0.91 across all studied systems. We find file ownership, SLOC, developer experience and log density to be strong predictors of log change in our studied systems.}
 
 
 
