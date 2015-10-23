@@ -22,15 +22,15 @@ Research shows that only 40\% of the logs at execution level stays the same acro
 
 \textbf{RQ1:} \textbf{How much do logs change over time and why do the changes occur?}
 
-Based on our quantitative analysis of the studied systems we identify three categories of change frequency in logs. If a log is changed more than four times we categorize it as \textsl{`Frequently Changed'}, if it has one to three changes, it is categorized as \textsl{`Changed'} and if there are no changes made we categorize it as \textsl{`Never Changed'}. We find that in our studied systems, 20-80\% of the logs are changed at least once throughout the lifespan.
+Based on our quantitative analysis of the studied systems we identify three categories of change frequency in logs. If a log is changed more than four times we categorize it as \textsl{`Frequently Changed'}, if it has one to three changes, it is categorized as \textsl{`Changed'} and if there are no changes made we categorize it as \textsl{`Never Changed'}. We find that in our studied systems, 20-80\% of the logs are changed at least once throughout their lifespan.
 
 
 \textbf{RQ2:} \textbf{Can metrics from code, log and developer dimension help in explaining the stability of logs?}
 
-We collect the produce and change metrics from three dimensions namely code, log and developer information. Our \textsl{random forest} achieved an accuracy of 89\%-91\% and recall of 71\%-91\%, when predicting which logs have higher likelihood of getting changed. We also identify significant metrics from each of the three dimensions, that affect the stability of logs. We find  developer experience, source lines of code, file ownership, log density in the file are strong predictors in classifying if a log will change in the future. 
+We collect the product and change metrics from three dimensions namely code, log and developer information. Our \textsl{random forest} achieves an accuracy of 89\%-91\% and recall of 71\%-91\%, when predicting which logs have higher likelihood of getting changed. We also identify significant metrics from each of the three dimensions, that affect the stability of logs. We find  developer experience, source lines of code, file ownership, log density in the file are strong predictors in classifying if a log will change in the future. 
  
  
- Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
+% Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
  
 The rest of this paper is organized as follows. Section~\ref{Methodology} presents the methodology for gathering and extracting data for our study. Section~\ref{studyresults} presents the case studies and the results to answer the two research questions. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
  

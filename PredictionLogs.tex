@@ -13,25 +13,38 @@ In RQ1, we find that 45\% of logs are changed at-least once in three of out stud
 
 To identify the stability of logs we use product and change metrics collected from code, log and developer dimensions. Change metrics measure the changes to the system at the time of introduction of the log and product metrics measure the source code of the system. We use the git repository to extract the change metrics and product metrics for the studied systems. Table~\ref{tba:Taxonomy} lists all the metrics we collect for each dimension. We define each metric and the rationale behind the choice of each metric.  We use the product and process metrics because this data can be extracted from control version systems (CVS) easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the system to understand these metrics.\\
 \begin{table*}
-	\centering \protect\caption{Taxonomy of metrics considered for model construction}
-	
-	
+	\centering \protect\caption{Taxonomy of metrics considered for model construction}	
 	\label{tba:Taxonomy} %
-	\begin{tabular}{|c|l|c|>{\raggedright}p{1\columnwidth}|}
+	\begin{tabular}{|c|l|l|>{\raggedright}p{1\columnwidth}|}
 		\hline 
 		Dimension  & Metrics  & Values  & Definition (d) -- Rationale (r)\tabularnewline
 		\hline 
 		\hline 
 		\multirow{12}{*}{Change Metrics} & 
-			Log revision count
-	 & Numeric & d: The number of prior commits which had log changes. \tabularnewline
-		\cline{2-4} 
-		&  &  & r: This helps to identify if the file is prone to log changes.\tabularnewline
-		\cline{2-4} 
-			 & New File & Boolean (0 -1) & d: Check if the log is added in a new file (i.e., newly committed)\tabularnewline
-		\cline{2-4} 
-		&  &  & r: This helps to identify which logs where added later in subsequent
-		commits.\tabularnewline
+Log revision count	 & Numeric &
+	 d: The number of prior commits which had log changes. \tabularnewline
+		\cline{2-4} &  &  &
+	 r: This helps to identify if the file is prone to log changes.\tabularnewline
+		\cline{2-4} &
+Old Log	 & Boolean (0 -1) &
+d: Check if the log is added to the file after creation or it wad added when file was created. \tabularnewline
+\cline{2-4} &  &  &
+r: This helps to identify if the logs added into file after creation are changed more than logs added at creation of file. 	\tabularnewline
+\cline{2-4} &
+Is deleted	 & Boolean (0 -1) &
+d: Check if the log is deleted from the file \tabularnewline
+\cline{2-4} &  &  &
+r: Identify the logs which get deleted in the file after they are added 	\tabularnewline
+\cline{2-4} & 		
+Deleted count & Numerical &
+d: Number of commits from the time a log is introduced into the file till it is deleted (removed) from the file. \tabularnewline
+\cline{2-4} &  &  &
+r: Find out how long it takes before a log is removed from the file. \tabularnewline
+\cline{2-4} 
+& New File & Boolean (0 -1) & 
+	  d: Check if the log is added in a new file (i.e., newly committed)\tabularnewline
+		\cline{2-4} &  &  & 
+	  r: This helps to identify which logs where added later in subsequent commits.\tabularnewline
 		\cline{2-4} 
 		& Total revision count & Numeric & d: Total number of commits made to the file before the log is added.
 		This value is 0 for logs added in the initial commit but not for logs
@@ -60,7 +73,13 @@ To identify the stability of logs we use product and change metrics collected fr
 		\cline{2-4} 
 		&  &  & r: Prior research finds that logs are mostly used in assertion checks,
 		logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
-		\cline{2-4} 
+		\cline{2-4} &
+Log change type	 & Boolean (0 -1) &
+d: Check the type of log change the log has undergone before i.e., relocation, text-variable change, level change. \tabularnewline
+\cline{2-4} &  &  &
+r: This helps in removing the relocation changes from the dataset and check if logs that have changed once before undergo similar changes again.  	\tabularnewline
+\cline{2-4} 	
+ 
 		& Log variable count & Numerical & d: Number of variables logged.\tabularnewline
 		\cline{2-4} 
 		&  &  & r: Over 62\% of logs add new variables~\cite{Characterizinglogs}.
@@ -124,7 +143,7 @@ To identify the stability of logs we use product and change metrics collected fr
 		&  &  & r: Research has shown that priority of issue affects resolution time
 		of bug fixes~\cite{MarkFixTime}. A Higher priority indicates the
 		issue will be fixed faster with log changes. \tabularnewline
-		\hline 
+\cline{2-4} 
 		& File ownership  & Numerical (0-1) & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
 		\cline{2-4} 
 		&  &  & r: The owner of the file is more likely to introduce stable logs than developers who have not edited the file before. \tabularnewline
@@ -365,7 +384,7 @@ We find that \emph{SLOC}(source lines of code), \emph{Variable declared} are str
 %, logs around those comments are less likely to get changed. 
 
 
-We find that \emph{file ownership} is a strong predict of log change and has positive correlation in three of the studied systems. This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. 
+We find that \emph{file ownership} is a strong predict of log change and has positive correlation in three of the studied systems. This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. This is seen RQ1 Figure~\ref{fig:ChangedvsUnchangedlogs}, where in in three of the studied systems, the logs which change are introduced by developers who have lower ownership of a file. 
 
 We find that \emph{developer experience} is also a strong predictor of log change in all our models but the correlation is split within the projects. We find that in Cloudstack and Camel, developer experience has negative correlation on log change, where as in ActiveMQ and Liferay developer experience has positive correlation. The positive correlation may be because of strong code ownership seen ActiveMQ and liferay where two developer are responsible for over 50\% of the total commits within the projects. 
 

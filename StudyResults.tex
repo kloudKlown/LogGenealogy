@@ -73,7 +73,7 @@ After identifying the different types of log changes in the studied systems, we 
 
 \noindent \textbf{Results}
 
-\textbf{We find that developers change 20-80\% of the logs across our studied systems as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}}. Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed as shown in Table~\ref{tba:logchangeDistribution}. If a log is changed more than three times it is categorized as `Frequently Changed'. If it is changed fewer 1 to 3 times it is categorized under `changed' and if there is no changes made it is categorized under `Never Changed'. We see that a majority of logs never change in Life Ray and the logs in ActiveMQ and CloudStack are changed at-least once. This may be because Camel and Liferay have fewer logs per source code (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
+\textbf{We find that developers change 20-80\% of the logs across our studied systems as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}}. Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed as shown in Table~\ref{tba:logchangeDistribution}. If a log is changed more than three times it is categorized as `Frequently Changed'. If it is changed fewer 1 to 3 times it is categorized under `changed' and if there is no changes made it is categorized under `Never Changed'. We select three as the threshold as we observe that majority of logs only have 1 to 2 changes as seen in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. We see that a majority of logs never change in Life Ray and the logs in ActiveMQ and CloudStack are changed at-least once. This may be because Camel and Liferay have fewer logs per source code (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
 %{\suhas{ I have question Can i tell here that in RQ2 we find log density to be imporatnt factor in stability of logs ?? }}
 
 % are application layer software which  rely less on logs as they are middle-ware/application software, whereas ActiveMQ and CloudStack are service software.
@@ -96,7 +96,7 @@ After identifying the different types of log changes in the studied systems, we 
 \end{table*}
 
 
-We find that log relocation occurs more often than other types of log changes. We find that in all the studied systems log relocation occurs more than 49\%. As log relocations have no changes to the text or variables in logs, their impact on log processing tools is limited. Hence we exclude log relocation changes from our datasets. 
+We find that log relocation occurs more often than other types of log changes. We find that in all the studied systems log relocation occurs more than 49\%. As log relocations have no changes to the text or variables in logs, their impact on log processing tools is limited. Hence we exclude log relocation changes from our datasets and do not consider relocation changes for the classifier. 
 
 
 %From manually analyzing the changed logs, we identify five types of log changes (i.e., changes to verbosity levels, log context, logged variables, both context and variable and relocation of log).  Table~\ref{tba:logtype} shows their distributions. When there is overlapping of the different types of log changes, we categorize them as newly added log and track changes made to it.
