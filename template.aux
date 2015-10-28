@@ -6,10 +6,12 @@
 \citation{Yuan}
 \citation{IanWCRE}
 \citation{carasso2012exploring}
+\citation{xpolog}
 \citation{xu2013detecting}
 \citation{TanSalsa}
 \citation{Yuan}
 \citation{chukwa}
+\citation{IanWCRE}
 \citation{IanWCRE}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \newlabel{intro}{{I}{1}}
@@ -20,36 +22,28 @@
 \citation{EMSEIAN}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Methodology}{2}}
 \newlabel{Methodology}{{II}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces An overview of all studied systems\relax }}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Subject systems}{2}}
+\@writefile{lot}{\contentsline {table}{\numberline {I}{\ignorespaces An overview of all studied applications\relax }}{2}}
 \newlabel{tba:overviewsystems}{{I}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Study Approach}{2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}1}Extracting Code Evolution}{2}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}2}Identifying Log Changes}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Study Approach}{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}1}Extracting the change history }{2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}2}Identifying Log Changes}{2}}
 \citation{levenshteinratio}
-\citation{IanContextinformation}
-\citation{IanIcesm}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Overview of the data extraction and case study approach\relax }}{3}}
 \newlabel{fig:LGmethod}{{2}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}3}Tracking Log Changes}{3}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-A}4}Match JIRA to Log Changes}{3}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Study Results}{3}}
-\newlabel{studyresults}{{III}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Frequency of log changes in the studied systems.\relax }}{4}}
-\newlabel{fig:RQ1_Liferay_Camel_Logchangefreq}{{3}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Distribution of log changes in different projects\relax }}{5}}
-\newlabel{tba:logchangeDistribution}{{II}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Distribution of log changes in different projects\relax }}{5}}
-\newlabel{tba:logtype}{{III}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Flowchart to categorize the different types of log changes that occur\relax }}{5}}
-\newlabel{fig:Flowchart2}{{4}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Distribution of logs which are changed vs un-changed against the ownership of the developer introducing the log\relax }}{5}}
-\newlabel{fig:ChangedvsUnchangedlogs}{{5}{5}}
-\newlabel{fig:f1}{{6a}{5}}
-\newlabel{sub@fig:f1}{{(a)}{a}}
-\newlabel{fig:f2}{{6b}{5}}
-\newlabel{sub@fig:f2}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distribution of the number of developers responsible for changing a log\relax }}{5}}
-\newlabel{fig:NumberofDevelopers}{{6}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Flowchart to categorize the different types of log changes that occur\relax }}{3}}
+\newlabel{fig:Flowchart2}{{3}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}3}Tracking Log Changes}{3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {II-B}4}Categorize log changes}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Preliminary analysis}{4}}
+\newlabel{analysis}{{III}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Approach}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Results}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Frequency of log changes in the studied applications.\relax }}{4}}
+\newlabel{fig:RQ1_Liferay_Camel_Logchangefreq}{{4}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Distribution of logs which are changed vs un-changed against the ownership of the developer introducing the log\relax }}{4}}
+\newlabel{fig:ChangedvsUnchangedlogs}{{5}{4}}
+\citation{Albert2008424}
 \citation{Characterizinglogs}
 \citation{EMSEIAN}
 \citation{Characterizinglogs}
@@ -63,44 +57,48 @@
 \citation{Characterizinglogs}
 \citation{mcintosh2014impact}
 \citation{EMSEIAN}
-\citation{giger2010predicting}
-\citation{rahman2011ownership}
-\citation{EMSEIAN}
-\citation{MarkFixTime}
-\citation{Albert2008424}
 \citation{spearmanbook}
 \citation{pearsonbook}
 \citation{ShaneOLS}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Distribution of log changes in different projects\relax }}{5}}
+\newlabel{tba:logtype}{{II}{5}}
+\newlabel{fig:f2}{{6a}{5}}
+\newlabel{sub@fig:f2}{{(a)}{a}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Distribution of the number of developers responsible for changing a log\relax }}{5}}
+\newlabel{fig:NumberofDevelopers}{{6}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Case study}{5}}
+\newlabel{prediction}{{IV}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Approach}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Overview of Model construction(C) and flow of data in random forest generation\relax }}{5}}
+\newlabel{fig:ModelCreationLogGeanology}{{7}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Taxonomy of metrics considered for model construction\relax }}{6}}
+\newlabel{tba:Taxonomy}{{III}{6}}
 \citation{ShaneOLS}
 \citation{breiman1996bagging}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Overview of Model construction(C) and Evaluation\relax }}{6}}
-\newlabel{fig:ModelCreationLogGeanology}{{7}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Hierarchical clustering of variables according to Spearman’s $\rho $ in ActiveMQ\relax }}{6}}
-\newlabel{fig:SpearmanActiveMQ}{{8}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Taxonomy of metrics considered for model construction\relax }}{7}}
-\newlabel{tba:Taxonomy}{{IV}{7}}
 \citation{F-Measure}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Hierarchical clustering of variables according to Spearman’s $\rho $ in ActiveMQ\relax }}{7}}
+\newlabel{fig:SpearmanActiveMQ}{{8}{7}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  Overview of random forest generation in C2\relax }}{7}}
+\newlabel{fig:BootRF}{{9}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Confusion Matrix\relax }}{7}}
+\newlabel{tba:confusion}{{IV}{7}}
+\newlabel{f:precision}{{1}{7}}
+\newlabel{f:recall}{{2}{7}}
 \citation{wilks2011statistical}
 \citation{ShaneOLS}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces  Overview of random forest generation in C2\relax }}{8}}
-\newlabel{fig:BootRF}{{9}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Confusion Matrix\relax }}{8}}
-\newlabel{tba:ConfusionMatrix}{{V}{8}}
-\newlabel{f:precision}{{1}{8}}
-\newlabel{f:recall}{{2}{8}}
-\newlabel{f:Fmeasure}{{3}{8}}
-\newlabel{f:BS}{{4}{8}}
 \citation{Cluster1}
 \citation{Cluster2}
-\citation{Characterizinglogs}
-\newlabel{fig:f4}{{10a}{9}}
+\newlabel{f:Fmeasure}{{3}{8}}
+\newlabel{fig:f4}{{10a}{8}}
 \newlabel{sub@fig:f4}{{(a)}{a}}
-\newlabel{fig:f4}{{10c}{9}}
+\newlabel{fig:f4}{{10c}{8}}
 \newlabel{sub@fig:f4}{{(c)}{c}}
-\newlabel{fig:f4}{{10d}{9}}
+\newlabel{fig:f4}{{10d}{8}}
 \newlabel{sub@fig:f4}{{(d)}{d}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The optimism reduced performance measures of the four projects\relax }}{9}}
-\newlabel{fig:optmisim}{{10}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces The optimism reduced performance measures of the four projects\relax }}{8}}
+\newlabel{fig:optmisim}{{10}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Results}{8}}
+\citation{Characterizinglogs}
 \citation{JGLouMining}
 \citation{QFuanomaly}
 \citation{ConsoleLogs}
@@ -112,69 +110,66 @@
 \citation{Jiang:2008:AAA:1400155.1400158}
 \citation{JiangICSM2008}
 \citation{JiangICSM20092}
-\citation{Jiang:2010:ICS:1850000.1850068}
-\citation{IanContextinformation}
-\citation{Jiang:2009:UCP:1525908.1525912}
-\citation{Beschastnikh:2011:LEI:2025113.2025151}
-\citation{Characterizinglogs}
-\citation{Fu1}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces The importance values of the metrics (top 10), divided into homogeneous groups by Scott-Knott clustering. The `+' and `-' signs signifing positive and negative correlation of the metric on log stability. \relax }}{9}}
+\newlabel{tba:Scott}{{V}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Related Work}{9}}
+\newlabel{related}{{V}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-A}}Log analysis}{9}}
 \citation{TanSalsa}
 \citation{Yuan}
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces The important values of the metrics (top 8), divided into homogeneous groups by Scott-Knott clustering. The `+' sign signify positive correlation of the metric on log stability i.e., increase in metric increases the likelhood of log change and vice-versa. \relax }}{10}}
-\newlabel{tba:Scott}{{VI}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Related Work}{10}}
-\newlabel{related}{{IV}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Log Analysis}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Empirical Studies on Logs}{10}}
+\citation{Characterizinglogs}
+\citation{Fu1}
 \citation{EMSEIAN}
 \citation{PaperIanCIIII}
 \citation{IanGap}
 \citation{IanIcesm}
-\citation{EMSEIAN}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Threats to Validity}{11}}
-\newlabel{threats}{{V}{11}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}}
-\newlabel{conc}{{VI}{11}}
 \bibstyle{IEEEtran}
 \bibdata{Logreference}
 \bibcite{ConsoleLogs}{1}
 \bibcite{JGLouMining}{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-B}}Log tools}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {V-C}}Empirical Studies on Logs}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Threats to Validity}{10}}
+\newlabel{threats}{{VI}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {VII}Conclusion}{10}}
+\newlabel{conc}{{VII}{10}}
+\@writefile{toc}{\contentsline {section}{References}{10}}
 \bibcite{QFuanomaly}{3}
 \bibcite{Automatic}{4}
 \bibcite{Yuan}{5}
 \bibcite{IanWCRE}{6}
 \bibcite{carasso2012exploring}{7}
-\bibcite{xu2013detecting}{8}
-\bibcite{TanSalsa}{9}
-\bibcite{chukwa}{10}
-\bibcite{ihaka1996r}{11}
-\bibcite{EMSEIAN}{12}
-\bibcite{levenshteinratio}{13}
-\bibcite{IanContextinformation}{14}
-\bibcite{IanIcesm}{15}
-\bibcite{Characterizinglogs}{16}
-\bibcite{zhang2009investigation}{17}
-\bibcite{Fu1}{18}
-\bibcite{mcintosh2014impact}{19}
-\bibcite{giger2010predicting}{20}
-\bibcite{rahman2011ownership}{21}
-\bibcite{MarkFixTime}{22}
-\bibcite{Albert2008424}{23}
-\bibcite{spearmanbook}{24}
-\bibcite{pearsonbook}{25}
-\bibcite{ShaneOLS}{26}
-\bibcite{breiman1996bagging}{27}
-\bibcite{F-Measure}{28}
-\bibcite{wilks2011statistical}{29}
-\bibcite{Cluster1}{30}
-\bibcite{Cluster2}{31}
-\bibcite{Yuan:2010:SED:1736020.1736038}{32}
-\bibcite{Jiang:2008:AAA:1400155.1400158}{33}
-\bibcite{JiangICSM2008}{34}
-\bibcite{JiangICSM20092}{35}
-\bibcite{Jiang:2010:ICS:1850000.1850068}{36}
-\bibcite{Jiang:2009:UCP:1525908.1525912}{37}
-\bibcite{Beschastnikh:2011:LEI:2025113.2025151}{38}
-\bibcite{PaperIanCIIII}{39}
-\bibcite{IanGap}{40}
-\@writefile{toc}{\contentsline {section}{References}{12}}
+\bibcite{xpolog}{8}
+\bibcite{xu2013detecting}{9}
+\bibcite{TanSalsa}{10}
+\bibcite{chukwa}{11}
+\bibcite{ihaka1996r}{12}
+\bibcite{EMSEIAN}{13}
+\bibcite{levenshteinratio}{14}
+\bibcite{IanContextinformation}{15}
+\bibcite{IanIcesm}{16}
+\bibcite{Characterizinglogs}{17}
+\bibcite{zhang2009investigation}{18}
+\bibcite{Fu1}{19}
+\bibcite{mcintosh2014impact}{20}
+\bibcite{giger2010predicting}{21}
+\bibcite{rahman2011ownership}{22}
+\bibcite{MarkFixTime}{23}
+\bibcite{Albert2008424}{24}
+\bibcite{spearmanbook}{25}
+\bibcite{pearsonbook}{26}
+\bibcite{ShaneOLS}{27}
+\bibcite{breiman1996bagging}{28}
+\bibcite{F-Measure}{29}
+\bibcite{wilks2011statistical}{30}
+\bibcite{Cluster1}{31}
+\bibcite{Cluster2}{32}
+\bibcite{Yuan:2010:SED:1736020.1736038}{33}
+\bibcite{Jiang:2008:AAA:1400155.1400158}{34}
+\bibcite{JiangICSM2008}{35}
+\bibcite{JiangICSM20092}{36}
+\bibcite{Jiang:2010:ICS:1850000.1850068}{37}
+\bibcite{Jiang:2009:UCP:1525908.1525912}{38}
+\bibcite{Beschastnikh:2011:LEI:2025113.2025151}{39}
+\bibcite{PaperIanCIIII}{40}
+\bibcite{IanGap}{41}

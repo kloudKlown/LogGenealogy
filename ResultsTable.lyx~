@@ -1,4 +1,4 @@
-#LyX 2.1 created this file. For more info see http://www.lyx.org/
+#LyX file created by tex2lyx 2.1
 \lyxformat 474
 \begin_document
 \begin_header
@@ -7,7 +7,7 @@
 \maintain_unincluded_children false
 \language english
 \language_package none
-\inputencoding auto
+\inputencoding iso8859-15
 \fontencoding default
 \font_roman default
 \font_sans default
@@ -70,18 +70,32 @@
 \begin_body
 
 \begin_layout Standard
+
 \begin_inset Float table
 placement t
 wide true
 sideways false
 status open
 
-\begin_layout Plain Layout
+
+\begin_layout Standard
+
 \begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
 
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
 
 \backslash
 protect
@@ -92,12 +106,8 @@ protect
 
 \begin_inset Caption Standard
 
-\begin_layout Plain Layout
-The important values of the metrics (top 10), divided into homogeneous groups
- by Scott-Knott clustering.
- The `+' and `-' signs signify positive and negative correlation of the
- metric on log stability.
- 
+\begin_layout Standard
+The important values of the metrics (top 10), divided into homogeneous groups by Scott-Knott clustering. The `+' and `-' signs signify positive and negative correlation of the metric on log stability. 
 \end_layout
 
 \end_inset
@@ -105,12 +115,12 @@ The important values of the metrics (top 10), divided into homogeneous groups
 
 \end_layout
 
-\begin_layout Plain Layout
+\begin_layout Standard
+
 \begin_inset ERT
 status collapsed
 
 \begin_layout Plain Layout
-
 
 \backslash
 centering
@@ -124,7 +134,6 @@ status collapsed
 
 \begin_layout Plain Layout
 
-
 \backslash
 resizebox*{1
 \backslash
@@ -136,9 +145,9 @@ textwidth}{
 \end_inset
 
  
-\begin_inset Tabular
+\begin_inset Tabular 
 <lyxtabular version="3" rows="11" columns="6">
-<features rotate="0" tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -149,16 +158,12 @@ textwidth}{
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
  Active MQ
@@ -171,28 +176,20 @@ textwidth}{
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
-CloudStack
+Camel
 \series default
  
 \end_layout
@@ -202,10 +199,6 @@ CloudStack
 <cell alignment="none" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 </cell>
 </row>
@@ -213,7 +206,7 @@ CloudStack
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Rank
@@ -226,7 +219,7 @@ Rank
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Factors
@@ -239,7 +232,7 @@ Factors
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Importance
@@ -252,7 +245,7 @@ Importance
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Rank
@@ -265,7 +258,7 @@ Rank
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Factors
@@ -278,7 +271,7 @@ Factors
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Importance
@@ -293,7 +286,7 @@ Importance
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 1 
 \end_layout
 
@@ -302,10 +295,8 @@ Importance
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-SLOC
+\begin_layout Standard
+SLOC 
 \end_layout
 
 \end_inset
@@ -313,7 +304,7 @@ SLOC
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.174 + 
 \end_layout
 
@@ -322,7 +313,7 @@ SLOC
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 1 
 \end_layout
 
@@ -331,8 +322,8 @@ SLOC
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Code churn in commit
+\begin_layout Standard
+Ownership of file 
 \end_layout
 
 \end_inset
@@ -340,8 +331,8 @@ Code churn in commit
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.138 + 
+\begin_layout Standard
+0.207 + 
 \end_layout
 
 \end_inset
@@ -351,7 +342,7 @@ Code churn in commit
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 2 
 \end_layout
 
@@ -360,10 +351,8 @@ Code churn in commit
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Ownership of file
+\begin_layout Standard
+Ownership of file 
 \end_layout
 
 \end_inset
@@ -371,7 +360,7 @@ Ownership of file
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.162 + 
 \end_layout
 
@@ -380,8 +369,8 @@ Ownership of file
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-2
+\begin_layout Standard
+2 
 \end_layout
 
 \end_inset
@@ -389,127 +378,7 @@ Ownership of file
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Ownership of file
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.136 + 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Log variable count
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.161 + 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Developer experience
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.135 - 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Developer experience
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.140 + 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-1 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
+\begin_layout Standard
 Log density 
 \end_layout
 
@@ -518,8 +387,8 @@ Log density
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.122 - 
+\begin_layout Standard
+0.175 - 
 \end_layout
 
 \end_inset
@@ -529,19 +398,13 @@ Log density
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-4 
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Log density
+\begin_layout Standard
+Log variable count 
 \end_layout
 
 \end_inset
@@ -549,8 +412,8 @@ Log density
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.120 - 
+\begin_layout Standard
+0.161 + 
 \end_layout
 
 \end_inset
@@ -558,19 +421,13 @@ Log density
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-2 
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-SLOC
+\begin_layout Standard
+Developer experience 
 \end_layout
 
 \end_inset
@@ -578,8 +435,8 @@ SLOC
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.122 + 
+\begin_layout Standard
+0.174 - 
 \end_layout
 
 \end_inset
@@ -589,34 +446,7 @@ SLOC
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-5 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Variable Declared 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.090 - 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 3 
 \end_layout
 
@@ -625,8 +455,8 @@ Variable Declared
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log variable count
+\begin_layout Standard
+Developer experience 
 \end_layout
 
 \end_inset
@@ -634,8 +464,35 @@ Log variable count
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.113 + 
+\begin_layout Standard
+0.140 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+SLOC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.168 + 
 \end_layout
 
 \end_inset
@@ -645,8 +502,8 @@ Log variable count
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-6 
+\begin_layout Standard
+4 
 \end_layout
 
 \end_inset
@@ -654,8 +511,8 @@ Log variable count
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Deleted count
+\begin_layout Standard
+Log density 
 \end_layout
 
 \end_inset
@@ -663,8 +520,8 @@ Deleted count
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.082 - 
+\begin_layout Standard
+0.120 - 
 \end_layout
 
 \end_inset
@@ -672,8 +529,8 @@ Deleted count
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-1 
+\begin_layout Standard
+4 
 \end_layout
 
 \end_inset
@@ -681,8 +538,8 @@ Deleted count
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log text length
+\begin_layout Standard
+Log variable count 
 \end_layout
 
 \end_inset
@@ -690,8 +547,8 @@ Log text length
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.102 + 
+\begin_layout Standard
+0.124 + 
 \end_layout
 
 \end_inset
@@ -701,8 +558,8 @@ Log text length
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-7 
+\begin_layout Standard
+5 
 \end_layout
 
 \end_inset
@@ -710,34 +567,7 @@ Log text length
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log level
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.078 - 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-2 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 Variable Declared 
 \end_layout
 
@@ -746,8 +576,143 @@ Variable Declared
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.076 + 
+\begin_layout Standard
+0.090 - 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Log level 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.116 - 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Deleted count 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.082 - 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Elapsed time 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.109 - 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Log level 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.078 - 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Issue type 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.108 + 
 \end_layout
 
 \end_inset
@@ -757,7 +722,7 @@ Variable Declared
 <cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 8 
 \end_layout
 
@@ -766,8 +731,8 @@ Variable Declared
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log churn in commit
+\begin_layout Standard
+Log churn in commit 
 \end_layout
 
 \end_inset
@@ -775,7 +740,7 @@ Log churn in commit
 <cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.060 + 
 \end_layout
 
@@ -784,17 +749,13 @@ Log churn in commit
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-3 
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Type of log change
+\begin_layout Standard
+Variable Declared 
 \end_layout
 
 \end_inset
@@ -802,8 +763,8 @@ Type of log change
 <cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.063 + 
+\begin_layout Standard
+0.108 + 
 \end_layout
 
 \end_inset
@@ -818,7 +779,6 @@ Type of log change
 status collapsed
 
 \begin_layout Plain Layout
-
 }
 \end_layout
 
@@ -829,7 +789,6 @@ status collapsed
 status collapsed
 
 \begin_layout Plain Layout
-
 
 \backslash
 resizebox*{1
@@ -847,7 +806,6 @@ status collapsed
 
 \begin_layout Plain Layout
 
-
 \backslash
 centering
 \end_layout
@@ -857,10 +815,11 @@ centering
 
 \end_layout
 
-\begin_layout Plain Layout
-\begin_inset Tabular
+\begin_layout Standard
+
+\begin_inset Tabular 
 <lyxtabular version="3" rows="11" columns="6">
-<features rotate="0" tabularvalignment="middle">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
 <column alignment="left" valignment="top">
@@ -871,19 +830,15 @@ centering
 <cell alignment="left" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
-Life Ray
+CloudStack
 \series default
  
 \end_layout
@@ -893,28 +848,20 @@ Life Ray
 <cell alignment="left" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
 
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" topline="true" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
-Camel
+Life Ray
 \series default
  
 \end_layout
@@ -924,10 +871,6 @@ Camel
 <cell alignment="none" valignment="top" topline="true" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\end_layout
-
 \end_inset
 </cell>
 </row>
@@ -935,7 +878,7 @@ Camel
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Rank
@@ -948,7 +891,7 @@ Rank
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Factors
@@ -961,7 +904,7 @@ Factors
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Importance
@@ -974,7 +917,7 @@ Importance
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Rank
@@ -987,7 +930,7 @@ Rank
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Factors
@@ -1000,7 +943,7 @@ Factors
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 
 \series bold
 Importance
@@ -1015,7 +958,7 @@ Importance
 <cell alignment="left" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 1 
 \end_layout
 
@@ -1024,9 +967,34 @@ Importance
 <cell alignment="left" valignment="top" topline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+Code churn in commit 
+\end_layout
 
-\series bold
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.138 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 Log density 
 \end_layout
 
@@ -1035,37 +1003,64 @@ Log density
 <cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.152 - 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-1 
+\begin_layout Standard
+2 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" usebox="none">
+<cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Ownership of file
+\begin_layout Standard
+Ownership of file 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" topline="true" rightline="true" usebox="none">
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.207 + 
+\begin_layout Standard
+0.136 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Ownership of file 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.137 - 
 \end_layout
 
 \end_inset
@@ -1075,19 +1070,13 @@ Ownership of file
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-2 
-\end_layout
-
 \end_inset
 </cell>
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Ownership of file
+\begin_layout Standard
+Developer experience 
 \end_layout
 
 \end_inset
@@ -1095,8 +1084,8 @@ Ownership of file
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.137 - 
+\begin_layout Standard
+0.135 - 
 \end_layout
 
 \end_inset
@@ -1104,8 +1093,33 @@ Ownership of file
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-2 
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Developer experience 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.137 + 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1 
 \end_layout
 
 \end_inset
@@ -1113,9 +1127,7 @@ Ownership of file
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
+\begin_layout Standard
 Log density 
 \end_layout
 
@@ -1124,19 +1136,8 @@ Log density
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.175 - 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
+\begin_layout Standard
+0.122 - 
 \end_layout
 
 \end_inset
@@ -1144,87 +1145,7 @@ Log density
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-Developer experience
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.137 + 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-Developer experience
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.174 - 
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row>
-<cell alignment="left" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-3
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-
-\series bold
-SLOC
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.127 + 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
+\begin_layout Standard
 3 
 \end_layout
 
@@ -1233,10 +1154,8 @@ SLOC
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-
-\series bold
-SLOC
+\begin_layout Standard
+SLOC 
 \end_layout
 
 \end_inset
@@ -1244,8 +1163,8 @@ SLOC
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-0.168 + 
+\begin_layout Standard
+0.127 + 
 \end_layout
 
 \end_inset
@@ -1255,7 +1174,34 @@ SLOC
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+SLOC 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.122 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 4 
 \end_layout
 
@@ -1264,8 +1210,8 @@ SLOC
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Issue Id
+\begin_layout Standard
+Issue Id 
 \end_layout
 
 \end_inset
@@ -1273,35 +1219,8 @@ Issue Id
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.096 - 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-4
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Log variable count
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.124 + 
 \end_layout
 
 \end_inset
@@ -1311,7 +1230,34 @@ Log variable count
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Log variable count 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.113 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 5 
 \end_layout
 
@@ -1320,7 +1266,7 @@ Log variable count
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 Variable Declared 
 \end_layout
 
@@ -1329,46 +1275,19 @@ Variable Declared
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.093 + 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-5 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Log level
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.116 - 
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
- 
+\begin_layout Standard
+1 
 \end_layout
 
 \end_inset
@@ -1376,8 +1295,8 @@ Log level
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log variable count
+\begin_layout Standard
+Log text length 
 \end_layout
 
 \end_inset
@@ -1385,45 +1304,68 @@ Log variable count
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+0.102 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Log variable count 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 0.091 + 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-6 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Elapsed time
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.109 - 
-\end_layout
-
-\end_inset
-</cell>
 </row>
 <row>
 <cell alignment="left" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Variable Declared 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+0.076 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 6 
 \end_layout
 
@@ -1432,8 +1374,8 @@ Elapsed time
 <cell alignment="left" valignment="top" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Log level
+\begin_layout Standard
+Log level 
 \end_layout
 
 \end_inset
@@ -1441,35 +1383,8 @@ Log level
 <cell alignment="left" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
 0.081 - 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Issue type
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.108 + 
 \end_layout
 
 \end_inset
@@ -1479,8 +1394,8 @@ Issue type
 <cell alignment="left" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-7
+\begin_layout Standard
+3 
 \end_layout
 
 \end_inset
@@ -1488,8 +1403,8 @@ Issue type
 <cell alignment="left" valignment="top" bottomline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
-Elapsed time
+\begin_layout Standard
+Type of log change 
 \end_layout
 
 \end_inset
@@ -1497,35 +1412,35 @@ Elapsed time
 <cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Plain Layout
+\begin_layout Standard
+0.063 + 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Elapsed time 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
 0.072 +
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
- 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-Variable Declared 
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="left" valignment="top" bottomline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-0.108 + 
 \end_layout
 
 \end_inset
@@ -1540,7 +1455,6 @@ Variable Declared
 status collapsed
 
 \begin_layout Plain Layout
-
 }
 \end_layout
 
@@ -1554,6 +1468,504 @@ name "tba:Scott"
 \end_inset
 
  
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset Float table
+placement tbh
+wide false
+sideways false
+status open
+
+
+\begin_layout Standard
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+\backslash
+protect
+\end_layout
+
+\end_inset
+
+
+\begin_inset Caption Standard
+
+\begin_layout Standard
+An overview of all studied applications
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\begin_inset CommandInset label
+LatexCommand label
+name "tba:overviewsystems"
+
+\end_inset
+
+ 
+\begin_inset Tabular 
+<lyxtabular version="3" rows="9" columns="5">
+<features rotate="0" tabularvalignment="middle" tabularwidth="0pt">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Projects 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Liferay 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Camel 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ActiveMQ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+CloudStack 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Starting release 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+6.1.0-b3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1.6.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+4.1.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.1.3 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+End release 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+7.0.0-m3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.11.3 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5.9.0 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+4.2.0 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total # log lines 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1.8k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+6.1k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5.1k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+9.6k 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total # of releases 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+24 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+43 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+19 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+111 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total added code 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+3.9M 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+505k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+261k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+1.09M 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total deleted code 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.8M 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+174k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+114k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+750K 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total # added logs 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+10.4k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+5.1k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+4.5k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+24k 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Total # deleted logs 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+8.1k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.4k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2.3k 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+17k 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
 \end_layout
 
 \end_inset

@@ -1,44 +1,141 @@
-In this section, we present our study results by answering our research questions. For each question, we discuss the motivation behind it, the approach to answering it and finally the results obtained. 
-\\
+%In this section, we present our study results by answering our research questions. For each question, we discuss the motivation behind it, the approach to answering it and finally the results obtained. 
+%\\
+%
+%\noindent\textbf{RQ1:} \textbf{How much do logs change over time and why do the changes occur?}
+%\\
 
-\noindent\textbf{RQ1:} \textbf{How much do logs change over time and why do the changes occur?}
-\\
+%\noindent\textbf{Motivation}
 
-\noindent\textbf{Motivation}
+%Research has shown that logs evolve along with the code~\cite{IanContextinformation}. When logs are changed, the log  processing tools which are dependent on them also have to get updated. This results in costly maintenance effort. To understand the cost, we have to understand how frequent changes to logs are. Hence, we explore the frequency of changes to logs in our studied systems and why they are changed.\\
 
-Research has shown that logs evolve along with the code~\cite{IanContextinformation}. When logs are changed, the log  processing tools which are dependent on them also have to get updated. This results in costly maintenance effort. To understand the cost, we have to understand how frequent changes to logs are. Hence, we explore the frequency of changes to logs in our studied systems and why they are changed.\\
+%\noindent \textbf{Approach}
 
-\noindent \textbf{Approach}
 
-To find the frequency of log changes, we conduct a quantitative analysis on our studied systems. We use the tracked log data for each studied system as explained in Section~\ref{Methodology}. From each project, we select a random sample with 95\% confidence interval. We follow the same iterative process as in prior research~\cite{IanIcesm} to find how frequently logs change in our studied systems. \\
+%\begin{table*}
+%	\centering
+%	\caption{Distribution of log changes in different projects}
+%	\label{tba:logchangeDistribution}
+%	\begin{tabular}{l|>{\centering}p{.1\columnwidth}>{\centering}p{.01\columnwidth} 
+%			p{0.01\columnwidth} }
+%		\cline{1-4}  	\multicolumn{1}{|c}{Projects}    & \multicolumn{1}{|c}{Never Changed (\%) }  &  \multicolumn{1}{|c}{Changed (\%) }	   &  \multicolumn{1}{|c}{Frequently Changed (\%) }\\ \cline{1-4}   
+%		
+%		Life Ray      & 78.67     & 19.66 & 1.66           \\
+%		
+%		Camel      & 55.43    & 37.32 & 7.25            \\
+%		ActiveMq   & 34.78     & 62.02 & 3.20           \\
+%		CloudStack & 19.68     & 68.61 & 11.71          \\ \cline{1-4}
+%	\end{tabular}
+%\end{table*}
 
-When logs are changed, they can be changed in five possible ways namely:
-\begin{enumerate}
+\begin{table*}
+	\centering
+	\caption{Distribution of log changes in different projects}
+	\label{tba:logtype}
+	\begin{tabular}{l|llll}
+		\cline{1-5}  	\multicolumn{1}{|c}{Projects}    & \multicolumn{1}{|c}{ ActiveMQ }  &  \multicolumn{1}{|c}{ Camel}	   &  \multicolumn{1}{|c}{ Cloudstack }  & 
+		\multicolumn{1}{|c|}{ Liferay } \\ \cline{1-5}   
+		
+		Log relocation (\%)       & 20.05     & 20.80 &  53.32  & 49.42         \\
+		
+		Log text change (\%)      & 26.59    & 26.37 & 15.54    & 32.70       \\
+		Log variable change (\%)   & 53.18     & 52.75 & 31.08 &  16.75     \\
+		Change of log level (\%) & 0.18   & 0.08 & 0.04  &  1.13       \\ 
+%		Text and variable change (\%) & 2.33     & 6.39 & 22.0   &  30.59    \\ 
+\cline{1-5}
+	\end{tabular}
+\end{table*}
+
+
+Prior to performing our case study, we perform a preliminary analysis to evaluate how much logs change in the four studied applications.
+%present the results of our preliminary analysis on the log changes in the four studied systems. 
+\subsection{Approach}
+%\noindent \textsl{Approach\\}\\
+Using the tracked log changes, we look at how many times a single log can change in its lifetime. We use the tracked log data from Section~\ref{Methodology} to find the frequency of log changes in the studied applications. 
+
+
+
+%Next, we look how many times can a single log change it its lifetime. 
+
+
+\begin{figure}[tb]
+	\centering
+%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
+	\includegraphics[width=0.9\linewidth]{Percentageofchanges}
+	\caption{Frequency of log changes in the studied applications.}
+	\label{fig:RQ1_Liferay_Camel_Logchangefreq}
+\end{figure}
+
+
+
+%To find how frequently logs change, we conduct a quantitative analysis on the studied systems. We use the tracked log data for each studied system as explained in Section~\ref{Methodology}. From each project, we select a random sample with 95\% confidence interval. We follow the same iterative process as in prior research~\cite{IanIcesm} to find how frequently logs change in our studied systems. 
+
+
+\subsection{Results}
+
+\textbf{We find that developers change 45\%-55\% of the logs across our studied applications as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}}. This suggests that log change extensively throughout the lifetime of an application which can affect the log processing tools
+
+Next, we look at the different types of log changed which occur in our studied applications. We find that log relocation occurs more often than other types of log changes in all of the studied applications. We find that log relocation occurs between 20\%-50\% as seen in Table~\ref{tba:logtype}. As log relocations have no changes to the text or variables in logs, their effect on log processing tools is limited. Hence we exclude log relocation changes from our datasets and non-relocation changes for the random forest classifier. 
+
+%Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed as shown in Table~\ref{tba:logchangeDistribution}. If a log is changed more than four times it is categorized as `Frequently Changed'. If it is changed 1 to 3 times it is categorized under `Changed' and if it did not change it is categorized under `Never Changed'. We select four as the threshold as we observe that majority of logs only have 1 to 2 changes as seen in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. We see that the majority of logs never change in Liferay and the majority of logs in ActiveMQ and CloudStack are changed atleast once. This may be because Liferay has fewer logs per source code file (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
+
+
+
+After identifying the frequency of changes within the studied applications, we find the number of the developers responsible for the log changes and also if they own the file which contains the log. We use the committer name available from the `git log' to sum the number of developers who change a log. To find if a developer owns a file we calculate the ratio of number of lines written by him to the total lines of code using the `blame' command available in git. This is recursively done till the first commit of the file and the contribution of the developer at each commit is recorded.  We take the mean average of his contribution across all commits to obtain his ownership metric for the file. 
+
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
+	\caption{Distribution of logs which are changed vs un-changed against the ownership of the developer introducing the log}
+	\label{fig:ChangedvsUnchangedlogs}
+\end{figure}
+\begin{figure}[tb]
 	
-	\item { \textbf{Log relocation:} } The log is kept intact but moved to a different location in the file because of context changes (code around the log is changed).
-	
-	\item \textbf{Text change:} The text (i.e., static content) of log is changed. 
-	
-	\item\textbf{Variable change:} One or more variables in the log are changed (added, deleted or modified).
-	
-	\item \textbf{Change of log level:} The verbosity level of a log is changed.
-	
-	\item  \textbf{Text and variable change:} Both text and variables in the logs are changed. This is generally done when developers provide more context information, i.e, text and add/modify the relevant variables in a log.
-	
-\end{enumerate}
+	\centering
+%	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
+%	\hfill
+	\subfloat{\includegraphics[width=1\linewidth]{NumberofDevelopers}\label{fig:f2}}
+	\caption{Distribution of the number of developers responsible for changing a log}
+	\label{fig:NumberofDevelopers}
+\end{figure}
 
-%for several reasons. To understand the different types of log changes we perform a manual analysis on the changed logs. We select a random sample from each project such that the sample achieves 95\% confidence interval. After identifying the different types of log changes we automate the process of identification using our scripts. Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes. For example,consider the logs shown below. 
+
+
+\textbf{We see that logs are changed by developers who have little ownership over the file.} From Figure~\ref{fig:ChangedvsUnchangedlogs} we see that in three of the studied applications logs are changed by developers who have less ownership on files than the developers who introduce the log. We also find that in one of the studied applications the majority of logs are changed by two or more developers as seen in Figure~\ref{fig:NumberofDevelopers}. These results suggest that logs are readily changed by developers who access the file but do not have strong ownership characteristics.
+
+% we see that in two of the studied systems, a single developer is responsible for majority of the log changes. 
+
+%This suggests that logs can be 
+% do not have strong ownership characteristics and can be changed by developers than one introducing the logs.
+
+\hypobox {45\%-55\% of the logs are changed atleast once in the studied applications. We find that over 51\% of the changes are made to the static content, variable content and log level. We also find that logs are changed by developers who have little ownership of the file and in two of the projects we find the majority of logs are changed by two or more developers.}
+
+%When logs are changed, they can be changed in five possible ways namely:
+%\begin{enumerate}
+%	
+%	\item { \textbf{Log relocation:} } The log is kept intact but moved to a different location in the file because of context changes (code around the log is changed).
+%	
+%	\item \textbf{Text change:} The text (i.e., static content) of log is changed. 
+%	
+%	\item\textbf{Variable change:} One or more variables in the log are changed (added, deleted or modified).
+%	
+%	\item \textbf{Change of log level:} The verbosity level of a log is changed.
+%	
+%	\item  \textbf{Text and variable change:} Both text and variables in the logs are changed. This is generally done when developers provide more context information, i.e, text and add/modify the relevant variables in a log.
+%	
+%\end{enumerate}
+%
+%%for several reasons. To understand the different types of log changes we perform a manual analysis on the changed logs. We select a random sample from each project such that the sample achieves 95\% confidence interval. After identifying the different types of log changes we automate the process of identification using our scripts. Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes. For example,consider the logs shown below. 
 
 
 %We see that there can be only four possible ways in which developers change logs namely:
+%
+%To automate the process of categorizing log changes into these categories, we first remove the logging method (i.e, LOG) and the log level (i.e, info) from the logs. We then compute the \textsl{Levenshtein ratio} between each term within the parentheses. In the example below we find that `+ Integer.toString(listenPort)' has \textsl{Levenshtein ratio} of 1, implying they are identical and the \textsl{Levenshtein ratio} between `starting HBase HsHA Thrift server on' and `starting HBase' is 0.56. This suggests there is some similarity between the two strings and the variable is constant which implies its a text change. (Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes.
+%
+%\hypobox {+ LOG.info(``starting HBase HsHA Thrift server on " + Integer.toString(listenPort)); }
+%
+%\hypobox {- LOG.info(``starting HBase " + implType.simpleClassName() +`` server on " + Integer.toString(listenPort)); }
 
-To automate the process of categorizing log changes into these categories, we first remove the logging method (i.e, LOG) and the log level (i.e, info) from the logs. We then compute the \textsl{Levenshtein ratio} between each term within the parentheses. In the example below we find that `+ Integer.toString(listenPort)' has \textsl{Levenshtein ratio} of 1, implying they are identical and the \textsl{Levenshtein ratio} between `starting HBase HsHA Thrift server on' and `starting HBase' is 0.56. This suggests there is some similarity between the two strings and the variable is constant which implies its a text change. (Figure~\ref{fig:Flowchart2} highlights the process of categorizing the log changes.
 
-\hypobox {+ LOG.info(``starting HBase HsHA Thrift server on " + Integer.toString(listenPort)); }
-
-\hypobox {- LOG.info(``starting HBase " + implType.simpleClassName() +`` server on " + Integer.toString(listenPort)); }
-
-After identifying the different types of log changes in the studied systems, we find the number of the developers responsible for the log changes and also if they own the file which contains the log. We use the committer name available from the `git log' to sum the number of developers who change a log. To find if a developer owns a file we calculate the ratio of number of lines written by him to the total lines of code using the `blame' command available in git. This is recursively done till the first commit of the file and the contribution of the developer at each commit is recorded.  We take the mean average of his contribution across all commits to obtain his ownership metric for the file. 
 
 % ownership of file using the `blame' command available in git i.e.., if two developers are responsible for a file, but one has written 100 of the 150 lines of code, we calculate his 
 %\begin{enumerate}
@@ -55,91 +152,18 @@ After identifying the different types of log changes in the studied systems, we 
 %	
 %\end{enumerate}
 % 
-\begin{figure}[tb]
-	\centering
-	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
-	\includegraphics[width=0.7\linewidth]{RQ1_Cloud_Active_Logchangefreq}
-	\caption{Frequency of log changes in the studied systems.}
-	\label{fig:RQ1_Liferay_Camel_Logchangefreq}
-\end{figure}
-\begin{figure}[tb]
-	\centering
-	\includegraphics[width=0.75\linewidth]{Flowchart2}
-	\caption{Flowchart to categorize the different types of log changes that occur}
-	\label{fig:Flowchart2}
-\end{figure}
+
+%\noindent \textbf{Results}
 
 
-
-\noindent \textbf{Results}
-
-\textbf{We find that developers change 20-80\% of the logs across our studied systems as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}}. Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed as shown in Table~\ref{tba:logchangeDistribution}. If a log is changed more than three times it is categorized as `Frequently Changed'. If it is changed fewer 1 to 3 times it is categorized under `changed' and if there is no changes made it is categorized under `Never Changed'. We select three as the threshold as we observe that majority of logs only have 1 to 2 changes as seen in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. We see that a majority of logs never change in Life Ray and the logs in ActiveMQ and CloudStack are changed at-least once. This may be because Camel and Liferay have fewer logs per source code (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
 %{\suhas{ I have question Can i tell here that in RQ2 we find log density to be imporatnt factor in stability of logs ?? }}
 
 % are application layer software which  rely less on logs as they are middle-ware/application software, whereas ActiveMQ and CloudStack are service software.
 
 
-\begin{table*}
-	\centering
-	\caption{Distribution of log changes in different projects}
-	\label{tba:logchangeDistribution}
-	\begin{tabular}{l|>{\centering}p{.1\columnwidth}>{\centering}p{.01\columnwidth} 
-			p{0.01\columnwidth} }
-	\cline{1-4}  	\multicolumn{1}{|c}{Projects}    & \multicolumn{1}{|c}{Never Changed (\%) }  &  \multicolumn{1}{|c}{Changed (\%) }	   &  \multicolumn{1}{|c}{Frequently Changed (\%) }\\ \cline{1-4}   
-
-		Life Ray      & 78.67     & 19.66 & 1.66           \\
-		
-		Camel      & 55.43    & 37.32 & 7.25            \\
-		ActiveMq   & 34.78     & 62.02 & 3.20           \\
-		CloudStack & 19.68     & 68.61 & 11.71          \\ \cline{1-4}
-	\end{tabular}
-\end{table*}
-
-
-We find that log relocation occurs more often than other types of log changes. We find that in all the studied systems log relocation occurs more than 49\%. As log relocations have no changes to the text or variables in logs, their impact on log processing tools is limited. Hence we exclude log relocation changes from our datasets and do not consider relocation changes for the classifier. 
 
 
 %From manually analyzing the changed logs, we identify five types of log changes (i.e., changes to verbosity levels, log context, logged variables, both context and variable and relocation of log).  Table~\ref{tba:logtype} shows their distributions. When there is overlapping of the different types of log changes, we categorize them as newly added log and track changes made to it.
-\begin{figure}[tb]
-\centering
-\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
-\caption{Distribution of logs which are changed vs un-changed against the ownership of the developer introducing the log}
-\label{fig:ChangedvsUnchangedlogs}
-\end{figure}
-\begin{figure}[tb]
-	
-	\centering
-	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
-	\hfill
-	\subfloat{\includegraphics[width=0.5\linewidth]{CL_numberofDevelopers}\label{fig:f2}}
-	\caption{Distribution of the number of developers responsible for changing a log}
-	\label{fig:NumberofDevelopers}
-\end{figure}
 
-\begin{table*}[t]
-	\centering
-	\caption{Distribution of log changes in different projects}
-	\label{tba:logtype}
-	\begin{tabular}{l|llll}
-		\cline{1-5}  	\multicolumn{1}{|c}{Projects}    & \multicolumn{1}{|c}{ Life Ray }  &  \multicolumn{1}{|c}{ Cloud Stack}	   &  \multicolumn{1}{|c}{ Active-MQ }  & 
-		 \multicolumn{1}{|c|}{ Camel } \\ \cline{1-5}   
-		
-		Log relocation (\%)       & 73.5     & 78.85 &  63.27  & 49.72         \\
-		
-		Log text change (\%)      & 20.11    & 6.37 & 5.97    & 7.59       \\
-		Log variable change (\%)   & 3.10     & 7.21 & 6.91 &  8.29     \\
-		Change of log level (\%) & 0.87   & 1.15 & 1.76  &  3.79       \\ 
-		Text and variable change (\%) & 2.33     & 6.39 & 22.0   &  30.59    \\ \cline{1-5}
-	\end{tabular}
-\end{table*}
-
-\textbf{We see that logs are changed by developers who have little ownership over the file.} From Figure~\ref{fig:ChangedvsUnchangedlogs} we see that in three of the studied systems logs are changed by developers who have lesser ownership on files than the developers who introduce the log. We also find that in two of the studied systems majority of logs are changed by two developers as seen in Figure~\ref{fig:NumberofDevelopers}. This results suggest that logs are readily changed by developers who access the file and do not have strong ownership characteristics.
-
-% we see that in two of the studied systems, a single developer is responsible for majority of the log changes. 
-
-%This suggests that logs can be 
-% do not have strong ownership characteristics and can be changed by developers than one introducing the logs.
-
-\hypobox { 45\% of the logs are changed atleast once in three of our studied systems. We find that over 49\% of these log changes are due to log relocation. The changes are made to the text (i.e., static content), variable and log level. This suggests that developers change logs extensively throughout the lifecyle of a software and developers might dedicate significant amount of time to update and maintain logs}
 %	We find that about 3-11 \% of logs are changed frequently. This suggests that log processing tools which run on these systems need constant maintenance from developers
 

@@ -58,6 +58,11 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
 D.~Carasso, ``Exploring splunk,'' \emph{published by CITO Research, New York,
   USA, ISBN}, pp. 978--0, 2012.
 
+\bibitem{xpolog}
+\BIBentryALTinterwordspacing
+Xpolog. [Online]. Available: \url{http://www.xpolog.com/.}
+\BIBentrySTDinterwordspacing
+
 \bibitem{xu2013detecting}
 X.~Xu, I.~Weber, L.~Bass, L.~Zhu, H.~Wada, and F.~Teng, ``Detecting cloud
   provisioning errors using an annotated process model,'' in \emph{Proceedings
