@@ -1,28 +1,25 @@
-\begin{figure*}
-	\centering
-	\includegraphics[width=1\textwidth,
-	height=.20\textwidth]{LogGenalogyMethdology}
-	\caption{Overview of the data extraction and case study approach}
-	\label{fig:LGmethod}
-\end{figure*}
+
 
 In this paper we aim to get a better understanding of the unstable logs in an application so that we can improve the maintenance of log processing tools. In this section we present our rationale for selecting the applications we studied and present our data extraction and analysis approach.
 
 \subsection{Subject systems}
-We evaluate our approach through a case study on four open source applications. We select these projects on two criteria namely .
+We evaluate our approach through a case study on four open source applications. We select these projects on the following two criteria:
 \begin{itemize}
-	\item \textbf{Log usage -} We pick applications which have extensive logging in their source code. This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
-	\item \textbf{Large commit history -} We pick applications which have large user base and commit history to identify and track the log changes across multiple releases. 
+	\item \textbf{Log usage -} We select applications that make use of extensive logging in their source code. 
+%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
+	\item \textbf{Project activity -} We pick applications which have a large user base and commit history to identify and track the log changes across multiple releases. 
 \end{itemize}
 
-To find the number of logs present in a application we `grep' command to recursively search all lines of code within the `.java' files. Next, using git log we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache git repository which fit these criteria: ActiveMQ, Camel, CloudStack  and Liferay. Table~\ref{tba:overviewsystems} presents an overview of the applications.
+To find the number of logs present in an application we `grep' to search all lines of code within the `.java' files. Next, using git log we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache git repository which fit these criteria: ActiveMQ, Camel, CloudStack  and Liferay. Table~\ref{tba:overviewsystems} presents an overview of the applications.
 
 
 % which had more than 10,000 commits. We also verify if the projects utilize a bug tracking system like 'JIRA' or `Bugzilla' because, this helps to tag commits to specific development activities (i.e., bug fix, improvement, new-features). We use the `grep' command to recursively search for all log lines within `.java' files in the latest release of each project in the cloned repositories. The four open source projects are: Liferay, Camel, ActiveMQ and CloudStack. All studied systems have extensive system logs and Table~\ref{tba:overviewsystems} presents an overview of the systems.
 
-\textbf{ActiveMQ}\footnote[1]{http://activemq.apache.org/}: ActiveMQ is an open source message broker and integration patterns server. We covered ActiveMQ release 4.1.1 to 5.9.0 which cover more than 6 years of development from 2007 to 2013.
+\textbf{ActiveMQ}\footnote[1]{http://activemq.apache.org/} is an open source message broker and integration patterns server.
 
-\textbf{Camel}\footnote[2]{http://camel.apache.org/}: Camel is an open source integration platform based on enterprise integration patterns. We analyze Camel release 1.6 to 2.11.3 which cover more than five years of development from 2009 to 2013. 
+% We covered ActiveMQ release 4.1.1 to 5.9.0 which cover more than 6 years of development from 2007 to 2013.
+
+\textbf{Camel}\footnote[2]{http://camel.apache.org/} is an open source integration platform based on enterprise integration patterns. We analyze Camel release 1.6 to 2.11.3 which cover more than five years of development from 2009 to 2013. 
 
 \begin{table}[tbh]
 	\centering \protect\protect\caption{An overview of all studied applications}
@@ -46,10 +43,13 @@ To find the number of logs present in a application we `grep' command to recursi
 \end{table}
 
 
-\textbf{CloudStack}\footnote[3]{https://cloudstack.apache.org/}: Apache CloudStack is open source software designed to deploy and manage large networks of virtual machines, as a highly available, highly scalable Infrastructure-as-a-Service (IaaS) cloud computing platform. We covered CloudStack release 2.1.3 to 4.20 which cover more than 3 year of development from 2010 to 2014.
+\textbf{CloudStack}\footnote[3]{https://cloudstack.apache.org/} is open source software designed to deploy and manage large networks of virtual machines. 
+%as a highly available, highly scalable Infrastructure-as-a-Service (IaaS) cloud computing platform. We covered CloudStack release 2.1.3 to 4.20 which cover more than 3 year of development from 2010 to 2014.
 
 
-\textbf{Liferay}\footnote[4]{http://www.liferay.com/}:  Liferay is a free and open source enterprise project written in Java. It provides platform features which are used in development of websites and portals. We study the releases from 6.1.0 to 7.0.0-m3 which cover more than three years of development from 2010 to 2014
+\textbf{Liferay}\footnote[4]{http://www.liferay.com/} is an open source software to deploy websites and portals. 
+
+% is a free and open source enterprise project written in Java. It provides platform features which are used in development of websites and portals. We study the releases from 6.1.0 to 7.0.0-m3 which cover more than three years of development from 2010 to 2014
 % We select liferay as it is one of the leading platforms for platform development~\cite{LiferayGartner} and has growing user base~\cite{LiferayUser}.
 %  It also has an extensive issue tracking system in JIRA which helps in categorizing the commits as bug fixes, improvements, .
   
@@ -110,6 +110,8 @@ If the added log does not match any log in our initial set, it is considered as 
 
 
 %\subsubsection{Match JIRA to Log Changes}
+
+
 
 \subsubsection{Categorize log changes}
 

@@ -98,18 +98,15 @@ M.~Mednis and M.~K. Aurich, ``Application of string similarity ratio and edit
   models,'' \emph{Biosystems and Information technology}, vol.~1, no.~1, pp.
   14--18, 2012.
 
-\bibitem{IanContextinformation}
-W.~Shang, Z.~M. Jiang, H.~Hemmati, B.~Adams, A.~E. Hassan, and P.~Martin,
-  ``Assisting developers of big data analytics applications when deploying on
-  hadoop clouds,'' in \emph{ICSE'13: Proceedings of the 2013 International
-  Conference on Software Engineering}, ser. ICSE '13.\hskip 1em plus 0.5em
-  minus 0.4em\relax Piscataway, NJ, USA: IEEE Press, 2013, pp. 402--411.
-
-\bibitem{IanIcesm}
-W.~Shang, M.~Nagappan, A.~E. Hassan, and Z.~M. Jiang, ``Understanding log lines
-  using development knowledge,'' in \emph{ICSME '14: Proceedings of the
-  International Conference on Software Maintenance and Evolution,}.\hskip 1em
-  plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 21--30.
+\bibitem{Albert2008424}
+\BIBentryALTinterwordspacing
+J.~Albert and E.~Aliu, ``Implementation of the random forest method for the
+  imaging atmospheric cherenkov telescope \{MAGIC\},'' \emph{Nuclear
+  Instruments and Methods in Physics Research Section A: Accelerators,
+  Spectrometers, Detectors and Associated Equipment}, vol. 588, no.~3, pp. 424
+  -- 432, 2008. [Online]. Available:
+  \url{http://www.sciencedirect.com/science/article/pii/S0168900207024059}
+\BIBentrySTDinterwordspacing
 
 \bibitem{Characterizinglogs}
 D.~Yuan, S.~Park, and Y.~Zhou, ``Characterizing logging practices in
@@ -129,40 +126,16 @@ Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where
   \emph{ICSE Companion '14: Proceedings of the 36th International Conference on
   Software Engineering,}, pp. Pages 24--33.
 
-\bibitem{mcintosh2014impact}
-S.~McIntosh, Y.~Kamei, B.~Adams, and A.~E. Hassan, ``The impact of code review
-  coverage and code review participation on software quality: A case study of
-  the qt, vtk, and itk projects,'' in \emph{Proceedings of the 11th Working
-  Conference on Mining Software Repositories}.\hskip 1em plus 0.5em minus
-  0.4em\relax ACM, 2014, pp. 192--201.
-
-\bibitem{giger2010predicting}
-E.~Giger, M.~Pinzger, and H.~Gall, ``Predicting the fix time of bugs,'' in
-  \emph{Proceedings of the 2nd International Workshop on Recommendation Systems
-  for Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2010,
-  pp. 52--56.
-
 \bibitem{rahman2011ownership}
 F.~Rahman and P.~Devanbu, ``Ownership, experience and defects: a fine-grained
   study of authorship,'' in \emph{Proceedings of the 33rd International
   Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2011, pp. 491--500.
 
-\bibitem{MarkFixTime}
-L.~Marks, Y.~Zou, and A.~E. Hassan, ``Studying the fix-time for bugs in large
-  open source projects,'' in \emph{Proceedings of the 7th International
-  Conference on Predictive Models in Software Engineering}.\hskip 1em plus
-  0.5em minus 0.4em\relax ACM, 2011, p.~11.
-
-\bibitem{Albert2008424}
-\BIBentryALTinterwordspacing
-J.~Albert and E.~Aliu, ``Implementation of the random forest method for the
-  imaging atmospheric cherenkov telescope \{MAGIC\},'' \emph{Nuclear
-  Instruments and Methods in Physics Research Section A: Accelerators,
-  Spectrometers, Detectors and Associated Equipment}, vol. 588, no.~3, pp. 424
-  -- 432, 2008. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S0168900207024059}
-\BIBentrySTDinterwordspacing
+\bibitem{correlationBook}
+J.~Cohen, P.~Cohen, S.~G. West, and L.~S. Aiken, \emph{Applied multiple
+  regression/correlation analysis for the behavioral sciences}.\hskip 1em plus
+  0.5em minus 0.4em\relax Routledge, 2013.
 
 \bibitem{spearmanbook}
 \BIBentryALTinterwordspacing
@@ -233,21 +206,6 @@ Z.~M. Jiang, A.~Avritzer, E.~Shihab, A.~E. Hassan, and P.~Flora, ``An
   1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
   pp. 131--140, 2010.
 
-\bibitem{Jiang:2009:UCP:1525908.1525912}
-W.~Jiang, C.~Hu, S.~Pasupathy, A.~Kanevsky, Z.~Li, and Y.~Zhou, ``Understanding
-  customer problem troubleshooting from storage system logs,'' in \emph{FAST
-  '09: Proceedings of the 7th Conference on File and Storage
-  Technologies}.\hskip 1em plus 0.5em minus 0.4em\relax Berkeley, CA, USA:
-  USENIX Association, 2009, pp. 43--56.
-
-\bibitem{Beschastnikh:2011:LEI:2025113.2025151}
-I.~Beschastnikh, Y.~Brun, S.~Schneider, M.~Sloan, and M.~D. Ernst, ``Leveraging
-  existing instrumentation to automatically infer invariant-constrained
-  models,'' in \emph{Proceedings of the 19th ACM SIGSOFT Symposium and the 13th
-  European Conference on Foundations of Software Engineering}, ser. ESEC/FSE
-  '11.\hskip 1em plus 0.5em minus 0.4em\relax New York, NY, USA: ACM, 2011, pp.
-  267--277.
-
 \bibitem{PaperIanCIIII}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
   P.~Flora, ``An exploratory study of the evolution of communicated information
@@ -258,5 +216,11 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
 W.~Shang, ``Bridging the divide between software developers and operators using
   logs,'' in \emph{ICSE '12 :Proceedings of the 34th International Conference
   on Software Engineering}.
+
+\bibitem{IanIcesm}
+W.~Shang, M.~Nagappan, A.~E. Hassan, and Z.~M. Jiang, ``Understanding log lines
+  using development knowledge,'' in \emph{ICSME '14: Proceedings of the
+  International Conference on Software Maintenance and Evolution,}.\hskip 1em
+  plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 21--30.
 
 \end{thebibliography}

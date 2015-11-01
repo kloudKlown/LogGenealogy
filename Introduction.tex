@@ -12,15 +12,24 @@ Logging can be done through the use of log libraries or more archaic methods suc
 \end{figure}
 
 
-The unified format of logs has lead to the development of many enterprise log processing tools such as \textsl{Splunk}~\cite{carasso2012exploring}, \textsl{Xpolog}~\cite{xpolog}, \textsl{Logstash}~\cite{xu2013detecting} and research tools such as Salsa~\cite{TanSalsa}, log-enhancer~\cite{Yuan} and chukwa~\cite{chukwa} which are designed to diagnose as well as improve logging in software applications. However, when logs are changed the log processing tools also have to be updated to reflect the changes to the log. For example, Figure~\ref{fig:ExampleOfLogChange_LPA} demonstrates a case in which a developer removes the time taken for completing an event. This can affect log processing tools that rely on that information for other activities and the data lost is not recoverable. Prior research also shows that 60\% of the logs are changed at execution level across releases~\cite{IanWCRE}. These log changes can affect the log processing tools which heavily depend on them and maintenance cost will be high~\cite{IanWCRE}. 
+The unified format of logs has lead to the development of many enterprise log processing tools such as \textsl{Splunk}~\cite{carasso2012exploring}, \textsl{Xpolog}~\cite{xpolog}, \textsl{Logstash}~\cite{xu2013detecting} and research tools such as Salsa~\cite{TanSalsa}, log-enhancer~\cite{Yuan} and chukwa~\cite{chukwa} which are designed to diagnose as well as improve logging in software applications. However, when logs are changed the log processing tools also have to be updated to reflect the changes to the log. For example, Figure~\ref{fig:ExampleOfLogChange_LPA} demonstrates a case in which a developer removes the time taken for completing an event. This can affect log processing tools that rely on that information for other activities and the data lost is not recoverable. Prior research also shows that 60\% of the logs which are ouputted at system execution are changed across releases~\cite{IanWCRE}. These log changes can affect the log processing tools which heavily depend on them and maintenance cost will be high~\cite{IanWCRE}. 
 
-In this paper, we track the changes made to logs across multiple releases in four studied open source applications. From the preliminary analysis, we find that 45\%-55\% of the logs are changed at least once throughout their lifespan in the studied applications. We find that a single log changes between 1 to 12 times within their lifetime and can be changed by more than one developer. To identify which factors play vital role in the stability of logging statements, we build a random forest classifier using change and process metrics. From the random forest classifier we make the following observations.
+\begin{figure*}
+	\centering
+	\includegraphics[width=1\textwidth,
+	height=.4\textwidth]{LogGenalogyMethdology}
+	\caption{Overview of the data extraction and case study approach}
+	\label{fig:LGmethod}
+\end{figure*}
+
+
+In this paper, we study the changes made to logs across multiple releases in four studied open source applications. We find that 45\%-55\% of the logs are changed at least once during their lifespan in the studied applications. We find that a single log changes between 1 to 12 times its their lifetime and can be changed by more than one developer. To identify which factors play a vital role in the stability of logging statements and predict which logs will change in future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
 \begin{enumerate}
-	\item  Our \textsl{random forest} achieves an accuracy of 89\%-91\% and recall of 71\%-91\%, when predicting which logs have higher likelihood of getting changed.
-	\item We find that logs introduced by developers who have less ownership of the file are more likely to be changed later than logs written by owners of the file. 
-	\item We find that file with higher log density are less likely to have changes to their logs than files with lesser log density.
-	\item We find that developer experience is negatively correlated in the studied applications, suggesting that log introduced by more experienced developers are more stable. 
-	\item We find that change metrics like SLOC, number of variables logged, number of variables declared are strong predictors of log stability within the studied applications. 
+	\item  Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
+	\item Logs introduced in a file by developers who have less ownership of that file are more likely to be changed later than logs written by owners of the file. 
+	\item Files with a higher log density are less likely to have changes made to their logs than files with a lower log density.
+	\item Developer experience is negatively correlated in the studied applications, suggesting that logs introduced by more experienced developers are more stable. 
+	\item Change metrics such as SLOC, number of variables logged and number of variables declared are strong predictors of log stability within the studied applications. 
 
 \end{enumerate}
 
@@ -42,7 +51,7 @@ In this paper, we track the changes made to logs across multiple releases in fou
  
 % Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
  
-The rest of this paper is organized as follows. Section~\ref{Methodology} presents the methodology for gathering and extracting data for our study. Section~\ref{analysis} presents the preliminary analysis to motivate our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
+The remainder of this paper is organized as follows. Section~\ref{Methodology} presents the methodology for gathering and extracting data for our study. Section~\ref{analysis} presents the preliminary analysis to motivate our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
  
  
 % However, as these tools are not scalable for all companies and systems, companies prefer in house development or customization of these tools for their specific purposes. 

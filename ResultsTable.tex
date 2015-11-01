@@ -25,15 +25,15 @@ and negative correlation of the metric on log stability. }
 \hline 
 \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
 \hline 
-1  & SLOC  & 0.174 +  & 1  & Ownership of file  & 0.207 + \tabularnewline
-2  & Ownership of file  & 0.162 +  & 2  & Log density  & 0.175 - \tabularnewline
- & Log variable count  & 0.161 +  &  & Developer experience  & 0.174 - \tabularnewline
-3  & Developer experience  & 0.140 +  & 3  & SLOC  & 0.168 + \tabularnewline
-4  & Log density  & 0.120 -  & 4  & Log variable count  & 0.124 + \tabularnewline
-5  & Variable Declared  & 0.090 -  & 5  & Log level  & 0.116 - \tabularnewline
-6  & Deleted count  & 0.082 -  & 6  & Elapsed time  & 0.109 - \tabularnewline
-7  & Log level  & 0.078 -  &  & Issue type  & 0.108 + \tabularnewline
-8  & Log churn in commit  & 0.060 +  &  & Variable Declared  & 0.108 + \tabularnewline
+1  & SLOC  & 0.186 +  & 1  & Ownership of file  & 0.218 + \tabularnewline
+2  & Ownership of file  & 0.180 +  & 2  & Developer experience  & 0.200 - \tabularnewline
+ & Developer experience  & 0.179 +  & 3 & Log density & 0.188 - \tabularnewline
+3  & Log density  & 0.132 -  & 4  & SLOC  & 0.187 + \tabularnewline
+4  & Code churn in commit & 0.093 +  & 5 & Log level  & 0.135 - \tabularnewline
+5  & Log variable count & 0.072 +  & 6 & Log variable count & 0.133 + \tabularnewline
+6  & Variable declared & 0.067 -  & 7  & Variable Declared  & 0.122 + \tabularnewline
+7  & Log level  & 0.061 +  & 8 & Code churn in commit & 0.103 + \tabularnewline
+8  & Log text length & 0.055 +  & 9 & Log context & 0.060 - \tabularnewline
 \hline 
 \end{tabular}} \resizebox*{1\textwidth}{0.26\textwidth}{ \centering
 
@@ -44,19 +44,41 @@ and negative correlation of the metric on log stability. }
 \hline 
 \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
 \hline 
-1  & Code churn in commit  & 0.138 +  & 1  & Log density  & 0.152 - \tabularnewline
-2  & Ownership of file  & 0.136 +  & 2  & Ownership of file  & 0.137 - \tabularnewline
- & Developer experience  & 0.135 -  &  & Developer experience  & 0.137 + \tabularnewline
-1  & Log density  & 0.122 -  & 3  & SLOC  & 0.127 + \tabularnewline
-2  & SLOC  & 0.122 +  & 4  & Issue Id  & 0.096 - \tabularnewline
-3  & Log variable count  & 0.113 +  & 5  & Variable Declared  & 0.093 + \tabularnewline
-1  & Log text length  & 0.102 +  &  & Log variable count  & 0.091 + \tabularnewline
-2  & Variable Declared  & 0.076 +  & 6  & Log level  & 0.081 - \tabularnewline
-3  & Type of log change  & 0.063 +  & 7  & Elapsed time  & 0.072 +\tabularnewline
+1  & Developer experience  & 0.152 -  & 1  & Log density  & 0.199 - \tabularnewline
+2  & Ownership of file  & 0.149 +  & 2  & Developer experience  & 0.180 + \tabularnewline
+ & Code churn in commit & 0.148 +  & 3 & SLOC  & 0.165 + \tabularnewline
+3  & Log density  & 0.139 -  &  & Log level & 0.165 + \tabularnewline
+4 & SLOC  & 0.135 +  & 4  & Ownership of file  & 0.151 - \tabularnewline
+5 & Log variable count  & 0.122 +  &  & Variable Declared  & 0.150 + \tabularnewline
+6  & Log text length  & 0.107 +  & 5 & Log variable count  & 0.074 + \tabularnewline
+7 & Variable Declared  & 0.084 +  & 6  & Log context & 0.059 - \tabularnewline
+8 & Type of log change  & 0.066 +  &   & Log text length & 0.059 +\tabularnewline
 \hline 
 \end{tabular}} \label{tba:Scott} 
+
+
 \end{table*}
 
 
+\begin{table}[tbh]
+\centering \protect\protect\caption{An overview of all studied applications}
+
+
+\label{tba:overviewsystems} %
+\begin{tabular}{lllll}
+\hline 
+Projects  & ActiveMQ  & Camel  & CloudStack  & Liferay \tabularnewline
+\hline 
+Starting release  & 4.1.1  & 1.6.0  & 2.1.3  & 6.1.0-b3 \tabularnewline
+End release  & 5.9.0  & 2.11.3  & 4.2.0  & 7.0.0-m3 \tabularnewline
+Total \# log lines  & 5.1k  & 6.1k  & 9.6k  & 1.8k \tabularnewline
+Total \# of releases  & 19  & 43  & 111  & 24 \tabularnewline
+Total added code  & 261k  & 505k  & 1.09M  & 3.9M \tabularnewline
+Total deleted code  & 114k  & 174k  & 750K  & 2.8M \tabularnewline
+Total \# added logs  & 4.5k  & 5.1k  & 24k  & 10.4k \tabularnewline
+Total \# deleted logs  & 2.3k  & 2.4k  & 17k  & 8.1k \tabularnewline
+\hline 
+\end{tabular}
+\end{table}
 
 \end{document}

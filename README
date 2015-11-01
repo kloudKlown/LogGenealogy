@@ -1,140 +1,74 @@
+This directory holds 3 packages for sectioning titles -- when used as
+such (titlesec), in headers and footers (titleps) and in tables of
+contents (titletoc).  They can be used separately, but you will get
+most of them when used together.
 
-August 26, 2015
+Titlesec
+~~~~~~~~
+Sectioning titles, including margin and `wrap' titles, different
+format in odd and even pages, rules above and below the title, 
+adding new sectioning levels, measuring the width of the title, etc.
 
+Titletoc
+~~~~~~~~
+TOC entries, with the possibility of changing the format in the middle
+of a document, grouping the entries in a single paragraph, pretty
+free-forms entries, partial tocs, etc.  It's described in titlesec.pdf
+(or .tex).
 
-IEEEtran is a LaTeX class for authors of the Institute of Electrical and
-Electronics Engineers (IEEE) transactions journals and conferences.
-The latest version of the IEEEtran package can be found at CTAN:
+Titleps
+~~~~~~~
+Page styles with working top marks, access to top, first and bot marks
+in a single header/footer, rules, headers/footers for specific floats
+(kinda \thispagestyle), multiple sets of marks, etc.  An one-stage
+mechanims is used, without intermediate \leftmark's or \rightmark's.
 
-http://www.ctan.org/pkg/ieeetran
+What's new (2.9. 2.10)
+~~~~~~~~~~~~~~~~
 
-as well as within IEEE's site:
+- Fixed \assignpagestyle, which did not work except in a 
+few cases.
+- Fixed an incompatibility with hyperref (wrong appendix 
+name).
+- Added \iftitlemeasuring
+- Added package option uppercase
+- Fixed a bug when reckoning the number of lines in wrap/drop.
 
-http://www.ieee.org/
+2.9.1: Fixed a typo (a spurious > in wrap.tss).
+2.9.2: Fixed another typo (\MessageBreag in ttlps.def)
+2.10.0: New features in titleps also available in titlesec
 
-For latest news, helpful tips, answers to frequently asked questions,
-beta releases and other support, visit the IEEEtran home page at my
-website:
+Installation
+~~~~~~~~~~~~
+No .ins/.dtx preinstalation is required.  Move the files to a place 
+where LaTeX can find them and typeset titlesec.tex.  All of files in 
+this directory are necessary for titlesec.sty to work, except the 
+manual titlesec.tex (and this 'readme' file). The manual requires
+titlesec.sty and titletoc.sty, and hence all the .tss and .def 
+files as well.
 
-http://www.michaelshell.org/tex/ieeetran/
+Formerly there were files with extension .new (titlesec.new and
+titletoc.new) used to patch the packages, but if present should be
+removed (they will be ignored, however).
 
-Version 1.8b has a number of significant changes over the v1.8a release.
-For a full history of changes, please read the file changelog.txt.
-The most notable changes in this release include:
+Web site, manual in PDF format and info
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Further details are available on
 
- 1) Added new comsoc mode for the IEEE Communications Society.
-    This mode (at present) only invokes the use of the newtxmath math fonts.
- 
- 2) Revised IEEEeqnarray column specifications to work with active " 
-    (or other punctuation catcode changes) as with babel under the
-    german or ngerman language modes. 
-    Thanks to Stefan M. Moser for reporting this problem.
+   http://www.tex-tipografia.com/titlesec.html
 
- 3) Added \indexspace and other index related macros as newer versions of
-    article.cls now do. These macros are needed to avoid an error when
-    using the glossaries package.
-    Thanks to Sebastian Nyberg for suggesting this change.
+Contact
+~~~~~~~
+Please, for suggestions, bug reports, etc., go to
+More
+   http://www.tex-tipografia.com/contact.html
 
- 4) Fixed odd/even page header font bug under compsoc mode and
-    other page style code improvements.
-    Thanks to Marco Paolieri for reporting this problem.
+Known problems
+~~~~~~~~~~
+Some language styles (for babel) add the indentation
+after a section in a so radical way that titlesec (which
+uses the internal LaTeX macros) cannot supress it again.
+For example, spanish (fixed in version 5.0) and frenchb.
 
- 5) Added hooks to allow for easy control of spacing above title.
+2011/12/15
 
- 6) Added the \IEEEnoauxwrite command.
-    Thanks to Sudarshan Mukherjee for suggesting this feature.
-
-
-NOTE: Take care not to confuse the "comsoc" and "compsoc" class
-options/modes as they are very different:
-
-comsoc  ==> IEEE Communications Society
-compsoc ==> IEEE Computer Society
-
-The comsoc mode requires that an acceptable Times math font be available on
-the LaTeX system. This requirement will be enforced by IEEEtran in comsoc
-mode. Either the freely available newtxmath font by Michael Sharpe
-http://www.ctan.org/pkg/newtx
-(version 1.451, July 28, 2015 or later is recommended)
-or the commercial MathTime font (e.g., mtpro2.sty) is acceptable.
-See Section II-D (2.4) "Class Options - comsoc, compsoc, transmag" of
-the IEEEtran HOWTO for more details.
-
-
-Best wishes for all your publication endeavors,
-
-Michael Shell
-http://www.michaelshell.org/
-
-
-***************************** Subdirectories ******************************
-
-bibtex   - The IEEEtran BibTeX style package.
-
-extras   - Supplementary material that may be of interest.
-
-testflow - The testflow diagnostic suite for verifying PS/PDF output.
-
-tools    - The IEEEtrantools.sty package which provides several commands
-           from the IEEEtran.cls file for use with other LaTeX classes.
-
-
-********************************** Files **********************************
-
-README                 - This file.
-
-IEEEtran.cls           - The IEEEtran LaTeX class file.
-
-changelog.txt          - The revision history.
-
-IEEEtran_HOWTO.pdf     - The IEEEtran LaTeX class user manual.
-
-bare_conf.tex          - A bare bones starter file for IEEE conference papers.
-
-bare_conf_compsoc.tex  - A bare bones starter file for IEEE Computer Society
-                         conference papers.
-
-bare_jrnl.tex          - A bare bones starter file for IEEE journal papers.
-
-bare_jrnl_comsoc.tex   - A bare bones starter file for IEEE Communications
-                         Society journal papers.
-
-bare_jrnl_compsoc.tex  - A bare bones starter file for IEEE Computer Society
-                         journal papers.
-
-bare_jrnl_transmag.tex - A bare bones starter file for IEEE Transactions
-                         on Magnetics journal papers.
-
-bare_adv.tex           - A bare bones starter file showing advanced
-                         techniques such as conditional compilation,
-                         hyperlinks, PDF thumbnails, etc. The illustrated
-                         format is for an IEEE Computer Society journal paper.
-
-***************************************************************************
-Legal Notice:
-This code is offered as-is without any warranty either expressed or
-implied; without even the implied warranty of MERCHANTABILITY or
-FITNESS FOR A PARTICULAR PURPOSE! 
-User assumes all risk.
-In no event shall the IEEE or any contributor to this code be liable for
-any damages or losses, including, but not limited to, incidental,
-consequential, or any other damages, resulting from the use or misuse
-of any information contained here.
-
-All comments are the opinions of their respective authors and are not
-necessarily endorsed by the IEEE.
-
-This work is distributed under the LaTeX Project Public License (LPPL)
-( http://www.latex-project.org/ ) version 1.3, and may be freely used,
-distributed and modified. A copy of the LPPL, version 1.3, is included
-in the base LaTeX documentation of all distributions of LaTeX released
-2003/12/01 or later.
-Retain all contribution notices and credits.
-** Modified files should be clearly indicated as such, including  **
-** renaming them and changing author support contact information. **
-
-File list of work: IEEEtran.cls, IEEEtran_HOWTO.pdf, bare_adv.tex,
-                   bare_conf.tex, bare_conf_compsoc.tex,
-                   bare_jrnl.tex, bare_jrnl_comsoc.tex,
-                   bare_jrnl_compsoc.tex, bare_jrnl_transmag.tex
-***************************************************************************
