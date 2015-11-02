@@ -23,7 +23,7 @@ The unified format of logs has lead to the development of many enterprise log pr
 \end{figure*}
 
 
-In this paper, we study the changes made to logs across multiple releases in four studied open source applications. We find that 45\%-55\% of the logs are changed at least once during their lifespan in the studied applications. We find that a single log changes between 1 to 12 times its their lifetime and can be changed by more than one developer. To identify which factors play a vital role in the stability of logging statements and predict which logs will change in future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
+In this paper, we study the changes made to logs across multiple releases in four studied open source applications. We find that 45\%-55\% of the logs are changed at least once during their lifespan in the studied applications. We find that a single log changes between 1 to 12 times within its lifetime and can be changed by more than one developer. To identify which factors play a vital role in the stability of logging statements and predict which logs will change in future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
 \begin{enumerate}
 	\item  Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
 	\item Logs introduced in a file by developers who have less ownership of that file are more likely to be changed later than logs written by owners of the file. 
@@ -51,7 +51,7 @@ In this paper, we study the changes made to logs across multiple releases in fou
  
 % Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
  
-The remainder of this paper is organized as follows. Section~\ref{Methodology} presents the methodology for gathering and extracting data for our study. Section~\ref{analysis} presents the preliminary analysis to motivate our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
+The remainder of this paper is organized as follows. Section~\ref{analysis} presents the preliminary analysis to motivate our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
  
  
 % However, as these tools are not scalable for all companies and systems, companies prefer in house development or customization of these tools for their specific purposes. 

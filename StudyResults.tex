@@ -55,14 +55,14 @@ We evaluate our approach through a case study on four open source applications. 
 	\item \textbf{Log usage -} We select applications that make use of extensive logging in their source code. 
 	%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
 	\item \textbf{Project activity -} We pick applications which have a large user base and commit history.
-	\item \textbf{Programming language -} We pick applications written in `java' as its one of the widely used languages.
+	\item \textbf{Programming language -} We pick applications written in Java as it is one of the most popular languages today~\cite{Javaprog}.
 %	 to identify and track the log changes across multiple releases. 
 \end{itemize}
 
 
 
 
-To find the number of logs present in an application we `grep' to search all lines of code within the `.java' files. Next, using git log we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache git repository which fit these criteria: 1) ActiveMQ\footnote[1]{http://activemq.apache.org/} is an open source message broker and integration patterns server, 2) {Camel}\footnote[2]{http://camel.apache.org/} is an open source integration platform based on enterprise integration patterns, 3) {CloudStack}\footnote[3]{https://cloudstack.apache.org/} is open source software designed to deploy and manage large networks of virtual machines and 4) {Liferay}\footnote[4]{http://www.liferay.com/} is an open source software to deploy websites and portals. Table~\ref{tba:overviewsystems} presents an overview of the applications. 
+To find the number of logs present in an application we use the `grep' command to search all lines of code within the `.java' files. Next, using git log we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache git repository which fit these criteria: 1) ActiveMQ\footnote[1]{http://activemq.apache.org/} is an open source message broker and integration patterns server, 2) {Camel}\footnote[2]{http://camel.apache.org/} is an open source integration platform based on enterprise integration patterns, 3) {CloudStack}\footnote[3]{https://cloudstack.apache.org/} is open source software designed to deploy and manage large networks of virtual machines and 4) {Liferay}\footnote[4]{http://www.liferay.com/} is an open source software to deploy websites and portals. Table~\ref{tba:overviewsystems} presents an overview of the applications. 
 
 
 \begin{table}[tb]
@@ -88,14 +88,14 @@ To find the number of logs present in an application we `grep' to search all lin
 
 \subsection{Study Approach}
 
-The data extraction approach from the four studied applications consists of four steps: (1) We clone the git repository of each studied application to extract all commits made for each file.(2) We identify the log changes in the extracted files. (3) We track the changes made to each log across the commits. (4) We categorize the log changes in the commit and collect the context and log metrics for each log change in the commit.
+The data extraction approach from the four studied applications consists of four steps: (1) We clone the git repository of each studied application to extract all commits made for each file. (2) We identify the log changes in the extracted files. (3) We track the changes made to each log across the commits. (4) We categorize the log changes in the commit and collect the context and log metrics for each log change in the commit.
 Figure~\ref{fig:LGmethod} shows a general overview of our approach. We use R~\cite{ihaka1996r}, to perform experiments and answer our preliminary analysis and case study
 
 
 \subsubsection*{B.1. Extracting the change history} 
-In order to find the stability of logs we have to identify all the `Java' files in our studied applications. To achieve this, we use the `grep' command to search for all the `*.java' files in the cloned repositories and we exclude the `test' files. 
+In order to find the stability of logs we have to identify all the `java' files in our studied applications. To achieve this, we use the `grep' command to search for all the `*.java' files in the cloned repositories and we exclude the `test' files. 
 
-After collecting all the Java files from the four studied applications, we use the respective git repositories to obtain all the changes made to the files within the time-frame shown in Table~\ref{tba:overviewsystems}. We use the `follow' option to track the file even when they are renamed or relocated. We also flatten all the changes made to files to include the changes made in different branches but exclude the final merging commit. Using this approach, we obtain a complete history of each Java file in the latest version of the master branch.
+After collecting all the Java files from the four studied applications, we use the respective git repositories to obtain all the changes made to the files within the time-frame shown in Table~\ref{tba:overviewsystems}. We use the `follow' option to track the file even when they are renamed or relocated. We exclude the log changes made in non-merged branches as they might not affect log processing tools. We use the `--no-merges' option to flatten the changes to a file and exclude the final merging commit. Using this approach, we obtain a complete history of each Java file in the latest version of the master branch.
 
 
 \subsubsection*{B.2. Identifying log changes}
@@ -107,7 +107,9 @@ As a project can have multiple logging libraries throughout its life-cycle, we u
 
 
 \subsubsection*{B.3. Tracking log changes}
-After identifying all the log changes made to a file across multiple commits, we track each log individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every subsequent commit which has changes to a log appears as an added and deleted log in \textsl{git}. To track these log changes made, we used the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the size of difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). 
+After identifying all the log changes made to a file across multiple commits, we track each log individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every subsequent commit which has changes to a log appears as an added and deleted log in \textsl{git}. To track these log changes made, we used the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). This is necessary to compare multiple logs which can be similar, which is not possible using string comparison.
+
+%within the range 0 to 1 (more similar the strings the ratio approaches 1).
 
 %To calculate Levenshtein ratio for a pair of added and deleted logs, we first remove the logging method (e.g., LOG) and compare the remaining text to increase the accuracy of categorization. 
 
@@ -235,7 +237,7 @@ After identifying the frequency of changes within the studied applications, we f
 
 
 \hypobox{We see that logs which change are introduced by developers who have little ownership over the file.} 
-Figure~\ref{fig:ChangedvsUnchangedlogs} shows that in Camel, Cloudstack and ActiveMQ, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. 
+Figure~\ref{fig:ChangedvsUnchangedlogs} shows that in Camel, Cloudstack and ActiveMQ, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. This suggests that logs can be introduced by non-owners of a file, which leads to logs being changed later. 
 
 %We see that logs are changed by developers who have lesser ownership over the 
 %file than the developers who introduce the log.

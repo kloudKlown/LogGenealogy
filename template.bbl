@@ -80,6 +80,9 @@ J.~Boulon, A.~Konwinski, R.~Qi, A.~Rabkin, E.~Yang, and M.~Yang, ``Chukwa, a
   large-scale monitoring system,'' in \emph{Proceedings of CCA}, vol.~8, 2008,
   pp. 1--5.
 
+\bibitem{Javaprog}
+``Java language ranking -http://www.tiobe.com/paperinfo/tpci/index.html.''
+
 \bibitem{ihaka1996r}
 R.~Ihaka and R.~Gentleman, ``R: a language for data analysis and graphics,''
   \emph{Journal of computational and graphical statistics}, vol.~5, no.~3, pp.
@@ -120,17 +123,17 @@ D.~Zhang, K.~El~Emam, H.~Liu \emph{et~al.}, ``An investigation into the
   \emph{Software Engineering, IEEE Transactions on}, vol.~35, no.~2, pp.
   293--304, 2009.
 
-\bibitem{Fu1}
-Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where
-  do developers log? an empirical study on logging practices in industry,'' in
-  \emph{ICSE Companion '14: Proceedings of the 36th International Conference on
-  Software Engineering,}, pp. Pages 24--33.
-
 \bibitem{rahman2011ownership}
 F.~Rahman and P.~Devanbu, ``Ownership, experience and defects: a fine-grained
   study of authorship,'' in \emph{Proceedings of the 33rd International
   Conference on Software Engineering}.\hskip 1em plus 0.5em minus 0.4em\relax
   ACM, 2011, pp. 491--500.
+
+\bibitem{Fu1}
+Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where
+  do developers log? an empirical study on logging practices in industry,'' in
+  \emph{ICSE Companion '14: Proceedings of the 36th International Conference on
+  Software Engineering,}, pp. Pages 24--33.
 
 \bibitem{correlationBook}
 J.~Cohen, P.~Cohen, S.~G. West, and L.~S. Aiken, \emph{Applied multiple

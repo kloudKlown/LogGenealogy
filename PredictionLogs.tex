@@ -51,7 +51,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		\hline 
 		\multirow{12}{*}{Context Metrics} & 
 
-		Old log	 & Boolean (0 -1) &
+		Old log	 & Boolean &
 		d: Check if the log is added to the file after creation or it wad added when file was created. \tabularnewline
 		\cline{4-4} &  &  &
 		r: This helps to identify if the logs added into file after creation are changed more than logs added at creation of file. 	\tabularnewline
@@ -86,7 +86,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		\cline{4-4} 
 		&  &  & r: Log changes are correlated to code churn in files~\cite{EMSEIAN}. \tabularnewline
 		\cline{2-4} 
-		& File ownership  & Numerical (0-1) & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
+		& File ownership  & Numerical  & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
 		\cline{4-4} 
 		 &  &  & r: The owner of the file is more likely to introduce stable logs than developers who have not edited the file before. 
 		 		\tabularnewline			\cline{2-4}
@@ -117,7 +117,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		&  &  & r: Prior research finds that logs are mostly used in assertion checks,
 		logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
 		\cline{2-4} &
-	Is readded	 & Boolean (0 -1) &
+	Is readded	 & Boolean &
 		d: Check if the log is readded into a file \tabularnewline
 	\cline{4-4} &  &  &
 	r: Identify the logs which get readded into a file after they are removed. \tabularnewline
