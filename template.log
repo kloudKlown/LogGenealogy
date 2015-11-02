@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  1 NOV 2015 21:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  1 NOV 2015 23:02
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -610,7 +610,11 @@ rs/Suhas/Dropbox/Log Genealogy/Paper/frequencyofLogchanges.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 239.
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+)
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
@@ -824,7 +828,7 @@ ogram Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x8
 6)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/t
 ype1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on template.pdf (11 pages, 613214 bytes).
+Output written on template.pdf (11 pages, 613204 bytes).
 PDF statistics:
  173 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

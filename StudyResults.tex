@@ -118,7 +118,7 @@ After identifying all the log changes made to a file across multiple commits, we
 We calculate the Levenshtein ratio for each deleted log against all the added logs and pick the pair which has the highest Levenshtein ratio  as a modification. This is done recursively to find all the modifications within a commit. For example in the logs shown below, we find that the Levenshtein ratio between the added and deleted pair (a1) is 0.86 and (a2) 0.76. Hence, we consider (a1) as a log modification and compare (a2) with next deleted log. If there are no more deleted log pairs, (a2) is considered as addition of new log into the file. 
 \hypobox{-        LOG.debug(``Call: " +method.getName()+ `` " + callTime);\\
 	+      LOG.debug(``Call: " +method.getName()+`` took "+ callTime + ``ms"); \space  \space  \space  \space  \space  \space -- (a1)\\ 
-	+      LOG.debug(``Call: " +method.setName()+`` took "+ callTime + ``ms");\space  \space  \space  \space  \space  \space -- (a2)\\} 
+	+      LOG.debug(``Call: " +method.setName()+`` took "+ callTime + ``ms");\space  \space  \space  \space  \space  \space -- (a2)} 
 
 This way we track when a log is added into a file and the log is added to the initial set for tracking in future commits. From this, we track how many times a log is changed and how many commits are made between the changes. 
 
@@ -221,7 +221,7 @@ This way we track when a log is added into a file and the log is added to the in
 \subsection{Results}
 
 \subsubsection*{C.1. Change frequency}
-\hypobox { Developers change 45\%-55\% of the logs across our studied applications. }
+\hypobox {Developers change 45\%-55\% of the logs across our studied applications. }
 Figure~\ref{fig:frequencyofLogchanges} shows the percentage of changed logs in each of the studied applications. This shows that log change extensively throughout the lifetime of an application which can affect the log processing tools.
  
 %as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. 
