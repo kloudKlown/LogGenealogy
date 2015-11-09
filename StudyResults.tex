@@ -46,13 +46,15 @@
 %\end{table*}
 
 
-In this paper we aim to get a better understanding of the
-unstable logs in an application so that we can improve the maintenance of log processing tools. In this section we present our rationale for selecting the applications we studied and present the results of our preliminary analysis in the four studied applications.
+%In this paper we aim to get a better understanding of the
+%unstable logs in an application so that we can improve the maintenance of log processing tools. 
 
-\subsection{Subject systems}
-We evaluate our approach through a case study on four open source applications. We select these projects on the following two criteria:
+In this section we present our rationale for selecting the applications that we studied and present the results of our preliminary analysis in the four studied applications.
+
+\subsection{Studied applications}
+We evaluate our approach through a case study on four open source applications. We select these projects on the following three criteria:
 \begin{itemize}
-	\item \textbf{Log usage -} We select applications that make use of extensive logging in their source code. 
+	\item \textbf{Log usage -} We select applications that make use of the extensive logs in their source code. 
 	%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
 	\item \textbf{Project activity -} We pick applications which have a large user base and commit history.
 	\item \textbf{Programming language -} We pick applications written in Java as it is one of the most popular languages today~\cite{Javaprog}.
@@ -62,7 +64,7 @@ We evaluate our approach through a case study on four open source applications. 
 
 
 
-To find the number of logs present in an application we use the `grep' command to search all lines of code within the `.java' files. Next, using git log we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache git repository which fit these criteria: 1) ActiveMQ\footnote[1]{http://activemq.apache.org/} is an open source message broker and integration patterns server, 2) {Camel}\footnote[2]{http://camel.apache.org/} is an open source integration platform based on enterprise integration patterns, 3) {CloudStack}\footnote[3]{https://cloudstack.apache.org/} is open source software designed to deploy and manage large networks of virtual machines and 4) {Liferay}\footnote[4]{http://www.liferay.com/} is an open source software to deploy websites and portals. Table~\ref{tba:overviewsystems} presents an overview of the applications. 
+To find the number of logs present in an application we use the `grep' command to search all lines of code within the `.java' files. Next, using \emph{git log} we find the total number of commits in the open source projects and pick ones which have more than 10,000 commits. We find four open source projects from the Apache Git repository which fit these criteria: 1) ActiveMQ\footnote[1]{http://activemq.apache.org/} is an open source message broker and integration patterns server, 2) {Camel}\footnote[2]{http://camel.apache.org/} is an open source integration platform based on enterprise integration patterns, 3) {CloudStack}\footnote[3]{https://cloudstack.apache.org/} is an open source application designed to deploy and manage large networks of virtual machines and 4) {Liferay}\footnote[4]{http://www.liferay.com/} is an open source application for websites and portals deployment. Table~\ref{tba:overviewsystems} presents an overview of the applications. 
 
 
 \begin{table}[tb]
@@ -86,16 +88,16 @@ To find the number of logs present in an application we use the `grep' command t
 	\end{tabular}
 \end{table}
 
-\subsection{Study Approach}
+\subsection{Data extraction approach}
 
-The data extraction approach from the four studied applications consists of four steps: (1) We clone the git repository of each studied application to extract all commits made for each file. (2) We identify the log changes in the extracted files. (3) We track the changes made to each log across the commits. (4) We categorize the log changes in the commit and collect the context and log metrics for each log change in the commit.
+The data extraction approach from the four studied applications consists of four steps: (1) We clone the Git repository of each studied application to extract all commits made for each file. (2) We identify the log changes in the extracted files. (3) We track the changes that are made to each log across the commits. (4) We categorize the log changes in the commit and collect the metrics for each added log in the commit.
 Figure~\ref{fig:LGmethod} shows a general overview of our approach. We use R~\cite{ihaka1996r}, to perform experiments and answer our preliminary analysis and case study
 
 
 \subsubsection*{B.1. Extracting the change history} 
-In order to find the stability of logs we have to identify all the `java' files in our studied applications. To achieve this, we use the `grep' command to search for all the `*.java' files in the cloned repositories and we exclude the `test' files. 
+In order to find the stability of logs, we have to identify all the Java files in our studied applications. To achieve this, we use the \emph{grep} command to search for all the \emph{*.java} files in the cloned repositories and we exclude the \emph{test} files. 
 
-After collecting all the Java files from the four studied applications, we use the respective git repositories to obtain all the changes made to the files within the time-frame shown in Table~\ref{tba:overviewsystems}. We use the `follow' option to track the file even when they are renamed or relocated. We exclude the log changes made in non-merged branches as they might not affect log processing tools. We use the `--no-merges' option to flatten the changes to a file and exclude the final merging commit. Using this approach, we obtain a complete history of each Java file in the latest version of the master branch.
+After collecting all the Java files from the four studied applications, we use their respective Git repositories to obtain all the changes that are made to the files within the time-frame shown in Table~\ref{tba:overviewsystems}. We use the \emph{follow} option to track the file even when they are renamed or relocated. We exclude the log changes that are made in non-merged branches as they might not affect log processing tools. We use the `--no-merges' option to flatten the changes to a file and exclude the final merging commit. Using this approach, we obtain a complete history of each Java file in the latest version of the master branch.
 
 
 \subsubsection*{B.2. Identifying log changes}
@@ -107,7 +109,7 @@ As a project can have multiple logging libraries throughout its life-cycle, we u
 
 
 \subsubsection*{B.3. Tracking log changes}
-After identifying all the log changes made to a file across multiple commits, we track each log individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every subsequent commit which has changes to a log appears as an added and deleted log in \textsl{git}. To track these log changes made, we used the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). This is necessary to compare multiple logs which can be similar, which is not possible using string comparison.
+After identifying all the log changes that are made to a file across multiple commits, we track each log individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every change to a log in the subsequent commits appears as an added and deleted log in Git. To identify added, deleted and modified logs, we leverage the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). This is necessary to compare multiple logs which can be similar, which is not possible using string comparison.
 
 %within the range 0 to 1 (more similar the strings the ratio approaches 1).
 
@@ -115,7 +117,7 @@ After identifying all the log changes made to a file across multiple commits, we
 
 
 %We set a minimum threshold of 0.6 for a pair of added and deleted logs to be considered modified. We set 0.6 because there is atleast 60\% similarity between the pair. We find that when the threshold is set lower there are more false positives and when set higher we miss log modifications. When an added log has levenshtein ratio higher than 0.6 with multiple deleted logs, we consider the pair with highest levenshtein ratio. 
-We calculate the Levenshtein ratio for each deleted log against all the added logs and pick the pair which has the highest Levenshtein ratio  as a modification. This is done recursively to find all the modifications within a commit. For example in the logs shown below, we find that the Levenshtein ratio between the added and deleted pair (a1) is 0.86 and (a2) 0.76. Hence, we consider (a1) as a log modification and compare (a2) with next deleted log. If there are no more deleted log pairs, (a2) is considered as addition of new log into the file. 
+We calculate the Levenshtein ratio for each deleted log against all the added logs and pick the pair which has the highest Levenshtein ratio  as a log modification. This is done recursively to find all the modifications within a commit. For example in the logs shown below, we find that the Levenshtein ratio between the added and deleted pair (a1) is 0.86 and (a2) 0.76. Hence, we consider (a1) as a log modification and compare (a2) with next deleted log. If there are no more deleted log pairs, (a2) is considered as addition of new log into the file. 
 \hypobox{-        LOG.debug(``Call: " +method.getName()+ `` " + callTime);\\
 	+      LOG.debug(``Call: " +method.getName()+`` took "+ callTime + ``ms"); \space  \space  \space  \space  \space  \space -- (a1)\\ 
 	+      LOG.debug(``Call: " +method.setName()+`` took "+ callTime + ``ms");\space  \space  \space  \space  \space  \space -- (a2)} 
@@ -166,15 +168,15 @@ This way we track when a log is added into a file and the log is added to the in
 	\centering
 %	\captionsetup{justification=centre}
 	
-		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
-			{Percentageofchanges}\label{fig:percentage} }
+%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
+%			{Percentageofchanges}\label{fig:percentage} }
 
-	\subfloat[Frequency of log changes]{\includegraphics[width=1\linewidth]
+	\subfloat{\includegraphics[width=1\linewidth]
 		{frequencyofLogchanges}\label{fig:Feq} }
 	
 	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
 %	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
-	\caption{\protect \subref{fig:percentage}  shows the percentage of changed vs unchanged logs and \protect\subref{fig:Feq} shows the number of times logs are changed within the studied applications. } 
+	\caption{Distribution of log changes in the studied applications, where row `0' signifies the percentage of unchanged logs.} 
 	\label{fig:frequencyofLogchanges}
 \end{figure}
 
@@ -185,34 +187,29 @@ This way we track when a log is added into a file and the log is added to the in
 
 
 
-\begin{figure}[tb]
-	\centering
-	\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
-	\caption{Distribution of logs which are changed vs un-changed against the ownership of the developer introducing the log}
-	\label{fig:ChangedvsUnchangedlogs}
-\end{figure}
-\begin{figure}[tb]
-	
-	\centering
-	%	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
-	%	\hfill
-	\subfloat{\includegraphics[width=1\linewidth]{ChangedvsChangesorNot}\label{fig:f2}}
-	\caption{Distribution of file ownership against developers introducing the log vs developers changing the log.}
-	\label{fig:ChangedvsChangesorNot}
-\end{figure}
+
+%\begin{figure}[tb]
+%	
+%	\centering
+%	%	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
+%	%	\hfill
+%	\subfloat{\includegraphics[width=1\linewidth]{ChangedvsChangesorNot}\label{fig:f2}}
+%	\caption{Distribution of file ownership against developers introducing the log vs developers changing the log.}
+%	\label{fig:ChangedvsChangesorNot}
+%\end{figure}
 
 
 
-\begin{figure}[tb]
-	
-	\centering
-	%	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
-	%	\hfill
-	\subfloat{\includegraphics[width=1\linewidth]{NumberofDevelopers}\label{fig:f2}}
-	\caption{Distribution of the number of developers responsible
-		for changing a log.}
-	\label{fig:NumberofDevelopers}
-\end{figure}
+%\begin{figure}[tb]
+%	
+%	\centering
+%	%	\subfloat{\includegraphics[width=0.5\linewidth]{CA_numberofDevelopers}\label{fig:f1}}
+%	%	\hfill
+%	\subfloat{\includegraphics[width=1\linewidth]{NumberofDevelopers}\label{fig:f2}}
+%	\caption{Distribution of the number of developers responsible
+%		for changing a log.}
+%	\label{fig:NumberofDevelopers}
+%\end{figure}
 
 
 
@@ -220,9 +217,58 @@ This way we track when a log is added into a file and the log is added to the in
 
 \subsection{Results}
 
+\begin{table}[tb]
+	\centering
+	\caption{Summary of total commits before a new log added is changed in the studied applications}
+	
+	\begin{tabular}{lllllll}
+			\cline{1-7}
+		Project    & Min & 1st Qu & Median & Mean & 3rd Qu & Max \\
+		\cline{1-7}
+		ActiveMQ   & 1   & 2      & 7      & 9    & 14     & 37  \\
+		Camel      & 1   & 1      & 2      & 4    & 5      & 117 \\
+		Cloudstack & 1   & 1      & 3      & 17   & 14     & 390 \\
+		Liferay    & 1   & 1      & 1      & 7    & 1      & 130\\	\cline{1-7}
+		
+	\end{tabular}
+	\label{tba:summaryofnewLogchange}
+\end{table}
+
+
 \subsubsection*{C.1. Change frequency}
-\hypobox {Developers change 45\%-55\% of the logs across our studied applications. }
+\hypobox {Developers change 35\%-50\% of the logs across our studied applications. }
 Figure~\ref{fig:frequencyofLogchanges} shows the percentage of changed logs in each of the studied applications. This shows that log change extensively throughout the lifetime of an application which can affect the log processing tools.
+
+\begin{table}[t]
+	\centering
+	\caption{Summary of total code churn in the commits, where a log is changed before 15 commits since addition.}
+	
+	\begin{tabular}{lllllll}
+		\cline{1-7}
+		Project    & Min & 1st Qu & Median & Mean & 3rd Qu & Max \\
+		\cline{1-7}
+		ActiveMQ   & 2  & 25      & 47     & 141    & 163     & 493  \\
+		Camel      & 2   & 13      & 32      & 98    & 133      & 456 \\
+		Cloudstack & 1   & 66      & 234      & 410   & 574     & 4121 \\
+		Liferay    & 2   & 6      & 14     & 28    & 27     & 278\\	\cline{1-7}
+		
+	\end{tabular}
+	\label{tba:summaryofnewLogCodechange}
+\end{table}
+
+
+
+
+\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that logs added newly into the application can change between 37 to 390 commits since their addition, but majority i.e., 75\% are changed within 15 commits since addition. This short time between addition and log change suggests that log change are more likely to be rewording or after-thoughts rather than change of feature.  This is seen in Table~\ref{tba:summaryofnewLogCodechange} where in three of the applications, the code churn is less than 50 lines of code for 50\% of the new logs which are changed before 15 commits since addition. 
+
+The logs added near the end of our study time-frame can change but will not be considered in our analysis which leads to noise. From Table~\ref{tba:summaryofnewLogchange}, we find that this varies widely within the application between 37 to 390 commits. To eliminate such logs, we find the maximum number of commits before a newly added log is changed within the studied applications and exclude all new logs added before that many commits from our analysis.  
+
+%We find that logs are added throughout the lifetime of an application and these logs are changed within 
+
+%, the logs added near the end of our study time-frame can change but will not be considered in our analysis. We find that a new log is changed between 37 to 390 commits within our applications as seen in Table~\ref{tba:summaryofnewLogchange}. To eliminate such logs, we find the maximum number of commits before a newly added log is changed within the studied applications and exclude all new logs added before that many commits from our analysis. 
+
+
+%From Table~\ref{tba:summaryofnewLogchange}, we see that the maximum value varies greatly within the studied applications and we exclude all newly added logs into the application before the 
  
 %as shown in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. 
 
@@ -231,18 +277,20 @@ Figure~\ref{fig:frequencyofLogchanges} shows the percentage of changed logs in e
 %Based on frequency of changes, we categorize logs into 3 categories namely: a) Frequently Changed, b) Changed and c) Never Changed as shown in Table~\ref{tba:logchangeDistribution}. If a log is changed more than four times it is categorized as `Frequently Changed'. If it is changed 1 to 3 times it is categorized under `Changed' and if it did not change it is categorized under `Never Changed'. We select four as the threshold as we observe that majority of logs only have 1 to 2 changes as seen in Figure~\ref{fig:RQ1_Liferay_Camel_Logchangefreq}. We see that the majority of logs never change in Liferay and the majority of logs in ActiveMQ and CloudStack are changed atleast once. This may be because Liferay has fewer logs per source code file (i.e., lower log density) when compared to ActiveMQ and CloudStack as seen in Table~\ref{tba:overviewsystems}. 
 
 
-\subsubsection*{C.2. Developer impact}
-After identifying the frequency of changes within the studied applications, we find the number of the developers responsible for the log changes and also if they own the file which contains the log. We use the developer name available from the `git log' to count the number of developers who change a log. To decide whether a developer owns a file we calculate the ratio of number of lines written by him to the total lines of code using the `blame' command available in git. This is recursively done till the first commit of the file and the contribution of the developer at each commit is recorded.  We take the mean average of his contribution across all commits to obtain his ownership metric for the file. 
+%\subsubsection*{C.2. Developer impact}
+%After identifying the frequency of changes within the studied applications, we find the number of the developers responsible for the log changes and also if they own the file which contains the log. We use the developer name available from the `git log' to count the number of developers who change a log. To decide whether a developer owns a file we calculate the ratio of number of lines written by him to the total lines of code using the `blame' command available in Git. Since \emph{blame} only shows the changes made to a file in the last commit, to calculate the contribution of a developer to a file we recursively look at changes made in previous commits by that developer. We use the \emph{blame} to calculate the contribution at each commit and take the mean contribution across all commits to find his ownership of a file.
+
+%we obtain all the the commits made to a file and calculate th
 
 
 
-\hypobox{We see that logs which change are introduced by developers who have little ownership over the file.} 
-Figure~\ref{fig:ChangedvsUnchangedlogs} shows that in Camel, Cloudstack and ActiveMQ, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. This suggests that logs can be introduced by non-owners of a file, which leads to logs being changed later. 
+%\hypobox{Logs which change are introduced by developers who have little ownership over the file.} 
+%Figure~\ref{fig:ChangedvsUnchangedlogs} shows that in Camel, Cloudstack and Liferay, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. This suggests that logs can be introduced by non-owners of a file, which leads to logs being changed later. 
 
 %We see that logs are changed by developers who have lesser ownership over the 
 %file than the developers who introduce the log.
 
-We see thats logs are also changed by developers who have lesser ownership than the ones introducing them. Figure~\ref{fig:ChangedvsChangesorNot} shows that in all the studied applications the logs are more likely to be changed by developers who have lesser ownership on the file than the developers who introduce the log. We find that in one of the studied applications the majority of logs are changed by two or more developers as seen in Figure~\ref{fig:NumberofDevelopers}. These results suggest that logs are readily changed by developers who access the file but do not have strong ownership characteristics.   
+%We see thats logs are also changed by developers who have lesser ownership than the ones introducing them. Figure~\ref{fig:ChangedvsChangesorNot} shows that in all the studied applications the logs are more likely to be changed by developers who have lesser ownership on the file than the developers who introduce the log. These results suggest that logs are readily changed by developers who access the file but do not have strong ownership characteristics.   
 
 
 

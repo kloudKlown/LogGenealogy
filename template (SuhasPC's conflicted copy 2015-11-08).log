@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  9 NOV 2015 16:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.11)  8 NOV 2015 23:01
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -13,10 +13,10 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Program Files (x86)\Latex\tex\latex\base\fix-cm.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fix-cm.sty"
 Package: fix-cm 2014/09/29 v1.1s fixes to LaTeX
 
-("C:\Program Files (x86)\Latex\tex\latex\base\ts1enc.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 ))
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\IEEEtran.cls"
@@ -32,7 +32,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1ptm.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -127,11 +127,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\setup.tex"
-("C:\Program Files (x86)\Latex\tex\latex\multirow\multirow.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen126
 )
-("C:\Program Files (x86)\Latex\tex\latex\tools\longtable.sty"
-Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
+Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip44
 \LTright=\skip45
 \LTpre=\skip46
@@ -148,31 +148,31 @@ Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count98
 \LT@p@ftn=\toks15
 )
-("C:\Program Files (x86)\Latex\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\Latex\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\Latex\tex\latex\graphics\graphics.sty"
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\Latex\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\Latex\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\Latex\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\Latex\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\Latex\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
@@ -180,13 +180,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen128
 \Gin@req@width=\dimen129
 )
-("C:\Program Files (x86)\Latex\tex\latex\base\alltt.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-("C:\Program Files (x86)\Latex\tex\latex\ltxmisc\relsize.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
-("C:\Program Files (x86)\Latex\tex\latex\booktabs\booktabs.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen130
 \lightrulewidth=\dimen131
@@ -206,24 +206,24 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count103
 \@thisrulewidth=\dimen142
 )
-("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\Latex\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen143
 ))
-("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen144
 )
-("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count104
@@ -264,25 +264,25 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\Latex\tex\latex\tools\verbatim.sty"
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks22
 \verbatim@line=\toks23
 \verbatim@in@stream=\read1
 )
-("C:\Program Files (x86)\Latex\tex\latex\xcolor\xcolor.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\Latex\tex\latex\00miktex\color.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Program Files (x86)\Latex\tex\latex\colortbl\colortbl.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
-("C:\Program Files (x86)\Latex\tex\latex\tools\array.sty"
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen152
 \extrarowheight=\dimen153
 \NC@list=\toks24
@@ -303,13 +303,13 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files (x86)\Latex\tex\latex\subfig\subfig.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Program Files (x86)\Latex\tex\latex\caption\caption.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\Latex\tex\latex\caption\caption3.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen154
@@ -340,7 +340,7 @@ ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 \fi .
 \c@ContinuedFloat=\count117
 Package caption Info: longtable package is loaded.
-("C:\Program Files (x86)\Latex\tex\latex\caption\ltcaption.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 ))
 \c@KVtest=\count118
@@ -357,17 +357,17 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 \sf@top=\skip57
 \sf@bottom=\skip58
 )
-("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files (x86)\Latex\tex\latex\float\float.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count125
 \float@exts=\toks26
@@ -375,11 +375,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box35
 )
-("C:\Program Files (x86)\Latex\tex\latex\url\url.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\Latex\tex\latex\fancybox\fancybox.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancybox\fancybox.sty"
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
@@ -392,7 +392,7 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \EndVerbatimTokens=\toks31
 \Verbatim@Outfile=\write3
 \Verbatim@Infile=\read2
-) ("C:\Program Files (x86)\Latex\tex\latex\listings\listings.sty"
+) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
 \lst@mode=\count126
 \lst@gtempboxa=\box38
 \lst@token=\toks32
@@ -406,18 +406,18 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \lst@lineno=\count131
 \lst@maxwidth=\dimen166
 
-("C:\Program Files (x86)\Latex\tex\latex\listings\lstmisc.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count132
 \lst@skipnumbers=\count133
 \lst@framebox=\box39
 )
-("C:\Program Files (x86)\Latex\tex\latex\listings\listings.cfg"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
 File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-("C:\Program Files (x86)\Latex\tex\latex\framed\framed.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip59
 \fb@frw=\dimen167
@@ -425,19 +425,19 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen169
 \FrameSep=\dimen170
 )
-("C:\Program Files (x86)\Latex\tex\latex\tools\hhline.sty"
-Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\hhline.sty"
+Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
 )
-("C:\Program Files (x86)\Latex\tex\latex\psnfss\pifont.sty"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
-("C:\Program Files (x86)\Latex\tex\latex\psnfss\upzd.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 
-("C:\Program Files (x86)\Latex\tex\latex\psnfss\upsy.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 \qdx=\dimen171
@@ -445,24 +445,6 @@ File: upsy.fd 2001/06/04 font definitions for U/psy.
 \qdb=\dimen173
 )
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux"
-
-LaTeX Warning: Label `fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f4' multiply defined.
-
 
 LaTeX Warning: Label `fig:f4' multiply defined.
 
@@ -492,7 +474,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
 
 -- Lines per column: 56 (exact).
-("C:\Program Files (x86)\Latex\tex\context\base\supp-pdf.mkii"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
 \scratchdimen=\dimen174
@@ -514,7 +496,7 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count140
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 100.
 
- ("C:\Program Files (x86)\Latex\tex\latex\psnfss\omsptm.fd"
+ ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
@@ -524,12 +506,12 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Introduction.tex"
 LaTeX Font Info:    Try loading font information for U+msa on input line 4.
 
-("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 
-("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Missing character: There is no â in font ptmr7t!
@@ -555,7 +537,7 @@ File: LogGenalogyMethdology.pdf Graphic file (type pdf)
 <use LogGenalogyMethdology.pdf>
 Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 23.
 (pdftex.def)             Requested size: 515.99257pt x 206.40492pt.
- [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]) ("C:
@@ -593,37 +575,56 @@ Overfull \hbox (3.50006pt too wide) in paragraph at lines 175--176
  [][] 
  []
 
+<ChangedvsUnchangedlogs.pdf, id=25, 505.89pt x 382.42876pt>
+File: ChangedvsUnchangedlogs.pdf Graphic file (type pdf)
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 239.
+<use ChangedvsUnchangedlogs.pdf>
+Package pdftex.def Info: ChangedvsUnchangedlogs.pdf used on input line 192.
+(pdftex.def)             Requested size: 252.0pt x 190.50198pt.
 
-[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/frequencyofLogchanges.pdf>])
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
+<ChangedvsChangesorNot.pdf, id=26, 505.89pt x 382.42876pt>
+File: ChangedvsChangesorNot.pdf Graphic file (type pdf)
+
+<use ChangedvsChangesorNot.pdf>
+Package pdftex.def Info: ChangedvsChangesorNot.pdf used on input line 201.
+(pdftex.def)             Requested size: 252.0pt x 190.50198pt.
+
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 242.
+
+[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/frequencyofLogchanges.pdf>]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 264.
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 20--21
 
  []
 
-<ModelCreationLogGeanology.pdf, id=33, 795.97375pt x 181.67876pt>
+<ModelCreationLogGeanology.pdf, id=35, 615.29875pt x 181.67876pt>
 File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 
 <use ModelCreationLogGeanology.pdf>
 Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 39.
-(pdftex.def)             Requested size: 252.0pt x 57.51741pt.
+(pdftex.def)             Requested size: 252.0pt x 74.4056pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 214--215
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
 
  []
 
-<SpearmanActiveMQ.pdf, id=34, 411.5375pt x 361.35pt>
+[4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ChangedvsUnchangedlogs.pdf> <C:/
+Users/Suhas/Dropbox/Log Genealogy/Paper/ChangedvsChangesorNot.pdf>] [5 <C:/User
+s/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+ []
+
+<SpearmanActiveMQ.pdf, id=55, 411.5375pt x 382.42876pt>
 File: SpearmanActiveMQ.pdf Graphic file (type pdf)
 
 <use SpearmanActiveMQ.pdf>
-Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 221.
-(pdftex.def)             Requested size: 226.79845pt x 201.59923pt.
+Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 219.
+(pdftex.def)             Requested size: 226.79845pt x 201.60089pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
@@ -631,143 +632,92 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-<BootRandomForest.pdf, id=35, 434.62375pt x 217.81375pt>
+<BootRandomForest.pdf, id=56, 434.62375pt x 217.81375pt>
 File: BootRandomForest.pdf Graphic file (type pdf)
 
 <use BootRandomForest.pdf>
-Package pdftex.def Info: BootRandomForest.pdf used on input line 237.
+Package pdftex.def Info: BootRandomForest.pdf used on input line 231.
 (pdftex.def)             Requested size: 252.00237pt x 125.9997pt.
 
-Overfull \hbox (0.84673pt too wide) in paragraph at lines 263--270
+Underfull \hbox (badness 6625) in paragraph at lines 237--239
+[]\OT1/ptm/m/n/10 Given a dataset of \OT1/ptm/m/sl/10 m \OT1/ptm/m/n/10 logs fo
+r train-ing, $\OML/cmm/m/it/10 D \OT1/cmr/m/n/10 =$
+ []
+
+
+Overfull \hbox (0.84673pt too wide) in paragraph at lines 256--263
  [][] 
  []
 
-[4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 294--295
+
+Underfull \hbox (badness 10000) in paragraph at lines 287--288
 
  []
 
-
-Underfull \hbox (badness 2173) in paragraph at lines 340--342
+[6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf> <C:/Users/
+Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
+Underfull \hbox (badness 2173) in paragraph at lines 333--335
 []\OT1/ptm/m/n/10 The above pro-cess is re-peated 1,000 times and the
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 340--342
+Underfull \hbox (badness 1661) in paragraph at lines 333--335
 \OT1/ptm/m/n/10 F-measure and Brier score by sub-tract-ing the av-er-aged
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--342
+Underfull \hbox (badness 10000) in paragraph at lines 333--335
 
  []
 
-<ARBox.pdf, id=47, 722.7pt x 505.89pt>
-File: ARBox.pdf Graphic file (type pdf)
- <use ARBox.pdf>
-Package pdftex.def Info: ARBox.pdf used on input line 346.
-(pdftex.def)             Requested size: 173.88062pt x 121.71712pt.
+<ActiveMQResults.pdf, id=73, 411.5375pt x 382.42876pt>
+File: ActiveMQResults.pdf Graphic file (type pdf)
 
-<CRBox.pdf, id=48, 722.7pt x 505.89pt>
-File: CRBox.pdf Graphic file (type pdf)
- <use CRBox.pdf>
-Package pdftex.def Info: CRBox.pdf used on input line 349.
-(pdftex.def)             Requested size: 173.88062pt x 121.71712pt.
+<use ActiveMQResults.pdf>
+Package pdftex.def Info: ActiveMQResults.pdf used on input line 353.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
+ <CamelResults.pdf, id=74, 411.5375pt x 382.42876pt>
+File: CamelResults.pdf Graphic file (type pdf)
 
-<CloRBox.pdf, id=49, 722.7pt x 505.89pt>
-File: CloRBox.pdf Graphic file (type pdf)
- <use CloRBox.pdf>
-Package pdftex.def Info: CloRBox.pdf used on input line 353.
-(pdftex.def)             Requested size: 173.88062pt x 121.71712pt.
+<use CamelResults.pdf>
+Package pdftex.def Info: CamelResults.pdf used on input line 356.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
+ <CloudstackResults.pdf, id=75, 433.62pt x 382.42876pt>
+File: CloudstackResults.pdf Graphic file (type pdf)
 
-<LRBox.pdf, id=50, 722.7pt x 505.89pt>
-File: LRBox.pdf Graphic file (type pdf)
- <use LRBox.pdf>
-Package pdftex.def Info: LRBox.pdf used on input line 356.
-(pdftex.def)             Requested size: 173.88062pt x 121.71712pt.
- [6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf> <C:/Users
-/Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
+<use CloudstackResults.pdf>
+Package pdftex.def Info: CloudstackResults.pdf used on input line 360.
+(pdftex.def)             Requested size: 123.47711pt x 115.91992pt.
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 442.
+<LiferayResults.pdf, id=76, 411.5375pt x 382.42876pt>
+File: LiferayResults.pdf Graphic file (type pdf)
+ <use LiferayResults.pdf>
+Package pdftex.def Info: LiferayResults.pdf used on input line 363.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 449.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 426.
 
-<DexpA.pdf, id=63, 542.025pt x 578.16pt>
-File: DexpA.pdf Graphic file (type pdf)
- <use DexpA.pdf>
-Package pdftex.def Info: DexpA.pdf used on input line 480.
-(pdftex.def)             Requested size: 123.48138pt x 131.71245pt.
 
-<DexpC.pdf, id=64, 542.025pt x 578.16pt>
-File: DexpC.pdf Graphic file (type pdf)
- <use DexpC.pdf>
-Package pdftex.def Info: DexpC.pdf used on input line 483.
-(pdftex.def)             Requested size: 123.48138pt x 131.71245pt.
+LaTeX Warning: Reference `tba:logtype' on page 7 undefined on input line 428.
 
-<DexpClo.pdf, id=65, 542.025pt x 578.16pt>
-File: DexpClo.pdf Graphic file (type pdf)
- <use DexpClo.pdf>
-Package pdftex.def Info: DexpClo.pdf used on input line 487.
-(pdftex.def)             Requested size: 123.48138pt x 131.71245pt.
+[7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ActiveMQResults.pdf> <C:/Users/S
+uhas/Dropbox/Log Genealogy/Paper/CamelResults.pdf> <C:/Users/Suhas/Dropbox/Log 
+Genealogy/Paper/CloudstackResults.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Pa
+per/LiferayResults.pdf>]
 
-<DexpL.pdf, id=66, 542.025pt x 578.16pt>
-File: DexpL.pdf Graphic file (type pdf)
- <use DexpL.pdf>
-Package pdftex.def Info: DexpL.pdf used on input line 490.
-(pdftex.def)             Requested size: 123.48138pt x 131.71245pt.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 432.
 
-<ChangedvsUnchangedlogs.pdf, id=67, 505.89pt x 382.42876pt>
-File: ChangedvsUnchangedlogs.pdf Graphic file (type pdf)
 
-<use ChangedvsUnchangedlogs.pdf>
-Package pdftex.def Info: ChangedvsUnchangedlogs.pdf used on input line 501.
-(pdftex.def)             Requested size: 252.0pt x 190.50198pt.
- <OwA.pdf, id=68, 505.89pt x 382.42876pt>
-File: OwA.pdf Graphic file (type pdf)
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 464.
 
-<use OwA.pdf>
-Package pdftex.def Info: OwA.pdf used on input line 510.
-(pdftex.def)             Requested size: 123.48138pt x 93.34282pt.
- <OwC.pdf, id=69, 505.89pt x 382.42876pt>
-File: OwC.pdf Graphic file (type pdf)
- <use OwC.pdf>
-Package pdftex.def Info: OwC.pdf used on input line 513.
-(pdftex.def)             Requested size: 123.48138pt x 93.34282pt.
-
-<OwClo.pdf, id=70, 542.025pt x 404.51125pt>
-File: OwClo.pdf Graphic file (type pdf)
- <use OwClo.pdf>
-Package pdftex.def Info: OwClo.pdf used on input line 517.
-(pdftex.def)             Requested size: 123.48138pt x 92.15298pt.
-
-<OwL.pdf, id=71, 505.89pt x 382.42876pt>
-File: OwL.pdf Graphic file (type pdf)
- <use OwL.pdf>
-Package pdftex.def Info: OwL.pdf used on input line 520.
-(pdftex.def)             Requested size: 123.48138pt x 93.34282pt.
- [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ARBox.pdf> <C:/Users/Suhas/Drop
-box/Log Genealogy/Paper/CRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
-CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf>]
-Underfull \vbox (badness 2088) has occurred while \output is active []
-
- [8 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Drop
-box/Log Genealogy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
-DexpClo.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf> <C:/Users/S
-uhas/Dropbox/Log Genealogy/Paper/ChangedvsUnchangedlogs.pdf>]
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 605.
-
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex" [8])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwA.pdf> <C:/Users/Suhas/Dropbox
-/Log Genealogy/Paper/OwC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwClo
-.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwL.pdf>]
+
 Underfull \hbox (badness 1430) in paragraph at lines 19--20
 []\OT1/ptm/m/n/10 We use Lev-en-shtein ra-tio and choose a thresh-old to
  []
@@ -782,7 +732,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 19--20
 
  []
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex")
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex" [9])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl"
 Overfull \hbox (3.58963pt too wide) in paragraph at lines 84--85
 []\OT1/ptm/m/n/8 ``Java lan-guage rank-ing -http://www.tiobe.com/paperinfo/tpci
@@ -797,10 +747,7 @@ Overfull \hbox (3.58963pt too wide) in paragraph at lines 84--85
 ** the default language instead.
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 107.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [10])
+)
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -812,36 +759,39 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
+[10] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
 
-] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
+LaTeX Warning: There were undefined references.
+
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7112 strings out of 493921
- 109043 string characters out of 3146880
- 191119 words of memory out of 3000000
- 10253 multiletter control sequences out of 15000+200000
- 47247 words of font info for 93 fonts, out of 3000000 for 9000
+ 7071 strings out of 493921
+ 109364 string characters out of 3144875
+ 187059 words of memory out of 3000000
+ 10220 multiletter control sequences out of 15000+200000
+ 46151 words of font info for 92 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,42p,1575b,323s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
-es (x86)/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
-)/Latex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/lat
-xfont/lcirclew.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmb8a.p
-fb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program 
-Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Late
-x/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/ur
-w/times/utmri8a.pfb>
-Output written on template.pdf (11 pages, 789878 bytes).
+ 46i,12n,42p,1575b,326s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Fil
+es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times
+/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pf
+b>
+Output written on template.pdf (10 pages, 604348 bytes).
 PDF statistics:
- 202 PDF objects out of 1000 (max. 8388607)
+ 157 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

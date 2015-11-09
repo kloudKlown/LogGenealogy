@@ -2,7 +2,7 @@
 %	\\\\
 %\noindent \textbf{Motivation}
 
-From our preliminary analysis, we find that 35\%-50\% of logs are changed in our subject applications. This affects the log processing tools which run on these studied applications, making developers spend more time on maintenance of those tools. In this section we construct a random forest model for predicting log changes. We use this model to identify the most important factors which describe whether a log will change in the future. 
+From our preliminary analysis, we find that 45\%-55\% of logs are changed in our subject applications. This affects the log processing tools which run on these studied applications, making developers spend more time on maintenance of those tools. In this section we construct a random forest model for predicting log changes. We use this model to identify the most important factors which describe whether a log will change in the future. 
 
 % classifier and ident	ify the important metrics.
 
@@ -79,13 +79,12 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		This value is 0 for logs added in the initial commit but not for logs
 		added overtime. \tabularnewline
 		\cline{4-4} 
-		&  &  & r: Logs present in a file which is changed heavily, have higher chance of being changed as prior research shows that average log churn rate is twice that of entire code~\cite{Characterizinglogs}. Hence, more commits to a file, more the likelihood of logs being changed. 
-%		chances of logs being changed in a commit as well.
+		&  &  & r: Prior research shows that average log churn rate is twice that of entire code~\cite{Characterizinglogs}. Hence, more commits to a file, more chances of logs being changed in a commit as well.
 %		Logs present in a file which is changed heavily, have higher chance of being changed.  This helps to find out if the file is changed heavily which can result in log changes~\cite{Characterizinglogs}.
 		 \tabularnewline \cline{2-4} 
 		& Code churn in commit & Numerical & d: The code churn of the commit in which a log is added. \tabularnewline
 		\cline{4-4} 
-		&  &  & r: Logs added during large code changes like feature addition, improvements might be more stable than logs added during bug-fixes which have lesser code changes. 
+		&  &  & r: Log changes are correlated to code churn in files~\cite{EMSEIAN}.
 		 \tabularnewline
 		\cline{2-4} 
 		& File ownership  & Numerical  & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
@@ -95,7 +94,8 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		& Variables declared & Numerical & d: The number of variables which are declared before the log statement.
 		(we limit to 20 lines before log statement).\tabularnewline
 		\cline{4-4} 
-		&  &  & r: When a large \# of variables are declared, there is higher chance that any of the variables can be changed afterwards. \tabularnewline
+		&  &  & r: When a large \# of variables are declared, developers may log the new variables
+		to obtain more information~\cite{Characterizinglogs}. \tabularnewline
 		\cline{2-4} 
 		
 		
@@ -107,23 +107,21 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		 \cline{2-4} 
 		& Developer experience & Numerical & d: The number of commits the developer has made prior to this commit. \tabularnewline
 		\cline{4-4} 
-		&  &  & r: More experienced developers are more likely to introduce more stable logs, since they have better understanding of the application and may not make mistakes in the logs. 		 \tabularnewline
-%		Research has shown that experienced developers might take up more
-%		complex issues~\cite{rahman2011ownership} and therefore may leverage
-%		logs more~\cite{EMSEIAN}.
-
+		&  &  & r: Research has shown that experienced developers might take up more
+		complex issues~\cite{rahman2011ownership} and therefore may leverage
+		logs more~\cite{EMSEIAN}. \tabularnewline
 		\cline{2-4} 		 
 		\hline 
 		\multirow{22}{*}{Log Metrics} & Log context & Categorical & d: Identify the block in which a log is added. (i.e., `if', `if-=else',
 		`try-catch', `exception', `throw', `new function').\tabularnewline
 		\cline{4-4} 
 		&  &  & r: Prior research finds that logs are mostly used in assertion checks,
-		logical branching and return value checking~\cite{Fu1}. So, logs used in logical branching and assertion checks i.e., if-else block may not be as stable as logs in exception block. \tabularnewline
+		logical branching, return value checking, assertion checking~\cite{Fu1}. \tabularnewline
 		\cline{2-4} &
 	Is re-added	 & Boolean &
 		d: Check if the log is re-added into a file \tabularnewline
 	\cline{4-4} &  &  &
-	r: Logs which are added, removed and re-added into a file suggest that developers are unsure of the purpose of the log making them very unstable and prone to changes.  \tabularnewline
+	r: Identify the logs which get re-added into a file after they are removed. \tabularnewline
 	\cline{2-4} & 	
 		Log change type	 & Categorical &
 		d: Check the type of log change the log has undergone before i.e., relocation, text-variable change, level change. \tabularnewline
@@ -140,7 +138,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		\cline{2-4} 
 		& Log density & Numerical & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
 		\cline{4-4} 
-		&  &  & r: Research has found that files with logs tend to be more defect-prone~\cite{EMSEIAN}. Hence, files with higher log density might be more defect-prone, forcing developers to leverage logs to assist in debugging and making them more unstable. 
+		&  &  & r: Research has found that files with logs tend to be more defect-prone~\cite{EMSEIAN}. Hence, files with higher log density might be more defect-prone and contain more unstable logs within a file.
 		
 		
 		
@@ -149,7 +147,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		& Log level & Categorical & d: Identify the log level (verbosity) of the added log (i.e., `info',
 		`error', `warn', `debug', `trace' and `trace').\tabularnewline
 		\cline{4-4} 
-		&  &  & r: Research has shown that developers spend significant amount of time in adjusting the verbosity of logs~\cite{Characterizinglogs}. Hence, higher level logs such as `warn' and `error' might be more carefully placed than default level `info' logs and the higher level info are less likely to be changed than default level logs. \tabularnewline
+		&  &  & r: Research has shown that developers spend significant amount of time in adjusting the verbosity of logs~\cite{Characterizinglogs}. Hence, higher level logs such as `warn' and `error' might be more carefully placed than default level `info' logs. \tabularnewline
 		\cline{2-4} 
 		& Log text length & Numerical & d: Number of text phrases logged (i.e., we count all text present
 		between a pair of quotes as one phrase).\tabularnewline
@@ -157,12 +155,12 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		&  &  & r: Over 45\% of logs have modifications to static context~\cite{Characterizinglogs}.
 		Logs with fewer phrases might be subject to changes later to provide
 		better explanation.\tabularnewline
-		\cline{1-4} 
-%		Log revision count	 & Numerical &
-%		d: The number of prior commits which had log changes. \tabularnewline
-%		\cline{4-4} &  &  &
-%		r:  \tabularnewline
-%		\cline{2-4} 	
+		\cline{2-4} &
+		Log revision count	 & Numerical &
+		d: The number of prior commits which had log changes. \tabularnewline
+		\cline{4-4} &  &  &
+		r: This helps to identify if the file is prone to log changes.\tabularnewline
+		\cline{2-4} 	
 %		& Resolution time & Numerical & d: The time it takes for the issue to get fixed. It is defined as
 %		the time it takes since an issue is opened until closed. \tabularnewline
 %		\cline{2-4} 
@@ -196,7 +194,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 %		issue will be fixed faster with log changes. \tabularnewline
 %		\cline{2-4} 
 
-%		\hline 
+		\hline 
 	\end{tabular}\protect
 \end{table*}
 
@@ -227,11 +225,7 @@ Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\
 \subsection*{Step C2 - Random forest generation}
 %\textbf{\noindent\textsl{(C2 - Random forest generation)}}
 
-After we eliminate the correlated metrics from our datasets, we construct the random forest model. Random forest is a black-box ensemble classifier, which operates by constructing a multitude of decision trees on the training set and uses this to classify the testing set.  Figure~\ref{fig:BootRF} explains the construction of the random forest classifier, where from a training set of $m$ logs a random sample of \emph{n} components is selected with replacement~\cite{ShaneOLS} and using the \emph{randomForest} function from the \emph{randomForest} package in R, a random forest model is generated. 
-
-%From the sampled selection, many classification trees are grown without pruning. Each classification tree gives a vote, i.e., \emph{true} if log is changed and \emph{false} if not. The random forest chooses the class with most number of votes over all the trees in the forest. This strategy helps to make the random forests more robust against over-fitting~\cite{breiman1996bagging}.
-
-%and the steps are explained below.
+After we eliminate the correlated metrics from our datasets, we construct the random forest model. Random forest is a black-box ensemble classifier, which operates by constructing a multitude of decision trees on the training set and uses this to classify the testing set.
 \begin{figure}
 	\centering
 	\includegraphics[height=.5\columnwidth,width=1\columnwidth]{BootRandomForest}
@@ -240,21 +234,20 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 \end{figure}
 
 
-%Given a dataset of \textsl{m} logs for training, $ D = \{ (X_{1}Y_{1}),...,(X_{m}Y_{m}) \} $ where $X_{i, i = 1...m}$, is a vector of descriptors (i.e., $X$ are the metrics which are left after correlation analysis ) and $Y_{i}$ is the flag which indicates whether a log is changed or not.
+Given a dataset of \textsl{m} logs for training, $ D = \{ (X_{1}Y_{1}),...,(X_{m}Y_{m}) \} $ where $X_{i, i = 1...m}$, is a vector of descriptors (i.e., $X$ are the metrics which are left after correlation analysis ) and $Y_{i}$ is the flag which indicates whether a log is changed or not. Figure~\ref{fig:BootRF} explains the construction of the random forest classifier and the steps are explained below.
+\begin{enumerate}
+\item From the training set of \textsl{m} logs, a random sample of \emph{n} components is selected with replacement (i.e., bootstrap sample)~\cite{ShaneOLS}.
 
-%\begin{enumerate}
-%\item From the training set of \textsl{m} logs, a random sample of \emph{n} components is selected with replacement (i.e., bootstrap sample)~\cite{ShaneOLS}.
-%
-%We use the \emph{boot} function from the \emph{boot} package in R to generate bootstrap samples. The boot function generates a set of random indices, with replacement from the integers 1:\emph{n}.
-%
-%\item From the sampled selection, many classification trees are grown without pruning. Each classification tree gives a vote, i.e., \emph{true} if log is changed and \emph{false} if not. The random forest chooses the class with most number of votes over all the trees in the forest. This strategy helps to make the random forests more robust against over-fitting~\cite{breiman1996bagging}.
-%
-% We use the \emph{randomForest} function from the \emph{randomForest} package in R to generate the random forest model. 
-%
-%
-%\item The above steps are repeated until \textsl{M} such models are grown.
-%\item Predict new data by aggregating the prediction of the $M$ models generated.
-%\end{enumerate}  
+We use the `boot' function from the `boot' package in R to generate bootstrap samples. The boot function generates a set of random indices, with replacement from the integers 1:\emph{n}.
+
+\item From the sampled selection, many classification trees are grown without pruning. Each classification tree gives a vote, i.e., `true' if log is changed and `false' if not. The random forest chooses the class with most number of votes over all the trees in the forest. This strategy helps to make the random forests more robust against over-fitting~\cite{breiman1996bagging}.
+
+ We use the `randomForest' function from the `randomForest' package in R to generate the random forest model. 
+
+
+\item The above steps are repeated until \textsl{M} such models are grown.
+\item Predict new data by aggregating the prediction of the $M$ models generated.
+\end{enumerate}  
 
 \begin{table}[t]
 	\centering
@@ -309,7 +302,7 @@ After we build the random forest model, we evaluate the performance of our model
 	 \label{f:Fmeasure}
 	 \end{equation}	
 
-\textsl{Area Under Curve (AUC)} is used to measure the overall ability of the model to classify changed and un-changed logs. The value of AUC ranges between 0.5(worst) for random guessing and 1(best) where 1 means that our model can correctly classify every log as changed or un-changed. 
+\textsl{Area Under Curve (AUC)} is used to measure the overall ability of the model to classify changed and un-changed logs. The value of AUC ranges between 0.5(worst) and 1(best) where 1 means that our model can correctly classify every log as changed or un-changed
 
 
 
@@ -329,7 +322,7 @@ After we build the random forest model, we evaluate the performance of our model
 
 These performance measure, described previously only provide insight into how the random forest models fit the observed dataset, but it may overestimate the performance of the model if the model is over-fit.
 
-To account for the over-fitting in our models, we use \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows.
+To account for the overfitting in our models, we use \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows.
 \begin{enumerate}
 	\item From the original dataset with \textsl{m} records, select a bootstrap sample with \textsl{m} components with replacement.
 	\item Build random forest as described in (C2) using the bootstrap sample.
@@ -340,97 +333,40 @@ To account for the over-fitting in our models, we use \textsl{optimism} measure,
 	The above process is repeated 1,000 times and the average (mean) \textsl{optimism} is calculated. Finally, we calculate \textsl{optimism-reduced} performance measures for precision, recall, F-measure and Brier score by subtracting the averaged optimism of each measure, from their corresponding original measure.  The smaller the optimism values, the more stable the original model fit is.
 	\\
 
-\begin{figure}[tb]
-	
-	\centering
-	\subfloat{\includegraphics[width=0.69\columnwidth]{ARBox}\label{fig:f41}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.69\columnwidth]{CRBox} }
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.69\columnwidth]{CloRBox}
-		\label{fig:f42}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.69\columnwidth]{LRBox}\label{fig:f43}}
-	\hfill
-	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{The optimism reduced performance measures of the four projects}
-	\label{fig:optmisim}
-	
-\end{figure}
-
 %\textbf{\noindent \textsl{(C4 - Importance of each metric in relation to log stability)}}
 \subsection*{Step A2 - Identifying important metrics}
 
 To find the importance of each metric in a random forest model, we use a permutation test. In this test, the model built using the bootstrap data (i.e., two thirds of the original data) is applied to the test data (i.e., remaining one third of the original data).  
 
-
 Then, the values of the $X_{i}$ $^{th}$ metric of which we want to find importance for, are randomly permuted in the test dataset and the accuracy of the model is recomputed. The decrease in accuracy as a result of this permutation is averaged over all trees, and is used as a measure of the importance of metric $X_{i}$th in the random forest.
 
+We use the `importance' function defined in `RandomForest' package of R, to calculate the importance of each metric. We call the `importance' function each time during the bootstrapping process to obtain 1000 importance scores for each metric in our dataset. 	
 
-
-
-
-We use the \emph{importance} function defined in \emph{RandomForest} package of R, to calculate the importance of each metric. We call the \emph{importance}function each time during the bootstrapping process to obtain 1,000 importance scores for each metric in our dataset. 	
-
-
-
-As we obtain 1,000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} (SK) clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are strong predictors of likelihood of log change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the \emph{SK}	 function in the \emph{ScottKnott} package of R and set the significance threshold parameter to 0.05 to cluster the metrics into different groups. 
+As we obtain 1000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} (SK) clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are strong predictors of likelihood of log change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the `SK' function in the `ScottKnott' package of R and set the significance threshold parameter to 0.05 to cluster the metrics into different groups. 
 %\begin{table}
 
 %	\centering
 
-
-\begin{table*}[t]
-	\protect\protect\caption{The importance values of the metrics (top 10), divided into homogeneous
-		groups by Scott-Knott clustering. The `+' and `-' signs signifing positive
-		and negative correlation of the metric on log stability. }
+\begin{figure}[tb]
 	
 	\centering
-	
-	\begin{tabular}{|lll|lll|}
-		\hline 
-		& \textbf{ Active MQ}  &  &  & \textbf{Camel}  & \tabularnewline
-		\hline 
-		\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
-		\hline 
-		1  & Developer experience  & 0.258 -  & 1  & Developer experience  & 0.297 - \tabularnewline
-		2  & SLOC  & 0.188 +  & 2  & Ownership of file  & 0.161 - \tabularnewline
-		3& Ownership of file   & 0.170 +  & 3 & Log level & 0.128  \tabularnewline
-		4  & Log density  & 0.166 +  & 4  & SLOC  & 0.112 + \tabularnewline
-		5  & Log variable count & 0.089 +  & 5 & Log density  & 0.108 - \tabularnewline
-		6 & Log level & 0.078   &  & Type of log change & 0.106  \tabularnewline
-		7  & Type of log change & 0.069   & 6  & Log variable count & 0.090 + \tabularnewline
-		8  & Variable declared  & 0.055 -  & 7 & Old log & 0.071 - \tabularnewline
-		9  & Log context & 0.043   & 9 & Log context & 0.061  \tabularnewline
-		\hline 
-	\end{tabular}
-	
-	\begin{tabular}{|lll|lll|}
-		\hline 
-		& \textbf{CloudStack}  &  &  & \textbf{Liferay}  & \tabularnewline
-		\hline 
-		\hline 
-		\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
-		\hline 
-		1  & Type of log change & 0.268   & 1  & SLOC  & 0.192 + \tabularnewline
-		2  & Code churn in commit  & 0.243 +  & 2  & Developer experience  & 0.174 - \tabularnewline
-		3& SLOC & 0.232 +  & 3 & Ownership of file  & 0.170 - \tabularnewline
-		4  & Log density  & 0.208 -  & 4 & Log density & 0.158 - \tabularnewline
-		5 & Ownership of file  & 0.154 -  & 5  & Log variable count  & 0.143 + \tabularnewline
-		6 & Developer experience   & 0.119 +  & 6 & Variable declared  & 0.118 + \tabularnewline
-		7  & Log text length  & 0.095 +  &7 & Log context  & 0.106  \tabularnewline
-		8 & Log variable count  & 0.091 +  & 8  & Log text length & 0.071 + \tabularnewline
-		9 & Variable declared  & 0.097 -  & 9  & Type of log change & 0.058 \tabularnewline
-		\hline 
-	\end{tabular} \label{tba:Scott} 
-	
-	
-	
-\end{table*}
+	\subfloat{\includegraphics[width=0.49\columnwidth]{ActiveMQResults}\label{fig:f4}}
+	\hfill
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{CamelResults} }
+	\hfill
+		\centering
+		\subfloat{\includegraphics[width=0.49\columnwidth,height=0.46\columnwidth]{CloudstackResults}
+			\label{fig:f4}}
+		\hfill
+			\centering
+			\subfloat{\includegraphics[width=0.49\columnwidth]{LiferayResults}\label{fig:f4}}
+			\hfill
+%	\caption{Distribution of the number of developers responsible for changing a log}
+		\caption{The optimism reduced performance measures of the four projects}
+	\label{fig:optmisim}
 
+\end{figure}
 
 
 %\label{tba:optmisim}
@@ -438,32 +374,62 @@ As we obtain 1,000 data sets for each metric because of bootstrapping process, w
 
 
 \subsection{Results}
+\begin{table*}[t]
+	\protect\protect\caption{The importance values of the metrics (top 10), divided into homogeneous
+		groups by Scott-Knott clustering. The `+' and `-' signs signifing positive
+		and negative correlation of the metric on log stability. }
+	
+	\centering
+	
+\begin{tabular}{|lll|lll|}
+	\hline 
+	& \textbf{ Active MQ}  &  &  & \textbf{Camel}  & \tabularnewline
+	\hline 
+	\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+	\hline 
+	1  & SLOC  & 0.186 +  & 1  & Ownership of file  & 0.218 + \tabularnewline
+	2  & Ownership of file  & 0.180 +  & 2  & Developer experience  & 0.200 - \tabularnewline
+	& Developer experience  & 0.179 +  & 3 & Log density & 0.188 - \tabularnewline
+	3  & Log density  & 0.132 -  & 4  & SLOC  & 0.187 + \tabularnewline
+	4  & Code churn in commit & 0.093 +  & 5 & Log level  & 0.135 - \tabularnewline
+	5  & Log variable count & 0.072 +  & 6 & Log variable count & 0.133 + \tabularnewline
+	6  & Variable declared & 0.067 -  & 7  & Variable Declared  & 0.122 + \tabularnewline
+	7  & Log level  & 0.061 +  & 8 & Code churn in commit & 0.103 + \tabularnewline
+	8  & Log text length & 0.055 +  & 9 & Log context & 0.060 - \tabularnewline
+	\hline 
+\end{tabular}
+
+\begin{tabular}{|lll|lll|}
+	\hline 
+	& \textbf{CloudStack}  &  &  & \textbf{Life Ray}  & \tabularnewline
+	\hline 
+	\hline 
+	\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
+	\hline 
+	1  & Developer experience  & 0.152 -  & 1  & Log density  & 0.199 - \tabularnewline
+	2  & Ownership of file  & 0.149 +  & 2  & Developer experience  & 0.180 + \tabularnewline
+	& Code churn in commit & 0.148 +  & 3 & SLOC  & 0.165 + \tabularnewline
+	3  & Log density  & 0.139 -  &  & Log level & 0.165 + \tabularnewline
+	4 & SLOC  & 0.135 +  & 4  & Ownership of file  & 0.151 - \tabularnewline
+	5 & Log variable count  & 0.122 +  &  & Variable Declared  & 0.150 + \tabularnewline
+	6  & Log text length  & 0.107 +  & 5 & Log variable count  & 0.074 + \tabularnewline
+	7 & Variable Declared  & 0.084 +  & 6  & Log context & 0.059 - \tabularnewline
+	8 & Type of log change  & 0.066 +  &   & Log text length & 0.059 +\tabularnewline
+	\hline 
+\end{tabular} \label{tba:Scott} 
+
+	
+	
+\end{table*}
+
 
 \hypobox{The random forest classifier achieves a precision of 0.89-0.91 and recall of 0.71-0.83 for our studied applications.} 
 
-Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. The model achieves AUC of 0.95-0.96 across the studied applications.
-% We find the recall of the random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest total number of log lines and close to 50\% of the log changes are log relocations as seen in Table~\ref{tba:logtype}. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
+Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. The model achieves AUC of 0.95-0.96 across the studied applications. We find the recall of the random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest total number of log lines and close to 50\% of the log changes are log relocations as seen in Table~\ref{tba:logtype}. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 %lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 \hypobox{The random forest classifier outperforms random guessing.} The classifier achieves Brier scores between 0.04 and 0.07 across all projects. If the model achieves a Brier score of 0.07, it means our model can forecast with 73\% probability a log will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
-
-\begin{table}[tb]
-	\centering
-	\caption{Contribtuion of top 3 developers}
-	
-	\begin{tabular}{lll}
-		
-		\cline{1-3} 	& Total logs & Changed logs \\  \cline{1-3}
-		ActiveMQ    & 956 (50.4 \%)            & 301 (31.4 \%)      \\
-		Camel       & 3060 (63.1 \%)              & 1460 (47.7 \%)      \\
-		Cloudstack  & 5982 (35.7 \%)              & 2276 (38.0 \%)      \\
-		Liferay     &  3382 (86.7\%)            & 609 (18.0 \%)      \\\cline{1-3}
-		\textbf{Average}& \textbf{3345 (59 \%)} & \textbf{1161} (\textbf{33.75 \%}) \\\cline{1-3}
-		
-	\end{tabular}
-	\label{tba:topDevelopers}
-\end{table}
 
 
 \subsection*{{Important metrics for log stability}}
@@ -474,80 +440,28 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 
 %% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
-\begin{figure}[tb]
-	
+
+\textbf{{{Developer experience} has positive correlation in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has positive correlation to log stability, which implies a) logs introduced by more experienced developers are more likely to change or b) experienced developer introduce more logs in the studied application.
+
+\begin{table}[tb]
 	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpA}\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpC} }
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpClo}
-		\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpL}\label{fig:f4}}
-	\hfill
-	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing experience of developers who introduce unchanged logs against logs changing more than once.}
-	\label{fig:Dexp_BP}
-	
-\end{figure}
+	\caption{Contribtuion of top 3 developers}
+
+	\begin{tabular}{|lll|}
+		& Total logs & Changed logs \\
+		ActiveMQ    & 956 (50.4 \%)            & 301 (51.1 \%)      \\
+		Camel       & 3060 (63.1 \%)              & 1460 (74.4 \%)      \\
+		Cloudstack  & 5982 (35.7 \%)              & 2276 (41.6 \%)      \\
+		Liferay     &  3382 (86.7\%)            & 609 (90.5 \%)      \\
+		\textbf{Average}& \textbf{3345 (59 \%)} & \textbf{1161} (\textbf{64.2 \%})  
+	\end{tabular}
+		\label{tba:topDevelopers}
+\end{table}
+
+We find that the top 3 developers introduce 59\% of the total logs in the studied applications as seen in Table\ref{tba:topDevelopers}. We also find that close to 64\% of the logs which change are from these experienced developers. This results suggest that even though experienced developers introduce majority of logs, they is no increase in log stability. 
 
 
-\begin{figure}[tb]
-	\centering
-	\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
-	\caption{Comparing the file ownership of developers who add logs that are never changed vs logs which are changed.}
-		\label{fig:ChangedvsUnchangedlogs}
-\end{figure}
-
-
-\begin{figure}[tb]
-	
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{OwA}\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{OwC} }
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{OwClo}
-		\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{OwL}\label{fig:f4}}
-	\hfill
-	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing file ownership of developers who introduce unchanged logs against logs changing more than once.}
-	\label{fig:Numberofchanges_BP}
-	
-\end{figure}
-
-
-
-
-\textbf{{{Developer experience} has negative correlation in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has negative correlation to log stability in three of the studied applications. This suggests that logs which change are introduced by less experienced developers in ActiveMQ, Camel and liferay. This seen in Figure~\ref{fig:Dexp_BP} where logs which change three times or more are done much less experienced developers, when compared to unchanged logs. We also find that in these three applications the top 3 developers are responsible for more than 50\% of the logs and only 30\% of the logs introduced by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommends that new developers should get more experience about the application by actively making more commits to write more stable logs. 
-
-
-
-\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers introducing the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when introducing or changing logs in the file. 
-
-
-% where we find that in Camel, Cloudstack and Liferay unchanged logs are introduced by developer who have higher ownership than developers introducing changed logs. 
-
-%After identifying the frequency of changes within the studied applications, we find the number of the developers responsible for the log changes and also if they own the file which contains the log. We use the developer name available from the `git log' to count the number of developers who change a log. To decide whether a developer owns a file we calculate the ratio of number of lines written by him to the total lines of code using the `blame' command available in Git. Since \emph{blame} only shows the changes made to a file in the last commit, to calculate the contribution of a developer to a file we recursively look at changes made in previous commits by that developer. We use the \emph{blame} to calculate the contribution at each commit and take the mean contribution across all commits to find his ownership of a file.
-
-
-
-% which implies a) logs introduced by more experienced developers are more likely to change or b) experienced developer introduce more logs in the studied application.
-
-%We find that the top 3 developers introduce 59\% of the total logs in the studied applications as seen in Table\ref{tba:topDevelopers}. We also find that close to 64\% of the logs which change are from these experienced developers. This results suggest that even though experienced developers introduce majority of logs, they is no increase in log stability. 
-
-
-
-%where in three of the studied applications, the logs which change are introduced by developers who have lower ownership of a file. 
+\hypobox{{File ownership} is a strong predictor of log change and has positive correlation in three of the studied applications.} This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. This is seen Figure~\ref{fig:ChangedvsUnchangedlogs}, where in three of the studied applications, the logs which change are introduced by developers who have lower ownership of a file. 
 
 
 
@@ -556,20 +470,12 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 %Even though ActiveMQ and Liferay has positive correlation in Table~\ref{tba:Scott}, we find that these projects have strong code ownership and  two developer are responsible for over 50\% of the total commits within the projects. To remove this strong ownership, we exclude the log changes made by these top developers in ActiveMQ and Liferay and we find that developer experience has negative correlation in both ActiveMQ and Liferay. This suggests that logs which are introduced by more experienced developers are less likely to change in all of the studied applications. 
 
 
-%
-\textbf{{We find that \emph{log density} is an important metric in our studied applications.}}
-We find that log density has negative correlation with log stability (i.e., increase in log density decreases probability of log change), in Camel, Cloudstack and Liferay as seen in Table~\ref{tba:Scott}. We find that in these applications, the logs which change are present in files with lower log density than unchanged logs. When we measure the median file sizes we find that, logs which change more are present in files with significantly higher SLOC (2x-3x higher). This suggests that large files which are not well logged are more likely to have unstable logs, than well logged files. 
- 
-%have significanlty 
 
-%more than three times are present in files with low density i.e., not a well logged file but more SLOC than files with unchanged logs.
+{We find that \emph{log density} is an important metric in our studied applications.} 
+We find that log density has positive correlation with log stability (i.e., increase in log density inceases probability of log change), in three of studied applications as seen in Table~\ref{tba:Scott}.
 
- 
-% the log density for logs changing 1-2 times is higher than unchanged logs, but w
-
-
-%{{log variable count} has a positive correlation with log stability as shown in Table~\ref{tba:Scott}.}
-%This implies that more variables in a log results in a higher likelihood that a log will be changed. This may be because there are inconsistencies between logs and the actual needed information intended as shown by prior research~\cite{Characterizinglogs} and developers have to update logs to resolve the inconsistencies. We find that the median for changed logs in all the subject systems is two variables for 
+{{log variable count} has a positive correlation with log stability as shown in Table~\ref{tba:Scott}.}
+This implies that more variables in a log results in a higher likelihood that a log will be changed. This may be because there are inconsistencies between logs and the actual needed information intended as shown by prior research~\cite{Characterizinglogs} and developers have to update logs to resolve the inconsistencies.
 
 
 %\textbf{We find that \emph{SLOC}(source lines of code) is a strong predictor of log change across all projects.} \emph{SLOC} has a positive correlation suggesting that logs in larger files have higher a likelihood of getting changed. 
@@ -602,7 +508,7 @@ We find that log density has negative correlation with log stability (i.e., incr
 %We find that other metrics from the developer dimension are not consistent among the studied systems. This may be because each project might have different philosophy of development, for example we find that \emph{resolution time} has negative effect in Liferay and Camel but has positive effect in ActiveMQ. This suggests that logs are more likely to change in ActiveMQ when the resolution time of issue increases, but less likely in Liferay and Camel. 
 
 
-\hypobox {Our Random Forest classifier achieves a precision of 89\%-91\% and recall of 71\%-83\% across all studied applications. We find file ownership, SLOC, developer experience and log density to be strong predictors of log change in our studied applications.}
+%\hypobox {Our Random Forest classifier achieves a precision of 89\%-91\% and recall of 71\%-83\% across all studied applications. We find file ownership, SLOC, developer experience and log density to be strong predictors of log change in our studied applications.}
 
 
 
