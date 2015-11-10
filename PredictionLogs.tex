@@ -496,12 +496,12 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 \end{figure}
 
 
-\begin{figure}[tb]
-	\centering
-	\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
-	\caption{Comparing the file ownership of developers who add logs that are never changed vs logs which are changed.}
-		\label{fig:ChangedvsUnchangedlogs}
-\end{figure}
+%\begin{figure}[tb]
+%	\centering
+%	\includegraphics[width=1\linewidth]{ChangedvsUnchangedlogs}
+%	\caption{Comparing the file ownership of developers who add logs that are never changed vs logs which are changed.}
+%		\label{fig:ChangedvsUnchangedlogs}
+%\end{figure}
 
 
 \begin{figure}[tb]
@@ -534,7 +534,10 @@ We also find that in ActiveMQ, Camel and Liferay, the top three developers are r
 
 
 
-\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs added by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be added by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers adding the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
+\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs added by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:Numberofchanges_BP}, where in Camel and Liferay, the unchanged logs are introduced by developers who have more ownership of the file. We also find that the most unstable logs i.e., (3 + changes ) in Camel, Cloudstack and Liferay are done by developers who have lesser ownership of the file, accounting for the negative correlation in these three applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
+
+
+%This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be added by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers adding the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
 
 %when logs are changed by developer who has less ownership, an experienced developer reverts fixes the same logs again. 
 
