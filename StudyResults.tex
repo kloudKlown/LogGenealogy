@@ -249,19 +249,24 @@ Figure~\ref{fig:frequencyofLogchanges} shows the percentage of changed logs in e
 		\cline{1-7}
 		ActiveMQ   & 2  & 25      & 47     & 141    & 163     & 493  \\
 		Camel      & 2   & 13      & 32      & 98    & 133      & 456 \\
-		Cloudstack & 1   & 66      & 234      & 410   & 574     & 4121 \\
+		Cloudstack & 2   & 66      & 234      & 410   & 574     & 4121 \\
 		Liferay    & 2   & 6      & 14     & 28    & 27     & 278\\	\cline{1-7}
 		
 	\end{tabular}
 	\label{tba:summaryofnewLogCodechange}
 \end{table}
 
+The logs added near the end of our study time-frame can change but will not be considered in our analysis which leads to noise. From Table~\ref{tba:summaryofnewLogchange}, we find that this varies widely within the application between 37 to 390 commits. To eliminate such logs, we use the maximum number of commits before a newly added log is changed within the studied applications and exclude all new logs added before that many commits from our analysis.  
 
 
 
-\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that logs added newly into the application can change between 37 to 390 commits since their addition, but majority i.e., 75\% are changed within 15 commits since addition. This short time between addition and log change suggests that log change are more likely to be rewording or after-thoughts rather than change of feature.  This is seen in Table~\ref{tba:summaryofnewLogCodechange} where in three of the applications, the code churn is less than 50 lines of code for 50\% of the new logs which are changed before 15 commits since addition. 
+\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that logs added newly into the application can change between 37 to 390 commits since their addition. But majority i.e., 75\% are changed within 15 commits since addition. We also find that the median code churn during these log changes is less than 50 lines of code in three of the studied applications as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that the log changes are more likely to be changed due to rewording changes rather than major changes to the added feature.
 
-The logs added near the end of our study time-frame can change but will not be considered in our analysis which leads to noise. From Table~\ref{tba:summaryofnewLogchange}, we find that this varies widely within the application between 37 to 390 commits. To eliminate such logs, we find the maximum number of commits before a newly added log is changed within the studied applications and exclude all new logs added before that many commits from our analysis.  
+%rewording or after-thoughts rather than change of feature.
+
+% This short time between addition and log change suggests that log change are more likely to be rewording or after-thoughts rather than change of feature. This is seen in Table~\ref{tba:summaryofnewLogCodechange} where in three of the applications, the code churn is less than 50 lines of code for 50\% of the new logs which are changed before 15 commits since addition. 
+
+
 
 %We find that logs are added throughout the lifetime of an application and these logs are changed within 
 

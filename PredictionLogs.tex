@@ -17,7 +17,7 @@ From our preliminary analysis, we find that 35\%-50\% of logs are changed in our
 
 \subsection{Approach}
 
-We use context and log metrics to build the random forest classifier. Context metrics measure the changes to the applications at the time of introduction of the log and log metrics, collect the information about the introduced log. We use the git repository to extract the context metrics and log metrics for the studied applications. Table~\ref{tba:Taxonomy} lists all the metrics we collect. We define each metric and the rationale behind the choice of each metric.  We use the context and log metrics because this data can be extracted from control versioning systems easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the application to understand these metrics.\\
+We use context and log metrics to build the random forest classifier. Context metrics measure the changes to the applications at the time of adding of the log and log metrics, collect the information about the added log. We use the git repository to extract the context metrics and log metrics for the studied applications. Table~\ref{tba:Taxonomy} lists all the metrics we collect. We define each metric and the rationale behind the choice of each metric.  We use the context and log metrics because this data can be extracted from control versioning systems easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the application to understand these metrics.\\
 
 %To find the stability of logs in our studied systems, we extract code and log churn metrics from the Git repository and developer metrics from JIRA. We use code churn metrics because prior work has linked logs to development knowledge and issue reports~\cite{IanIcesm}.
 
@@ -88,9 +88,9 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		&  &  & r: Logs added during large code changes like feature addition, improvements might be more stable than logs added during bug-fixes which have lesser code changes. 
 		 \tabularnewline
 		\cline{2-4} 
-		& File ownership  & Numerical  & d: Identify the percentage of the file written by developer introducing the log \tabularnewline
+		& File ownership  & Numerical  & d: Identify the percentage of the file written by developer adding the log \tabularnewline
 		\cline{4-4} 
-		 &  &  & r: The owner of the file is more likely to introduce stable logs than developers who have not edited the file before. 
+		 &  &  & r: The owner of the file is more likely to add stable logs than developers who have not edited the file before. 
 		 		\tabularnewline			\cline{2-4}
 		& Variables declared & Numerical & d: The number of variables which are declared before the log statement.
 		(we limit to 20 lines before log statement).\tabularnewline
@@ -107,7 +107,7 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		 \cline{2-4} 
 		& Developer experience & Numerical & d: The number of commits the developer has made prior to this commit. \tabularnewline
 		\cline{4-4} 
-		&  &  & r: More experienced developers are more likely to introduce more stable logs, since they have better understanding of the application and may not make mistakes in the logs. 		 \tabularnewline
+		&  &  & r: More experienced developers are more likely to add more stable logs, since they have better understanding of the application and may not make mistakes in the logs. 		 \tabularnewline
 %		Research has shown that experienced developers might take up more
 %		complex issues~\cite{rahman2011ownership} and therefore may leverage
 %		logs more~\cite{EMSEIAN}.
@@ -490,7 +490,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing experience of developers who introduce unchanged logs against logs changing more than once.}
+	\caption{Compraing experience of developers who add unchanged logs against logs changing more than once.}
 	\label{fig:Dexp_BP}
 	
 \end{figure}
@@ -520,7 +520,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{OwL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing file ownership of developers who introduce unchanged logs against logs changing more than once.}
+	\caption{Compraing file ownership of developers who add unchanged logs against logs changing more than once.}
 	\label{fig:Numberofchanges_BP}
 	
 \end{figure}
@@ -528,11 +528,15 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 
 
 
-\textbf{{{Developer experience} has negative correlation in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has negative correlation to log stability in three of the studied applications. This suggests that logs which change are introduced by less experienced developers in ActiveMQ, Camel and liferay. This seen in Figure~\ref{fig:Dexp_BP} where logs which change three times or more are done much less experienced developers, when compared to unchanged logs. We also find that in these three applications the top 3 developers are responsible for more than 50\% of the logs and only 30\% of the logs introduced by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommends that new developers should get more experience about the application by actively making more commits to write more stable logs. 
+\textbf{{{Developer experience} has negative correlation in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has negative correlation to log stability in three of the studied applications. This suggests that logs which change are added by less experienced developers in ActiveMQ, Camel and liferay. This seen in Figure~\ref{fig:Dexp_BP}, where logs which change three times or more are done much less experienced developers, when compared to unchanged logs. For example, when we inspect \emph{git diff} for the file \emph{SessionBatchTransactionSynchronization.java} in Camel, we find that all the logs introduced by a new developer are fixed by a more experienced developer. In this case, the experienced developer changes the log contexts i.e., relocates the logs and adds additional context information to provide more meaning to the logs. 
+
+We also find that in ActiveMQ, Camel and Liferay, the top three developers are responsible for more than 50\% of the logs and only 30\% of the logs added by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommend that new developers should get more experience about the application by actively making more commits to write more stable logs. 
 
 
 
-\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs introduced by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be introduced by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers introducing the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when introducing or changing logs in the file. 
+\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs added by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be added by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers adding the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
+
+%when logs are changed by developer who has less ownership, an experienced developer reverts fixes the same logs again. 
 
 
 % where we find that in Camel, Cloudstack and Liferay unchanged logs are introduced by developer who have higher ownership than developers introducing changed logs. 
