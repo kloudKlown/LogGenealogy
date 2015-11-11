@@ -2,7 +2,7 @@
 %	\\\\
 %\noindent \textbf{Motivation}
 
-From our preliminary analysis, we find that 35\%-50\% of logs are changed in our subject applications. This affects the log processing tools which run on these studied applications, making developers spend more time on maintenance of those tools. In this section we construct a random forest model for predicting log changes. We use this model to identify the most important factors which describe whether a log will change in the future. 
+In our preliminary analysis, we find that 35\%-50\% of logs are changed in our subject applications. This affects the log processing tools which run on these studied applications, making developers spend more time on maintenance of those tools. In this section we construct a random forest model for predicting log changes. We use this model to identify the most important factors which describe whether a log will change in the future, so that these factors can be taken into account by developers of log processing tools. 
 
 % classifier and ident	ify the important metrics.
 
@@ -17,7 +17,7 @@ From our preliminary analysis, we find that 35\%-50\% of logs are changed in our
 
 \subsection{Approach}
 
-We use context and log metrics to build the random forest classifier. Context metrics measure the changes to the applications at the time of adding of the log and log metrics, collect the information about the added log. We use the git repository to extract the context metrics and log metrics for the studied applications. Table~\ref{tba:Taxonomy} lists all the metrics we collect. We define each metric and the rationale behind the choice of each metric.  We use the context and log metrics because this data can be extracted from control versioning systems easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the application to understand these metrics.\\
+We use context and log metrics to build the random forest classifier. Context metrics measure the file context at the time of adding the log. Log metrics measure the details about the added log. We use the Git repository to extract the context metrics and log metrics for the studied applications. Table~\ref{tba:Taxonomy} lists the metrics we collect. We define each metric and the rationale behind the choice of each metric.  We use the context and log metrics because this data can be extracted from the source code repository easily by developers. It also benefits log processing tool developers as they do not need domain knowledge about the application to understand these metrics.\\
 
 %To find the stability of logs in our studied systems, we extract code and log churn metrics from the Git repository and developer metrics from JIRA. We use code churn metrics because prior work has linked logs to development knowledge and issue reports~\cite{IanIcesm}.
 
@@ -33,28 +33,28 @@ We use context and log metrics to build the random forest classifier. Context me
 
 %\noindent{\textbf{{Model construction}}}
 
-We build random forest models~\cite{Albert2008424} to explain the stability of logs in our studied applications. A random forest is a collection of largely uncorrelated decision trees in which the results of all trees are combined to form a generalized predictor. In our model the context and log metrics are the explanatory variables and the dependent class variable is a boolean variable that represents whether the log is changed or not (i.e., '0' for not changed and '1' for changed).
+We build random forest models~\cite{Albert2008424} to predict whether a log will change in our studied applications. A random forest is a collection of largely uncorrelated decision trees in which the results of all trees are combined to form a generalized predictor. In our model, the context and log metrics are the explanatory variables and the dependent class variable is a boolean variable that represents whether the log ever changed or not (i.e., '0' for not changed and '1' for changed).
 \begin{figure}
 	\centering
 	\includegraphics[width=1\columnwidth]{ModelCreationLogGeanology}
-	\caption{Overview of model construction(C), analysis(A) and flow of data in random forest generation}
+	\caption{Overview of model construction (C), analysis (A) and flow of data in random forest generation}
 	\label{fig:ModelCreationLogGeanology}
 \end{figure}  
 
 \begin{table*}
 	\centering \protect\caption{Taxonomy of metrics considered for model construction}	
 	\label{tba:Taxonomy} %
-	\begin{tabular}{|c|l|l|>{\raggedright}p{1\columnwidth}|}
-		\hline 
-		Dimension  & Metrics  & Values  & Definition (d) -- Rationale (r)\tabularnewline
-		\hline 
+	\begin{tabular}{c|l|l|>{\raggedright}p{1\columnwidth}}
+%		\hline 
+\toprule	Dimension  & Metrics  & Values  & Definition (d) -- Rationale (r)\tabularnewline
+%		\hline 
 		\hline 
 		\multirow{12}{*}{Context Metrics} & 
 
 		Old log	 & Boolean &
-		d: Check if the log is added to the file after creation or it wad added when file was created. \tabularnewline
-		\cline{4-4} &  &  &
-		r: Logs added into a file after creation might be more likely to be changed than the logs added during file creation.	\tabularnewline 	\cline{2-4} &
+		d: Check if the log is added to the file after creation or it was added when file was created. \tabularnewline
+	 &  &  & 
+			r: Logs added into a file after creation might be more likely to be changed than the logs added during file creation.	\tabularnewline \cmidrule{2-4} 	&
 %		Is readded	 & Boolean (0 -1) &
 %		d: Check if the log is readded into a file \tabularnewline
 %		\cline{4-4} &  &  &
@@ -78,86 +78,90 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 		Total revision count & Numerical & d: Total number of commits made to the file before the log is added.
 		This value is 0 for logs added in the initial commit but not for logs
 		added overtime. \tabularnewline
-		\cline{4-4} 
-		&  &  & r: Logs present in a file which is changed heavily, have higher chance of being changed as prior research shows that average log churn rate is twice that of entire code~\cite{Characterizinglogs}. Hence, more commits to a file, more the likelihood of logs being changed. 
+%		\cline{4-4} 
+		&  &  & r: Logs present in a file which is changed heavily, have higher chance of being changed as prior research shows that average log churn rate is twice that of entire code~\cite{Characterizinglogs}. Hence, the more commits to a file, the higher the likelihood of logs being changed. 
 %		chances of logs being changed in a commit as well.
 %		Logs present in a file which is changed heavily, have higher chance of being changed.  This helps to find out if the file is changed heavily which can result in log changes~\cite{Characterizinglogs}.
-		 \tabularnewline \cline{2-4} 
+		 \tabularnewline 	\cmidrule{2-4}
 		& Code churn in commit & Numerical & d: The code churn of the commit in which a log is added. \tabularnewline
-		\cline{4-4} 
-		&  &  & r: Logs added during large code changes like feature addition, improvements might be more stable than logs added during bug-fixes which have lesser code changes. 
+%		\cline{4-4} 
+		&  &  & r: Logs added during large code changes like feature addition
+		 might be more stable than logs added during bug fixes which have lesser code changes. 
 		 \tabularnewline
-		\cline{2-4} 
-		& File ownership  & Numerical  & d: Identify the percentage of the file written by developer adding the log \tabularnewline
-		\cline{4-4} 
+		\cmidrule{2-4}
+		& File ownership  & Numerical  & d: The percentage of the file written by developer adding the log. \tabularnewline
+%		\cline{4-4} 
 		 &  &  & r: The owner of the file is more likely to add stable logs than developers who have not edited the file before. 
-		 		\tabularnewline			\cline{2-4}
-		& Variables declared & Numerical & d: The number of variables which are declared before the log statement.
-		(we limit to 20 lines before log statement).\tabularnewline
-		\cline{4-4} 
+		 		\tabularnewline		\cmidrule{2-4}
+		& Variables declared & Numerical & d: The number of variables which are declared before the log statement. We limit to 20 lines before log statement.\tabularnewline
+%		\cline{4-4} 
 		&  &  & r: When a large \# of variables are declared, there is higher chance that any of the variables can be changed afterwards. \tabularnewline
-		\cline{2-4} 
+	\cmidrule{2-4}
 		
 		
 		& SLOC & Numerical & d: The number of lines of code in the file.\tabularnewline
-		\cline{4-4} 
+%		\cline{4-4} 
 		&  &  & r: Large files have more functionality and are more prone to changes~\cite{zhang2009investigation}
-		and more log changes~\cite{Characterizinglogs,EMSEIAN}.
+		and log changes~\cite{Characterizinglogs,EMSEIAN}.
 		 \tabularnewline
-		 \cline{2-4} 
+		 \cmidrule{2-4}
 		& Developer experience & Numerical & d: The number of commits the developer has made prior to this commit. \tabularnewline
-		\cline{4-4} 
-		&  &  & r: More experienced developers are more likely to add more stable logs, since they have better understanding of the application and may not make mistakes in the logs. 		 \tabularnewline
+%		\cline{4-4} 
+		&  &  & r: More experienced developers are more likely to add more stable logs, since they have a better understanding of the application and may not make mistakes in the logs. 		 \tabularnewline
 %		Research has shown that experienced developers might take up more
 %		complex issues~\cite{rahman2011ownership} and therefore may leverage
 %		logs more~\cite{EMSEIAN}.
 
-		\cline{2-4} 		 
-		\hline 
-		\multirow{22}{*}{Log Metrics} & Log context & Categorical & d: Identify the block in which a log is added. (i.e., `if', `if-=else',
-		`try-catch', `exception', `throw', `new function').\tabularnewline
-		\cline{4-4} 
+%		\cline{2-4} 	
+\cmidrule{2-4}	 
+%		\hline
+		\cmidrule{1-4} 
+		\multirow{22}{*}{Log Metrics} & Log context & Categorical & d: The block in which a log is added i.e., \emph{if, if-else,
+		try-catch, exception, throw, new function}.\tabularnewline
+%		\cline{4-4} 
 		&  &  & r: Prior research finds that logs are mostly used in assertion checks,
-		logical branching and return value checking~\cite{Fu1}. So, logs used in logical branching and assertion checks i.e., if-else block may not be as stable as logs in exception block. \tabularnewline
-		\cline{2-4} &
+		logical branching and return value checking~\cite{Fu1}. Therefore, logs used in logical branching and assertion checks, i.e., if-else blocks, may not be as stable as logs in exception blocks. \tabularnewline
+\cmidrule{2-4}
+		 &
 	Is re-added	 & Boolean &
-		d: Check if the log is re-added into a file \tabularnewline
-	\cline{4-4} &  &  &
+		d: Check if the log is re-added into a file. \tabularnewline
+%	\cline{4-4}
+	 &  &  &
 	r: Logs which are added, removed and re-added into a file suggest that developers are unsure of the purpose of the log making them very unstable and prone to changes.  \tabularnewline
-	\cline{2-4} & 	
+\cmidrule{2-4}
+	& 	
 		Log change type	 & Categorical &
-		d: Check the type of log change the log has undergone before i.e., relocation, text-variable change, level change. \tabularnewline
-		\cline{4-4} &  &  &
+		d: Check the type of log change the log has undergone before, i.e., relocation, text-variable change, level change. \tabularnewline
+%		\cline{4-4}
+		 &  &  &
 		r: Changes to log text, variable and verbosity level can make logs more unstable than relocation changes.    
 		\tabularnewline
-		\cline{2-4} 	
+\cmidrule{2-4}
 		
 		& Log variable count & Numerical & d: Number of variables logged.\tabularnewline
-		\cline{4-4} 
+%		\cline{4-4} 
 		&  &  & r: Over 62\% of logs add new variables~\cite{Characterizinglogs}.
-		Hence fewer variables in the initial log statement might result in
+		Hence, fewer variables in the initial log statement might result in
 		addition later. \tabularnewline
-		\cline{2-4} 
-		& Log density & Numerical & d: Ratio of number of log lines to the source code lines in the file.\tabularnewline
-		\cline{4-4} 
+\cmidrule{2-4}
+		& Log density & Numerical & d: Ratio of the number of log lines to the source code lines in the file.\tabularnewline
+%		\cline{4-4} 
 		&  &  & r: Research has found that files with logs tend to be more defect-prone~\cite{EMSEIAN}. Hence, files with higher log density might be more defect-prone, forcing developers to leverage logs to assist in debugging and making them more unstable. 
 		
 		
 		
 		\tabularnewline
-		\cline{2-4} 
-		& Log level & Categorical & d: Identify the log level (verbosity) of the added log (i.e., `info',
-		`error', `warn', `debug', `trace' and `trace').\tabularnewline
-		\cline{4-4} 
-		&  &  & r: Research has shown that developers spend significant amount of time in adjusting the verbosity of logs~\cite{Characterizinglogs}. Hence, higher level logs such as `warn' and `error' might be more carefully placed than default level `info' logs and the higher level info are less likely to be changed than default level logs. \tabularnewline
-		\cline{2-4} 
-		& Log text length & Numerical & d: Number of text phrases logged (i.e., we count all text present
-		between a pair of quotes as one phrase).\tabularnewline
-		\cline{4-4} 
+\cmidrule{2-4}
+		& Log level & Categorical & d: The log level (verbosity) of the added log, i.e., \emph{info,error, warn, debug, trace} and \emph{trace}.\tabularnewline
+%		\cline{4-4} 
+		&  &  & r: Research has shown that developers spend significant amount of time in adjusting the verbosity of logs~\cite{Characterizinglogs}. Hence, higher level logs such as \emph{warn} and \emph{error} might be more carefully placed than default level \emph{info} logs and the higher level info are less likely to be changed than default level logs. \tabularnewline
+\cmidrule{2-4}
+		& Log text length & Numerical & d: Number of text phrases logged. We count all text present	between a pair of quotes as one phrase.\tabularnewline
+%		\cline{4-4} 
 		&  &  & r: Over 45\% of logs have modifications to static context~\cite{Characterizinglogs}.
-		Logs with fewer phrases might be subject to changes later to provide
+		Logs with fewer phrases might be subject to changes later to provide a
 		better explanation.\tabularnewline
-		\cline{1-4} 
+\cmidrule{1-4}
 %		Log revision count	 & Numerical &
 %		d: The number of prior commits which had log changes. \tabularnewline
 %		\cline{4-4} &  &  &
@@ -202,16 +206,17 @@ We build random forest models~\cite{Albert2008424} to explain the stability of l
 
 
 
-Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the four construction steps (C1 to C4) for building a random forest model and evaluating the model. We adopt the statistical tool R to model our data and use the `RandomForest' package to generate the random forests.\\
+Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the construction steps (C1 to C3) for building a random forest model and steps (A1 and A2) provides an analysis of the results. We adopt the statistical tool R to model our data and use the \emph{RandomForest} package to generate the random forests.\\
 
-\subsection*{Step C1 - Removing correlated metrics}
+\subsection*{Step C1 - Removing Correlated Metrics}
 %\textbf{\textsl{(C1 - Correlation analysis) }}
 
 Correlation analysis is necessary to remove the highly correlated metrics from our dataset~\cite{correlationBook}. Collinearity between metrics can affect the performance of a model because small changes in one metric can affect the values of other metrics causing large changes on the dependent class variable.
 
- We use Spearman rank correlation~\cite{spearmanbook} to find correlated metrics in our data. Spearman rank correlation assesses how well two metrics can be described by a monotonic function. We use Spearman rank correlation instead of Pearson~\cite{pearsonbook} because Spearman is resilient to data that is not normally distributed. We use the function `varclus' in R to perform the correlation analysis.
+ We use Spearman rank correlation~\cite{spearmanbook} to find correlated metrics in our data. Spearman rank correlation assesses how well two metrics can be described by a monotonic function. We use Spearman rank correlation instead of Pearson~\cite{pearsonbook} because Spearman is resilient to data that is not normally distributed. We use the function \emph{varclus} in R to perform the correlation analysis.
 
-Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\rho $ values in the ActiveMQ project. The solid horizontal lines indicate the correlation value of the two metrics that are connected by the vertical branches that descend from it.  We include one metric from the sub-hierarchies which have correlation $|\rho| > 0.7 $. The gray line indicates our cutoff value ($ | \rho | $ = 0.7). We use cutoff value of ($ | \rho | $ = 0.7) as used by prior research~\cite{ShaneOLS} to remove the correlated metrics before building our model. \\
+Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\rho $ values in the ActiveMQ project. The solid horizontal lines indicate the correlation value of the two metrics that are connected by the vertical branches that descend from it.  We include one metric from the sub-hierarchies which have correlation $|\rho| > 0.7 $. The gray line indicates our cutoff value ($ | \rho | $ = 0.7). We use cutoff value of ($ | \rho | $ = 0.7) as used by prior research~\cite{ShaneOLS} to remove the correlated metrics before building our model. We find that \emph{total revision count} is highly correlated with \emph{code and log churn in commit}, because a file with more commits has higher chance of having a large commit with log changes, than a file with fewer commits. We exclude \emph{total revision count} and \emph{log churn in commit} and retain \emph{code churn in commit} as it is the simpler matrix to compute. \\
+
 
 
 
@@ -224,7 +229,7 @@ Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\
 \end{figure}
 
 
-\subsection*{Step C2 - Random forest generation}
+\subsection*{Step C2 - Random Forest Generation}
 %\textbf{\noindent\textsl{(C2 - Random forest generation)}}
 
 After we eliminate the correlated metrics from our datasets, we construct the random forest model. Random forest is a black-box ensemble classifier, which operates by constructing a multitude of decision trees on the training set and uses this to classify the testing set.  Figure~\ref{fig:BootRF} explains the construction of the random forest classifier, where from a training set of $m$ logs a random sample of \emph{n} components is selected with replacement~\cite{ShaneOLS} and using the \emph{randomForest} function from the \emph{randomForest} package in R, a random forest model is generated. 
@@ -286,7 +291,7 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 %	
 %
 %\end{table}
-\subsection*{Step A1 - Model analysis}
+\subsection*{Step A1 - Model Analysis}
 %\textbf{\noindent \textsl{(C3 - Model evaluation)}}
 
 After we build the random forest model, we evaluate the performance of our model using precision, recall, F-measure and Brier Score. These measures are functions of the confusion matrix as shown in Table~\ref{tba:confusion} and are explained below.
@@ -362,7 +367,7 @@ To account for the over-fitting in our models, we use \textsl{optimism} measure,
 \end{figure}
 
 %\textbf{\noindent \textsl{(C4 - Importance of each metric in relation to log stability)}}
-\subsection*{Step A2 - Identifying important metrics}
+\subsection*{Step A2 - Identifying Important Metrics}
 
 To find the importance of each metric in a random forest model, we use a permutation test. In this test, the model built using the bootstrap data (i.e., two thirds of the original data) is applied to the test data (i.e., remaining one third of the original data).  
 
@@ -458,7 +463,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 		ActiveMQ    & 956 (50.4 \%)            & 301 (31.4 \%)      \\
 		Camel       & 3060 (63.1 \%)              & 1460 (47.7 \%)      \\
 		Cloudstack  & 5982 (35.7 \%)              & 2276 (38.0 \%)      \\
-		Liferay     &  3382 (86.7\%)            & 609 (18.0 \%)      \\\cline{1-3}
+		Liferay     &  3382 (86.7 \%)            & 609 (18.0 \%)      \\\cline{1-3}
 		\textbf{Average}& \textbf{3345 (59 \%)} & \textbf{1161} (\textbf{33.75 \%}) \\\cline{1-3}
 		
 	\end{tabular}
@@ -490,7 +495,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing experience of developers who add unchanged logs against logs changing more than once.}
+	\caption{Compraing experience of developers who add unchanged logs against logs changing more than once}
 	\label{fig:Dexp_BP}
 	
 \end{figure}
@@ -520,7 +525,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{OwL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing file ownership of developers who add unchanged logs against logs changing more than once.}
+	\caption{Compraing file ownership of developers who add unchanged logs against logs changing more than once}
 	\label{fig:Numberofchanges_BP}
 	
 \end{figure}

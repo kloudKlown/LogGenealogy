@@ -1,34 +1,44 @@
 
 
-Logs are leveraged by developers to record useful information during the execution of an application. Logs are recorded during various development activities such as bug fixing~\cite{ConsoleLogs,JGLouMining,QFuanomaly}, load test analysis~\cite{Automatic}, monitoring performance~\cite{Yuan} and for knowledge transfer~\cite{IanWCRE}.
+Logs are leveraged by developers to record useful information during the execution of an application. Logs are recorded during various development activities such as  fixing bugs~\cite{ConsoleLogs,JGLouMining,QFuanomaly}, analyzing load tests~\cite{Automatic}, monitoring performance~\cite{Yuan} and transferring knowledge~\cite{IanWCRE}.
 Logging can be done through the use of log libraries or more archaic methods such as \textsl{print} statements. Every log\footnote{
-In the rest of this paper, we use ‘log’ to refer to the logging statements in the source code.} contains a textual part, which provides information about the context, a variable part providing context information about the event and a log level, which shows the verbosity of the logs. An example of a log is shown below where info is the logging level, \textsl{Testing Connection to Host Id} is the context information and \textsl{host}, which is the variable part, provides information about the logging context.
-\hypobox{LOG.info(``Testing Connection to Host Id:" + host);}
+In the rest of this paper, we use ‘log’ to refer to the logging statements in the source code.} contains a textual part, which provides information about the context, a variable part providing context information about the event and a log level, which shows the verbosity of the logs. An example of a log is in Figure~\ref{fig:logexample}.
+% shown below where info is the logging level, \textsl{Testing Connection to Host Id} is the context information and \textsl{host}, which is the variable part, provides information about the logging context.
+%\hypobox{LOG.info(``Testing Connection to Host Id:" + host);}
 
-\begin{figure}[tb]
+\begin{figure}[thb]
 	\centering
-	\includegraphics[width=1\columnwidth]{ExampleOfLogChange_LPA}
-	\caption{Modification of a logging statement}
-	\label{fig:ExampleOfLogChange_LPA}
+	\includegraphics[width=1\columnwidth]{logexample}
+	\caption{Example of log statement}
+	\label{fig:logexample}
 \end{figure}
 
 
-The rich knowledge in logs has lead to the development of many enterprise log processing tools such as \textsl{Splunk}~\cite{carasso2012exploring}, \textsl{Xpolog}~\cite{xpolog}, \textsl{Logstash}~\cite{xu2013detecting} and research tools such as Salsa~\cite{TanSalsa}, log-enhancer~\cite{Yuan} and Chukwa~\cite{chukwa} which are designed to analyze as well as improve logs in software applications. However, when logs are changed, the associated log processing tools may also need to be updated. For example, Figure~\ref{fig:ExampleOfLogChange_LPA} demonstrates a case in which a developer removes the time taken for completing an event. This can affect log processing tools that rely on the removed information in-order to monitor the health of the application. Prior research shows that 60\% of the logs which are output during system execution are changed and affect the log processing tools that heavily depend on such logs~\cite{IanWCRE}.
+
+
+The rich knowledge in logs has lead to the development of many enterprise log processing tools such as \textsl{Splunk}~\cite{carasso2012exploring}, \textsl{Xpolog}~\cite{xpolog}, \textsl{Logstash}~\cite{xu2013detecting} and research tools such as Salsa~\cite{TanSalsa}, log-enhancer~\cite{Yuan} and Chukwa~\cite{chukwa} which are designed to analyze as well as improve logs in software applications. However, when logs are changed, the associated log processing tools may also need to be updated. For example, Figure~\ref{fig:ExampleOfLogChange_LPA} demonstrates a case in which a developer removes the time taken for completing an event. This can affect log processing tools that rely on the removed information inorder to monitor the health of the application. Prior research shows that 60\% of the logs which are output during system execution are changed and affect the log processing tools that heavily depend on such logs~\cite{IanWCRE}.
 
 % These log changes can affect the log processing tools which heavily depend on them and maintenance cost will be high~\cite{IanWCRE}. 
+\begin{figure}[tb]
+	\centering
+	\includegraphics[width=1\columnwidth]{ExampleOfLogChange_LPA}
+	\caption{Modification of a log statement}
+	\label{fig:ExampleOfLogChange_LPA}
+\end{figure}
 
 \begin{figure*}
 	\centering
 	\includegraphics[width=1\textwidth,
 	height=.4\textwidth]{LogGenalogyMethdology}
-	\caption{Overview of the data extraction and case study approach}
+	\caption{Overview of the data extraction and empirical study approach}
 	\label{fig:LGmethod}
 \end{figure*}
 
 
-In this paper, we study the changes that are made to logs across multiple releases in four studied open source applications. We find that 35\%-50\% of the logs are changed at least once during their lifespan in the studied applications. We find that a single log changes between 1 to 10 times within its lifetime and can be changed by more than one developer. To identify which factors play a vital role in the stability of logging statements and model which logs will change in future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
+In this paper, we study the changes that are made to logs across multiple releases in four studied source applications. We find that 35\%-50\% of the logs are changed at least once during their lifespan in the studied applications. We find that a single log changes between 0 to 10 times within its lifetime and can be changed by more than one developer. To identify which factors play a vital role in the stability of logging statements and model which logs will change in the future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
 \begin{enumerate}
-	\item  Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
+	\item  We can predict which logs will be changed using a \emph{random forest} classifier with a precision of 89\%-91\% and recall of 71\%-83\%
+%	Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
 	\item Logs added in a file by developers who have less ownership of that file are more likely to be changed later than logs written by owners of the file. 
 	\item Files with a higher log density are less likely to have changes made to their logs than files with a lower log density.
 	\item Developer experience is negatively correlated to log stability in the studied applications, suggesting that logs added by more experienced developers are more stable. 
