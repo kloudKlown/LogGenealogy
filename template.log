@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  11 NOV 2015 02:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  11 NOV 2015 15:33
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -694,11 +694,13 @@ Package pdftex.def Info: LRBox.pdf used on input line 356.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
  [6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf> <C:/Users
 /Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
-Underfull \vbox (badness 1931) has occurred while \output is active []
-
-
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 439.
+
+
+Overfull \hbox (0.73515pt too wide) in paragraph at lines 451--461
+ [][] 
+ []
 
 <DexpA.pdf, id=68, 505.89pt x 505.89pt>
 File: DexpA.pdf Graphic file (type pdf)
@@ -727,37 +729,37 @@ Package pdftex.def Info: DexpL.pdf used on input line 485.
 <OwA.pdf, id=72, 578.16pt x 578.16pt>
 File: OwA.pdf Graphic file (type pdf)
  <use OwA.pdf>
-Package pdftex.def Info: OwA.pdf used on input line 505.
+Package pdftex.def Info: OwA.pdf used on input line 514.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwC.pdf, id=73, 578.16pt x 578.16pt>
 File: OwC.pdf Graphic file (type pdf)
  <use OwC.pdf>
-Package pdftex.def Info: OwC.pdf used on input line 508.
+Package pdftex.def Info: OwC.pdf used on input line 517.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwClo.pdf, id=74, 578.16pt x 578.16pt>
 File: OwClo.pdf Graphic file (type pdf)
  <use OwClo.pdf>
-Package pdftex.def Info: OwClo.pdf used on input line 512.
+Package pdftex.def Info: OwClo.pdf used on input line 521.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwL.pdf, id=75, 578.16pt x 578.16pt>
 File: OwL.pdf Graphic file (type pdf)
  <use OwL.pdf>
-Package pdftex.def Info: OwL.pdf used on input line 515.
+Package pdftex.def Info: OwL.pdf used on input line 524.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
  [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ARBox.pdf> <C:/Users/Suhas/Drop
 box/Log Genealogy/Paper/CRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
-CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf> <C:/Users/S
-uhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Dropbox/Log Genealo
-gy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpClo.pdf> <C
-:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf>] [8 <C:/Users/Suhas/Dropbo
+CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf>] [8 <C:/Use
+rs/Suhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Dropbox/Log Gen
+ealogy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpClo.pdf
+> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf> <C:/Users/Suhas/Dropbo
 x/Log Genealogy/Paper/OwA.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwC.
 pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwClo.pdf> <C:/Users/Suhas/Dro
 pbox/Log Genealogy/Paper/OwL.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 607.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 608.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
@@ -804,9 +806,7 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11
-
-] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
+[11] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -830,7 +830,7 @@ utmb8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x
 86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (11 pages, 775206 bytes).
+Output written on template.pdf (11 pages, 770675 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

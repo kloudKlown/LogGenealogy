@@ -48,7 +48,7 @@
 
 %In this paper we aim to get a better understanding of the
 %unstable logs in an application so that we can improve the maintenance of log processing tools. 
-In this paper we study the changes that are made to logs across multiple releases in four open source applications. In order to understand and build a random forest classifier to predict log changes, it is first necessary to identify the extent logs are changed within these applications.Hence, in this section we present our rationale for selecting the applications that we studied and present the results of our preliminary analysis on the four studied applications. 
+In this paper we study the changes that are made to logs across multiple releases in open source applications. In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these applications.Hence, in this section we present our rationale for selecting the applications that we studied and present the results of our preliminary analysis on the four studied applications. 
 
 \subsection{Studied Applications}
 We evaluate our approach through an empirical study on four open source applications. We selected these projects on the following three criteria:
@@ -263,10 +263,10 @@ Figure~\ref{fig:frequencyofLogchanges} shows the percentage values for the numbe
 
 
 
-%\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that majority i.e., 75\% are changed within 15 commits since addition.  We also find that the median code churn during these log changes is less than 50 lines of code in three of the studied applications as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that the log changes are more likely to be changed due to rewording changes rather than major changes to the added feature and are less likely to affect log processing tools. 
+\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that majority, i.e., 75\% are changed within 15 commits since addition.  We also find that the median code churn during these log changes is less than 50 lines of code in three of the studied applications as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that the log changes are more likely to be changed due to rewording changes rather than major changes to the added feature. This means that new logs which are introduced prior to 15 commits in the studied applications, are less likely to break the log processing tools which might depend on them. 
 
 
-\textbf{25\% of the new logs which change, are changed after 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find 25\% are changed after 15 commits since addition and the code churn during these log changes is more than 150 lines of code in three of the studied applications as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that these log changes are more likely to be changes to the feature rather than rewording changes, and are more likely to affect the log processing tools. 
+%\textbf{25\% of the new logs which change, are changed after 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find 25\% of the new logs added are changed after 15 commits since their addition. We also find that the code churn during these log changes is more than 150 lines of code in three of the studied applications as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that these log changes are more likely to be changes to the feature rather than rewording changes, and are more likely to affect the log processing tools. 
 
 %This also means that the remaining 25\% of log changes might break the log processing tools which might rely on them, as they are changed much later. 
 
