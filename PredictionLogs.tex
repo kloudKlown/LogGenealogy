@@ -146,10 +146,7 @@ We build random forest models~\cite{Albert2008424} to predict whether a log will
 \cmidrule{2-4}
 		& Log density & Numerical & d: Ratio of the number of log lines to the source code lines in the file.\tabularnewline
 %		\cline{4-4} 
-		&  &  & r: Research has found that files with logs tend to be more defect-prone~\cite{EMSEIAN}. Hence, files with higher log density might be more defect-prone, forcing developers to leverage logs to assist in debugging and making them more unstable. 
-		
-		
-		
+		&  &  & r: Research has found that files with logs tend to be more defect-prone~\cite{EMSEIAN}. Hence, files with higher log density might be more defect-prone, forcing developers to leverage logs to assist in debugging and making them more unstable.
 		\tabularnewline
 \cmidrule{2-4}
 		& Log level & Categorical & d: The log level (verbosity) of the added log, i.e., \emph{info,error, warn, debug, trace} and \emph{trace}.\tabularnewline
@@ -294,9 +291,9 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 \subsection*{Step A1 - Model Analysis}
 %\textbf{\noindent \textsl{(C3 - Model evaluation)}}
 
-After we build the random forest model, we evaluate the performance of our model using precision, recall, F-measure and Brier Score. These measures are functions of the confusion matrix as shown in Table~\ref{tba:confusion} and are explained below.
+After we build the random forest model, we evaluate the performance of our model using precision, recall, F-measure, AUC and Brier Score. These measures are functions of the confusion matrix as shown in Table~\ref{tba:confusion} and are explained below.
 
-\textsl{Precision (P)} measures the correctness of our model in predicting which log will undergo a change in the future. It is defined as the number of logs which were accurately predicted as changed over all logs predicted to have changed as explained in Equation~\ref{f:precision}.   \\
+\textsl{Precision (P)} measures the correctness of our model in predicting which log will change in the future. It is defined as the number of logs which were accurately predicted as changed over all logs predicted to have changed as explained in Equation~\ref{f:precision}.   \\
 	 \begin{equation}
  P =  \dfrac{TP}{TP + FP } 
  \label{f:precision}
@@ -314,13 +311,13 @@ After we build the random forest model, we evaluate the performance of our model
 	 \label{f:Fmeasure}
 	 \end{equation}	
 
-\textsl{Area Under Curve (AUC)} is used to measure the overall ability of the model to classify changed and un-changed logs. The value of AUC ranges between 0.5(worst) for random guessing and 1(best) where 1 means that our model can correctly classify every log as changed or un-changed. 
+\textsl{Area Under Curve (AUC)} is used to measure the overall ability of the model to classify changed and unchanged logs. The value of AUC ranges between 0.5 (worst) for random guessing and 1 (best) where 1 means that our model can correctly classify every log as changed or unchanged. 
 
 
 
 %a measure of the accuracy of the predictions in our model~\cite{wilks2011statistical}. It explains how well the model performs compared to random guessing i.e.,  a perfect classifier  will have Brier score of 0 and perfect misfit classifier will have Brier score of 1 (predicts probability of log change when log not changed). This means the lower the Brier score value, the better our random forest classifier.
 	 
-\textsl{Brier Score (BS)} is a measure of the accuracy of the predictions in our model~\cite{wilks2011statistical}. It explains how well the model performs compared to random guessing i.e.,  a perfect classifier  will have Brier score of 0 and perfect misfit classifier will have Brier score of 1 (predicts probability of log change when log not changed). This means the lower the Brier score value, the better our random forest classifier.
+\textsl{Brier score (BS)} is a measure of the accuracy of the predictions in our model~\cite{wilks2011statistical}. It explains how well the model performs compared to random guessing, i.e.,  a perfect classifier will have a Brier score of 0 and a perfect misfit classifier will have a Brier score of 1 (predicts probability of log change when log not changed). This means the lower the Brier score value, the better our random forest classifier.
 %As the Brier score measure the total difference between the event and the forecast probability of the event, 
  
 %The most common formulation of Brier Score is shown in Equation~\ref{f:BS}, where $f_{t}$ is the probability that was predicted, $o_{t}$ is the actual outcome of the event at the instance $t$ (0 if log is not changed and 1 if it is changed), and $N$ is the number of forecasting instances. 
@@ -332,17 +329,15 @@ After we build the random forest model, we evaluate the performance of our model
 %	 \label{f:BS}
 %	 \end{equation}	
 
-These performance measure, described previously only provide insight into how the random forest models fit the observed dataset, but it may overestimate the performance of the model if the model is over-fit.
-
-To account for the over-fitting in our models, we use \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows.
+These performance measures, provide insight into how the random forest models fit the observed dataset, but it may overestimate the performance of the model if the model is overfit. To account for the overfitting in our models, we use the \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows:
 \begin{enumerate}
 	\item From the original dataset with \textsl{m} records, select a bootstrap sample with \textsl{m} components with replacement.
 	\item Build random forest as described in (C2) using the bootstrap sample.
-	\item Apply the classier model built from bootstrap sample on both the bootstrap and original data sample, calculating precision, recall, F-measure and Brier score for both data samples.
-	\item Calculate \textsl{Optimism} by subtracting the performance measures of the bootstrap sample against the original sample. 	
+	\item Apply the classifier model built from the bootstrap sample on both the bootstrap and original data sample, calculating precision, recall, F-measure and Brier score for both data samples.
+	\item Calculate the \textsl{optimism} by subtracting the performance measures of the bootstrap sample from the original sample. 	
 \end{enumerate}
 
-	The above process is repeated 1,000 times and the average (mean) \textsl{optimism} is calculated. Finally, we calculate \textsl{optimism-reduced} performance measures for precision, recall, F-measure and Brier score by subtracting the averaged optimism of each measure, from their corresponding original measure.  The smaller the optimism values, the more stable the original model fit is.
+	The above process is repeated 1,000 times and the average (mean) \textsl{optimism} is calculated. Finally, we calculate \textsl{optimism-reduced} performance measures for precision, recall, F-measure, AUC and Brier score by subtracting the averaged optimism of each measure, from their corresponding original measure.  The smaller the optimism values, the more stable the original model fit is.
 	\\
 
 \begin{figure}[tb]
@@ -369,20 +364,17 @@ To account for the over-fitting in our models, we use \textsl{optimism} measure,
 %\textbf{\noindent \textsl{(C4 - Importance of each metric in relation to log stability)}}
 \subsection*{Step A2 - Identifying Important Metrics}
 
-To find the importance of each metric in a random forest model, we use a permutation test. In this test, the model built using the bootstrap data (i.e., two thirds of the original data) is applied to the test data (i.e., remaining one third of the original data).  
-
-
-Then, the values of the $X_{i}$ $^{th}$ metric of which we want to find importance for, are randomly permuted in the test dataset and the accuracy of the model is recomputed. The decrease in accuracy as a result of this permutation is averaged over all trees, and is used as a measure of the importance of metric $X_{i}$th in the random forest.
+To find the importance of each metric in a random forest model, we use a permutation test. In this test, the model built using the bootstrap data (i.e., two thirds of the original data) is applied to the test data (i.e., remaining one third of the original data). Then, the values of the $X_{i}$ $^{th}$ metric of which we want to find importance for, are randomly permuted in the test dataset and the precision of the model is recomputed. The decrease in precision as a result of this permutation is averaged over all trees, and is used as a measure of the importance of metric $X_{i}$th in the random forest.
 
 
 
 
 
-We use the \emph{importance} function defined in \emph{RandomForest} package of R, to calculate the importance of each metric. We call the \emph{importance}function each time during the bootstrapping process to obtain 1,000 importance scores for each metric in our dataset. 	
+We use the \emph{importance} function defined in \emph{RandomForest} package of R, to calculate the importance of each metric. We call the \emph{importance} function every time during the bootstrapping process to obtain 1,000 importance scores for each metric in our dataset. 	
 
 
 
-As we obtain 1,000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} (SK) clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are strong predictors of likelihood of log change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the \emph{SK}	 function in the \emph{ScottKnott} package of R and set the significance threshold parameter to 0.05 to cluster the metrics into different groups. 
+As we obtain 1,000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} (SK) clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are important predictors for the likelihood of log change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the \emph{SK}	 function in the \emph{ScottKnott} package of R and set the significance threshold parameter to 0.05 to cluster the metrics into different groups. 
 %\begin{table}
 
 %	\centering
@@ -395,9 +387,9 @@ As we obtain 1,000 data sets for each metric because of bootstrapping process, w
 	
 	\centering
 	
-	\begin{tabular}{|lll|lll|}
+	\begin{tabular}{lll|lll}
 		\hline 
-		& \textbf{ Active MQ}  &  &  & \textbf{Camel}  & \tabularnewline
+		& \textbf{ ActiveMQ}  &  &  & \textbf{Camel}  & \tabularnewline
 		\hline 
 		\textbf{Rank}  & \textbf{Factors}  & \textbf{Importance}  & \textbf{Rank}  & \textbf{Factors}  & \textbf{Importance} \tabularnewline
 		\hline 
@@ -413,7 +405,7 @@ As we obtain 1,000 data sets for each metric because of bootstrapping process, w
 		\hline 
 	\end{tabular}
 	
-	\begin{tabular}{|lll|lll|}
+	\begin{tabular}{lll|lll}
 		\hline 
 		& \textbf{CloudStack}  &  &  & \textbf{Liferay}  & \tabularnewline
 		\hline 
@@ -444,34 +436,32 @@ As we obtain 1,000 data sets for each metric because of bootstrapping process, w
 
 \subsection{Results}
 
-\hypobox{The random forest classifier achieves a precision of 0.89-0.91 and recall of 0.71-0.83 for our studied applications.} 
-
-Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. The model achieves AUC of 0.95-0.96 across the studied applications.
+\hypobox{The random forest classifier achieves a precision of 0.89-0.91, recall of 0.71-0.83 and outperforms random guessing for our studied applications} 
+Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for each project. The model achieves an AUC of 0.95-0.96 across the studied applications. The classifier achieves Brier scores between 0.04 and 0.07 across all projects. If the model achieves a Brier score of 0.07, it means our model can forecast with 73\% probability a log will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
 % We find the recall of the random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest total number of log lines and close to 50\% of the log changes are log relocations as seen in Table~\ref{tba:logtype}. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 %lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
-\hypobox{The random forest classifier outperforms random guessing.} The classifier achieves Brier scores between 0.04 and 0.07 across all projects. If the model achieves a Brier score of 0.07, it means our model can forecast with 73\% probability a log will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
+%\hypobox{The random forest classifier outperforms random guessing.} 
 
 \begin{table}[tb]
 	\centering
-	\caption{Contribtuion of top 3 developers}
+	\caption{Contribution of top 3 developers}
 	
-	\begin{tabular}{lll}
-		
-		\cline{1-3} 	& Total logs & Changed logs \\  \cline{1-3}
-		ActiveMQ    & 956 (50.4 \%)            & 301 (31.4 \%)      \\
-		Camel       & 3060 (63.1 \%)              & 1460 (47.7 \%)      \\
-		Cloudstack  & 5982 (35.7 \%)              & 2276 (38.0 \%)      \\
-		Liferay     &  3382 (86.7 \%)            & 609 (18.0 \%)      \\\cline{1-3}
-		\textbf{Average}& \textbf{3345 (59 \%)} & \textbf{1161} (\textbf{33.75 \%}) \\\cline{1-3}
+	\begin{tabular}{lrrr}		
+		\cline{1-4} 	& Total logs & Changed logs & Total \# contributors \\  \cline{1-4}
+		ActiveMQ    & 956 (50.4 \%)            & 301 (31.4 \%)   & 41 \\
+		Camel       & 3060 (63.1 \%)              & 1460 (47.7 \%) &   151	    \\
+		Cloudstack  & 5982 (35.7 \%)              & 2276 (38.0 \%)  &  204  \\
+		Liferay     &  3382 (86.7 \%)            & 609 (18.0 \%)     &  351 \\\cline{1-4}
+		\textbf{Average}& \textbf{3345 (59 \%)} & \textbf{1161} (\textbf{33.75 \%})& 747 \\\cline{1-4}
 		
 	\end{tabular}
 	\label{tba:topDevelopers}
 \end{table}
 
 
-\subsection*{{Important metrics for log stability}}
+\subsection*{{B2. Important metrics for log stability}}
 
 %From Table~\ref{tba:Scott} we see that `file ownership', `SLOC', `log density', and `developer experience' are common across all the projects in our studied systems. 
 
@@ -495,7 +485,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{DexpL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing experience of developers who add unchanged logs against logs changing more than once}
+	\caption{Comparing experience of developers who add unchanged logs against logs changing more than once}
 	\label{fig:Dexp_BP}
 	
 \end{figure}
@@ -525,7 +515,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{OwL}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Compraing file ownership of developers who add unchanged logs against logs changing more than once}
+	\caption{Comparing file ownership of developers who add unchanged logs against logs changing more than once}
 	\label{fig:Numberofchanges_BP}
 	
 \end{figure}
@@ -533,13 +523,13 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 
 
 
-\textbf{{{Developer experience} has negative correlation in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has negative correlation to log stability in three of the studied applications. This suggests that logs which change are added by less experienced developers in ActiveMQ, Camel and liferay. This seen in Figure~\ref{fig:Dexp_BP}, where logs which change three times or more are done much less experienced developers, when compared to unchanged logs. For example, when we inspect \emph{git diff} for the file \emph{SessionBatchTransactionSynchronization.java} in Camel, we find that all the logs introduced by a new developer are fixed by a more experienced developer. In this case, the experienced developer changes the log contexts i.e., relocates the logs and adds additional context information to provide more meaning to the logs. 
+\textbf{{{Developer experience} has negative correlation with log stability in the studied applications.}} From Table~\ref{tba:Scott}, we see that developer experience has negative correlation to log stability in three of the studied applications. This suggests that logs which change are added by less experienced developers in ActiveMQ, Camel and Liferay. This can be seen in Figure~\ref{fig:Dexp_BP}, where logs which change three times or more are changed by less experienced developers, when compared to unchanged logs. For example, when we inspect \emph{git diff} for the file \emph{SessionBatchTransactionSynchronization.java} in Camel, we find that all the logs introduced by a new developer are fixed by a more experienced developer. In this case, the experienced developer changes the log contexts, i.e., relocates the logs and adds additional context information to provide more meaning to the logs. 
 
-We also find that in ActiveMQ, Camel and Liferay, the top three developers are responsible for more than 50\% of the logs and only 30\% of the logs added by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommend that new developers should get more experience about the application by actively making more commits to write more stable logs. 
+We also find that in ActiveMQ, Camel and Liferay, the top three developers are responsible for more than 50\% of the logs. Only 30\% of the logs added by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommend that new developers should get more experience about the application by actively making more commits to write more stable logs. 
 
 
 
-\textbf{{{File ownership} is a strong predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs added by developers who have little ownership are more unstable and have to be changed. This is seen in Figure~\ref{fig:Numberofchanges_BP}, where in Camel and Liferay, the unchanged logs are introduced by developers who have more ownership of the file. We also find that the most unstable logs i.e., (3 + changes ) in Camel, Cloudstack and Liferay are done by developers who have lesser ownership of the file, accounting for the negative correlation in these three applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
+\textbf{{{File ownership} is an important predictor of log change and has negative correlation in three of the studied applications.}} This suggests that logs added by developers who have little ownership are more unstable and more likely to be changed. This is show by Figure~\ref{fig:Numberofchanges_BP}, where in Camel and Liferay, the unchanged logs are introduced by developers who have more ownership of the file. We also find that the most unstable logs i.e., (3 + changes ) in Camel, Cloudstack and Liferay are done by developers who have lesser ownership of the file, accounting for the negative correlation in these three applications. These results suggest that developers who are not owners of a file, should be more cautious	 when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
 
 
 %This is seen in Figure~\ref{fig:ChangedvsUnchangedlogs}, where in Camel and Liferay, the logs which change are more likely to be added by developers who have less ownership on the files, than logs which are never changed. We also find that when logs change, the developers making the changes have less ownership than developers adding the log. From Figure~\ref{fig:Numberofchanges_BP} we see that in Camel, Cloudstack and Liferay, the logs which change more than three times are done by developers who have lesser ownership of the file, accounting for the negative correlation in these applications. These results suggest that developers who are not owners of a file, should be more cautions when adding or changing logs in the file. For example when we inspect the \emph{git diff} for the file \emph{SSLContextServerParameters.java} in Camel, we find that the owner of the file fixes the changes made by a non-owner by increasing the logging level to reduce a flood of logs being generated. 
@@ -614,7 +604,7 @@ We find that log density has negative correlation with log stability (i.e., incr
 %We find that other metrics from the developer dimension are not consistent among the studied systems. This may be because each project might have different philosophy of development, for example we find that \emph{resolution time} has negative effect in Liferay and Camel but has positive effect in ActiveMQ. This suggests that logs are more likely to change in ActiveMQ when the resolution time of issue increases, but less likely in Liferay and Camel. 
 
 
-\hypobox {Our Random Forest classifier achieves a precision of 89\%-91\% and recall of 71\%-83\% across all studied applications. We find file ownership, SLOC, developer experience and log density to be strong predictors of log change in our studied applications.}
+\hypobox {Our Random Forest classifier achieves a precision of 89\%-91\% and recall of 71\%-83\% across all studied applications. We find file ownership, SLOC, developer experience and log density to be important predictors of log change in our studied applications.}
 
 
 

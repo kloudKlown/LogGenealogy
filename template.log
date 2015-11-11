@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  10 NOV 2015 21:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  11 NOV 2015 01:47
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -620,12 +620,12 @@ File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 39.
 (pdftex.def)             Requested size: 252.0pt x 57.51741pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 206--207
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 218--219
+Underfull \hbox (badness 10000) in paragraph at lines 215--216
 
  []
 
@@ -633,7 +633,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 218--219
 File: SpearmanActiveMQ.pdf Graphic file (type pdf)
 
 <use SpearmanActiveMQ.pdf>
-Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 226.
+Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 223.
 (pdftex.def)             Requested size: 226.79845pt x 201.60475pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -646,56 +646,51 @@ Missing character: There is no ™ in font ptmr7t!
 File: BootRandomForest.pdf Graphic file (type pdf)
 
 <use BootRandomForest.pdf>
-Package pdftex.def Info: BootRandomForest.pdf used on input line 242.
+Package pdftex.def Info: BootRandomForest.pdf used on input line 239.
 (pdftex.def)             Requested size: 252.00237pt x 125.9997pt.
 
-Overfull \hbox (0.84673pt too wide) in paragraph at lines 268--275
+Overfull \hbox (0.84673pt too wide) in paragraph at lines 265--272
  [][] 
  []
 
 [4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 299--300
+Underfull \hbox (badness 10000) in paragraph at lines 296--297
 
  []
 
 
-Underfull \hbox (badness 2173) in paragraph at lines 345--347
+Underfull \hbox (badness 2173) in paragraph at lines 340--342
 []\OT1/ptm/m/n/10 The above pro-cess is re-peated 1,000 times and the
  []
 
 
-Underfull \hbox (badness 1661) in paragraph at lines 345--347
-\OT1/ptm/m/n/10 F-measure and Brier score by sub-tract-ing the av-er-aged
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 345--347
+Underfull \hbox (badness 10000) in paragraph at lines 340--342
 
  []
 
 <ARBox.pdf, id=51, 578.16pt x 382.42876pt>
 File: ARBox.pdf Graphic file (type pdf)
  <use ARBox.pdf>
-Package pdftex.def Info: ARBox.pdf used on input line 351.
+Package pdftex.def Info: ARBox.pdf used on input line 346.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
 
 <CRBox.pdf, id=52, 867.24pt x 578.16pt>
 File: CRBox.pdf Graphic file (type pdf)
  <use CRBox.pdf>
-Package pdftex.def Info: CRBox.pdf used on input line 354.
+Package pdftex.def Info: CRBox.pdf used on input line 349.
 (pdftex.def)             Requested size: 173.88062pt x 115.91225pt.
 
 <CloRBox.pdf, id=53, 578.16pt x 382.42876pt>
 File: CloRBox.pdf Graphic file (type pdf)
  <use CloRBox.pdf>
-Package pdftex.def Info: CloRBox.pdf used on input line 358.
+Package pdftex.def Info: CloRBox.pdf used on input line 353.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
 
 <LRBox.pdf, id=54, 578.16pt x 382.42876pt>
 File: LRBox.pdf Graphic file (type pdf)
  <use LRBox.pdf>
-Package pdftex.def Info: LRBox.pdf used on input line 361.
+Package pdftex.def Info: LRBox.pdf used on input line 356.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
  [6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf> <C:/Users
 /Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
@@ -703,69 +698,66 @@ Underfull \vbox (badness 1931) has occurred while \output is active []
 
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 447.
-
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 454.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 439.
 
 <DexpA.pdf, id=68, 505.89pt x 505.89pt>
 File: DexpA.pdf Graphic file (type pdf)
  <use DexpA.pdf>
-Package pdftex.def Info: DexpA.pdf used on input line 485.
+Package pdftex.def Info: DexpA.pdf used on input line 475.
 (pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
 
 <DexpC.pdf, id=69, 505.89pt x 505.89pt>
 File: DexpC.pdf Graphic file (type pdf)
  <use DexpC.pdf>
-Package pdftex.def Info: DexpC.pdf used on input line 488.
+Package pdftex.def Info: DexpC.pdf used on input line 478.
 (pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
 
 <DexpClo.pdf, id=70, 505.89pt x 505.89pt>
 File: DexpClo.pdf Graphic file (type pdf)
  <use DexpClo.pdf>
-Package pdftex.def Info: DexpClo.pdf used on input line 492.
+Package pdftex.def Info: DexpClo.pdf used on input line 482.
 (pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
 
 <DexpL.pdf, id=71, 505.89pt x 505.89pt>
 File: DexpL.pdf Graphic file (type pdf)
  <use DexpL.pdf>
-Package pdftex.def Info: DexpL.pdf used on input line 495.
+Package pdftex.def Info: DexpL.pdf used on input line 485.
 (pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
 
 <OwA.pdf, id=72, 578.16pt x 578.16pt>
 File: OwA.pdf Graphic file (type pdf)
  <use OwA.pdf>
-Package pdftex.def Info: OwA.pdf used on input line 515.
+Package pdftex.def Info: OwA.pdf used on input line 505.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwC.pdf, id=73, 578.16pt x 578.16pt>
 File: OwC.pdf Graphic file (type pdf)
  <use OwC.pdf>
-Package pdftex.def Info: OwC.pdf used on input line 518.
+Package pdftex.def Info: OwC.pdf used on input line 508.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwClo.pdf, id=74, 578.16pt x 578.16pt>
 File: OwClo.pdf Graphic file (type pdf)
  <use OwClo.pdf>
-Package pdftex.def Info: OwClo.pdf used on input line 522.
+Package pdftex.def Info: OwClo.pdf used on input line 512.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
 
 <OwL.pdf, id=75, 578.16pt x 578.16pt>
 File: OwL.pdf Graphic file (type pdf)
  <use OwL.pdf>
-Package pdftex.def Info: OwL.pdf used on input line 525.
+Package pdftex.def Info: OwL.pdf used on input line 515.
 (pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
  [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ARBox.pdf> <C:/Users/Suhas/Drop
 box/Log Genealogy/Paper/CRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
-CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf>] [8 <C:/Use
-rs/Suhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Dropbox/Log Gen
-ealogy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpClo.pdf
-> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf> <C:/Users/Suhas/Dropbo
+CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf> <C:/Users/S
+uhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Dropbox/Log Genealo
+gy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpClo.pdf> <C
+:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf>] [8 <C:/Users/Suhas/Dropbo
 x/Log Genealogy/Paper/OwA.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwC.
 pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwClo.pdf> <C:/Users/Suhas/Dro
 pbox/Log Genealogy/Paper/OwL.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 617.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 607.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
@@ -774,17 +766,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 19--20
+Underfull \hbox (badness 1430) in paragraph at lines 18--19
 []\OT1/ptm/m/n/10 We use Lev-en-shtein ra-tio and choose a thresh-old to
  []
 
 
-Underfull \hbox (badness 3240) in paragraph at lines 19--20
+Underfull \hbox (badness 3240) in paragraph at lines 18--19
 \OT1/ptm/m/n/10 iden-tify mod-i-fi-ca-tions to logs. How-ever, this thresh-old
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 19--20
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
 
  []
 
@@ -841,7 +833,7 @@ utmb8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x
 86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (11 pages, 776327 bytes).
+Output written on template.pdf (11 pages, 775551 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
