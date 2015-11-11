@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  11 NOV 2015 01:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  11 NOV 2015 02:02
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -786,11 +786,6 @@ Underfull \hbox (badness 8056) in paragraph at lines 73--77
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-[]\OT1/ptm/m/n/10 ``Java lan-guage rank-ing -
- []
-
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
@@ -809,19 +804,21 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[11] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
+[11
+
+] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7517 strings out of 493921
- 114605 string characters out of 3146880
- 197283 words of memory out of 3000000
- 10655 multiletter control sequences out of 15000+200000
+ 7508 strings out of 493921
+ 114398 string characters out of 3146880
+ 197235 words of memory out of 3000000
+ 10646 multiletter control sequences out of 15000+200000
  47247 words of font info for 93 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 46i,12n,42p,1575b,348s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,12n,42p,1575b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
 es (x86)/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
 )/Latex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/
@@ -833,7 +830,7 @@ utmb8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/
 Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x
 86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/
 type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (11 pages, 775551 bytes).
+Output written on template.pdf (11 pages, 775206 bytes).
 PDF statistics:
  196 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
