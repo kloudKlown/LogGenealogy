@@ -62,26 +62,26 @@ In this paper, we examine the logging statements in open source projects. We sel
 %	 to identify and track the log changes across multiple releases. 
 \end{itemize}
 
-To select projects matching these criteria, we first selected all Java projects from the list of Apache Foundation Git repositories\footnote{\url{https://git.apache.org/}} that have more than 10,000 commits. Next, we counted the number of logging statements in a repository using the \code{grep} command in Listing~\ref{lst:grep}.
+To select projects matching these criteria, we first selected all Java projects from the list of Apache Foundation Git repositories\footnote{\url{https://git.apache.org/}} that have more than 10,000 commits. Next, we counted the number of logging statements in all \code{*.java} files in a repository using the \code{grep} command in Listing~\ref{lst:grep}.
 
 \vspace{-5mm}
 \begin{Code}
 \begin{lstlisting}[caption={Counting logging statements}, label={lst:grep}]
 grep -icR 
-"\(log\.*\)\.\(warn\|info\|error\|debug\|warn\)(" . 
+"\(log\.*\)\.\(|info\|trace\|debug\|error\|warn\)(" . 
 | grep "\.java"
 \end{lstlisting}
 \end{Code}
 \vspace{-5mm}
 
-This command counts the occurrences in a file of an invocation of a logging library (e.g., \code{log} or \code{\_logger}) followed by the specification of a log level. We sum the occurrences in all projects of a file to get the total number of logging statements shown in Table~\ref{tba:overviewsystems}.
+This command counts the occurrences in a file of an invocation of a logging library (e.g., \code{log} or \code{\_logger}) followed by the specification of a log level. We sum the occurrences in all files of a project to get the total number of logging statements shown in Table~\ref{tba:overviewsystems}.
 %To find the log usage in an project we use the \emph{grep} command to search all lines of code within the \emph{.java} files. %Next, using \emph{git log} we find the total number of commits in the code repositories and select projects which have more than 10,000 commits.
  
 We select the four projects (ActiveMQ, Camel, Cloudstack and Liferay) with the highest number of logging statements for further analysis. ActiveMQ\footnote{\url{http://activemq.apache.org/}} is an open source message broker and integration patterns server. Camel\footnote{\url{http://camel.apache.org/}} is an open source integration platform based on enterprise integration patterns. CloudStack\footnote{\url{https://cloudstack.apache.org/}} is an open source project designed to deploy and manage large networks of virtual machines. Liferay\footnote{\url{http://www.liferay.com/}} is an open source platform for building websites and web portals. Table~\ref{tba:overviewsystems} presents an overview of the studied projects. %We pick the releases after incubation for each project, as during incubation the projects might not be used by log processing tools.  
 
 
 \begin{table}[tb]
-	\centering \protect\protect\caption{An overview of the studied projects (all metrics calculated using the latest HEAD of the repository)}
+	\centering \protect\protect\caption{An overview of the studied projects (all metrics calculated using the latest HEAD of the repository) \cp{FIXME}}
 	\smaller
 	
 	\label{tba:overviewsystems} %
@@ -113,24 +113,26 @@ The data extraction approach from the four studied projects consists of three st
 \item We track the changes that are made to each logging statement in a file across commits 
 \end{enumerate}
 
-We use R~\cite{ihaka1996r}, to perform experiments and answer our preliminary analysis and empirical study. Figure~\ref{fig:LGmethod} shows a general overview of our approach and we discuss each step discussed above in further detail. 
+We use R~\cite{ihaka1996r}, to perform experiments and answer our preliminary analysis. Figure~\ref{fig:LGmethod} shows a general overview of our approach and we detail below each of the aforementioned steps. 
 
-\subsubsection*{B.1. Extracting the change history} 
-In order to find the stability of logs, we have to identify all the Java files in our studied projects. To achieve this, we use the \emph{grep} command to search for all the \emph{*.java} files in the cloned repositories and we exclude the \emph{test} files. 
+\subsubsection*{B.1. Extracting the change history of Java files} 
+%In order to find the stability of logs, we have to identify all the Java files in our studied projects. To achieve this, we use the \emph{grep} command to search for all the \emph{*.java} files in the cloned repositories and we exclude the \emph{test} files. 
+To examine the changes made to logging statements, we must first obtain a complete history of each Java file in the latest version of the main branch.
+We collect all the Java files in the four studied projects and we use their Git repositories to obtain all the changes that are made to the files. We use Git's \emph{follow} option to track a file even when it is renamed or relocated. We include only the changes to logging statements that are made in the main branch as other logging statements are unlikely to affect log processing tools. %We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. 
 
-After collecting all the Java files from the four studied projects, we use their Git repositories to obtain all the changes that are made to the files within the time-frame shown in Table~\ref{tba:overviewsystems}. We use the \emph{follow} option to track a file even when it is renamed or relocated. We exclude log changes that are made in non-merged branches as they are unlikely to affect log processing tools. We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. Using this approach, we obtain a complete history of each Java file in the latest version of the master branch.
+\subsubsection*{B.2. Identifying changes to logging statements}
+From the extracted change history of each Java file, we identify all the changes made to logging statements.
+First, we must identify the log statements in the source code. We manually examine the documentation of each studied project to identify the logging library used to generate the logs. %We examine commits rather than code because a project may use multiple logging libraries during its lifetime. 
+We find that the studied projects use \textsl{Log4j}~\cite{EMSEIAN}, \emph{Slf4j}\footnote{\url{http://www.slf4j.org/}} and \emph{logback}\footnote{\url{http://logback.qos.ch/}}.
+Using this information, we manually identify the common method invocations that invoke the logging library. For example, in ActiveMQ and Camel, a logging library is invoked by a method named \emph{LOG} as shown below.
 
-
-\subsubsection*{B.2. Identifying log changes}
-From the extracted change history of each {Java} file, we identify all the log changes made in the commits. To identify the log statements in the source code, we manually sample some commits from each studied project and identify the logging library used to generate the logs. We find that the studied projects use \textsl{Log4j}~\cite{EMSEIAN} and \textsl{Slf4j}\footnote{http://www.slf4j.org/} widely and \textsl{logback}\footnote{http://logback.qos.ch/} sparingly. Using this information, we identify the common method invocations that invoke the logging library. For example, in  ActiveMQ and Camel a logging library is invoked by method named \emph{LOG} as shown below.
 \hypobox{ LOG.debug(``Exception detail", exception);}
 
+As a project can have multiple logging libraries throughout its lifetime, we use regular expressions to match all the common log invocation patterns (i.e., \emph{LOG, log, \_logger, LOGGER, Log}). We consider every invocation of a logging library followed by a log level (\emph{info, trace, debug, error, warn}) a logging statement.
 
-As a project can have multiple logging libraries throughout its life-cycle, we use regular expressions to match all the common log invocation patterns (i.e., \emph{LOG,log,\_logger,LOGGER,Log}). We consider every invocation of a logging library followed by a logging level (\emph{info, trace, debug, error, warn}) a log.
 
-
-\subsubsection*{B.3. Tracking log changes}
-After identifying all the log changes that are made to a file across multiple commits, we track each log individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every change to a log in the subsequent commits appears as an added and deleted log in Git. To identify added, deleted and modified logs, we leverage the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). This is necessary to compare multiple logs which can be similar, which is not possible using string comparison.
+\subsubsection*{B.3. Tracking changes to logging statements}
+After identifying all the log changes that are made to a file across multiple commits, we track each logging statement individually to find out whether it has changed in subsequent revisions. We first collect all the logs present in a file at the first commit, which form the initial set of logs for the file. Every change to a log in the subsequent commits appears as an added and deleted log in Git. To identify added, deleted and modified logs, we leverage the Levenshtein ratio~\cite{levenshteinratio}. We use Levenshtein ratio instead of string comparison, because Levenshtein ratio quantifies the difference between the strings compared within the range 0 to 1 (more similar the strings the ratio approaches 1). This is necessary to compare multiple logs which can be similar, which is not possible using string comparison.
 
 %within the range 0 to 1 (more similar the strings the ratio approaches 1).
 
