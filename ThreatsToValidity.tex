@@ -12,7 +12,7 @@ Our empirical study is performed on Liferay, ActiveMQ, Camel and CloudStack. Tho
 
 Our heuristics to extract logging source code may not be able to extract every logging statement in the source code. Even though the studied applications leverage logging libraries to generate logs at run-time, there may still exist user-defined logs. By manually examining the source code, we believe that we extract most of the logging statements. Evaluation on the coverage of our extracted logging statements can address this threat.
 
-
+In our model, we use the first change after the introduction of a logging statement only. While the first change is sufficient for deciding whether a logging statement will change, we need more information to decide how likely it is that a logging statement will change. In future work, we will extend our model to give more specific details about a future change.
 %We use keywords to identify bug fixing commits when the JIRA issue ID is not included in the commit messages. Although such keywords are used extensively in prior research~\cite{EMSEIAN}, we may still fail to identify bug fixing commits or branching and merging commits.
 
 %We use Levenshtein ratio and choose a threshold to identify modifications to logs. However, this threshold may not accurately identify modifications to logs. Further sensitivity analysis on this threshold is needed to better understand the impact of the threshold to our findings. \\
