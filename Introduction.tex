@@ -56,7 +56,7 @@ The most important observations in this paper are:
 
 %To identify which factors the stability of logging statements and model which logs will change in the future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
 \begin{enumerate}
-	\item We can decide which logs will be changed using a \emph{random forest} classifier with a precision of 89\%-91\% and recall of 71\%-83\%
+	\item We can decide which logs will be changed in the future using a \emph{random forest} classifier with a precision of 89\%-91\% and recall of 71\%-83\%.
 %	Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
 	\item FIXME Logging statements changed by developers who have less ownership in that file are 0.4-1.4 times more likely to be changed again than logs changed by owners of the file in three of the applications.
 	\item FIXME Developer experience is negatively correlated to log stability in the studied applications, suggesting that logs added by more experienced developers are more stable. This findings suggest that knowledge of the code in a file is important when considering the stability of a logging statement. As a result, maintainers of log processing tools can take special care when importing log statements written by developers who have less experience or with no ownership of the file in which the statement was added.
