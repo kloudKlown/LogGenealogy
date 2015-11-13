@@ -15,13 +15,13 @@ Our heuristics to extract logging source code may not be able to extract every l
 
 %We use keywords to identify bug fixing commits when the JIRA issue ID is not included in the commit messages. Although such keywords are used extensively in prior research~\cite{EMSEIAN}, we may still fail to identify bug fixing commits or branching and merging commits.
 
-We use Levenshtein ratio and choose a threshold to identify modifications to logs. However, this threshold may not accurately identify modifications to logs. Further sensitivity analysis on this threshold is needed to better understand the impact of the threshold to our findings. \\
+%We use Levenshtein ratio and choose a threshold to identify modifications to logs. However, this threshold may not accurately identify modifications to logs. Further sensitivity analysis on this threshold is needed to better understand the impact of the threshold to our findings. \\
 
 %Our models are incomplete, i.e., we have not measured all potential dimensions that impact logging stability like file and log ownership metrics, code complexity measures. However, we feel that our metrics are good and additional new dimensions can compliment our dimension to improve the explanation.\\ 
 
 \noindent \textbf{Internal Validity}
 
-Our study is based on the data obtained from Git for all the studied applications. The quality of the data contained in the repositories can impact the internal validity of our study.
+Our study is based on the data obtained from Git for all the studied applications. The quality of the data contained in the repositories can impact the internal validity of our study. For example, merging commits or rewriting the history of the repository (i.e. by \emph{rebasing} the history) may affect our results.  
 
 Our analysis of the relationship between metrics that are important factors in predicting the stability of logs cannot claim causal effects, as we are investigating correlation and not causation. The important factors from our random forest models only indicate that there exists a relationship which should be studied in depth in future studies. 
 
