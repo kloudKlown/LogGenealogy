@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  12 NOV 2015 10:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  13 NOV 2015 17:17
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -529,51 +529,40 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Abstract.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Introduction.tex"
-LaTeX Font Info:    Try loading font information for U+msa on input line 4.
+<logexample.pdf, id=1, 290.08376pt x 51.19125pt>
+File: logexample.pdf Graphic file (type pdf)
+ <use logexample.pdf>
+Package pdftex.def Info: logexample.pdf used on input line 10.
+(pdftex.def)             Requested size: 252.0pt x 44.47118pt.
+ [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+
+ <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/logexample.pdf>]
+<ExampleOfLogChange_LPA.pdf, id=14, 495.8525pt x 181.67876pt>
+File: ExampleOfLogChange_LPA.pdf Graphic file (type pdf)
+
+<use ExampleOfLogChange_LPA.pdf>
+Package pdftex.def Info: ExampleOfLogChange_LPA.pdf used on input line 41.
+(pdftex.def)             Requested size: 252.0pt x 92.33336pt.
+
+<LogGenalogyMethdology.pdf, id=15, 940.51375pt x 326.21875pt>
+File: LogGenalogyMethdology.pdf Graphic file (type pdf)
+
+<use LogGenalogyMethdology.pdf>
+Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 49.
+(pdftex.def)             Requested size: 515.99257pt x 206.40492pt.
+)
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
+LaTeX Font Info:    Try loading font information for U+msa on input line 56.
 
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 4.
+LaTeX Font Info:    Try loading font information for U+msb on input line 56.
 
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ˜ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-
-<logexample.pdf, id=1, 290.08376pt x 51.19125pt>
-File: logexample.pdf Graphic file (type pdf)
- <use logexample.pdf>
-Package pdftex.def Info: logexample.pdf used on input line 11.
-(pdftex.def)             Requested size: 252.0pt x 44.47118pt.
-
-<ExampleOfLogChange_LPA.pdf, id=2, 495.8525pt x 181.67876pt>
-File: ExampleOfLogChange_LPA.pdf Graphic file (type pdf)
-
-<use ExampleOfLogChange_LPA.pdf>
-Package pdftex.def Info: ExampleOfLogChange_LPA.pdf used on input line 27.
-(pdftex.def)             Requested size: 252.0pt x 92.33336pt.
-
-<LogGenalogyMethdology.pdf, id=3, 940.51375pt x 326.21875pt>
-File: LogGenalogyMethdology.pdf Graphic file (type pdf)
-
-<use LogGenalogyMethdology.pdf>
-Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 35.
-(pdftex.def)             Requested size: 515.99257pt x 206.40492pt.
- [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
-
-
- <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/logexample.pdf> <C:/Users/Suhas/Dr
-opbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>])
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
+) [2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 103.
 
@@ -595,7 +584,8 @@ Underfull \hbox (badness 6268) in paragraph at lines 106--107
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 121.
 
-<frequencyofLogchanges.pdf, id=27, 722.7pt x 382.42876pt>
+[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
+<frequencyofLogchanges.pdf, id=31, 722.7pt x 382.42876pt>
 File: frequencyofLogchanges.pdf Graphic file (type pdf)
 
 <use frequencyofLogchanges.pdf>
@@ -609,8 +599,8 @@ Overfull \hbox (3.50006pt too wide) in paragraph at lines 179--180
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 243.
 
-[3]) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
-Underfull \hbox (badness 10000) in paragraph at lines 20--21
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex"
+Underfull \hbox (badness 10000) in paragraph at lines 32--33
 
  []
 
@@ -618,25 +608,24 @@ Underfull \hbox (badness 10000) in paragraph at lines 20--21
 File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 
 <use ModelCreationLogGeanology.pdf>
-Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 39.
+Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 56.
 (pdftex.def)             Requested size: 252.0pt x 57.51741pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 206--207
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
+Underfull \hbox (badness 10000) in paragraph at lines 232--233
 
  []
 
 [4 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/frequencyofLogchanges.pdf> <C:/U
 sers/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>] [5]
-<SpearmanActiveMQ.pdf, id=49, 411.5375pt x 433.62pt>
+Underfull \hbox (badness 10000) in paragraph at lines 243--244
+
+ []
+
+<SpearmanActiveMQ.pdf, id=47, 411.5375pt x 433.62pt>
 File: SpearmanActiveMQ.pdf Graphic file (type pdf)
 
 <use SpearmanActiveMQ.pdf>
-Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 223.
+Package pdftex.def Info: SpearmanActiveMQ.pdf used on input line 251.
 (pdftex.def)             Requested size: 226.79845pt x 201.60475pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
@@ -645,122 +634,115 @@ Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 
-<BootRandomForest.pdf, id=50, 434.62375pt x 217.81375pt>
-File: BootRandomForest.pdf Graphic file (type pdf)
-
-<use BootRandomForest.pdf>
-Package pdftex.def Info: BootRandomForest.pdf used on input line 239.
-(pdftex.def)             Requested size: 252.00237pt x 125.9997pt.
-
-Overfull \hbox (0.84673pt too wide) in paragraph at lines 265--272
+Overfull \hbox (0.84673pt too wide) in paragraph at lines 295--302
  [][] 
  []
 
 
-Underfull \vbox (badness 1552) has occurred while \output is active []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 296--297
+Underfull \hbox (badness 10000) in paragraph at lines 326--327
 
  []
 
-[6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf> <C:/Users/
-Suhas/Dropbox/Log Genealogy/Paper/BootRandomForest.pdf>]
-Underfull \hbox (badness 2173) in paragraph at lines 340--342
+[6 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/SpearmanActiveMQ.pdf>]
+Underfull \hbox (badness 2173) in paragraph at lines 374--376
 []\OT1/ptm/m/n/10 The above pro-cess is re-peated 1,000 times and the
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--342
+Underfull \hbox (badness 10000) in paragraph at lines 374--376
 
  []
 
-<ARBox.pdf, id=63, 578.16pt x 382.42876pt>
+<ARBox.pdf, id=61, 578.16pt x 382.42876pt>
 File: ARBox.pdf Graphic file (type pdf)
  <use ARBox.pdf>
-Package pdftex.def Info: ARBox.pdf used on input line 346.
+Package pdftex.def Info: ARBox.pdf used on input line 380.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
 
-<CRBox.pdf, id=64, 867.24pt x 578.16pt>
+<CRBox.pdf, id=62, 867.24pt x 578.16pt>
 File: CRBox.pdf Graphic file (type pdf)
  <use CRBox.pdf>
-Package pdftex.def Info: CRBox.pdf used on input line 349.
+Package pdftex.def Info: CRBox.pdf used on input line 383.
 (pdftex.def)             Requested size: 173.88062pt x 115.91225pt.
 
-<CloRBox.pdf, id=65, 578.16pt x 382.42876pt>
+<CloRBox.pdf, id=63, 578.16pt x 382.42876pt>
 File: CloRBox.pdf Graphic file (type pdf)
  <use CloRBox.pdf>
-Package pdftex.def Info: CloRBox.pdf used on input line 353.
+Package pdftex.def Info: CloRBox.pdf used on input line 387.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
 
-<LRBox.pdf, id=66, 578.16pt x 382.42876pt>
+<LRBox.pdf, id=64, 578.16pt x 382.42876pt>
 File: LRBox.pdf Graphic file (type pdf)
  <use LRBox.pdf>
-Package pdftex.def Info: LRBox.pdf used on input line 356.
+Package pdftex.def Info: LRBox.pdf used on input line 390.
 (pdftex.def)             Requested size: 173.88062pt x 115.0096pt.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 439.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 473.
 
 
-Overfull \hbox (0.73515pt too wide) in paragraph at lines 451--461
+Overfull \hbox (0.73515pt too wide) in paragraph at lines 485--495
  [][] 
  []
 
-<DexpA.pdf, id=67, 505.89pt x 505.89pt>
-File: DexpA.pdf Graphic file (type pdf)
- <use DexpA.pdf>
-Package pdftex.def Info: DexpA.pdf used on input line 475.
-(pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
+<QP_Amq_Dxp.pdf, id=65, 411.5375pt x 382.42876pt>
+File: QP_Amq_Dxp.pdf Graphic file (type pdf)
+ <use QP_Amq_Dxp.pdf>
+Package pdftex.def Info: QP_Amq_Dxp.pdf used on input line 509.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<DexpC.pdf, id=68, 505.89pt x 505.89pt>
-File: DexpC.pdf Graphic file (type pdf)
- <use DexpC.pdf>
-Package pdftex.def Info: DexpC.pdf used on input line 478.
-(pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
+<QP_Camel_Dxp.pdf, id=66, 411.5375pt x 382.42876pt>
+File: QP_Camel_Dxp.pdf Graphic file (type pdf)
+ <use QP_Camel_Dxp.pdf>
+Package pdftex.def Info: QP_Camel_Dxp.pdf used on input line 512.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<DexpClo.pdf, id=69, 505.89pt x 505.89pt>
-File: DexpClo.pdf Graphic file (type pdf)
- <use DexpClo.pdf>
-Package pdftex.def Info: DexpClo.pdf used on input line 482.
-(pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
+<QP_Clo_Dxp.pdf, id=67, 411.5375pt x 382.42876pt>
+File: QP_Clo_Dxp.pdf Graphic file (type pdf)
+ <use QP_Clo_Dxp.pdf>
+Package pdftex.def Info: QP_Clo_Dxp.pdf used on input line 516.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<DexpL.pdf, id=70, 505.89pt x 505.89pt>
-File: DexpL.pdf Graphic file (type pdf)
- <use DexpL.pdf>
-Package pdftex.def Info: DexpL.pdf used on input line 485.
-(pdftex.def)             Requested size: 123.48138pt x 123.47711pt.
+<QP_Lif_Dxp.pdf, id=68, 411.5375pt x 382.42876pt>
+File: QP_Lif_Dxp.pdf Graphic file (type pdf)
+ <use QP_Lif_Dxp.pdf>
+Package pdftex.def Info: QP_Lif_Dxp.pdf used on input line 519.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
  [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ARBox.pdf> <C:/Users/Suhas/Drop
 box/Log Genealogy/Paper/CRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
 CloRBox.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LRBox.pdf>]
-<OwA.pdf, id=96, 578.16pt x 578.16pt>
-File: OwA.pdf Graphic file (type pdf)
- <use OwA.pdf>
-Package pdftex.def Info: OwA.pdf used on input line 514.
-(pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
+<QP_Amq_Ow.pdf, id=93, 411.5375pt x 382.42876pt>
+File: QP_Amq_Ow.pdf Graphic file (type pdf)
+ <use QP_Amq_Ow.pdf>
+Package pdftex.def Info: QP_Amq_Ow.pdf used on input line 552.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<OwC.pdf, id=97, 578.16pt x 578.16pt>
-File: OwC.pdf Graphic file (type pdf)
- <use OwC.pdf>
-Package pdftex.def Info: OwC.pdf used on input line 517.
-(pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
+<QP_Camel_Ow.pdf, id=94, 411.5375pt x 382.42876pt>
+File: QP_Camel_Ow.pdf Graphic file (type pdf)
+ <use QP_Camel_Ow.pdf>
+Package pdftex.def Info: QP_Camel_Ow.pdf used on input line 555.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<OwClo.pdf, id=98, 578.16pt x 578.16pt>
-File: OwClo.pdf Graphic file (type pdf)
- <use OwClo.pdf>
-Package pdftex.def Info: OwClo.pdf used on input line 521.
-(pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
+<QP_Clo_Ow.pdf, id=95, 411.5375pt x 382.42876pt>
+File: QP_Clo_Ow.pdf Graphic file (type pdf)
+ <use QP_Clo_Ow.pdf>
+Package pdftex.def Info: QP_Clo_Ow.pdf used on input line 559.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<OwL.pdf, id=99, 578.16pt x 578.16pt>
-File: OwL.pdf Graphic file (type pdf)
- <use OwL.pdf>
-Package pdftex.def Info: OwL.pdf used on input line 524.
-(pdftex.def)             Requested size: 123.48138pt x 123.48152pt.
- [8 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpA.pdf> <C:/Users/Suhas/Drop
-box/Log Genealogy/Paper/DexpC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/
-DexpClo.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/DexpL.pdf>]
+<QP_Lif_Ow.pdf, id=96, 411.5375pt x 382.42876pt>
+File: QP_Lif_Ow.pdf Graphic file (type pdf)
+ <use QP_Lif_Ow.pdf>
+Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 562.
+(pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 608.
+Underfull \vbox (badness 2865) has occurred while \output is active []
+
+ [8 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas
+/Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Gene
+alogy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_
+Dxp.pdf>]
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 705.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex"
@@ -768,9 +750,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwA.pdf> <C:/Users/Suhas/Dropbox
-/Log Genealogy/Paper/OwC.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwClo
-.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/OwL.pdf>]
+[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Ow.pdf> <C:/Users/Suhas/D
+ropbox/Log Genealogy/Paper/QP_Camel_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealo
+gy/Paper/QP_Clo_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_Ow.p
+df>]
 Underfull \hbox (badness 1430) in paragraph at lines 18--19
 []\OT1/ptm/m/n/10 We use Lev-en-shtein ra-tio and choose a thresh-old to
  []
@@ -815,10 +798,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 7508 strings out of 493921
- 114398 string characters out of 3146880
- 197235 words of memory out of 3000000
- 10646 multiletter control sequences out of 15000+200000
+ 7503 strings out of 493921
+ 114493 string characters out of 3146880
+ 195233 words of memory out of 3000000
+ 10642 multiletter control sequences out of 15000+200000
  47247 words of font info for 93 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,42p,1575b,340s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -826,16 +809,17 @@ Here is how much of TeX's memory you used:
 es (x86)/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
 )/Latex/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/
 fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsf
-onts/latxfont/lcirclew.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/
-utmb8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/
-Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x
-86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/
-type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (11 pages, 771404 bytes).
+pe1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Latex/fonts/type1/publi
+c/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfo
+nts/cm/cmsy7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/latx
+font/lcirclew.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmb8a.pf
+b><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program F
+iles (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex
+/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw
+/times/utmri8a.pfb>
+Output written on template.pdf (11 pages, 584276 bytes).
 PDF statistics:
- 196 PDF objects out of 1000 (max. 8388607)
+ 220 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 96 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 91 words of extra memory for PDF output out of 10000 (max. 10000000)
 
