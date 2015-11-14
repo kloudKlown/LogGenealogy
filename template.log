@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  14 NOV 2015 10:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  14 NOV 2015 10:20
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -474,22 +474,22 @@ LaTeX Warning: Label `fig:Feq' multiply defined.
 LaTeX Warning: Label `sub@fig:Feq' multiply defined.
 
 
-LaTeX Warning: Label `fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `fig:f4' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig:f4' multiply defined.
-
-
 LaTeX Warning: Label `fig:f41' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig:f41' multiply defined.
+
+
+LaTeX Warning: Label `fig:f4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:f4' multiply defined.
+
+
+LaTeX Warning: Label `fig:f4' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:f4' multiply defined.
 
 
 LaTeX Warning: Label `fig:f4' multiply defined.
@@ -595,9 +595,6 @@ LaTeX Font Info:    Try loading font information for OT1+pcr on input line 65.
 ("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 ) [2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
-Underfull \vbox (badness 1221) has occurred while \output is active []
-
-
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 129.
 
@@ -810,7 +807,7 @@ Files (x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Lat
 ex/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/u
 rw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a
 .pfb>
-Output written on template.pdf (12 pages, 660304 bytes).
+Output written on template.pdf (12 pages, 660232 bytes).
 PDF statistics:
  242 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
