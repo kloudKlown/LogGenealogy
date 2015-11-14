@@ -265,13 +265,13 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 	
 		\caption{Confusion Matrix}
 		\label{tba:confusion}
-		\resizebox*{.9\columnwidth}{.15\columnwidth}{
+		\resizebox*{\columnwidth}{.15\columnwidth}{
 	\begin{tabular}{|ll|l|l|}
 		\cline{1-4}
-		&                 & \multicolumn{2}{c|}{Predicted}            \\ \cline{3-4} 
-		&                 & Log changed         & Log not changed     \\ \hline
-		\multicolumn{1}{|c|}{\multirow{2}{*}{Actual}} & Log change      & True positive (TP)  & False negative (FN) \\ \cline{2-2} 
-		\multicolumn{1}{|c|}{}                        & Log not changed & False positive (FP) & True negative (TN)  \\ \hline
+		&                 & \multicolumn{2}{c|}{Classified}            \\ \cline{3-4} 
+		&                 & Logging statement changed         & Logging stsatement not changed     \\ \hline
+		\multicolumn{1}{|c|}{\multirow{2}{*}{Actual}} & Logging statement changed      & True positive (TP)  & False negative (FN) \\ \cline{2-2} 
+		\multicolumn{1}{|c|}{}                        & Logging statement not changed & False positive (FP) & True negative (TN)  \\ \hline
 	\end{tabular}}
 
 \end{table}
@@ -291,18 +291,18 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 %	
 %
 %\end{table}
-\subsection*{Step A1 - Model validation}
+\subsection*{Step A1 - Model Validation}
 %\textbf{\noindent \textsl{(C3 - Model evaluation)}}
 
 After we build the random forest classifier, we evaluate the performance of our classifier using precision, recall, F-measure, AUC and Brier Score. These measures are functions of the confusion matrix as shown in Table~\ref{tba:confusion} and are explained below.
 
-\textsl{Precision (P)} measures the correctness of our classifier in predicting which logging statement will change in the future. Precision is defined as the number of logging statements which were accurately predicted as changed over all logging statements predicted to have changed as explained in Equation~\ref{f:precision}.   \\
+\textsl{Precision (P)} measures the correctness of our classifier in predicting which logging statement will change in the future. Precision is defined as the number of logging statements which were correctly classified as changed over all logging statements classified to have changed as explained in Equation~\ref{f:precision}.   \\
 	 \begin{equation}
  P =  \dfrac{TP}{TP + FP } 
  \label{f:precision}
 	 \end{equation}	
 	 
-\textsl{Recall (R)} measures the completeness of our classifier. A classifier is said to be complete if the classifier can correctly classify all the logging statements which will get changed in our dataset. Recall is defined as the number of logging statements which were accurately predicted as changed over all logging statements which actually change as explained in Equation~\ref{f:recall}.
+\textsl{Recall (R)} measures the completeness of our classifier. A classifier is said to be complete if the classifier can correctly classify all the logging statements which will get changed in our dataset. Recall is defined as the number of logging statements which were correctly classified as changed over all logging statements which actually change as explained in Equation~\ref{f:recall}.
 	 \begin{equation}
 	 R =  \dfrac{TP}{TP + FN } 
 	 \label{f:recall}
@@ -322,7 +322,7 @@ After we build the random forest classifier, we evaluate the performance of our 
 
 %a measure of the accuracy of the predictions in our model~\cite{wilks2011statistical}. It explains how well the model performs compared to random guessing i.e.,  a perfect classifier  will have Brier score of 0 and perfect misfit classifier will have Brier score of 1 (predicts probability of log change when log not changed). This means the lower the Brier score value, the better our random forest classifier.
 	 
-\textsl{Brier score (BS)} is a measure of the accuracy of the predictions in our classifier~\cite{wilks2011statistical}. Brier score explains how well the classifier performs compared to random guessing as explained in Equation~\ref{f:BS}, where $P_{t}$ is the probability of log change and $O_{t}$ is the actual log being changed or not. A perfect classifier will have a Brier score of 0, a perfect misfit classifier will have a Brier score of 1 (predicts probability of log change when log is not changed) and for random guessing Brier score reaches the value of 0.25. This means lower the Brier score value, the better our random forest classifier.
+\textsl{Brier score (BS)} is a measure of the accuracy of the classifications of our classifier~\cite{wilks2011statistical}. The Brier score explains how well the classifier performs compared to random guessing as explained in Equation~\ref{f:BS}, where $P_{t}$ is the probability of whether a logging statement will change and $O_{t}$ is the boolean that shows whether the statement actually changed. A perfect classifier will have a Brier score of 0, a perfect misfit classifier will have a Brier score of 1 (predicts probability of log change when log is not changed) and for random guessing the Brier score is 0.25. As a result, the lower the Brier score value, the better our random forest classifier performs.
 
 % This means lower the Brier score value, the  accuracy of random forest classifier and Brier score reaches the value 0.25 for random guessing. 
 
@@ -338,7 +338,8 @@ After we build the random forest classifier, we evaluate the performance of our 
 	 \label{f:BS}
 	 \end{equation}	
 
-The performance measures described previously, may overestimate the performance of the classifier due to over fitting. To account for the overfitting in our classifier, we use the \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows:
+\subsubsection*{Optimism}
+The performance measures described previously may overestimate the performance of the classifier due to overfitting. To account for the overfitting in our classifier, we use the \textsl{optimism} measure, as used by prior research~\cite{ShaneOLS}. The \textsl{optimism} of the performance measures are calculated as follows:
 \begin{enumerate}
 	\item From the original dataset with \textsl{m} records, we select a bootstrap sample with \textsl{n} records with replacement.
 	\item Build random forest as described in (C2) using the bootstrap sample.
@@ -346,7 +347,7 @@ The performance measures described previously, may overestimate the performance 
 	\item Calculate the \textsl{optimism} by subtracting the performance measures of the bootstrap sample from the original sample. 	
 \end{enumerate}
 
-	The above process is repeated 1,000 times and the average (mean) \textsl{optimism} is calculated. Finally, we calculate \textsl{optimism-reduced} performance measures for precision, recall, F-measure, AUC and Brier score by subtracting the averaged optimism of each measure, from their corresponding original measure.  The smaller the optimism values, less of an overfit the original classifier is.
+	The above process is repeated 1,000 times and the average (mean) \textsl{optimism} is calculated. Finally, we calculate \textsl{optimism-reduced} performance measures for precision, recall, F-measure, AUC and Brier score by subtracting the averaged optimism of each measure, from their corresponding original measure.  The smaller the optimism values, the less the original classifier overfits the data.
 
 \begin{figure*}[tb]
 	
