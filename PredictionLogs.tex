@@ -402,8 +402,7 @@ Using the \emph{randomForest} package in R, we build a classifier as explained i
 
 
 \begin{table*}[t]
-	\protect\protect\caption{The importance values of the metrics (top 10), divided into homogeneous
-		groups by Scott-Knott clustering}
+	\protect\protect\caption{The most important metrics, divided into homogeneous groups by Scott-Knott clustering}
 	
 	\centering
 	
@@ -456,8 +455,8 @@ Using the \emph{randomForest} package in R, we build a classifier as explained i
 
 \subsection{Results}
 
-\hypobox{The random forest classifier achieves a precision of 0.89-0.91, recall of 0.71-0.83 and outperforms random guessing for our studied applications} 
-Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for studied application. The classifier achieves an AUC of 0.94-0.95 and Brier scores between 0.04 and 0.07 across all studied applications. If the classifier achieves a Brier score of 0.07, it means our model can forecast with 73\% probability a logging statement will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
+\hypobox{The random forest classifier achieves 0.89-0.91 precision, 0.71-0.83 recall and outperforms random guessing for our studied applications.} 
+Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} \emph{AUC} and \emph{Brier score} for each studied application. The classifier achieves an AUC of 0.94-0.95 and Brier scores between 0.04 and 0.07 across all studied applications. Using the equation described above, we can calculate that a Brier score of 0.07 means that our model can decide with 73\% probability whether a logging statement will change. The Brier score is 0.25 for random guessing (i.e., predicted value is 50\%).
 % We find the recall of the random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest total number of log lines and close to 50\% of the log changes are log relocations as seen in Table~\ref{tba:logtype}. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 %lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
@@ -481,7 +480,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 \end{table}
 
 
-\subsection*{{B2. Important metrics for logging statement stability}}
+\subsection*{{B2. Important Metrics for Logging Statement Stability}}
 
 %From Table~\ref{tba:Scott} we see that `file ownership', `SLOC', `log density', and `developer experience' are common across all the projects in our studied systems. 
 
@@ -505,7 +504,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Lif_Dxp}\label{fig:f4}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Comparing the probability of a change to a logging statement against experience of the developer adding the logging statement }
+	\caption{Comparing the probability of a change to a logging statement against the experience of the developer who adds that logging statement}
 	\label{fig:Dexp_BP}
 	
 \end{figure}
@@ -523,9 +522,13 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 
 
 
-\textbf{{{Developer experience} is an important metric to explain the likelihood of a change to a logging statement.}} From Table~\ref{tba:Scott}, we see that developer experience is one of top four metrics, to help explain the likelihood of a logging statement being changed in all the studied applications. 
-Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statements being changed as developer experience increases, and it is interesting to note that in all the projects logging statements introduced by new developers have lower probability of being changed, when compared to more experienced developers. We also observe that as developers get more experience the probability of a change to a logging statement decreases in ActiveMQ, Camel and Liferay. This downward trend maybe be because in ActiveMQ, Camel and Liferay, the top three developers are responsible for adding more than 50\% of the logging statements as seen in Table~\ref{tba:topDevelopers}. We also find that upto 70\% of the logging statements added by these top developers never change. These findings, suggest that developers of log processing tools should be more cautious when using a logging statement written by developers who have some experience in the application rather than new developers or very experienced developers.
+%\textbf{{{Developer experience} is an important metric to explain the likelihood of a change to a logging statement.}}
+\hypobox{In three out of four studied projects, the top three developers were responsible for adding over 50\% of the logging statements. Upto 70\% of these statements never change.}
+Table~\ref{tba:Scott} shows the metrics that are important for deciding whether a logging statement will change in the future. From Table~\ref{tba:Scott}, we see that developer experience is in the top four metrics for all studied applications to help explain the likelihood of a logging statement being changed in all the studied applications. 
+Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statement being changed as developer experience increases. In all the studied projects logging statements that are added by new developers have a lower probability of being changed, when compared to those added by more experienced developers.
+We account this phenomenon to the fact that inexperienced developers add a very small fraction of the logs (12\% in Cloudstack and 1-3\% in the other projects).
 
+We also observe that as developers get more experience the probability of a change to a logging statement decreases in ActiveMQ, Camel and Liferay. This downward trend may be explained by the fact that in ActiveMQ, Camel and Liferay, the top three developers are responsible for adding more than 50\% of the logging statements as seen in Table~\ref{tba:topDevelopers}. In addition, we find that upto 70\% of the logging statements added by these top developers never change. These findings suggest that developers of log processing tools should let their tools depend on logging statements added by developers with a high level of experience.
 
 %This suggests that logs which change are added by less experienced developers in ActiveMQ, Camel and Liferay. This can be seen in Figure~\ref{fig:Dexp_BP}, where logs which change three times or more are changed by less experienced developers, when compared to unchanged logs. For example, when we inspect \emph{git diff} for the file \emph{SessionBatchTransactionSynchronization.java} in Camel, we find that all the logs introduced by a new developer are fixed by a more experienced developer. In this case, the experienced developer changes the log contexts, i.e., relocates the logs and adds additional context information to provide more meaning to the logs. 
 
@@ -571,7 +574,10 @@ Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statements being c
 
 
 
-\textbf{{Ownership of the file is an important metric to explain the likelihood of a change to a logging statement.}} From Table~\ref{tba:Scott}, we see that ownership of the file is one of top four metrics after developer experience to help explain the likelihood of a change to a logging statement in all the studied applications. From Figure~\ref{fig:Numberofchanges_BP}, we observe that in all the applications that logging statements introduced by developers who own more than 75\% of the file are less likely to be changed. We also observe that developers who own less than 20\% of the file are responsible for 27\%-67\% of the changes to logging statements in the studied applications, which is seen as upward trend from 0 to 0.20 in Figure~\ref{fig:Numberofchanges_BP}. These results suggest that developers of log processing tools should be more cautious when using a logging statement written by a developer who has contributed to less than 20\% of the file.
+%\textbf{{Ownership of the file is an important metric to explain the likelihood of a change to a logging statement.}}
+\hypobox{Logging statements that are added into a file by developers who own more than 75\% of that file are unlikely to be changed in the future.}
+
+ From Table~\ref{tba:Scott}, we see that ownership of the file is in the top two metrics to help explain the likelihood of a change to a logging statement in all the studied applications. From Figure~\ref{fig:Numberofchanges_BP}, we observe in all the applications that logging statements introduced by developers who own more than 75\% of the file are less likely to be changed. We also observe that developers who own less than 20\% of the file are responsible for 27\%-67\% of the changes to logging statements in the studied applications, which is seen as upward trend from 0 to 0.20 in Figure~\ref{fig:Numberofchanges_BP}. These results suggest that developers of log processing tools should be more cautious when using a logging statement written by a developer who has contributed less than 20\% of the file.
 
  
 
@@ -634,7 +640,10 @@ Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statements being c
 
 
 %
-\textbf{{{Log density} is an important metric to explain the likelihood of a change to a logging statement.}} From Table~\ref{tba:Scott}, we see observe that log density has the highest importance in Liferay and Cloudstack. We find that in these two applications, the changed logging statements are present in files with lower log density, than unchanged logging statements. When we measure the median file sizes, we find that logging statements which change more are present in files with significantly higher SLOC (2x-3x higher). This suggests that large files which are not well logged are more likely to have unstable logging statements, than well logged files.
+%\textbf{{{Log density} is an important metric to explain the likelihood of a change to a logging statement.}}
+\hypobox{Logging statements in files with a low log density are more likely to change than logging statements in files with a high log density.}
+
+ From Table~\ref{tba:Scott}, we observe that log density has the highest importance in Liferay and Cloudstack. We find that in these two applications, changed logging statements are in files that have a lower log density than the files containing unchanged logging statements. When we measure the median file sizes, we find that logging statements which change more are present in files with significantly higher SLOC (2x-3x higher). This suggests that large files which are not well logged are more likely to have unstable logging statements, than well logged files.
 
 
 
@@ -688,7 +697,7 @@ Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statements being c
 %We find that other metrics from the developer dimension are not consistent among the studied systems. This may be because each project might have different philosophy of development, for example we find that \emph{resolution time} has negative effect in Liferay and Camel but has positive effect in ActiveMQ. This suggests that logs are more likely to change in ActiveMQ when the resolution time of issue increases, but less likely in Liferay and Camel. 
 
 
-\hypobox {Our Random Forest classifier achieves a precision of 89\%-91\% and recall of 71\%-83\% across all studied applications. We find file ownership, SLOC, developer experience and log density, help in explaining the likelihood of a change to a logging statement}
+\hypobox {File ownership, SLOC, developer experience and log density are important metrics for deciding whether a logging statement will change in the future.}
 
 
 
