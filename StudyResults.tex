@@ -48,7 +48,7 @@
 
 %In this paper we aim to get a better understanding of the
 %unstable logs in an project so that we can improve the maintenance of log processing tools. 
-In this paper we study the changes that are made to logs across multiple releases in open source projects. The goal of our study is to present a model for deciding whether a logging statement is likely to change in the future. This model can assist developers of log processing tools to decide on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
+In this paper we study the changes that are made to logs across multiple releases in open source projects. The goal of our study is to present a classifier for deciding whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools to decide on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
 First, we perform a preliminary analysis, in which we examine how often logging statements change, to motivate our work. In this section, we present our rationale for selecting the projects that we studied and present the results of our preliminary analysis of the four studied projects. 
 
 \subsection{Studied Projects}
@@ -81,17 +81,17 @@ We select the four projects (ActiveMQ, Camel, Cloudstack and Liferay) with the h
 
 
 \begin{table}[tb]
-	\centering \protect\protect\caption{An overview of the studied projects (all metrics calculated using the latest HEAD of the repository) \cp{FIXME}}
+	\centering \protect\protect\caption{An overview of the studied projects (all metrics calculated using the latest HEAD of the repository) }
 	\smaller
 	
 	\label{tba:overviewsystems} %
-	\begin{tabular}{lrrrr}
+	\begin{tabular}{>{\centering}p{.1\textwidth}rrrr}
 		\toprule 
 		~ & \textbf{ActiveMQ}  & \textbf{Camel}  & \textbf{CloudStack}  & \textbf{Liferay} \\
 		\midrule
 		Logging statements & 5.1k  & 6.1k  & 9.6k  & 1.8k \\
-		Commits &	 ?  & ?  & ?  & ? \\	
-		Months in repository &	 ?  & ?  & ?  & ? \\
+		Commits &	 11K  & 21K  & 29K  & 143K \\	
+		Years in repository&	 8  & 8  & 4  & 4 \\
 %		\# of releases  & 19  & 43  & 111  & 24 \\
 		\midrule
 		Added lines of code  & 261k  & 505k  & 1.09M  & 3.9M \\
@@ -129,7 +129,13 @@ Using this information, we manually identify the common method invocations that 
 \hypobox{ LOG.debug(``Exception detail", exception);}
 
 As a project can use multiple logging libraries throughout its lifetime, we use regular expressions to search for all the common log invocation patterns (i.e., \emph{LOG, log, \_logger, LOGGER, Log}). We identify every successful match of this regular expression that is followed by a log level (\emph{info, trace, debug, error, warn}) as a logging statement.
-
+%\begin{Code}
+\begin{lstlisting}[caption={Selecting the best matching logging statement}, label={lst:multiplelogs}, float=*]
+-      LOG.debug("Call: " +method.getName()+ " " + callTime);
++      LOG.debug("Call: " +method.getName()+ " took "+ callTime + "ms"); // (Statement a1)
++      LOG.debug("Call: " +method.setName()+ " took "+ callTime + "ms"); // (Statement a2)
+\end{lstlisting}
+%\end{Code}
 
 \subsubsection*{B.3. Tracking changes to logging statements}
 After identifying all the logging statements, we track the changes made to these statements after their introduction. We extract the change information from the Git commits, which show a \emph{diff} of added and removed code. To distinguish between a change in which a new logging statement is added and a change to an existing logging statement, we must track the changes made to a logging statement starting from the first project commit. Because there may be multiple changes to logging statements in a commit, we must decide to which existing logging statement a change maps.
@@ -142,13 +148,7 @@ We use the Levenshtein ratio instead of string comparison, because Levenshtein r
 %	+      LOG.debug(``Call: " +method.getName()+`` took "+ callTime + ``ms"); \space  \space  \space  \space  \space  \space -- \textbf{(a1)}\\ 
 %	+      LOG.debug(``Call: " +method.setName()+`` took "+ callTime + ``ms");\space  \space  \space  \space  \space  \space -- \textbf{(a2)}} 
 
-%\begin{Code}
-\begin{lstlisting}[caption={Selecting the best matching logging statement}, label={lst:multiplelogs}, float=*]
--      LOG.debug("Call: " +method.getName()+ " " + callTime);
-+      LOG.debug("Call: " +method.getName()+ " took "+ callTime + "ms"); // (Statement a1)
-+      LOG.debug("Call: " +method.setName()+ " took "+ callTime + "ms"); // (Statement a2)
-\end{lstlisting}
-%\end{Code}
+
 
 
 %within the range 0 to 1 (more similar the strings the ratio approaches 1).
@@ -214,7 +214,7 @@ As we do not have change information for logging statements which are added near
 %		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
 %			{Percentageofchanges}\label{fig:percentage} }
 
-	\subfloat{\includegraphics[width=1\linewidth]
+	\subfloat{\includegraphics[height=.7\linewidth]
 		{frequencyofLogchanges}\label{fig:Feq} }
 	
 	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
@@ -258,7 +258,7 @@ As we do not have change information for logging statements which are added near
 
 
 
-\subsection{Results \cp{FIXME}}
+\subsection{Results }
 
 \begin{table}[tb]
 	\centering
@@ -280,22 +280,22 @@ As we do not have change information for logging statements which are added near
 
 
 %\subsubsection*{C.1. Change frequency}
-\hypobox {Developers change 35\%-50\% of the logs across our studied projects. }
+\hypobox {Developers change 25\%-45\% of the logs across our studied applications. }
 Figure~\ref{fig:frequencyofLogchanges} shows the percentage values for the number of times a log is changed in each of the studied projects. This shows that logs change extensively throughout the lifetime of an project which can affect the log processing tools.
 
 \begin{table}[t]
 	\centering
 	\smaller
-	\caption{Total code churn in the commits where a newly added log is changed \cp{BOXPLOTS}}
+	\caption{Time taken in days before for a new log into the application is changed}
 	
 	\begin{tabular}{lrrrrrr}
 		\toprule
 		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
 		\midrule
-		ActiveMQ   & 2  & 25      & 47     & 141    & 163     & 493  \\
-		Camel      & 2   & 13      & 32      & 98    & 133      & 456 \\
-		Cloudstack & 2   & 66      & 234      & 410   & 574     & 4121 \\
-		Liferay    & 2   & 6      & 14     & 28    & 27     & 278\\	
+		ActiveMQ   & 1  & 1      & 7     & 86    & 99     & 680  \\
+		Camel      & 1   & 1      & 17      & 127    & 145      & 1139 \\
+		Cloudstack & 1   & 1      & 1      & 46   & 1     & 1113 \\
+		Liferay    & 1   & 1      & 2     & 34    & 2     & 945\\	
 		\bottomrule
 		
 	\end{tabular}
@@ -303,9 +303,15 @@ Figure~\ref{fig:frequencyofLogchanges} shows the percentage values for the numbe
 \end{table}
 
 
+\textbf{We find that 12\%-40\% of the logging statement changes, are due to the added logging statements which change.} From table~\ref{tba:summaryofnewLogCodechange}, we observe that upto 75\% of the added logging statement changes, are done within four months after the log is added. This means that any log processing tool, which utilizes a logging statement introduced in the previous releases is more susceptible to breakage, by changes to the added logging statement.  
 
+% that upto 75\% of logging statement changes occur within 4 months of across all our applications. 
 
-\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that majority, i.e., 75\% are changed within 15 commits since addition.  We also find that the median code churn during these log changes is less than 50 lines of code in three of the studied projects as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that the log changes are more likely to be changed due to rewording changes rather than major changes to the added feature. This means that new logs which are introduced prior to 15 commits in the studied projects, are less likely to break the log processing tools which might depend on them. 
+% find that over 75\% of the changes occur within 4 months of addition. 
+
+% suggests tha which are added 
+
+%\textbf{75\% of the new logs which change, are changed within 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find that majority, i.e., 75\% are changed within 15 commits since addition.  We also find that the median code churn during these log changes is less than 50 lines of code in three of the studied projects as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that the log changes are more likely to be changed due to rewording changes rather than major changes to the added feature. This means that new logs which are introduced prior to 15 commits in the studied projects, are less likely to break the log processing tools which might depend on them. 
 
 
 %\textbf{25\% of the new logs which change, are changed after 15 commits since their addition.} From Table~\ref{tba:summaryofnewLogchange}, we find 25\% of the new logs added are changed after 15 commits since their addition. We also find that the code churn during these log changes is more than 150 lines of code in three of the studied projects as seen in Table~\ref{tba:summaryofnewLogCodechange}. This suggests that these log changes are more likely to be changes to the feature rather than rewording changes, and are more likely to affect the log processing tools. 
