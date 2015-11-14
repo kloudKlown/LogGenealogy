@@ -1,13 +1,28 @@
 
 In this section, we present prior research in which log behavior in software applications is analyzed. In addition, we discuss tools developed to assist in logging. 
 
-\subsection{Log Analysis}
+\subsection{Log Analysis and Tools}
 
-Prior work leverages logs for detecting anomalies in large scale systems. Lou {et al}$.$~\cite{JGLouMining} propose an approach to use the variable values printed in logs to detect anomalies in large systems. Based on the variable values in logs, their approach creates invariants (e.g., equations). Any new logs that violates the invariant are considered to be a sign of anomalies. Fu {et al}$ . $~\cite{QFuanomaly} built a finite state automaton using unstructured logs to detect performance bugs in distributed systems.  \indent Xu {et al}$.$~\cite{ConsoleLogs} link output logs to logs in source code to recover the text and and the variable parts of logs in source code. They applied Principal Component Analysis (PCA) to detect system anomalies. To assist in fixing bugs using logs, Yuan {et al$.$}~\cite{Yuan:2010:SED:1736020.1736038} propose an approach to automatically infer the failure scenarios when a log is printed during a failed run of a system.
+
+Much of the prior work leverages logs for detecting anomalies in large scale systems. Lou {et al}$.$~\cite{JGLouMining} propose an approach to use the variable values printed in logs to detect anomalies in large systems. Similarly, Fu {et al}$ . $~\cite{QFuanomaly} built a finite state automaton using unstructured logs to detect performance bugs in distributed systems. In debugging, Yuan {et al$.$}~\cite{Yuan:2010:SED:1736020.1736038} propose an approach to automatically infer the failure scenarios when a log is printed during a failed run of a system.
+
+
+Logs are leveraged during load testing of large scale systems. The data collected from logs during load tests helps developers diagnose faults in the system. Jiang {et al$ . $}~\cite{Jiang:2008:AAA:1400155.1400158,JiangICSM2008,JiangICSM20092,Jiang:2010:ICS:1850000.1850068} proposed log analysis approaches to assist in automatically verifying results from load tests. Their log analysis approaches first automatically abstract logs into system events~\cite{Jiang:2008:AAA:1400155.1400158}. Based on the such events, they identified both functional anomalies~\cite{JiangICSM2008} and performance degradations~\cite{JiangICSM20092} in load test results.
+
+
+Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional . Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. 
+
+All these prior research works rely on the stability of output logs for functionality. However, we find that logging statements are constantly changing which affects the results of log analysis and tools.  Our work attempts to explore the stability of logging statements, so developers and practitioners can import logging statements which are less likely to be changed and have no significant affect on the analysis. 
+
+
+
+% show that output logs are leveraged for various activities such as debugging, anomaly detection, load test analysis and diagnose faults. However, when logging statements are changed, the output logs leveraged by these tools and analysis can change. These changes in the output logs, can break the tools and leads to erroneous results in the analysis.
+
+% Based on the variable values in logs, their approach creates invariants (e.g., equations). Any new logs that violates the invariant are considered to be a sign of anomalies. Fu {et al}$ . $~\cite{QFuanomaly} built a finite state automaton using unstructured logs to detect performance bugs in distributed systems.  \indent Xu {et al}$.$~\cite{ConsoleLogs} link output logs to logs in source code to recover the text and and the variable parts of logs in source code. They applied Principal Component Analysis (PCA) to detect system anomalies. To assist in fixing bugs using logs, Yuan {et al$.$}~\cite{Yuan:2010:SED:1736020.1736038} propose an approach to automatically infer the failure scenarios when a log is printed during a failed run of a system.
 %
 %
 
-Logs are leveraged during load testing of large scale systems. The data collected from logs during load tests helps developers diagnose faults in the system. Jiang {et al$ . $}~\cite{Jiang:2008:AAA:1400155.1400158,JiangICSM2008,JiangICSM20092,Jiang:2010:ICS:1850000.1850068} proposed log analysis approaches to assist in automatically verifying results from load tests. Their log analysis approaches first automatically abstract logs into system events~\cite{Jiang:2008:AAA:1400155.1400158}. Based on the such events, they identified both functional anomalies~\cite{JiangICSM2008} and performance degradations~\cite{JiangICSM20092} in load test results. The extensive prior research on log analysis shows that logs are leveraged for different purposes and changing logs can affect the performance of log analysis tools. 
+%Logs are leveraged during load testing of large scale systems. The data collected from logs during load tests helps developers diagnose faults in the system. Jiang {et al$ . $}~\cite{Jiang:2008:AAA:1400155.1400158,JiangICSM2008,JiangICSM20092,Jiang:2010:ICS:1850000.1850068} proposed log analysis approaches to assist in automatically verifying results from load tests. Their log analysis approaches first automatically abstract logs into system events~\cite{Jiang:2008:AAA:1400155.1400158}. Based on the such events, they identified both functional anomalies~\cite{JiangICSM2008} and performance degradations~\cite{JiangICSM20092} in load test results. The extensive prior research on log analysis shows that logs are leveraged for different purposes and changing logs can affect the performance of log analysis tools. 
 
 
 %and changes to logs can affect performance  of log analysis tools. 
@@ -16,9 +31,8 @@ Logs are leveraged during load testing of large scale systems. The data collecte
 %
 %
 %Logs are also leveraged in debugging software systems. Jiang {et al}$.$~\cite{Jiang:2009:UCP:1525908.1525912} study the leverage of logs in troubleshooting issues from storage systems. They find that logs assist in a faster resolution of issues in storage systems. Beschastnikh \textsl{et al}$ . $~\cite{Beschastnikh:2011:LEI:2025113.2025151} designed automated tools that infers execution models from logs. These models can be used by developers to understand the behaviors of concurrent systems. Moreover, the models also assist in verifying the correctness of the system and fixing bugs.
-\subsection {Log Tools}
+%\subsection {Log Tools}
 
-Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional . Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. 
 
 %While these works focus more on enhancing existing logs in the system, our paper focuses more on informing developers which logs are more likely to get changed and identifying which factors explain the change of logs. 
 

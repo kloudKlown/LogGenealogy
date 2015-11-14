@@ -432,7 +432,7 @@ We use the \emph{importance} function defined in \emph{RandomForest} package of 
 
 
 
-As we obtain 1,000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott} (SK) clustering to group the metric based on their means~\cite{Cluster1,Cluster2}. This is done to group metrics which are important predictors for the likelihood of logging statement change. The SK algorithm uses the hierarchical clustering approach to divide the metrics and uses the likelihood ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the \emph{SK} function in the \emph{ScottKnott} package of R and set the significance threshold parameter to 0.05 to cluster the metrics into different groups. 
+As we obtain 1,000 data sets for each metric because of bootstrapping process, we use the \textbf{Scott-Knott Effest size clustering} (SK-ESD) clustering to group the metric based on their effect size~\cite{tantithamthavorn2015tse}. This is done to group metrics which are important predictors for the likelihood of logging statement change. The SK-ESD algorithm uses the hierarchical clustering approach to divide the metrics and uses the effect ratio test to judge the difference between the groups. This assures the means of metrics within a group not to be statistically significantly different. We use the \emph{SK.ESD} function in the \emph{ScottKnottESD} package of R and set the effect size threshold parameter to negligible, (i.e., $<$ 0.2) to cluster the two metrics into the same groups. 
 %\begin{table}
 
 %	\centering
@@ -505,7 +505,7 @@ Using the \emph{randomForest} package in R, we build a classifier as explained i
 \subsection{Results}
 
 \hypobox{The random forest classifier achieves a precision of 0.89-0.91, recall of 0.71-0.83 and outperforms random guessing for our studied applications} 
-Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for studied application. The classifier achieves an AUC of 0.94-0.95 and Brier scores between 0.04 and 0.07 across all studied applications. If the classifier achieves a Brier score of 0.07, it means our model can forecast with 73\% probability a logging statement will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
+Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision}, \emph{recall}, \emph{F-measure} and \emph{Brier score} for studied application. The classifier achieves an AUC of 0.94-0.95 and Brier scores between 0.04 and 0.07 across all studied applications. If the classifier achieves a Brier score of 0.07, it means our classifier can forecast with 73\% probability a logging statement will change. Brier score reaches 0.25 for random guessing (i.e., predicted value is 50\%).
 % We find the recall of the random forest classier in Liferay is not as high as the other projects. This may be because Liferay has the lowest total number of log lines and close to 50\% of the log changes are log relocations as seen in Table~\ref{tba:logtype}. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
 
 %lowest percentage of logs which are changed at 20\%, compared to 45-70\% in the other projects. Because of the lower percentage of logs which are changed, the random forest classifier has fewer nodes (trees) and likelihood of false negatives is higher. 
@@ -516,7 +516,7 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 	\centering
 	\caption{Contribution of top 3 developers}
 	
-	\begin{tabular}{lrrr>{\centering}p{.1\textwidth}}		
+	\begin{tabular}{lr>{\centering}p{.25\columnwidth}r>{\centering}p{.2\columnwidth}}		
 		\cline{1-4} 	& Total logs & Changed logging  & Total \# of\\ &&statements&   contributors \\  \cline{1-4}
 		ActiveMQ    & 956 (50.4\%)            & 301 (31.4\%)   & 41 \\
 		Camel       & 3060 (63.1\%)              & 1460 (47.7\%) &   151	    \\

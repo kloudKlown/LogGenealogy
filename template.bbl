@@ -159,6 +159,13 @@ E.~G. Jelihovschi, J.~C. Faria, and I.~B. Allaman, ``Scottknott: a package for
   performing the scott-knott clustering algorithm in r,'' \emph{TEMA (S{\~a}o
   Carlos)}, vol.~15, no.~1, pp. 3--17, 2014.
 
+\bibitem{tantithamthavorn2015tse}
+C.~Tantithamthavorn, S.~McIntosh, A.~E. Hassan, and K.~Matsumoto, ``{An
+  Empirical Comparison of Model Validation Techniques for Defect Prediction
+  Model},''
+  \url{http://sailhome.cs.queensu.ca/replication/kla/model-validation.pdf},
+  2015, under Review at Transactions on Software Engineering~(TSE).
+
 \bibitem{Yuan:2010:SED:1736020.1736038}
 D.~Yuan, H.~Mai, W.~Xiong, L.~Tan, Y.~Zhou, and S.~Pasupathy, ``Sherlog: Error
   diagnosis by connecting clues from run-time logs,'' in \emph{ASPLOS '10:
