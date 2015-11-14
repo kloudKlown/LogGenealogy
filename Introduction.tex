@@ -77,27 +77,24 @@ The most important observations in this paper are:
 
 \end{enumerate}
 
-%From the above findings, maintainers of log processing tools can be more selective when importing logging statements to be used by their tools and decrease the maintenance effort.
-
+The above findings can assist maintainers of log processing tools with  selecting the logging statements on which they let their tools depend. %importing logging statements to be used by their tools and decrease the maintenance effort.
+%
 %should be careful when importing log statements written in larger file with less number of logs. 
-
-
+%
 %These log processing tools are used to generate information for capacity planning of large-scale systems~\cite{hassan2008industrial,nagappan2009efficiently}, to monitor system health~\cite{bitincka2010optimizing} or to detect abnormal system behavior~\cite{JiangICSM2008}. These tools rely heavily on the log messages themselves and require continuous maintenance when the format or content of logs are changed.
-
+%
 % and use the data to answer the following research questions.
-
+%
 %\textbf{RQ1:} \textbf{How much do logs change over time and why do the changes occur?}
 %
 %Based on our quantitative analysis of the studied systems we identify three categories of change frequency in logs. If a log is changed more than four times we categorize it as \textsl{`Frequently Changed'}, if it has one to three changes, it is categorized as \textsl{`Changed'} and if there are no changes made we categorize it as \textsl{`Never Changed'}. We find that in our studied systems, 20-80\% of the logs are changed at least once throughout their lifespan.
-
-
+%
 %\textbf{RQ2:} \textbf{Can metrics from code, log and developer dimension help in explaining the stability of logs?}
-
+%
 %We collect the product and change metrics from three dimensions namely code, log and developer information. Our \textsl{random forest} achieves an accuracy of 89\%-91\% and recall of 71\%-91\%, when predicting which logs have higher likelihood of getting changed. We also identify significant metrics from each of the three dimensions, that affect the stability of logs. We find  developer experience, source lines of code, file ownership, log density in the file are strong predictors in classifying if a log will change in the future. 
- 
- 
+%
 % Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
- 
+% 
 The remainder of this paper is organized as follows. Section~\ref{analysis} presents the preliminary analysis that motivates our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
  
  
