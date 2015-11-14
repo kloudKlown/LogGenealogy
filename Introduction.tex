@@ -27,7 +27,7 @@ To decide whether a logging statement will change in the future, we must underst
 \item The location of the logging statement
 \item The developer who added the logging statement to the source code
 \end{enumerate}
-In this paper, we examine which of these factors can help to decide whether a logging statement will change. First, we present a preliminary study which was done to get a better understanding of the stability of logging statements in four open source projects. In this preliminary study, we find that 25\%-45\% of the logging statements are changed at least once during their lifespan in the studied applications, which shows that developers of log processing tools have to carefully select the logging statements they will depend on. 
+In this paper, we examine which of these factors can help to decide whether a logging statement will change. First, we present a preliminary study which was done to get a better understanding of the stability of logging statements in four open source projects. In this preliminary study, we find that 20\%-45\% of the logging statements are changed at least once during their lifespan in the studied applications, which shows that developers of log processing tools have to carefully select the logging statements they will depend on. 
 
 Second, we extract the factors that are important for explaining the stability of a logging statement using a random forest classifier. This classifier uses metrics that describe the three factors mentioned above to decide the likelihood of a change to logging statement.
 The most important observations in this paper are:
