@@ -5,7 +5,7 @@ Logging statements make use of logging libraries or more archaic methods such as
 % shown below where info is the logging level, \textsl{Testing Connection to Host Id} is the context information and \textsl{host}, which is the variable part, provides information about the logging context.
 %\hypobox{LOG.info(``Testing Connection to Host Id:" + host);}
 
-\begin{figure}[thb]
+\begin{figure}[tb!]
 	\centering
 	\includegraphics[width=1\columnwidth]{logexample}
 	\caption{Example of a logging statement}
@@ -56,15 +56,14 @@ The most important observations in this paper are:
 
 %To identify which factors the stability of logging statements and model which logs will change in the future, we build a random forest classifier using context and log metrics. The most important observations in this paper are:
 \begin{enumerate}
-	\item We can decide which logging statements will be changed in the future using a \emph{random forest} classifier with a precision of 83\%-91\% and recall of 65\%-85\%.
+	\item We can decide which logging statements will be changed in the future using a \emph{random forest} classifier with 83\%-91\% precision and 65\%-85\% recall.
 %	Our \textsl{random forest} achieves an precision of 89\%-91\% and recall of 71\%-83\%, when predicting which logs will be changed.
 
 
-	\item Logging statements added  by highly experienced developers and very new developers are less likely to be changed. We find that in three of the studied applications the top three developers add more than 60\% of the logging statements and 70\% of their logging statement remain untouched. 
+	\item Logging statements added  by highly experienced developers and very new developers are less likely to be changed. We find that in three of the studied applications the top three developers add more than 60\% of the logging statements and 70\% of their logging statements remain untouched. 
 	
 	
-	\item Logging statements added by developers who have less ownership on the file have higher likelihood of being changed. We find that
-	27\%-67\% of all log changes, are done on logging statement added by developers who own less than 20\% of the file.
+	\item Logging statements added by developers who have little ownership on the file have a higher likelihood of being changed. We find that 27\%-67\% of all log changes, are done on logging statements added by developers who own less than 20\% of the file.
 	
 %	logging statements added by developers who own less than 20\% of the file are, 1.2-1.6 times more likely to be changed later.
 %	 27\%-67\% of all logging statement changes, are done on logging statement added by developers who own less than 20\% of the file. 
@@ -72,13 +71,13 @@ The most important observations in this paper are:
 	
 %	\item FIXME Logging statements changed by developers who have less ownership in that file are 0.4-1.4 times more likely to be changed again than logs changed by owners of the file in three of the applications.
 %	\item FIXME Developer experience is negatively correlated to log stability in the studied applications, suggesting that logs added by more experienced developers are more stable. This findings suggest that knowledge of the code in a file is important when considering the stability of a logging statement. As a result, maintainers of log processing tools can take special care when importing log statements written by developers who have less experience or with no ownership of the file in which the statement was added.
-	\item Large files (i.e., SLOC is 2x-3x the median) with lower log density, are more likely to have logging statement changes than well logged files.
+	\item Large files (i.e., SLOC is 2x-3x the median) with a low log density are more likely to have changes to their logging statements than well logged files.
 
 %	\item  Change metrics such as SLOC, number of variables logged and number of variables declared are strong predictors of log stability within the studied applications. 
 
 \end{enumerate}
 
-From the above findings, maintainers of log processing tools can be more selective when importing logging statements to be used by their tools and decrease the maintenance effort.
+%From the above findings, maintainers of log processing tools can be more selective when importing logging statements to be used by their tools and decrease the maintenance effort.
 
 %should be careful when importing log statements written in larger file with less number of logs. 
 
@@ -99,7 +98,7 @@ From the above findings, maintainers of log processing tools can be more selecti
  
 % Our results show that product and process metrics obtained from code, log and developer information can help in identifying unstable logs in our studied systems. This can help in reducing the effort needed in the maintenance of log processing applications, as system maintainers can flag the logs that have the potential of being changed in subsequent releases and track them. 
  
-The remainder of this paper is organized as follows. Section~\ref{analysis} presents the preliminary analysis to motivate our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
+The remainder of this paper is organized as follows. Section~\ref{analysis} presents the preliminary analysis that motivates our study. Section~\ref{prediction} describes the random forest classifier and the analysis results. Section~\ref{related} describes the prior research that is related to our work. Section~\ref{threats} discusses the threats to validity. Finally, Section~\ref{conc} concludes the paper.
  
  
 % However, as these tools are not scalable for all companies and systems, companies prefer in house development or customization of these tools for their specific purposes. 
