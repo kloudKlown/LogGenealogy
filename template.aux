@@ -15,7 +15,6 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Example of a logging statement\relax }}{1}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
 \newlabel{fig:logexample}{{1}{1}}
-\citation{ihaka1996r}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Modification of a logging statement\relax }}{2}}
 \newlabel{fig:ExampleOfLogChange_LPA}{{2}{2}}
 \@writefile{toc}{\contentsline {section}{\numberline {II}Preliminary analysis}{2}}
@@ -24,6 +23,7 @@
 \newlabel{lst:grep}{{1}{2}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {1}Counting logging statements}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Data Extraction Approach}{2}}
+\citation{ihaka1996r}
 \citation{EMSEIAN}
 \citation{levenshteinratio}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Overview of the data extraction and empirical study approach\relax }}{3}}
@@ -32,15 +32,15 @@
 \newlabel{tba:overviewsystems}{{I}{3}}
 \newlabel{lst:multiplelogs}{{2}{4}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Selecting the best matching logging statement}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Results }{4}}
 \newlabel{fig:Feq}{{4a}{4}}
 \newlabel{sub@fig:Feq}{{(a)}{a}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Distribution of log changes in the studied projects \relax }}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Distribution of changes to logging statemetns in the studied projects \relax }}{4}}
 \newlabel{fig:frequencyofLogchanges}{{4}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces The number of commits before a newly added log is changed in the studied projects \leavevmode {\color  {red}{\it  [CP: BOXPLOTS]}}\relax }}{4}}
-\newlabel{tba:summaryofnewLogchange}{{II}{4}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces Time taken in days before for a new log into the application is changed\relax }}{4}}
-\newlabel{tba:summaryofnewLogCodechange}{{III}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Results }{4}}
+\newlabel{fig:Feq}{{5a}{4}}
+\newlabel{sub@fig:Feq}{{(a)}{a}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Number of commits before an added logging statement is changed in the studied projects \relax }}{4}}
+\newlabel{fig:NumberofCommits}{{5}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {III}Building a log change classifier}{4}}
 \newlabel{prediction}{{III}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Approach}{4}}
@@ -56,50 +56,44 @@
 \citation{pearsonbook}
 \citation{ShaneOLS}
 \citation{ShaneOLS}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Overview of random forest classifier construction (C), analysis (A) and flow of data in random forest generation\relax }}{5}}
-\newlabel{fig:ModelCreationLogGeanology}{{5}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Hierarchical clustering of variables according to Spearman’s $\rho $ in ActiveMQ\relax }}{5}}
-\newlabel{fig:SpearmanActiveMQ}{{6}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces Confusion Matrix\relax }}{5}}
-\newlabel{tba:confusion}{{VI}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces The investigated metrics in our clasifier\relax }}{6}}
-\newlabel{tba:Taxonomy}{{IV}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces Time taken in days, before for an added logging statement is changed\relax }}{5}}
+\newlabel{tba:summaryofnewLogCodechange}{{II}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of random forest classifier construction (C), analysis (A) and flow of data in random forest generation\relax }}{5}}
+\newlabel{fig:ModelCreationLogGeanology}{{6}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hierarchical clustering of variables according to Spearman’s $\rho $ in ActiveMQ\relax }}{5}}
+\newlabel{fig:SpearmanActiveMQ}{{7}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces The investigated metrics in our clasifier\relax }}{6}}
+\newlabel{tba:Taxonomy}{{III}{6}}
 \citation{F-Measure}
 \citation{wilks2011statistical}
 \citation{ShaneOLS}
-\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces The investigated metrics in our clasifier\relax }}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces The investigated metrics in our clasifier\relax }}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {V}{\ignorespaces Confusion Matrix\relax }}{7}}
+\newlabel{tba:confusion}{{V}{7}}
 \newlabel{f:precision}{{1}{7}}
 \newlabel{f:recall}{{2}{7}}
 \newlabel{f:Fmeasure}{{3}{7}}
 \newlabel{f:BS}{{4}{7}}
 \citation{Cluster1,Cluster2}
-\newlabel{fig:f41}{{7a}{8}}
-\newlabel{sub@fig:f41}{{(a)}{a}}
-\newlabel{fig:f41}{{7b}{8}}
-\newlabel{sub@fig:f41}{{(b)}{b}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces The optimism reduced performance measures of the four projects\relax }}{8}}
-\newlabel{fig:optmisim}{{7}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {VIII}{\ignorespaces Contribution of top 3 developers\relax }}{8}}
-\newlabel{tba:topDevelopers}{{VIII}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces Contribution of top 3 developers\relax }}{8}}
+\newlabel{tba:topDevelopers}{{VII}{8}}
+\newlabel{fig:f4}{{9a}{8}}
+\newlabel{sub@fig:f4}{{(a)}{a}}
+\newlabel{fig:f4}{{9c}{8}}
+\newlabel{sub@fig:f4}{{(c)}{c}}
+\newlabel{fig:f4}{{9d}{8}}
+\newlabel{sub@fig:f4}{{(d)}{d}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparing experience of developers who add unchanged logs against logs changing more than once\relax }}{8}}
+\newlabel{fig:Dexp_BP}{{9}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Results}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {VII}{\ignorespaces The importance values of the metrics (top 10), divided into homogeneous groups by Scott-Knott clustering. The `+' and `-' signs signifing positive and negative correlation of the metric on log stability\relax }}{9}}
-\newlabel{tba:Scott}{{VII}{9}}
-\newlabel{fig:f4}{{8a}{9}}
-\newlabel{sub@fig:f4}{{(a)}{a}}
-\newlabel{fig:f4}{{8c}{9}}
-\newlabel{sub@fig:f4}{{(c)}{c}}
-\newlabel{fig:f4}{{8d}{9}}
-\newlabel{sub@fig:f4}{{(d)}{d}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Comparing experience of developers who add unchanged logs against logs changing more than once\relax }}{9}}
-\newlabel{fig:Dexp_BP}{{8}{9}}
-\newlabel{fig:f4}{{9a}{9}}
-\newlabel{sub@fig:f4}{{(a)}{a}}
-\newlabel{fig:f4}{{9c}{9}}
-\newlabel{sub@fig:f4}{{(c)}{c}}
-\newlabel{fig:f4}{{9d}{9}}
-\newlabel{sub@fig:f4}{{(d)}{d}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparing file ownership of developers who add unchanged logs against logs changing more than once\relax }}{9}}
-\newlabel{fig:Numberofchanges_BP}{{9}{9}}
+\newlabel{fig:f41}{{8a}{9}}
+\newlabel{sub@fig:f41}{{(a)}{a}}
+\newlabel{fig:f41}{{8b}{9}}
+\newlabel{sub@fig:f41}{{(b)}{b}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The optimism reduced performance measures of the four projects\relax }}{9}}
+\newlabel{fig:optmisim}{{8}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {VI}{\ignorespaces The importance values of the metrics (top 10), divided into homogeneous groups by Scott-Knott clustering. The `+' and `-' signs signifing positive and negative correlation of the metric on log stability\relax }}{9}}
+\newlabel{tba:Scott}{{VI}{9}}
 \citation{JGLouMining}
 \citation{QFuanomaly}
 \citation{ConsoleLogs}
@@ -115,13 +109,19 @@
 \citation{EMSEIAN,PaperIanCIIII}
 \citation{IanGap}
 \citation{IanIcesm}
+\newlabel{fig:f4}{{10a}{10}}
+\newlabel{sub@fig:f4}{{(a)}{a}}
+\newlabel{fig:f4}{{10c}{10}}
+\newlabel{sub@fig:f4}{{(c)}{c}}
+\newlabel{fig:f4}{{10d}{10}}
+\newlabel{sub@fig:f4}{{(d)}{d}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparing file ownership of developers who add unchanged logs against logs changing more than once\relax }}{10}}
+\newlabel{fig:Numberofchanges_BP}{{10}{10}}
 \@writefile{toc}{\contentsline {section}{\numberline {IV}Related Work \leavevmode {\color  {red}{\it  [CP: FIXME (discuss relation)]}}}{10}}
 \newlabel{related}{{IV}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Log Analysis}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Log Tools}{10}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Empirical Studies on Logging statements}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Threats to Validity}{10}}
-\newlabel{threats}{{V}{10}}
 \bibstyle{IEEEtran}
 \bibdata{Logreference}
 \bibcite{ConsoleLogs}{{1}{}{{}}{{}}}
@@ -133,11 +133,13 @@
 \bibcite{carasso2012exploring}{{7}{}{{}}{{}}}
 \bibcite{xpolog}{{8}{}{{}}{{}}}
 \bibcite{xu2013detecting}{{9}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Threats to Validity}{11}}
+\newlabel{threats}{{V}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}}
+\newlabel{conc}{{VI}{11}}
 \bibcite{TanSalsa}{{10}{}{{}}{{}}}
 \bibcite{chukwa}{{11}{}{{}}{{}}}
 \bibcite{ihaka1996r}{{12}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}}
-\newlabel{conc}{{VI}{11}}
 \bibcite{EMSEIAN}{{13}{}{{}}{{}}}
 \bibcite{levenshteinratio}{{14}{}{{}}{{}}}
 \bibcite{Albert2008424}{{15}{}{{}}{{}}}
