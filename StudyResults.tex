@@ -48,37 +48,22 @@
 
 %In this paper we aim to get a better understanding of the
 %unstable logs in an project so that we can improve the maintenance of log processing tools. 
-<<<<<<< HEAD
-In this paper we study the changes that are made to logging statements in open source projects. The goal of our study is to present a classifier for deciding whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools in deciding on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
-First, we perform a preliminary analysis, in which we examine how often logging statements change, to motivate our work. In this section, we present our rationale for selecting the projects that we studied and present the results of our preliminary analysis of the four studied projects. 
-=======
-In this paper we study the changes that are made to logging statements  in open source applications. The goal of our study is to present a classifier for deciding whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools to decide on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
+In this paper we study the changes that are made to logging statements in open source applications. The goal of our study is to present a classifier for deciding whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools in deciding on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
 First, we perform a preliminary analysis, in which we examine how often logging statements change, to motivate our work. In this section, we present our rationale for selecting the applications that we studied and present the results of our preliminary analysis of the four studied applications. 
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
 
 \subsection{Studied Applications}
 We selected our studied applications based on the following three criteria:
 \begin{itemize}
-<<<<<<< HEAD
-	\item \textbf{Usage of logging statements.} The projects must make extensive use of logging statements in their source code.
+	\item \textbf{Usage of logging statements.} The applications must make extensive use of logging statements in their source code.
 	%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
-	\item \textbf{Project activity.} The projects must have a mature development history (i.e., more than 10,000 commits).
-	\item \textbf{Technology used.} To simplify the implementation of our study, we opted to only select projects that are written in Java and are available through a Git repository.
-=======
-	\item \textbf{Usage of logging statements} - The applications must make extensive use of logging statements in their source code
-	%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
-	\item \textbf{Application activity} - The applications must have a mature development history (i.e., more than 10,000 commits)
-	\item \textbf{Technology used} - To simplify the implementation of our study, we opted to select only applications that are written in Java and are available through a Git repository
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
+	\item \textbf{Project activity.} The applications must have a mature development history (i.e., more than 10,000 commits).
+	\item \textbf{Technology used.} To simplify the implementation of our study, we opted to only select applications that are written in Java and are available through a Git repository.
+	
 %	We pick projects written in Java as it is one of the most popular languages today~\cite{Javaprog}.
 %	 to identify and track the log changes across multiple releases. 
 \end{itemize}
 
-<<<<<<< HEAD
-To select projects that match these criteria, we first selected all Java projects from the list of Apache Foundation Git repositories\footnote{\url{https://git.apache.org/}} that have more than 10,000 commits. Next, we counted the number of logging statements in all \code{*.java} files in a repository using the \code{grep} command in Listing~\ref{lst:grep}.
-=======
-To select applications matching these criteria, we first selected all Java applications from the list of Apache Foundation Git repositories\footnote{\url{https://git.apache.org/}} that have more than 10,000 commits. Next, we counted the number of logging statements in all \code{*.java} files in a repository using the \code{grep} command in Listing~\ref{lst:grep}.
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
+To select applications that match these criteria, we first selected all Java applications from the list of Apache Foundation Git repositories\footnote{\url{https://git.apache.org/}} that have more than 10,000 commits. Next, we counted the number of logging statements in all \code{*.java} files in a repository using the \code{grep} command in Listing~\ref{lst:grep}.
 
 \vspace{-5mm}
 \begin{Code}
@@ -130,28 +115,18 @@ We select the four applications (ActiveMQ, Camel, Cloudstack and Liferay) with t
 The data extraction approach from the four studied applications consists of three steps, which are explained further in this section: 
 
 \begin{enumerate}
-<<<<<<< HEAD
-\item We clone the Git repository of each studied project in order to extract the change history of each file.
+\item We clone the Git repository of each studied application in order to extract the change history of each file.
 \item We identify the logging statements in the repository.%, and use the change history to identify changes made to these logging statements
 \item We track the changes that are made to each logging statement across commits.
-=======
-\item We clone the Git repository of each studied application in order to extract the change history of each file 
-\item We identify the logging statements in the repository%, and use the change history to identify changes made to these logging statements
-\item We track the changes that are made to each logging statement across commits 
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
 \end{enumerate}
 
 We use R~\cite{ihaka1996r} to perform our preliminary analysis. Figure~\ref{fig:LGmethod} shows a general overview of our approach and we detail below each of the aforementioned steps. 
 
 \subsubsection*{B.1. Extracting the change history of Java files} 
 %In order to find the stability of logs, we have to identify all the Java files in our studied projects. To achieve this, we use the \emph{grep} command to search for all the \emph{*.java} files in the cloned repositories and we exclude the \emph{test} files. 
-<<<<<<< HEAD
 To examine the changes that are made to logging statements, we must first obtain a complete history of each Java file in the latest version of the main branch.
-We collect all the Java files in the four studied projects and we use their Git repositories to obtain all the changes that are made to the files. We use Git's \emph{follow} option to track a file even when it is renamed or relocated. We include only the changes to logging statements that are made in the main branch as other logging statements are unlikely to affect log processing tools. %We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. 
-=======
-To examine the changes made to logging statements, we must first obtain a complete history of each Java file in the latest version of the main branch.
-We collect all the Java files in the four studied applications and we use their Git repositories to obtain all the changes that are made to the files. We use Git's \emph{follow} option to track a file even when it is renamed or relocated. We include only the changes to logging statements that are made in the main branch as other logging statements are unlikely to affect log processing tools. %We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. 
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
+We collect all the Java files in the four studied application and we use their Git repositories to obtain all the changes that are made to the files. We use Git's \emph{follow} option to track a file even when it is renamed or relocated. We include only the changes to logging statements that are made in the main branch as other logging statements are unlikely to affect log processing tools. %We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. 
+
 
 \subsubsection*{B.2. Identifying logging statements}
 From the extracted change history of each Java file, we identify all the logging statements.
@@ -276,18 +251,6 @@ As we do not have change information for logging statements which are added near
 	\label{tba:summaryofnewLogchange}
 \end{table}
 
-<<<<<<< HEAD
-	\subfloat{\includegraphics[height=.7\linewidth]
-		{frequencyofLogchanges}\label{fig:Feq} }
-	
-	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
-%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
-	\caption{\ian{DELETE}Distribution of changes to logging statemetns in the studied projects	} 
-	\label{fig:frequencyofLogchanges}
-\end{figure}
-=======
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
-
 
 %\begin{figure}[tb]
 %	
@@ -383,14 +346,9 @@ As we do not have change information for logging statements which are added near
 %\hypobox {Developers change 20\%-45\% of the logging statements across our studied applications. }
 %Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. This shows that logging statements change extensively throughout the lifetime of an project which can affect the log processing tools.
 %=======
-<<<<<<< HEAD
 \hypobox {Developers change 25\%-45\% of the logging statements in the studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
-Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. We observe that A\%, B\%, C\% and C\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime\ian{add the number}. This shows that logging statements change extensively throughout the lifetime of a project, which can affect log processing tools.
-=======
-\hypobox {Developers change 25\%-45\% of the logging statements across our studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
-Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement changes in each of the studied application. We observe that in Liferay 25\%, while in Cloudstack 45\% of the logging statements changes. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
-%>>>>>>> 5547d3195c6b4fa9e75d8d7ea7226c9867cdee66
+Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. We observe that A\%, B\%, C\% and C\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime\ian{add the number}. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
+
 
 %\begin{table}[t]
 %	\centering
@@ -413,11 +371,9 @@ Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement 
 
 
 %\textbf{We find that 12\%-40\% of the logging statement changes, are due to the added logging statements which change.} 
-<<<<<<< HEAD
-From Figure~\ref{fig:numberofdays}, we observe that 75\% of the changes to logging statements are done within 145 days after the log is added. In fact, the largest median number of days between the addition of a logging statement and its first change is 17 in our studied projects. This number shows that, all too often, the changes to logging statements happen in a short time after the logging statement being added. Hence, it is important for developers of log processing tools to not depend on logging statements that are likely to change, as this dependency will require additional maintenance within a short time.
-=======
-From Figure~\ref{fig:numberofdays}, we observe that 75\% of the changes to logging statements are done within 145 days after the log is added. In fact, the largest median number of days between the addition of a logging statement and its first change is 17 in our studied applications. This number shows that a large part of the logging statements that will change will do so in a short time. Hence, it is important for developers of log processing tools to not depend on logging statements that are likely to change, as this dependency will require additional maintenance within a short time.
->>>>>>> c81afe5aab4af1198487f4494a3314e260e9fd43
+
+
+From Figure~\ref{fig:numberofdays}, we observe that 75\% of the changes to logging statements are done within 145 days after the log is added. In fact, the largest median number of days between the addition of a logging statement and its first change is 17 in our studied applications. This number shows that, all too often, the changes to logging statements happen in a short time after the logging statement being added. Hence, it is important for developers of log processing tools to not depend on logging statements that are likely to change, as this dependency will require additional maintenance within a short time.
 
 % that any log processing tool utilizing a logging statement introduced in the previous releases, is more susceptible to breakage by changes to the added logging statement.  
 
