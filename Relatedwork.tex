@@ -1,4 +1,5 @@
 
+
 In this section, we present prior empirical research done on logs and tools developed to assist in logging.
 
 %in which log behavior in software applications is analyzed. In addition, we discuss tools developed to assist in logging. 
@@ -12,7 +13,10 @@ In this section, we present prior empirical research done on logs and tools deve
 %Logs are leveraged during load testing of large scale systems. The data collected from logs during load tests helps developers diagnose faults in the system. Jiang {et al$ . $}~\cite{Jiang:2008:AAA:1400155.1400158,JiangICSM2008,JiangICSM20092,Jiang:2010:ICS:1850000.1850068} proposed log analysis approaches to assist in automatically verifying results from load tests. Their log analysis approaches first automatically abstract logs into system events~\cite{Jiang:2008:AAA:1400155.1400158}. Based on the such events, they identified both functional anomalies~\cite{JiangICSM2008} and performance degradations~\cite{JiangICSM20092} in load test results.
 
 
-Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional . Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. \emph{Log Enhancer} can improve the quality of log added and mitigate the need for changes later. However, it does not provide any insight into why some logging statements are more likely to be changed. Our paper, tries to classify which logging statements have higher likelihood of being changed later and avoid such logging statements from the analysis. 
+Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional . Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. \emph{Log Enhancer} can improve the quality of log added and mitigate the need for changes later. 
+
+
+However, it does not provide any insight into why some logging statements are more likely to be changed. Our paper, tries to classify which logging statements have higher likelihood of being changed later and avoid such logging statements from the analysis. 
 %tools assist developers to improve logging so developers can log the right information when the log is introduced
 
 

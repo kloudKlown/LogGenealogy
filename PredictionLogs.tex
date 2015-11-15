@@ -25,8 +25,8 @@ In our preliminary analysis, we find that 25-45\% of the logging statements are 
 
 
 \subsection{Approach}
-\ian{Your categories of metrics should match the 3 things that you mentioned in intro! See my change below, make sure you change your text every where when you mentioned your metrics. }
-We use metrics that measure the content, the location and the developers of the logging statements to train the random forest classifier. \ian{I only changed the sentence before this comment. Not the sentence after. Make sure you change the sentence after according to your intro.} Context metrics measure the file context at the time of adding the logging statement. Log metrics measure details about the added logging statement. We use the Git repository to extract the context metrics and log metrics for the studied applications. 
+%\ian{Your categories of metrics should match the 3 things that you mentioned in intro! See my change below, make sure you change your text every where when you mentioned your metrics. }
+We use metrics that measure the content, the location and the developers of the logging statements to train the random forest classifier. Context metrics measure the file context at the time of adding the logging statement. Location metrics collect information about where the logging statement is added and developer metrics collect information about the developer adding the logging statement. We use the Git repository to extract the context , location and developer metrics for the studied applications. 
 
 \ian{Update this paragraph}Table~\ref{tba:Taxonomy} defines each metric collected and the rationale behind our choice of each metric. We use context metrics as they describe the conditions in which the logging statement was added into the application. We use log metrics as they provide information about the added logging statement. These metrics benefit log processing tool developers as well as they do not need domain knowledge about the application to understand these metrics.
 
