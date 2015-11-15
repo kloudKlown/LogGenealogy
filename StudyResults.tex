@@ -57,7 +57,7 @@ We selected our studied applications based on the following three criteria:
 \begin{itemize}
 	\item \textbf{Usage of logging statements.} The applications must make extensive use of logging statements in their source code.
 	%	This helps to improve the performace of the random forest classifier and to identify the factors which effect log stability.
-	\item \textbf{Project activity.} The applications must have a mature development history (i.e., more than 10,000 commits).
+	\item \textbf{Application activity.} The applications must have a mature development history (i.e., more than 10,000 commits).
 	\item \textbf{Technology used.} To simplify the implementation of our study, we opted to only select applications that are written in Java and are available through a Git repository.
 	
 %	We pick projects written in Java as it is one of the most popular languages today~\cite{Javaprog}.
@@ -336,7 +336,7 @@ As we do not have change information for logging statements which are added near
 %Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. This shows that logging statements change extensively throughout the lifetime of an project which can affect the log processing tools.
 %=======
 
-\hypobox {Developers change 25\%-45\% of the logging statements in the studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
+\hypobox {Developers change 20\%-45\% of the logging statements in the studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
 Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement changes in each of the studied application. We observe that 28\%, 35.2\%, 44,6\% and 21.2\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
 
 

@@ -4,19 +4,36 @@ In this section, we present prior empirical research done on logs and tools deve
 
 %in which log behavior in software applications is analyzed. In addition, we discuss tools developed to assist in logging. 
 
-\subsection{Log Tools}
+\subsection{Log Maintenance Tools}
 
 
 %Much of the prior work leverages logs for detecting anomalies in large scale systems. Lou {et al}$.$~\cite{JGLouMining} propose an approach to use the variable values printed in logs to detect anomalies in large systems. Similarly, Fu {et al}$ . $~\cite{QFuanomaly} built a finite state automaton using unstructured logs to detect performance bugs in distributed systems. In debugging, Yuan {et al$.$}~\cite{Yuan:2010:SED:1736020.1736038} propose an approach to automatically infer the failure scenarios when a log is printed during a failed run of a system.
 %
 %
 %Logs are leveraged during load testing of large scale systems. The data collected from logs during load tests helps developers diagnose faults in the system. Jiang {et al$ . $}~\cite{Jiang:2008:AAA:1400155.1400158,JiangICSM2008,JiangICSM20092,Jiang:2010:ICS:1850000.1850068} proposed log analysis approaches to assist in automatically verifying results from load tests. Their log analysis approaches first automatically abstract logs into system events~\cite{Jiang:2008:AAA:1400155.1400158}. Based on the such events, they identified both functional anomalies~\cite{JiangICSM2008} and performance degradations~\cite{JiangICSM20092} in load test results.
+%\ian{This subsection should be about assisting developers in log maintenance. SALSA is not related. In stead, you should cite where to log in icse 2014 SEIP track and ICSE 2015.}
+
+%<<<<<<< HEAD
+
+%Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms.
+%Prior research performs an empirical study on the characteristics of logging statements. 
+%Yuan et al.~\cite{Characterizinglogs} study the logging characteristics in four open source systems. They find that over 33\% of all changes to logging statements are after-thoughts and that logging statements are changed 1.8 times more often than regular code.  
 
 
-Tan {et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional . Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. \emph{Log Enhancer} can improve the quality of log added and mitigate the need for changes later. 
+Prior research performs an empirical study to understand the characteristics of logging statements. Yuan et al.~\cite{Characterizinglogs} study the logging characteristics in four open source systems and finds that logging statements are changed 1.8 times more than regular code. A follow up research by Fu {et al$.$}~\cite{Fu1} explores where developers put logging statements in their code and provides guidelines to log better. Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional information. Their tool named \emph{Log Enhancer} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. \emph{Log Enhancer} can improve the quality of log added and mitigate the need for changes later. Though prior research tries to place the most stable logging statements in software, they do not provide any insight into why some logging statements are more likely to be changed. Our paper, tries to classify which logging statements have higher likelihood of being changed and avoid such logging statements from the analysis.
+
+%changed later and avoid such logging statements from the analysis. 
+
+%They find that logging statements are used for assertion checks, return value checks, exceptions, logic-branching and observing key points. The results of the analysis were evaluated by professionals from the industry and an F-measure of over 95\% was achieved.
 
 
-However, it does not provide any insight into why some logging statements are more likely to be changed. Our paper, tries to classify which logging statements have higher likelihood of being changed later and avoid such logging statements from the analysis. 
+
+
+
+%=======
+%et al}$ . $~\cite{TanSalsa} propose a tool named SALSA, which constructs state-machines from logs. The state-machines are further used to detect anomalies in distributed computing platforms.\ian{why the first paper is even discussed here?} Yuan {et al$ . $}~\cite{Yuan} show that logs need to be improved by providing additional\ian{you missed a word here?} . Their tool named \emph{Log Enhancer}\ian{in intro, you name this tool will all lower case letters} can automatically provide additional control and data flow parameters into the logs thereby improving the logs. \emph{Log Enhancer} can improve the quality of log added and mitigate the need for changes later. However, it does not provide any insight into why some logging statements are more likely to be changed. Our paper, tries to classify which logging statements have higher likelihood of being changed later and avoid such logging statements from the analysis. 
+
+
 %tools assist developers to improve logging so developers can log the right information when the log is introduced
 
 
@@ -47,9 +64,6 @@ However, it does not provide any insight into why some logging statements are mo
 \subsection{Empirical Studies on Logging statements}
 
 
-Prior research performs an empirical study on the characteristics of logging statements. Yuan et al.~\cite{Characterizinglogs} study the logging characteristics in four open source systems. They find that over 33\% of all changes to logging statements are after-thoughts and that logging statements are changed 1.8 times more often than regular code. Fu {et al$.$}~\cite{Fu1} performed an empirical study on where developers put logging statements. They find that logging statements are used for assertion checks, return value checks, exceptions, logic-branching and observing key points. The results of the analysis were evaluated by professionals from the industry and an F-measure of over 95\% was achieved. 
-
-
 %empirical studies on logs, show that 1) logging statements are changed by developers for various reasons 2) changes to logging stateme
 
 
@@ -57,7 +71,7 @@ Prior research performs an empirical study on the characteristics of logging sta
 
 %In our work, we use the intuitions and characteristics to collect relevant context and log metrics, to correctly classify the likelihood of log change.   
 
-Research also shows that logs are a source of information about the execution of large software systems for developers and end users. Shang et al. performed an empirical study on the evolution of both static logs and logs outputted during run time~\cite{EMSEIAN,PaperIanCIIII}. They find that logging statements are co-evolving with software systems. However, logging statements are often modified by developers without considering the needs of operators which even affects the log processing tools which run on top of the logs produced by these statements. They highlight the fact that there is a gap between operators and developers of software systems, especially in the leverage of logs~\cite{IanGap}. Furthermore, Shang et al.~\cite{IanIcesm} find that understanding logs is challenging. They examine user mailing lists from three large open-source projects and find that users of these systems have various issues in understanding logs outputted by the system. 
+Research shows that logs are a source of information about the execution of large software systems for developers and end users. Shang et al. performed an empirical study on the evolution of both static logs and logs outputted during run time~\cite{EMSEIAN,PaperIanCIIII}. They find that logging statements are co-evolving with software systems. However, logging statements are often modified by developers without considering the needs of operators which even affects the log processing tools which run on top of the logs produced by these statements. They highlight the fact that there is a gap between operators and developers of software systems, especially in the leverage of logs~\cite{IanGap}. Furthermore, Shang et al.~\cite{IanIcesm} find that understanding logs is challenging. They examine user mailing lists from three large open-source projects and find that users of these systems have various issues in understanding logs outputted by the system. 
 
 
 The existing empirical studies on logging statements show that 1) logs are leveraged by developers for different purposes and 2) logging statements are changed extensively by developers without consideration of other stakeholders,  which affect practitioners and end users. These findings highlight the need for better understanding of the stability of logging statements in the applications. 

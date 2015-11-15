@@ -23,8 +23,8 @@ Knowing whether a logging statement is likely to change in the future is helpful
 
 To decide whether a logging statement will change in the future, we must understand which factors play an important role during such a change. The following factors can influence whether a logging statement will change:
 \begin{enumerate} 
-\item the contents of the logging statement,
-\item the location of the logging statement,
+\item the context of the logging statement,
+\item the content of the logging statement,
 \item and the developer who added the logging statement into the source code
 \end{enumerate}
 In this paper, we examine which of these factors can help to decide whether a logging statement will change. First, we present a preliminary study which was done to get a better understanding of the stability of logging statements in four open source applications namely ActiveMQ, Camel, Cloudstack and Liferay. In this preliminary study, we find that 20\%-45\% of the logging statements are changed at least once during their lifetime in the studied applications. Therefore, developers of log processing tools have to carefully select the logging statements to depend on. 
