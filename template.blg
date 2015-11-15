@@ -1,14 +1,7 @@
-This is BibTeX, Version 0.99d (TeX Live 2014)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: template.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
 The style file: IEEEtran.bst
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Logreference.bib
-Repeated entry---line 1075 of file Logreference.bib
+Repeated entry---line 1082 of file Logreference.bib
  : @misc{xpolog
  :             ,
 I'm skipping whatever remains of this entry
@@ -21,45 +14,4 @@ Warning--empty year in Fu1
 Warning--empty year in IanGap
 
 Done.
-You've used 29 entries,
-            4039 wiz_defined-function locations,
-            994 strings with 13239 characters,
-and the built_in function-call counts, 21704 in all, are:
-= -- 1707
-> -- 558
-< -- 170
-+ -- 290
-- -- 102
-* -- 1030
-:= -- 3207
-add.period$ -- 61
-call.type$ -- 29
-change.case$ -- 25
-chr.to.int$ -- 384
-cite$ -- 33
-duplicate$ -- 1574
-empty$ -- 1819
-format.name$ -- 125
-if$ -- 5033
-int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 283
-newline$ -- 116
-num.names$ -- 29
-pop$ -- 698
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 2
-skip$ -- 1692
-stack$ -- 0
-substring$ -- 946
-swap$ -- 1255
-text.length$ -- 42
-text.prefix$ -- 0
-top$ -- 5
-type$ -- 29
-warning$ -- 4
-while$ -- 99
-width$ -- 31
-write$ -- 296
 (There was 1 error message)

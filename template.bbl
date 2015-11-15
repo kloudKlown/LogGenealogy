@@ -54,6 +54,11 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
   about the execution of large software systems,'' \emph{Journal of Software:
   Evolution and Process}, vol.~26, no.~1, pp. 3--26, 2014.
 
+\bibitem{log4j}
+\BIBentryALTinterwordspacing
+Log4j. [Online]. Available: \url{http://logging.apache.org/log4j/2.x/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{carasso2012exploring}
 D.~Carasso, ``Exploring splunk,'' \emph{published by CITO Research, New York,
   USA, ISBN}, pp. 978--0, 2012.

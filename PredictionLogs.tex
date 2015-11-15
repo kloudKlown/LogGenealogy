@@ -200,7 +200,7 @@ We build random forest classifier~\cite{Albert2008424} to predict whether a logg
 
 
 
-Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the construction steps (C1 to C2) for building a random forest classifier and steps (A1 and A3) for analyzing the results. We use the statistical tool R to model our data using the \emph{RandomForest} package.\\
+Figure~\ref{fig:ModelCreationLogGeanology} provides an overview of the construction steps (C1 to C2) for building a random forest classifier and steps (A1 and A3) for analyzing the results. We use the statistical tool R to model our data using the \emph{RandomForest} package.
 
 \subsection*{Step C1 - Removing Correlated and Redundant Metrics}
 %\textbf{\textsl{(C1 - Correlation analysis) }}
@@ -211,7 +211,7 @@ Correlation analysis is necessary to remove the highly correlated metrics from o
 
 We use Spearman rank correlation~\cite{spearmanbook} to find correlated metrics in our data. Spearman rank correlation assesses how well two metrics can be described by a monotonic function. We use Spearman rank correlation instead of Pearson~\cite{pearsonbook} because Spearman is resilient to data that is not normally distributed. We use the function \emph{varclus} in R to perform the correlation analysis.
 
-Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\rho $ values in the ActiveMQ project. The solid horizontal lines indicate the correlation value of the two metrics that are connected by the vertical branches that descend from it.  We include one metric from the sub-hierarchies which have correlation $|\rho| > 0.7 $. The dotted blue line indicates our cutoff value ($ | \rho | $ = 0.7). We use cutoff value of ($ | \rho | $ = 0.7) as used by prior research~\cite{ShaneOLS} to remove the correlated metrics before building our classifier.
+Figure~\ref{fig:SpearmanActiveMQ} shows the hierarchically clustered Spearman $\rho $ values in the ActiveMQ. The solid horizontal lines indicate the correlation value of the two metrics that are connected by the vertical branches that descend from it.  We include one metric from the sub-hierarchies which have correlation $|\rho| > 0.7 $. The dotted blue line indicates our cutoff value ($ | \rho | $ = 0.7). We use cutoff value of ($ | \rho | $ = 0.7) as used by prior research~\cite{ShaneOLS} to remove the correlated metrics before building our classifier.
 
 We find that \emph{total revision count} is highly correlated with \emph{code churn in commit}, \emph{log churn in commit} and \emph{log addition}, because a file with more commits has higher chance of having a large commit with log changes, than a file with less commits. We exclude \emph{total revision count}, \emph{log churn in commit} and \emph{log addition} and retain \emph{code churn in commit} as it is a simpler metric to compute.
 
@@ -220,6 +220,7 @@ Correlation analysis does not indicate redundant metrics, i.e, metrics that can 
 
 \begin{figure}
 	\centering
+		\setlength{\belowcaptionskip}{-15pt}
 	\includegraphics[height=1\columnwidth,width=0.95\columnwidth]{Spearman}
  \vspace*{-1cm}	\caption{Hierarchical clustering of variables according to Spearman’s $\rho$ in ActiveMQ}
 	\label{fig:SpearmanActiveMQ}
@@ -352,8 +353,8 @@ The performance measures described previously may overestimate the performance o
 \begin{figure*}[tb]
 	
 	\centering
-	\subfloat{\includegraphics[width=1.5\columnwidth]{BoxplotResults1}\label{fig:f41}}
-	\subfloat{\includegraphics[width=0.5\columnwidth,height=0.565\columnwidth]{BoxplotResults2}\label{fig:f41}}
+	\subfloat{\includegraphics[width=1.5\columnwidth]{BoxplotResults1}}
+	\subfloat{\includegraphics[width=0.5\columnwidth,height=0.565\columnwidth]{BoxplotResults2}}
 %	\hfill
 %	\centering
 %	\subfloat{\includegraphics[width=0.69\columnwidth]{CRBox} }
@@ -366,7 +367,7 @@ The performance measures described previously may overestimate the performance o
 %	\subfloat{\includegraphics[width=0.69\columnwidth]{LRBox}\label{fig:f43}}
 %	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{The optimism reduced performance measures of the four projects}
+	\caption{The optimism reduced performance measures of the four applications}
 	\label{fig:optmisim}
 	
 \end{figure*}
@@ -494,19 +495,19 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 %% LyX 2.1.2 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \begin{figure}[tb]
-	
+				\setlength{\belowcaptionskip}{-10pt}
 	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Amq_Dxp}\label{fig:f4}}
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Amq_Dxp}}
 	\hfill
 	\centering
 	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Camel_Dxp} }
 	\hfill
 	\centering
 	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Clo_Dxp}
-		\label{fig:f4}}
+	}
 	\hfill
 	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Lif_Dxp}\label{fig:f4}}
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Lif_Dxp}}
 	\hfill
 	%	\caption{Distribution of the number of developers responsible for changing a log}
 	\caption{Comparing the probability of a change to a logging statement against the experience of the developer who adds that logging statement}
@@ -528,10 +529,11 @@ Figure~\ref{fig:optmisim} shows the optimism-reduced values of \textsl{precision
 
 
 %\textbf{{{Developer experience} is an important metric to explain the likelihood of a change to a logging statement.}}
-\hypobox{In three out of four studied projects, the top three developers were responsible for adding over 50\% of the logging statements. Upto 70\% of these statements never change.}
+\hypobox{In three out of four studied applications, the top three developers were responsible for adding over 50\% of the logging statements. Upto 70\% of these statements never change.}
 Table~\ref{tba:Scott} shows the metrics that are important for deciding whether a logging statement will change in the future. From Table~\ref{tba:Scott}, we see that developer experience is in the top four metrics for all studied applications to help explain the likelihood of a logging statement being changed in all the studied applications. 
-Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statement being changed as developer experience increases. In all the studied projects logging statements that are added by new developers have a lower probability of being changed, when compared to those added by more experienced developers.
-We account this phenomenon to the fact that inexperienced developers add a very small fraction of the logs (12\% in Cloudstack and 1-3\% in the other projects).
+Figure~\ref{fig:Dexp_BP} shows the probabilities of a logging statement being changed as developer experience increases. In all the studied applications logging statements that are added by new developers have a lower probability of being changed, when compared to those added by more experienced developers.
+We account this phenomenon to the fact that inexperienced developers add a very small fraction of the logs (12\% in Cloudstack and 1-3\% in the other applications).
+
 
 We also observe that as developers get more experience the probability of a change to a logging statement decreases in ActiveMQ, Camel and Liferay. This downward trend may be explained by the fact that in ActiveMQ, Camel and Liferay, the top three developers are responsible for adding more than 50\% of the logging statements as seen in Table~\ref{tba:topDevelopers}. In addition, we find that upto 70\% of the logging statements added by these top developers never change. These findings suggest that developers of log processing tools should let their tools depend on logging statements added by developers with a high level of experience.
 
@@ -540,26 +542,6 @@ We also observe that as developers get more experience the probability of a chan
 
 %We also find that in ActiveMQ, Camel and Liferay, the top three developers are responsible for more than 50\% of the logs. Only 30\% of the logs added by these developers are changed as seen in Table~\ref{tba:topDevelopers}. This result recommend that new developers should get more experience about the application by actively making more commits to write more stable logs. 
 
-\begin{figure}[tb]
-	
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Amq_Ow}\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Camel_Ow} }
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Clo_Ow}
-		\label{fig:f4}}
-	\hfill
-	\centering
-	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Lif_Ow}\label{fig:f4}}
-	\hfill
-	%	\caption{Distribution of the number of developers responsible for changing a log}
-	\caption{Comparing the probability of a change to a logging statement against ownership of the file in which the logging statement is added }
-	\label{fig:Numberofchanges_BP}
-	
-\end{figure}
 
 %\begin{table}[tb]
 %	\centering
@@ -581,6 +563,28 @@ We also observe that as developers get more experience the probability of a chan
 
 %\textbf{{Ownership of the file is an important metric to explain the likelihood of a change to a logging statement.}}
 \hypobox{Logging statements that are added into a file by developers who own more than 75\% of that file are unlikely to be changed in the future.}
+
+\begin{figure}[tb]
+			\setlength{\belowcaptionskip}{-10pt}
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Amq_Ow}}
+	\hfill
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Camel_Ow} }
+	\hfill
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Clo_Ow}
+	}
+	\hfill
+	\centering
+	\subfloat{\includegraphics[width=0.49\columnwidth]{QP_Lif_Ow}}
+	\hfill
+	%	\caption{Distribution of the number of developers responsible for changing a log}
+	\caption{Comparing the probability of a change to a logging statement against ownership of the file in which the logging statement is added }
+	\label{fig:Numberofchanges_BP}
+%		\vspace{-0.3cm}
+\end{figure}
+
 
  From Table~\ref{tba:Scott}, we see that ownership of the file is in the top two metrics to help explain the likelihood of a change to a logging statement in all the studied applications. From Figure~\ref{fig:Numberofchanges_BP}, we observe in all the applications that logging statements introduced by developers who own more than 75\% of the file are less likely to be changed. We also observe that developers who own less than 20\% of the file are responsible for 27\%-67\% of the changes to logging statements in the studied applications, which is seen as upward trend from 0 to 0.20 in Figure~\ref{fig:Numberofchanges_BP}. These results suggest that developers of log processing tools should be more cautious when using a logging statement written by a developer who has contributed less than 20\% of the file.
 
