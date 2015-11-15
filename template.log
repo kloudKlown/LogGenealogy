@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  14 NOV 2015 20:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  14 NOV 2015 20:46
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -546,55 +546,54 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 65.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 78.
 
 ("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Overfull \hbox (6.93094pt too wide) in paragraph at lines 93--93
+) [2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
+Overfull \hbox (6.93094pt too wide) in paragraph at lines 109--109
  []|\OT1/ptm/b/n/8 ActiveMQ|
  []
 
 
-Overfull \hbox (2.29898pt too wide) in paragraph at lines 93--93
+Overfull \hbox (2.29898pt too wide) in paragraph at lines 109--109
  []|\OT1/ptm/b/n/8 Camel|
  []
 
 
-Overfull \hbox (8.70943pt too wide) in paragraph at lines 93--93
+Overfull \hbox (8.70943pt too wide) in paragraph at lines 109--109
  []|\OT1/ptm/b/n/8 CloudStack|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 105--105
+Underfull \hbox (badness 10000) in paragraph at lines 121--121
 []|\OT1/ptm/m/n/8 % of logging-related
  []
 
 
-Overfull \hbox (1.47879pt too wide) in paragraph at lines 91--110
+Overfull \hbox (1.47879pt too wide) in paragraph at lines 107--126
  [][] 
  []
 
-[2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 135.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 162.
 
 [3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
 <NumberofCommits.pdf, id=34, 505.89pt x 382.42876pt>
 File: NumberofCommits.pdf Graphic file (type pdf)
  <use NumberofCommits.pdf>
-Package pdftex.def Info: NumberofCommits.pdf used on input line 317.
+Package pdftex.def Info: NumberofCommits.pdf used on input line 195.
 (pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
 
 <Daysbeforechange.pdf, id=36, 505.89pt x 382.42876pt>
 File: Daysbeforechange.pdf Graphic file (type pdf)
 
 <use Daysbeforechange.pdf>
-Package pdftex.def Info: Daysbeforechange.pdf used on input line 333.
+Package pdftex.def Info: Daysbeforechange.pdf used on input line 360.
 (pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 348.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 373.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex" [4 <C:/Users
 /Suhas/Dropbox/Log Genealogy/Paper/NumberofCommits.pdf> <C:/Users/Suhas/Dropbox
@@ -639,13 +638,13 @@ File: BoxplotResults2.pdf Graphic file (type pdf)
 <use BoxplotResults2.pdf>
 Package pdftex.def Info: BoxplotResults2.pdf used on input line 357.
 (pdftex.def)             Requested size: 125.99913pt x 142.37756pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
 
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 463.
-
-
-Underfull \vbox (badness 2142) has occurred while \output is active []
 
 
 Overfull \hbox (8.11888pt too wide) in paragraph at lines 476--486
@@ -711,13 +710,10 @@ Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 580.
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 653.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas
-/Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Gene
-alogy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_
-Dxp.pdf>]
+[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas/
+Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genea
+logy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_D
+xp.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 709.
 
@@ -736,13 +732,14 @@ Underfull \hbox (badness 8056) in paragraph at lines 78--82
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `English'. Using the pattern for
-** the default language instead.
-** WARNING: IEEEtran.bst: No hyphenation pattern has been
-** loaded for the language `English'. Using the pattern for
-** the default language instead.
 [11]
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+** WARNING: IEEEtran.bst: No hyphenation pattern has been
+** loaded for the language `English'. Using the pattern for
+** the default language instead.
+
 Underfull \hbox (badness 3209) in paragraph at lines 159--164
 []\OT1/ptm/m/n/10 C. Tan-tithamtha-vorn, S. McIn-tosh, A. E. Has-san,
  []
@@ -784,7 +781,7 @@ Before submitting the final camera ready copy, remember to:
 Here is how much of TeX's memory you used:
  7689 strings out of 493921
  117183 string characters out of 3146880
- 256299 words of memory out of 3000000
+ 255299 words of memory out of 3000000
  10810 multiletter control sequences out of 15000+200000
  48475 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
@@ -802,7 +799,7 @@ fb><C:/Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program
 ex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/
 urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a
 .pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 699623 bytes).
+Output written on template.pdf (12 pages, 699774 bytes).
 PDF statistics:
  251 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

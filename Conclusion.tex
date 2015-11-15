@@ -7,13 +7,15 @@ In order to reduce the effort required for the maintenance of log processing too
 \begin{itemize}
 	\item We find that 20\%-40\%  of logs are changed at-least once.
 	\item Our random forest classifier for predicting whether a log will change achieves a precision of 83\%-91\% and recall of 65\%-85\%. 
+	\item Logging statements added by very experienced developer are less likely to be changed.
+	\item Logging statements added by a developer who owns more than 75\% of a file, is less likely to be changed. 
 	\item We find that log density, SLOC, developer experience, file ownership are important predictors of log stability in the studied applications.  	
 %	\item We find that log density has negative correlation in all projects which suggests that when source code is well logged i.e., more logs per lines of code, the logs convey the needed information and are more stable. 
 	
 %	We find a negative correlation between developer experience and log changes from the developer dimension. We find that the number of comments in source code, also has negative correlation towards log changes. 
 \end{itemize}
 
-Our findings highlight that we can correctly classify the likelihood of a log change, when log is added into the application. The important metrics from the classifier help in determining the likelihood of a log change, and developers can use this knowledge to be more selective when importing logging statements into their processing tools. 
+Our findings highlight that we can correctly classify the likelihood of a log change when log is added into the application. The important metrics from the classifier help in determining the likelihood of a log change, and developers can use this knowledge to be more selective when importing logging statements into their processing tools. 
 
 % which logs have a higher likelihood of getting changed when they are introduced. This information can be used by system administrators and practitioners, to identify logs which have a higher chance of affecting the log processing tools and prevent failure of these tools.  
 
