@@ -1,0 +1,37 @@
+﻿Merge branch 'master' of https://github.com/kloudKlown/LogGenealogy
+
+Conflicts:
+	PredictionLogs.tex
+#
+# It looks like you may be committing a merge.
+# If this is not correct, please remove the file
+#	.git/MERGE_HEAD
+# and try again.
+
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+# Your branch and 'origin/master' have diverged,
+# and have 1 and 3 different commits each, respectively.
+#   (use "git pull" to merge the remote branch into yours)
+#
+# All conflicts fixed but you are still merging.
+#
+# Changes to be committed:
+#	modified:   Abstract.tex
+#	new file:   Daysbeforechange.pdf
+#	modified:   ModelCreationLogGeanology.pdf
+#	modified:   PredictionLogs.tex
+#	modified:   Relatedwork.tex
+#	new file:   SanerDraft_PreFinal.pdf
+#	modified:   StudyResults.tex
+#	modified:   template.aux
+#	modified:   template.bbl
+#	modified:   template.blg
+#	modified:   template.log
+#	modified:   template.pdf
+#	modified:   template.synctex.gz
+#	modified:   template.tex
+#
+

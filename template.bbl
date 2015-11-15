@@ -150,15 +150,6 @@ G.~Hripcsak and A.~S. Rothschild, ``Agreement, the f-measure, and reliability
 D.~S. Wilks, \emph{Statistical methods in the atmospheric sciences}.\hskip 1em
   plus 0.5em minus 0.4em\relax Academic press, 2011, vol. 100.
 
-\bibitem{Cluster1}
-A.~Scott and M.~Knott, ``A cluster analysis method for grouping means in the
-  analysis of variance,'' \emph{Biometrics}, pp. 507--512, 1974.
-
-\bibitem{Cluster2}
-E.~G. Jelihovschi, J.~C. Faria, and I.~B. Allaman, ``Scottknott: a package for
-  performing the scott-knott clustering algorithm in r,'' \emph{TEMA (S{\~a}o
-  Carlos)}, vol.~15, no.~1, pp. 3--17, 2014.
-
 \bibitem{tantithamthavorn2015tse}
 C.~Tantithamthavorn, S.~McIntosh, A.~E. Hassan, and K.~Matsumoto, ``{An
   Empirical Comparison of Model Validation Techniques for Defect Prediction
@@ -166,36 +157,11 @@ C.~Tantithamthavorn, S.~McIntosh, A.~E. Hassan, and K.~Matsumoto, ``{An
   \url{http://sailhome.cs.queensu.ca/replication/kla/model-validation.pdf},
   2015, under Review at Transactions on Software Engineering~(TSE).
 
-\bibitem{Yuan:2010:SED:1736020.1736038}
-D.~Yuan, H.~Mai, W.~Xiong, L.~Tan, Y.~Zhou, and S.~Pasupathy, ``Sherlog: Error
-  diagnosis by connecting clues from run-time logs,'' in \emph{ASPLOS '10:
-  Proceedings of the 15th Edition of ASPLOS on Architectural Support for
-  Programming Languages and Operating Systems}.\hskip 1em plus 0.5em minus
-  0.4em\relax New York, NY, USA: ACM, 2010, pp. 143--154.
-
-\bibitem{Jiang:2008:AAA:1400155.1400158}
-Z.~M. Jiang, A.~E. Hassan, G.~Hamann, and P.~Flora, ``An automated approach for
-  abstracting execution logs to execution events,'' \emph{Journal of Software
-  Maintenance Evolution}, vol.~20, no.~4, pp. 249--267, Jul. 2008.
-
-\bibitem{JiangICSM2008}
-Z.~M. Jiang, A.~Hassan, G.~Hamann, and P.~Flora, ``Automatic identification of
-  load testing problems,'' in \emph{ICSM '08: Proceedings of theIEEE
-  International Conference on Software Maintenance}, Sept 2008, pp. 307--316.
-
-\bibitem{JiangICSM20092}
-Z.~M. Jiang, A.~E. Hassan, G.~Hamann, and P.~Flora, ``Automated performance
-  analysis of load tests,'' in \emph{ICSM '09: Proceedings of the IEEE
-  International Conference on Software Maintenance}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2009, pp. 125--134.
-
-\bibitem{Jiang:2010:ICS:1850000.1850068}
-Z.~M. Jiang, A.~Avritzer, E.~Shihab, A.~E. Hassan, and P.~Flora, ``An
-  industrial case study on speeding up user acceptance testing by mining
-  execution logs,'' in \emph{SSIRI '10: Proceedings of the 4th International
-  Conference on Secure Software Integration and Reliability Improvement}.\hskip
-  1em plus 0.5em minus 0.4em\relax Washington, DC, USA: IEEE Computer Society,
-  pp. 131--140, 2010.
+\bibitem{cohenUsage1}
+V.~B. Kampenes, T.~Dyb{\aa}, J.~E. Hannay, and D.~I. Sj{\o}berg, ``A systematic
+  review of effect size in software engineering experiments,''
+  \emph{Information and Software Technology}, vol.~49, no.~11, pp. 1073--1086,
+  2007.
 
 \bibitem{Fu1}
 Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where

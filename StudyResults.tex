@@ -279,6 +279,22 @@ As we do not have change information for logging statements which are added near
 	\caption{Number of commits before an added logging statement is changed in the studied projects } 
 	\label{fig:NumberofCommits}
 \end{figure}
+\begin{figure}[tb]
+	
+	\centering
+	%	\captionsetup{justification=centre}
+	
+	%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
+	%			{Percentageofchanges}\label{fig:percentage} }
+	
+	\subfloat{\includegraphics[height=.6\columnwidth]
+		{Daysbeforechange}\label{fig:Feq} }
+	
+	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
+	%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
+	\caption{Number of commits before an added logging statement is changed in the studied projects } 
+	\label{fig:numberofdays}
+\end{figure}
 
 %
 %\begin{table}[tb]
@@ -309,28 +325,28 @@ As we do not have change information for logging statements which are added near
 Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. We observe that in Liferay 25\%, while in Cloudstack 45\% of the logging statements changes. This shows that logging statements change extensively throughout the lifetime of a project, which can affect log processing tools.
 %>>>>>>> 5547d3195c6b4fa9e75d8d7ea7226c9867cdee66
 
-\begin{table}[t]
-	\centering
-	\smaller
-	\caption{Days between the addition and first change of a logging statement\cp{BOXPLOT}}
-	
-	\begin{tabular}{lrrrrrr}
-		\toprule
-		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
-		\midrule
-		ActiveMQ   & 1  & 1      & 7     & 86    & 99     & 680  \\
-		Camel      & 1   & 1      & 17      & 127    & 145      & 1139 \\
-		Cloudstack & 1   & 1      & 1      & 46   & 1     & 1113 \\
-		Liferay    & 1   & 1      & 2     & 34    & 2     & 945\\	
-		\bottomrule
-		
-	\end{tabular}
-	\label{tba:summaryofnewLogCodechange}
-\end{table}
+%\begin{table}[t]
+%	\centering
+%	\smaller
+%	\caption{Days between the addition and first change of a logging statement\cp{BOXPLOT}}
+%	
+%	\begin{tabular}{lrrrrrr}
+%		\toprule
+%		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
+%		\midrule
+%		ActiveMQ   & 1  & 1      & 7     & 86    & 99     & 680  \\
+%		Camel      & 1   & 1      & 17      & 127    & 145      & 1139 \\
+%		Cloudstack & 1   & 1      & 1      & 46   & 1     & 1113 \\
+%		Liferay    & 1   & 1      & 2     & 34    & 2     & 945\\	
+%		\bottomrule
+%		
+%	\end{tabular}
+%	\label{tba:summaryofnewLogCodechange}
+%\end{table}
 
 
 %\textbf{We find that 12\%-40\% of the logging statement changes, are due to the added logging statements which change.} 
-From Table~\ref{tba:summaryofnewLogCodechange}, we observe that 75\% of the changes to logging statements are done within 145 days after the log is added. In fact, the largest median number of days between the addition of a logging statement and its first change is 17 in our studied projects. This number shows that a large part of the logging statements that will change will do so in a short time. Hence, it is important for developers of log processing tools to not depend on logging statements that are likely to change, as this dependency will require additional maintenance within a short time.
+From Figure~\ref{fig:numberofdays}, we observe that 75\% of the changes to logging statements are done within 145 days after the log is added. In fact, the largest median number of days between the addition of a logging statement and its first change is 17 in our studied projects. This number shows that a large part of the logging statements that will change will do so in a short time. Hence, it is important for developers of log processing tools to not depend on logging statements that are likely to change, as this dependency will require additional maintenance within a short time.
 
 % that any log processing tool utilizing a logging statement introduced in the previous releases, is more susceptible to breakage by changes to the added logging statement.  
 
