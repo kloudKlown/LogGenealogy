@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 NOV 2015 21:53
-=======
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  14 NOV 2015 20:46
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  14 NOV 2015 22:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -591,108 +587,58 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-<<<<<<< HEAD
 (./StudyResults.tex
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 66.
-=======
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 78.
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 67.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-<<<<<<< HEAD
 )
-Overfull \hbox (6.93094pt too wide) in paragraph at lines 94--94
-=======
-) [2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
-Overfull \hbox (6.93094pt too wide) in paragraph at lines 109--109
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Overfull \hbox (6.93094pt too wide) in paragraph at lines 96--96
  []|\OT1/ptm/b/n/8 ActiveMQ|
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (2.29898pt too wide) in paragraph at lines 94--94
-=======
-Overfull \hbox (2.29898pt too wide) in paragraph at lines 109--109
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Overfull \hbox (2.29898pt too wide) in paragraph at lines 96--96
  []|\OT1/ptm/b/n/8 Camel|
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (8.70943pt too wide) in paragraph at lines 94--94
-=======
-Overfull \hbox (8.70943pt too wide) in paragraph at lines 109--109
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Overfull \hbox (8.70943pt too wide) in paragraph at lines 96--96
  []|\OT1/ptm/b/n/8 CloudStack|
  []
 
 
-<<<<<<< HEAD
-Underfull \hbox (badness 10000) in paragraph at lines 106--106
-=======
-Underfull \hbox (badness 10000) in paragraph at lines 121--121
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Underfull \hbox (badness 10000) in paragraph at lines 108--108
 []|\OT1/ptm/m/n/8 % of logging-related
  []
 
 
-<<<<<<< HEAD
-Overfull \hbox (1.47879pt too wide) in paragraph at lines 92--111
+Overfull \hbox (1.47879pt too wide) in paragraph at lines 94--113
  [][] 
  []
 
 [2 <./ExampleOfLogChange_LPA.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 137.
-=======
-Overfull \hbox (1.47879pt too wide) in paragraph at lines 107--126
- [][] 
- []
-
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 162.
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 140.
 
 [3 <./LogGenalogyMethdology.pdf>]
 <NumberofCommits.pdf, id=35, 505.89pt x 382.42876pt>
 File: NumberofCommits.pdf Graphic file (type pdf)
  <use NumberofCommits.pdf>
-<<<<<<< HEAD
-Package pdftex.def Info: NumberofCommits.pdf used on input line 318.
-=======
-Package pdftex.def Info: NumberofCommits.pdf used on input line 195.
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Package pdftex.def Info: NumberofCommits.pdf used on input line 173.
 (pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
 
 <Daysbeforechange.pdf, id=37, 505.89pt x 382.42876pt>
 File: Daysbeforechange.pdf Graphic file (type pdf)
 
 <use Daysbeforechange.pdf>
-<<<<<<< HEAD
-Package pdftex.def Info: Daysbeforechange.pdf used on input line 334.
+Package pdftex.def Info: Daysbeforechange.pdf used on input line 326.
 (pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 349.
-=======
-Package pdftex.def Info: Daysbeforechange.pdf used on input line 360.
-(pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 339.
 
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 373.
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
-
-
-LaTeX Warning: Reference `fig:frequencyofLogchanges' on page 4 undefined on inp
-ut line 350.
-
-) (./PredictionLogs.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4 <./NumberofCommits.pdf> <./Daysbeforechange.pdf>]
+) (./PredictionLogs.tex [4 <./NumberofCommits.pdf> <./Daysbeforechange.pdf>]
 <ModelCreationLogGeanology.pdf, id=58, 940.51375pt x 181.67876pt>
 File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 
@@ -711,7 +657,10 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [5] [6]
+
+Underfull \vbox (badness 2671) has occurred while \output is active []
+
+ [5 <./Spearman.pdf>] [6]
 Underfull \hbox (badness 2326) in paragraph at lines 300--301
 \OT1/ptm/m/n/10 fu-ture. Pre-ci-sion is de-fined as the num-ber of log-ging
  []
@@ -721,7 +670,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 300--301
 
  []
 
-[7 <./ModelCreationLogGeanology.pdf> <./Spearman.pdf>]
+[7 <./ModelCreationLogGeanology.pdf>]
 <BoxplotResults1.pdf, id=101, 2023.56pt x 722.7pt>
 File: BoxplotResults1.pdf Graphic file (type pdf)
  <use BoxplotResults1.pdf>
@@ -735,22 +684,11 @@ File: BoxplotResults2.pdf Graphic file (type pdf)
 Package pdftex.def Info: BoxplotResults2.pdf used on input line 357.
 (pdftex.def)             Requested size: 125.99913pt x 142.37756pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<<<<<<< HEAD
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 460.
 
 
 Overfull \hbox (8.11888pt too wide) in paragraph at lines 473--483
-=======
- [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
-
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 463.
-
-
-Overfull \hbox (8.11888pt too wide) in paragraph at lines 476--486
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
  [][] 
  []
 
@@ -781,66 +719,55 @@ Package pdftex.def Info: QP_Lif_Dxp.pdf used on input line 507.
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 529.
 
-
-Underfull \vbox (badness 2221) has occurred while \output is active []
-
- [8 <./QP_Amq_Dxp.pdf> <./QP_Camel_Dxp.pdf> <./QP_Clo_Dxp.pdf> <./QP_Lif_Dxp.pd
-f>]
+[8 <./QP_Amq_Dxp.pdf> <./QP_Camel_Dxp.pdf> <./QP_Clo_Dxp.pdf> <./QP_Lif_Dxp.pdf
+>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 562.
 
-[9 <./BoxplotResults1.pdf> <./BoxplotResults2.pdf>]
-<QP_Amq_Ow.pdf, id=162, 411.5375pt x 382.42876pt>
+<QP_Amq_Ow.pdf, id=146, 411.5375pt x 382.42876pt>
 File: QP_Amq_Ow.pdf Graphic file (type pdf)
  <use QP_Amq_Ow.pdf>
 Package pdftex.def Info: QP_Amq_Ow.pdf used on input line 567.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Camel_Ow.pdf, id=163, 411.5375pt x 382.42876pt>
+<QP_Camel_Ow.pdf, id=147, 411.5375pt x 382.42876pt>
 File: QP_Camel_Ow.pdf Graphic file (type pdf)
  <use QP_Camel_Ow.pdf>
 Package pdftex.def Info: QP_Camel_Ow.pdf used on input line 570.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Clo_Ow.pdf, id=164, 411.5375pt x 382.42876pt>
+<QP_Clo_Ow.pdf, id=148, 411.5375pt x 382.42876pt>
 File: QP_Clo_Ow.pdf Graphic file (type pdf)
  <use QP_Clo_Ow.pdf>
 Package pdftex.def Info: QP_Clo_Ow.pdf used on input line 574.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Lif_Ow.pdf, id=165, 411.5375pt x 382.42876pt>
+<QP_Lif_Ow.pdf, id=149, 411.5375pt x 382.42876pt>
 File: QP_Lif_Ow.pdf Graphic file (type pdf)
  <use QP_Lif_Ow.pdf>
 Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 577.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
+Underfull \vbox (badness 4805) has occurred while \output is active []
 
-<<<<<<< HEAD
+ [9 <./BoxplotResults1.pdf> <./BoxplotResults2.pdf>]
+
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 650.
 
-=======
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 653.
-
-[9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas/
-Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genea
-logy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_D
-xp.pdf>]
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 706.
 
-) (./Relatedwork.tex) [10 <./QP_Amq_Ow.pdf> <./QP_Camel_Ow.pdf> <./QP_Clo_Ow.pd
-f> <./QP_Lif_Ow.pdf>] (./ThreatsToValidity.tex
+) (./Relatedwork.tex) (./ThreatsToValidity.tex
 Underfull \hbox (badness 10000) in paragraph at lines 1--2
 
  []
 
-) (./Conclusion.tex) (./template.bbl [11]
+[10 <./QP_Amq_Ow.pdf> <./QP_Camel_Ow.pdf> <./QP_Clo_Ow.pdf> <./QP_Lif_Ow.pdf>])
+(./Conclusion.tex) (./template.bbl [11]
 Underfull \hbox (badness 8056) in paragraph at lines 78--82
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
-[11]
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
@@ -887,15 +814,14 @@ Before submitting the final camera ready copy, remember to:
 
 [12] (./template.aux)
 
-LaTeX Warning: There were undefined references.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
-<<<<<<< HEAD
- 8053 strings out of 493117
- 123453 string characters out of 6135433
+ 8052 strings out of 493117
+ 123426 string characters out of 6135433
  260240 words of memory out of 5000000
- 11312 multiletter control sequences out of 15000+600000
+ 11311 multiletter control sequences out of 15000+600000
  48475 words of font info for 98 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,49p,1574b,1112s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -913,30 +839,7 @@ texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist
 pe1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/urw/times/utmri8
 a.pfb>
-Output written on template.pdf (12 pages, 677515 bytes).
-=======
- 7689 strings out of 493921
- 117183 string characters out of 3146880
- 255299 words of memory out of 3000000
- 10810 multiletter control sequences out of 15000+200000
- 48475 words of font info for 98 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 46i,12n,49p,1575b,1112s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program F
-iles (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/Latex/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/t
-ype1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsf
-onts/cm/cmr7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/c
-msy10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/latxfont/lcirclew.p
-fb><C:/Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program
- Files (x86)/Latex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Lat
-ex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/
-urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a
-.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 699774 bytes).
->>>>>>> 0b6bab831360d7f1560c195b0aafeb6ba8025810
+Output written on template.pdf (12 pages, 677373 bytes).
 PDF statistics:
  254 PDF objects out of 1000 (max. 8388607)
  184 compressed objects within 2 object streams
