@@ -208,24 +208,62 @@ As we do not have change information for logging statements which are added near
 %	\caption{Percentage of log changes in the studied projects.}
 %	\label{fig:RQ1_Liferay_Camel_Logchangefreq}
 %\end{figure}
+%\
+%\begin{table}[tb]
+%	\centering
+%	\smaller
+%	\caption{{Distribution of changes to logging statemetns in the studied projects}
+%	
+%	\begin{tabular}{lrrrrrr}
+%		\toprule
+%		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
+%		\midrule
+%		ActiveMQ   & 1   & 2      & 7      & 9    & 14     & 37  \\
+%		Camel      & 1   & 1      & 2      & 4    & 5      & 117 \\
+%		Cloudstack & 1   & 1      & 3      & 17   & 14     & 390 \\
+%		Liferay    & 1   & 1      & 1      & 7    & 1      & 130\\
+%		\bottomrule
+%	\end{tabular}
+%	\label{tba:frequencyofLogchanges}
+%\end{table}
 
-\begin{figure}[tb]
-	
+\begin{table}[tb]
 	\centering
-%	\captionsetup{justification=centre}
+	\smaller
+	\caption{Distribution of changes to logging statemetns in the studied projects}
 	
-%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
-%			{Percentageofchanges}\label{fig:percentage} }
+	\begin{tabular}{lrrrrrr}
+		\toprule
+		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
+		\midrule
+		ActiveMQ   & 1   & 2      & 7      & 9    & 14     & 37  \\
+		Camel      & 1   & 1      & 2      & 4    & 5      & 117 \\
+		Cloudstack & 1   & 1      & 3      & 17   & 14     & 390 \\
+		Liferay    & 1   & 1      & 1      & 7    & 1      & 130\\
+		\bottomrule
+	\end{tabular}
+	\label{tba:summaryofnewLogchange}
+\end{table}
 
-	\subfloat{\includegraphics[height=.7\linewidth]
-		{frequencyofLogchanges}\label{fig:Feq} }
-	
-	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
-%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
-	\caption{Distribution of changes to logging statemetns in the studied projects	} 
-	\label{fig:frequencyofLogchanges}
-\end{figure}
 
+
+%\begin{figure}[tb]
+%	
+%	\centering
+%%	\captionsetup{justification=centre}
+%	
+%%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
+%%			{Percentageofchanges}\label{fig:percentage} }
+%
+%	\subfloat{\includegraphics[height=.7\linewidth]
+%		{frequencyofLogchanges}}
+%	
+%	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
+%%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
+%	\caption{Distribution of changes to logging statemetns in the studied projects	} 
+%	\label{fig:frequencyofLogchanges}
+%\end{figure}
+%
 
 
 %To find how frequently logs change, we conduct a quantitative analysis on the studied systems. We use the tracked log data for each studied system as explained in Section~\ref{Methodology}. From each project, we select a random sample with 95\% confidence interval. We follow the same iterative process as in prior research~\cite{IanIcesm} to find how frequently logs change in our studied systems. 
@@ -271,8 +309,8 @@ As we do not have change information for logging statements which are added near
 	%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
 	%			{Percentageofchanges}\label{fig:percentage} }
 	
-	\subfloat{\includegraphics[height=.6\columnwidth]
-		{NumberofCommits}\label{fig:Feq} }
+	\subfloat{\includegraphics[height=.6\columnwidth,width=0.9\columnwidth,trim={0 1.5cm 0 2cm},clip]
+		{NumberofCommits}}
 	
 	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
 	%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
@@ -280,41 +318,23 @@ As we do not have change information for logging statements which are added near
 	\label{fig:NumberofCommits}
 \end{figure}
 \begin{figure}[tb]
-	
+	\setlength{\belowcaptionskip}{-10pt}
 	\centering
 	%	\captionsetup{justification=centre}
 	
 	%		\subfloat[Percentage of log changes]{\includegraphics[width=0.5\linewidth]
 	%			{Percentageofchanges}\label{fig:percentage} }
 	
-	\subfloat{\includegraphics[height=.6\columnwidth]
-		{Daysbeforechange}\label{fig:Feq} }
+	\subfloat{\includegraphics[height=.6\columnwidth,width=0.9\columnwidth,trim={0 1.5cm 0 2cm },clip]
+		{Daysbeforechange}}
 	
 	%	\includegraphics[width=0.7\linewidth]{RQ1_Liferay_Camel_Logchangefreq}
 	%	\includegraphics[width=0.9\linewidth]{frequencyofLogchanges}
-	\caption{Number of commits before an added logging statement is changed in the studied projects } 
+	\caption{Number of days before an added logging statement is changed in the studied projects } 
 	\label{fig:numberofdays}
 \end{figure}
 
 %
-%\begin{table}[tb]
-%	\centering
-%	\smaller
-%	\caption{The number of commits before a added logging statement is changed in the studied projects \cp{BOXPLOTS}}
-%	
-%	\begin{tabular}{lrrrrrr}
-%		\toprule
-%		\textbf{Project} & \textbf{Min} & \textbf{1st Qu} & \textbf{Median} & \textbf{Mean} & \textbf{3rd Qu} & \textbf{Max} \\
-%		\midrule
-%		ActiveMQ   & 1   & 2      & 7      & 9    & 14     & 37  \\
-%		Camel      & 1   & 1      & 2      & 4    & 5      & 117 \\
-%		Cloudstack & 1   & 1      & 3      & 17   & 14     & 390 \\
-%		Liferay    & 1   & 1      & 1      & 7    & 1      & 130\\
-%		\bottomrule
-%	\end{tabular}
-%	\label{tba:summaryofnewLogchange}
-%\end{table}
-
 
 %\subsubsection*{C.1. Change frequency}
 %<<<<<<< HEAD
