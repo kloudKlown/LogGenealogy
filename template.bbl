@@ -47,11 +47,8 @@ H.~Malik, H.~Hemmati, and A.~Hassan, ``Automatic detection of performance
   2013, pp. 1012--1021.
 
 \bibitem{Yuan}
-\BIBentryALTinterwordspacing
 D.~Yuan, J.~Zheng, S.~Park, Y.~Zhou, and S.~Savage, ``Improving software
-  diagnosability via log enhancement,'' pp. 3--14, 2011. [Online]. Available:
-  \url{http://doi.acm.org/10.1145/1950365.1950369}
-\BIBentrySTDinterwordspacing
+  diagnosability via log enhancement,'' pp. 3--14, 2011.
 
 \bibitem{IanWCRE}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
@@ -117,14 +114,14 @@ J.~Albert and E.~Aliu, ``Implementation of the random forest method for the
 
 \bibitem{Characterizinglogs}
 D.~Yuan, S.~Park, and Y.~Zhou, ``Characterizing logging practices in
-  open-source software,'' in \emph{ICSE '12: Proceedings of the 34th
+  open-source software,'' in \emph{Proceedings of ICSE 2012, The 34th
   International Conference on Software Engineering}.\hskip 1em plus 0.5em minus
   0.4em\relax IEEE Press, 2012, pp. 102--112.
 
 \bibitem{zhang2009investigation}
 D.~Zhang, K.~El~Emam, H.~Liu \emph{et~al.}, ``An investigation into the
   functional form of the size-defect relationship for software modules,''
-  \emph{Software Engineering, IEEE Transactions on}, vol.~35, no.~2, pp.
+  \emph{IEEE Transactions on Software Engineering,}, vol.~35, no.~2, pp.
   293--304, 2009.
 
 \bibitem{correlationBook}
@@ -133,11 +130,8 @@ J.~Cohen, P.~Cohen, S.~G. West, and L.~S. Aiken, \emph{Applied multiple
   0.5em minus 0.4em\relax Routledge, 2013.
 
 \bibitem{spearmanbook}
-\BIBentryALTinterwordspacing
 J.~H. Zar, \emph{Spearman Rank Correlation}.\hskip 1em plus 0.5em minus
-  0.4em\relax John Wiley \& Sons, Ltd, 2005. [Online]. Available:
-  \url{http://dx.doi.org/10.1002/0470011815.b2a15150}
-\BIBentrySTDinterwordspacing
+  0.4em\relax John Wiley \& Sons, Ltd, 2005.
 
 \bibitem{pearsonbook}
 R.~J. Serfling, \emph{Approximation theorems of mathematical statistics}.\hskip
@@ -173,18 +167,20 @@ V.~B. Kampenes, T.~Dyb{\aa}, J.~E. Hannay, and D.~I. Sj{\o}berg, ``A systematic
 \bibitem{Fu1}
 Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where
   do developers log? an empirical study on logging practices in industry,'' in
-  \emph{ICSE Companion '14: Proceedings of the 36th International Conference on
-  Software Engineering,}, pp. Pages 24--33.
+  \emph{Proceedings of ICSE Companion 2014: The 36th International Conference
+  on Software Engineering,}, pp. Pages 24--33.
 
 \bibitem{ZhuIcse15}
-\BIBentryALTinterwordspacing
 J.~Zhu, P.~He, Q.~Fu, H.~Zhang, M.~R. Lyu, and D.~Zhang, ``Learning to log:
   Helping developers make informed logging decisions,'' in \emph{Proceedings of
-  the 37th International Conference on Software Engineering - Volume 1}, ser.
-  ICSE '15.\hskip 1em plus 0.5em minus 0.4em\relax Piscataway, NJ, USA: IEEE
-  Press, 2015, pp. 415--425. [Online]. Available:
-  \url{http://dl.acm.org/citation.cfm?id=2818754.2818807}
-\BIBentrySTDinterwordspacing
+  ICSE 2015, The 37th International Conference on Software Engineering - Volume
+  1}.\hskip 1em plus 0.5em minus 0.4em\relax Piscataway, NJ, USA: IEEE Press,
+  2015, pp. 415--425.
+
+\bibitem{Yuan_beconservative:}
+D.~Yuan, S.~Park, P.~Huang, Y.~Liu, M.~M. Lee, X.~Tang, Y.~Zhou, and S.~Savage,
+  ``Be conservative: enhancing failure diagnosis with proactive logging,'' in
+  \emph{in OSDI, 2012}, pp. 293--306.
 
 \bibitem{PaperIanCIIII}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
@@ -194,12 +190,12 @@ W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
 
 \bibitem{IanGap}
 W.~Shang, ``Bridging the divide between software developers and operators using
-  logs,'' in \emph{ICSE '12 :Proceedings of the 34th International Conference
+  logs,'' in \emph{Proceedings of ICSE 2012, The 34th International Conference
   on Software Engineering}.
 
 \bibitem{IanIcesm}
 W.~Shang, M.~Nagappan, A.~E. Hassan, and Z.~M. Jiang, ``Understanding log lines
-  using development knowledge,'' in \emph{ICSME '14: Proceedings of the
+  using development knowledge,'' in \emph{Proceedings of ICSME 2014: The
   International Conference on Software Maintenance and Evolution,}.\hskip 1em
   plus 0.5em minus 0.4em\relax IEEE, 2014, pp. 21--30.
 
