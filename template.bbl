@@ -48,7 +48,9 @@ H.~Malik, H.~Hemmati, and A.~Hassan, ``Automatic detection of performance
 
 \bibitem{Yuan}
 D.~Yuan, J.~Zheng, S.~Park, Y.~Zhou, and S.~Savage, ``Improving software
-  diagnosability via log enhancement,'' pp. 3--14, 2011.
+  diagnosability via log enhancement,'' \emph{Proceedings of ASPLOS 2011, The
+  16th Conference on Architectural Support for Programming Languages and
+  Operating Systems}, pp. 3--14, 2011.
 
 \bibitem{IanWCRE}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
@@ -86,6 +88,12 @@ J.~Tan, X.~Pan, S.~Kavulya, R.~Gandhi, and P.~Narasimhan, ``Salsa: Analyzing
 J.~Boulon, A.~Konwinski, R.~Qi, A.~Rabkin, E.~Yang, and M.~Yang, ``Chukwa, a
   large-scale monitoring system,'' in \emph{Proceedings of CCA}, vol.~8, 2008,
   pp. 1--5.
+
+\bibitem{shang2014exploratory}
+W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
+  P.~Flora, ``An exploratory study of the evolution of communicated information
+  about the execution of large software systems,'' \emph{Journal of Software:
+  Evolution and Process}, vol.~26, no.~1, pp. 3--26, 2014.
 
 \bibitem{ihaka1996r}
 R.~Ihaka and R.~Gentleman, ``R: a language for data analysis and graphics,''
@@ -150,6 +158,11 @@ G.~Hripcsak and A.~S. Rothschild, ``Agreement, the f-measure, and reliability
 \bibitem{wilks2011statistical}
 D.~S. Wilks, \emph{Statistical methods in the atmospheric sciences}.\hskip 1em
   plus 0.5em minus 0.4em\relax Academic press, 2011, vol. 100.
+
+\bibitem{strobl2008conditional}
+C.~Strobl, A.-L. Boulesteix, T.~Kneib, T.~Augustin, and A.~Zeileis,
+  ``Conditional variable importance for random forests,'' \emph{BMC
+  bioinformatics}, vol.~9, no.~1, p. 307, 2008.
 
 \bibitem{tantithamthavorn2015tse}
 C.~Tantithamthavorn, S.~McIntosh, A.~E. Hassan, and K.~Matsumoto, ``{An

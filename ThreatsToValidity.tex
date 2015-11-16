@@ -2,9 +2,13 @@ In this section, we present the threats to the validity to our findings.
 
 \noindent \textbf{External Validity.} Our empirical study is performed on Liferay, ActiveMQ, Camel and CloudStack. Though these studied applications have years of history and large user bases, these applications are all Java-based. Other languages may not use logging statements as extensively. Our applications are all open source and we do not verify the results on any commercial platform applications. More studies on other domains and commercial platforms, with other programming languages are needed to see whether our findings can be generalized. 
 
-\noindent \textbf{Construct Validity.} Our heuristics to extract logging source code may not be able to extract every logging statement in the source code. Even though the studied applications leverage logging libraries to generate logs at run-time, there may still exist user-defined logs. By manually examining the source code, we believe that we extract most of the logging statements. Evaluation on the coverage of our extracted logging statements can address this threat.
+\noindent \textbf{Construct Validity.} Our heuristics to extract logging source code may not be able to extract every logging statement in the source code. Even though the studied applications leverage logging libraries to generate logs at run-time, there may still use user-defined logs. By manually examining the source code, we believe that we extract most of the logging statements. Evaluation on the coverage of our extracted logging statements can address this threat.
 
-In our model, we use the first change after the introduction of a logging statement only. While the first change is sufficient for deciding whether a logging statement will change, we need more information to decide how likely it is that a logging statement will change. In future work, we will extend our model to give more specific details about a future change.
+In our model, we use the first change after the introduction of a logging statement only. While the first change is sufficient for determining whether a logging statement will change, we need more information to determine how likely it is going to be changed again. In future work, we will extend our model to give more specific details about stability of logs (i.e., how likely will a changed log be changed again). 
+
+%and how many times a particular log can cha 
+
+% we need more information to decide how likely it is that a logging statement will change. In future work, we will extend our model to give more specific details about a future change.
 %We use keywords to identify bug fixing commits when the JIRA issue ID is not included in the commit messages. Although such keywords are used extensively in prior research~\cite{EMSEIAN}, we may still fail to identify bug fixing commits or branching and merging commits.
 
 %We use Levenshtein ratio and choose a threshold to identify modifications to logs. However, this threshold may not accurately identify modifications to logs. Further sensitivity analysis on this threshold is needed to better understand the impact of the threshold to our findings. \\
@@ -13,7 +17,7 @@ In our model, we use the first change after the introduction of a logging statem
 
 \noindent \textbf{Internal Validity.} Our study is based on the data from Git repositories of all the studied applications. The quality of the data contained in the repositories can impact the internal validity of our study. For example, merging commits or rewriting the history of the repository (i.e., by \emph{rebasing} the history) may affect our results.  
 
-Our analysis of the relationship between metrics that are important factors in predicting the stability of logging statements cannot claim causal effects, as we are investigating correlation and not causation. The important factors from our random forest models only indicate that there exists a relationship which should be studied in depth in future studies. 
+Our analysis of the relationship between metrics that are important factors in predicting the likelihood of change of logging statements cannot claim causal effects, as we are investigating correlation and not causation. The important factors from our random forest models only indicate that there exists a relationship which should be studied in depth in future studies. 
 
 
 

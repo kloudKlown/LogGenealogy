@@ -511,14 +511,6 @@ Lin and Dongmei Zhang and Tao Xie},
   Url                      = {http://logging.apache.org/log4j/2.x/}
 }
 
-@Misc{Logstash,
-  Author                   = {logstash},
-
-  Owner                    = {Suhas},
-  Timestamp                = {2015.03.01},
-  Url                      = {http://logstash.net}
-}
-
 @Misc{logstash,
   Title                    = {http://logstash.net},
 
@@ -526,6 +518,14 @@ Lin and Dongmei Zhang and Tao Xie},
 
   Owner                    = {Suhas},
   Timestamp                = {2015.03.01}
+}
+
+@Misc{Logstash,
+  Author                   = {logstash},
+
+  Owner                    = {Suhas},
+  Timestamp                = {2015.03.01},
+  Url                      = {http://logstash.net}
 }
 
 @InProceedings{JGLouMining,
@@ -804,6 +804,18 @@ C. R. Das},
   Keywords                 = {reverse engineering, software evolution, communicated information, execution log analysis}
 }
 
+@Article{shang2014exploratory,
+  Title                    = {An exploratory study of the evolution of communicated information about the execution of large software systems},
+  Author                   = {Shang, Weiyi and Jiang, Zhen Ming and Adams, Bram and Hassan, Ahmed E and Godfrey, Michael W and Nasser, Mohamed and Flora, Parminder},
+  Journal                  = {Journal of Software: Evolution and Process},
+  Year                     = {2014},
+  Number                   = {1},
+  Pages                    = {3--26},
+  Volume                   = {26},
+
+  Publisher                = {Wiley Online Library}
+}
+
 @InProceedings{IanContextinformation,
   Title                    = {Assisting Developers of Big Data Analytics Applications when Deploying on Hadoop Clouds},
   Author                   = {Shang, Weiyi and Jiang, Zhen Ming and Hemmati, Hadi and Adams, Bram and Hassan, Ahmed E. and Martin, Patrick},
@@ -853,6 +865,18 @@ C. R. Das},
   Year                     = {2011},
   Organization             = {ACM},
   Pages                    = {300--310}
+}
+
+@Article{strobl2008conditional,
+  Title                    = {Conditional variable importance for random forests},
+  Author                   = {Strobl, Carolin and Boulesteix, Anne-Laure and Kneib, Thomas and Augustin, Thomas and Zeileis, Achim},
+  Journal                  = {BMC bioinformatics},
+  Year                     = {2008},
+  Number                   = {1},
+  Pages                    = {307},
+  Volume                   = {9},
+
+  Publisher                = {BioMed Central Ltd}
 }
 
 @Article{RFoutofbag,
@@ -1001,6 +1025,13 @@ C. R. Das},
   Keywords                 = {failure diagnostics, log, static analysis},
   Location                 = {Pittsburgh, Pennsylvania, USA},
   Numpages                 = {12}
+}
+
+@InProceedings{Yuan_beconservative:,
+  Title                    = {Be conservative: enhancing failure diagnosis with proactive logging},
+  Author                   = {Ding Yuan and Soyeon Park and Peng Huang and Yang Liu and Michael M. Lee and Xiaoming Tang and Yuanyuan Zhou and Stefan Savage},
+  Booktitle                = {in OSDI, 2012},
+  Pages                    = {293--306}
 }
 
 @InProceedings{yuan2012conservative,

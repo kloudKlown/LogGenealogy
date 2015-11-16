@@ -48,8 +48,8 @@
 
 %In this paper we aim to get a better understanding of the
 %unstable logs in an project so that we can improve the maintenance of log processing tools. 
-In this paper we study the changes that are made to logging statements in open source applications. The goal of our study is to present a classifier for deciding whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools in deciding on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
-First, we perform a preliminary analysis, in which we examine how often logging statements change, to motivate our work. In this section, we present our rationale for selecting the applications that we studied and present the results of our preliminary analysis of the four studied applications. 
+In this paper we study the changes that are made to logging statements in open source applications. The goal of our study is to present a classifier for determining whether a logging statement is likely to change in the future. This classifier can assist developers of log processing tools in determining on which logging statements they want their tool to depend. %In order to understand and build a random forest classifier to predict log changes, it is necessary to identify the extent logs are changed within these projects.
+First, we perform a preliminary analysis, in which we examine how often logging statements change, to motivate our work. In this section, we present our process for selecting the applications that we studied and present the results of our preliminary analysis of the four studied applications. 
 
 
 \subsection{Studied Applications}
@@ -77,28 +77,27 @@ grep -icR
 \end{Code}
 \vspace{-5mm}
 
-This command counts the occurrences in a file of an invocation of a logging library (e.g., \code{log} or \code{\_logger}) followed by the specification of a log level. We sum the occurrences in all files of an application to get the total number of logging statements shown in Table~\ref{tba:overviewsystems}.
+Listing~\ref{lst:grep} counts the occurrences in Java files of invocations of a logging library (e.g., \code{log} or \code{\_logger}) followed by the specification of a log level. We sum the occurrences in all files of an application to get the total number of logging statements shown in Table~\ref{tba:overviewsystems}.
 %To find the log usage in an project we use the \emph{grep} command to search all lines of code within the \emph{.java} files. %Next, using \emph{git log} we find the total number of commits in the code repositories and select projects which have more than 10,000 commits.
  
-We select the four applications (ActiveMQ, Camel, Cloudstack and Liferay) with the highest number of logging statements for further analysis. ActiveMQ\footnote{\url{http://activemq.apache.org/}} is an open source message broker and integration patterns server. Camel\footnote{\url{http://camel.apache.org/}} is an open source integration platform based on enterprise integration patterns. CloudStack\footnote{\url{https://cloudstack.apache.org/}} is an open source application designed to deploy and manage large networks of virtual machines. Liferay\footnote{\url{http://www.liferay.com/}} is an open source platform for building websites and web portals. Table~\ref{tba:overviewsystems} presents an overview of the studied applications. %We pick the releases after incubation for each project, as during incubation the projects might not be used by log processing tools.  
+We select the four applications (ActiveMQ, Camel, Cloudstack and Liferay) with the highest number of logging statements for further analysis. ActiveMQ\footnote{\url{http://activemq.apache.org/}} is an open source message broker and integration patterns server. Camel\footnote{\url{http://camel.apache.org/}} is an open source integration platform based on enterprise integration patterns. CloudStack\footnote{\url{https://cloudstack.apache.org/}} is an open source application that is designed to deploy and manage large networks of virtual machines. Liferay\footnote{\url{http://www.liferay.com/}} is an open source platform for building websites and web portals. Table~\ref{tba:overviewsystems} presents an overview of the studied applications. %We pick the releases after incubation for each project, as during incubation the projects might not be used by log processing tools.  
 
 
 \begin{table}[tb]
 	\centering \protect\protect\caption{An overview of the studied applications (all metrics calculated using the latest HEAD of the repository) }
 	\smaller
 	\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}m{#1}}
-
 	\label{tba:overviewsystems} %
 
-	
-	\begin{tabular}{>{}p{3cm}R{1.0cm}R{.7cm}R{1.1cm}R{1.0cm}}
+	\tabcolsep=0.15cm
+	\begin{tabular}{>{}p{3.7cm}R{1.0cm}R{.7cm}R{1.1cm}R{1.0cm}}
 		\toprule 
 		~ & \textbf{ActiveMQ}  & \textbf{Camel}  & \textbf{CloudStack}  & \textbf{Liferay} \\
 		\midrule
 		\# of logging statements & 5.1K  & 6.1K & 9.6K  & 1.8K \\
 		\# of commits &	 11K  & 21K  & 29K  & 143K \\	
 		\# of years in repository&	 8  & 8  & 4  & 4 \\
-		\# of Contributors&41&151&204&351\\
+		\# of contributors&41&151&204&351\\
 %		\# of releases  & 19  & 43  & 111  & 24 \\
 		\midrule
 		\# of added lines of code  & 261K  & 505K  & 1.09M  & 3.9M \\
@@ -125,15 +124,15 @@ The data extraction approach from the four studied applications consists of thre
 
 We use R~\cite{ihaka1996r} to perform our preliminary analysis. Figure~\ref{fig:LGmethod} shows a general overview of our approach and we detail below each of the aforementioned steps. 
 
-\subsubsection*{B.1. Extracting the change history of Java files} 
+\subsubsection*{B.1. Extracting the Change History of Java Files} 
 %In order to find the stability of logs, we have to identify all the Java files in our studied projects. To achieve this, we use the \emph{grep} command to search for all the \emph{*.java} files in the cloned repositories and we exclude the \emph{test} files. 
 To examine the changes that are made to logging statements, we must first obtain a complete history of each Java file in the latest version of the main branch.
 We collect all the Java files in the four studied application and we use their Git repositories to obtain all the changes that are made to the files. We use Git's \emph{follow} option to track a file even when it is renamed or relocated. We include only the changes to logging statements that are made in the main branch as other logging statements are unlikely to affect log processing tools. %We use the \emph{--no-merges} option to flatten the changes to a file and exclude the final merging commit. 
 
 
-\subsubsection*{B.2. Identifying logging statements}
+\subsubsection*{B.2. Identifying Logging Statements}
 From the extracted change history of each Java file, we identify all the logging statements.
-First, we manually examine the documentation of each studied application to identify the logging library used to generate the logs. %We examine commits rather than code because a project may use multiple logging libraries during its lifetime. 
+First, we manually examine the documentation of each studied application to identify the logging library that is used to generate the logs. %We examine commits rather than code because a project may use multiple logging libraries during its lifetime. 
 We find that the studied applications use \textsl{Log4j}~\cite{EMSEIAN}, \emph{Slf4j}\footnote{\url{http://www.slf4j.org/}} and \emph{logback}\footnote{\url{http://logback.qos.ch/}}.
 Using this information, we manually identify the common method invocations that invoke the logging library. For example, in ActiveMQ and Camel, a logging library is invoked by a method named \emph{LOG} as shown below.
 
@@ -145,11 +144,12 @@ As an application can use multiple logging libraries throughout its lifetime, we
 -      LOG.debug("Call: " +method.getName()+ " " + callTime);
 +      LOG.debug("Call: " +method.getName()+ " took "+ callTime + "ms"); // (Statement a1)
 +      LOG.debug("Call: " +method.setName()+ " took "+ callTime + "ms"); // (Statement a2)
+
 \end{lstlisting}
 %\end{Code}
 
-\subsubsection*{B.3. Tracking changes to logging statements}
-After identifying all the logging statements, we track the changes made to these statements after their introduction. We extract the change information from the Git commits, which show a \emph{diff} of added and removed code. To distinguish between a change in which a new logging statement is added and a change to an existing logging statement, we must track the changes made to a logging statement starting from the first application commit. Because there may be multiple changes to logging statements in a commit, we must decide to which existing logging statement a change maps.
+\subsubsection*{B.3. Tracking Changes to Logging Statements}
+After identifying all the logging statements, we track the changes made to these statements after their introduction. We extract the change information from the Git commits, which show a \emph{diff} of added and removed code. To distinguish between a change in which a new logging statement is added and a change to an existing logging statement, we must track the changes made to a logging statement starting from the first commit. Because there may be multiple changes to logging statements in a commit, we must decide to which existing logging statement a change maps.
 
 We first collect all the logging statements in the initial commit as the initial set of logging statements. Then, we analyze the next commit to find changes to logging statements until we reach the latest commit in the repository. To distinguish between added, deleted and changed logging statements and to map the change to an existing logging statement, we use the Levenshtein ratio~\cite{levenshteinratio}. 
 
@@ -169,9 +169,9 @@ We use the Levenshtein ratio instead of string comparison, because the Levenshte
 \begin{figure}[tb]
 		\setlength{\belowcaptionskip}{-15pt}
 	\centering
-	\subfloat{\includegraphics[height=.6\columnwidth,width=0.9\columnwidth,trim={0 1.5cm 0 2cm},clip]
+	\subfloat{\includegraphics[width=0.9\columnwidth,trim={0 1.5cm 0 2cm},clip]
 		{NumberofCommits}}
-	\caption{Number of commits before an added logging statement is changed in the studied applications } 
+	\caption{Number of commits before an added logging statement is changed in the studied applications (Cloudstack has outliers which are not shown due to their large numbers)} 
 	\label{fig:NumberofCommits}
 \end{figure}
 
@@ -322,7 +322,7 @@ As we do not have change information for logging statements which are added near
 \begin{figure}[tb]
 	\setlength{\belowcaptionskip}{-10pt}
 	\centering
-	\subfloat{\includegraphics[height=.6\columnwidth,width=0.9\columnwidth,trim={0 1.5cm 0 2cm },clip]
+	\subfloat{\includegraphics[width=0.9\columnwidth,trim={0 1.5cm 0 2cm },clip]
 		{Daysbeforechange}}
 	\caption{Number of days before an added logging statement is changed in the studied applications } 
 	\label{fig:numberofdays}
@@ -336,8 +336,8 @@ As we do not have change information for logging statements which are added near
 %Figure~\ref{fig:frequencyofLogchanges} shows the percentage of logging statement changes in each of the studied application. This shows that logging statements change extensively throughout the lifetime of an project which can affect the log processing tools.
 %=======
 
-\hypobox {Developers change 20\%-45\% of the logging statements in the studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
-We observe that 28\%, 35.2\%, 44,6\% and 21.2\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
+\hypobox {20\%-45\% of the logging statements in the studied applications are changed. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
+We observe that 28\%, 35.2\%, 44,6\% and 21.2\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime. The observed values show that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
 
 %Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement changes in each of the studied application. 
 
@@ -497,4 +497,3 @@ From Figure~\ref{fig:numberofdays}, we observe that 75\% of the changes to loggi
 %From manually analyzing the changed logs, we identify five types of log changes (i.e., changes to verbosity levels, log context, logged variables, both context and variable and relocation of log).  Table~\ref{tba:logtype} shows their distributions. When there is overlapping of the different types of log changes, we categorize them as newly added log and track changes made to it.
 
 %	We find that about 3-11 \% of logs are changed frequently. This suggests that log processing tools which run on these systems need constant maintenance from developers
-

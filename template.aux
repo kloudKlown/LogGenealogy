@@ -11,6 +11,7 @@
 \citation{Yuan}
 \citation{chukwa}
 \citation{IanWCRE}
+\citation{shang2014exploratory,IanWCRE}
 \@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \newlabel{intro}{{I}{1}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces An example of a logging statement\relax }}{1}}
@@ -33,13 +34,14 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Data Extraction Approach}{3}}
 \newlabel{lst:multiplelogs}{{2}{4}}
 \@writefile{lol}{\contentsline {lstlisting}{\numberline {2}Selecting the best matching logging statement}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Number of commits before an added logging statement is changed in the studied applications \relax }}{4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Number of commits before an added logging statement is changed in the studied applications (Cloudstack has outliers which are not shown due to their large numbers)\relax }}{4}}
 \newlabel{fig:NumberofCommits}{{4}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Results }{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Number of days before an added logging statement is changed in the studied applications \relax }}{4}}
 \newlabel{fig:numberofdays}{{5}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Results }{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {III}Deciding Whether a Logging Statement Will Change in the Future}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {III}Determining the likelihood that a Logging Statement Will Change in the Future}{4}}
 \newlabel{prediction}{{III}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Approach}{4}}
 \citation{Albert2008424}
 \citation{Characterizinglogs}
 \citation{zhang2009investigation}
@@ -52,50 +54,52 @@
 \citation{pearsonbook}
 \citation{ShaneOLS}
 \citation{ShaneOLS}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Approach}{5}}
+\citation{F-Measure}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Hierarchical clustering of variables according to Spearman’s $\rho $ in ActiveMQ\relax }}{5}}
 \newlabel{fig:SpearmanActiveMQ}{{7}{5}}
+\newlabel{f:precision}{{1}{5}}
+\newlabel{f:recall}{{2}{5}}
 \@writefile{lot}{\contentsline {table}{\numberline {II}{\ignorespaces The investigated metrics in our classifier\relax }}{6}}
 \newlabel{tba:Taxonomy}{{II}{6}}
-\citation{F-Measure}
 \citation{wilks2011statistical}
 \citation{ShaneOLS}
+\citation{strobl2008conditional}
 \citation{tantithamthavorn2015tse}
 \citation{cohenUsage1}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of random forest classifier construction (C), analysis (A) and flow of data in random forest generation\relax }}{7}}
 \newlabel{fig:ModelCreationLogGeanology}{{6}{7}}
-\newlabel{f:precision}{{1}{7}}
-\newlabel{f:recall}{{2}{7}}
 \newlabel{f:Fmeasure}{{3}{7}}
 \newlabel{f:BS}{{4}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces The optimism reduced performance measures of the four applications\relax }}{8}}
 \newlabel{fig:optmisim}{{8}{8}}
+\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces The most important metrics, divided into homogeneous groups by Scott-Knott Effect Size clustering\relax }}{8}}
+\newlabel{tba:Scott}{{III}{8}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Results}{8}}
 \@writefile{lot}{\contentsline {table}{\numberline {IV}{\ignorespaces Contribution of top 3 developers\relax }}{8}}
 \newlabel{tba:topDevelopers}{{IV}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {III}{\ignorespaces The most important metrics, divided into homogeneous groups by Scott-Knott Effect Size clustering\relax }}{9}}
-\newlabel{tba:Scott}{{III}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparing the probability of a change to a logging statement against the experience of the developer who adds that logging statement\relax }}{9}}
-\newlabel{fig:Dexp_BP}{{9}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparing the probability of a change to a logging statement against ownership of the file in which the logging statement is added \relax }}{9}}
-\newlabel{fig:Numberofchanges_BP}{{10}{9}}
 \citation{Fu1}
 \citation{ZhuIcse15}
 \citation{Yuan_beconservative:}
 \citation{Yuan}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Comparing the probability of a change to a logging statement against the experience of the developer who adds that logging statement\relax }}{9}}
+\newlabel{fig:Dexp_BP}{{9}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Comparing the probability of a change to a logging statement against ownership of the file in which the logging statement is added \relax }}{9}}
+\newlabel{fig:Numberofchanges_BP}{{10}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Related Work}{9}}
+\newlabel{related}{{IV}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Log Maintenance Tools}{9}}
 \citation{Characterizinglogs}
 \citation{EMSEIAN,PaperIanCIIII}
 \citation{IanGap}
 \citation{IanIcesm}
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Related Work}{10}}
-\newlabel{related}{{IV}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Log Maintenance Tools}{10}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Empirical Studies on Logging statements}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Threats to Validity}{10}}
-\newlabel{threats}{{V}{10}}
 \bibstyle{IEEEtran}
 \bibdata{Logreference}
 \bibcite{ConsoleLogs}{{1}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Empirical Studies on Logging Statements}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Threats to Validity}{10}}
+\newlabel{threats}{{V}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{10}}
+\newlabel{conc}{{VI}{10}}
 \bibcite{JGLouMining}{{2}{}{{}}{{}}}
 \bibcite{QFuanomaly}{{3}{}{{}}{{}}}
 \bibcite{Automatic}{{4}{}{{}}{{}}}
@@ -107,26 +111,26 @@
 \bibcite{xu2013detecting}{{10}{}{{}}{{}}}
 \bibcite{TanSalsa}{{11}{}{{}}{{}}}
 \bibcite{chukwa}{{12}{}{{}}{{}}}
-\bibcite{ihaka1996r}{{13}{}{{}}{{}}}
-\bibcite{EMSEIAN}{{14}{}{{}}{{}}}
-\bibcite{levenshteinratio}{{15}{}{{}}{{}}}
-\bibcite{Albert2008424}{{16}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {VI}Conclusion}{11}}
-\newlabel{conc}{{VI}{11}}
-\bibcite{Characterizinglogs}{{17}{}{{}}{{}}}
-\bibcite{zhang2009investigation}{{18}{}{{}}{{}}}
-\bibcite{correlationBook}{{19}{}{{}}{{}}}
-\bibcite{spearmanbook}{{20}{}{{}}{{}}}
-\bibcite{pearsonbook}{{21}{}{{}}{{}}}
-\bibcite{ShaneOLS}{{22}{}{{}}{{}}}
-\bibcite{F-Measure}{{23}{}{{}}{{}}}
-\bibcite{wilks2011statistical}{{24}{}{{}}{{}}}
-\bibcite{tantithamthavorn2015tse}{{25}{}{{}}{{}}}
-\bibcite{cohenUsage1}{{26}{}{{}}{{}}}
-\bibcite{Fu1}{{27}{}{{}}{{}}}
-\bibcite{ZhuIcse15}{{28}{}{{}}{{}}}
-\bibcite{Yuan_beconservative:}{{29}{}{{}}{{}}}
-\bibcite{PaperIanCIIII}{{30}{}{{}}{{}}}
-\bibcite{IanGap}{{31}{}{{}}{{}}}
-\bibcite{IanIcesm}{{32}{}{{}}{{}}}
+\bibcite{shang2014exploratory}{{13}{}{{}}{{}}}
+\bibcite{ihaka1996r}{{14}{}{{}}{{}}}
+\bibcite{EMSEIAN}{{15}{}{{}}{{}}}
+\bibcite{levenshteinratio}{{16}{}{{}}{{}}}
+\bibcite{Albert2008424}{{17}{}{{}}{{}}}
+\bibcite{Characterizinglogs}{{18}{}{{}}{{}}}
+\bibcite{zhang2009investigation}{{19}{}{{}}{{}}}
+\bibcite{correlationBook}{{20}{}{{}}{{}}}
+\bibcite{spearmanbook}{{21}{}{{}}{{}}}
+\bibcite{pearsonbook}{{22}{}{{}}{{}}}
+\bibcite{ShaneOLS}{{23}{}{{}}{{}}}
+\bibcite{F-Measure}{{24}{}{{}}{{}}}
+\bibcite{wilks2011statistical}{{25}{}{{}}{{}}}
+\bibcite{strobl2008conditional}{{26}{}{{}}{{}}}
+\bibcite{tantithamthavorn2015tse}{{27}{}{{}}{{}}}
+\bibcite{cohenUsage1}{{28}{}{{}}{{}}}
+\bibcite{Fu1}{{29}{}{{}}{{}}}
+\bibcite{ZhuIcse15}{{30}{}{{}}{{}}}
+\bibcite{Yuan_beconservative:}{{31}{}{{}}{{}}}
+\bibcite{PaperIanCIIII}{{32}{}{{}}{{}}}
+\bibcite{IanGap}{{33}{}{{}}{{}}}
+\bibcite{IanIcesm}{{34}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

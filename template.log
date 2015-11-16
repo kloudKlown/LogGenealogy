@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  15 NOV 2015 21:26
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  16 NOV 2015 00:04
 entering extended mode
 **template.tex
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\template.tex"
 LaTeX2e <2011/06/27>
 Babel <v3.8m> and hyphenation patterns for english, afrikaans, ancientgreek, ar
 abic, armenian, assamese, basque, bengali, bokmal, bulgarian, catalan, coptic, 
@@ -19,7 +19,7 @@ Package: fix-cm 2014/09/29 v1.1s fixes to LaTeX
 ("C:\Program Files (x86)\Latex\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 ))
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\IEEEtran.cls"
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\IEEEtran.cls"
 Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 -- See the "IEEEtran_HOWTO" manual for usage information.
 -- http://www.michaelshell.org/tex/ieeetran/
@@ -126,7 +126,7 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \IEEEPARstartletwidth=\dimen125
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\setup.tex"
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\setup.tex"
 ("C:\Program Files (x86)\Latex\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen126
 )
@@ -186,7 +186,7 @@ Package: alltt 1997/06/16 v2.0g defines alltt environment
 ("C:\Program Files (x86)\Latex\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\booktabs.sty"
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\booktabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen130
 \lightrulewidth=\dimen131
@@ -466,21 +466,21 @@ File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \@float@every@Code=\toks33
 \c@Code=\count135
 
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux")
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
-LaTeX Font Info:    ... okay on input line 83.
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\template.aux")
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 84.
+LaTeX Font Info:    ... okay on input line 84.
 
 -- Lines per column: 56 (exact).
 ("C:\Program Files (x86)\Latex\tex\context\base\supp-pdf.mkii"
@@ -503,25 +503,27 @@ Package caption Info: float package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count142
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 130.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 131.
 
  ("C:\Program Files (x86)\Latex\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 130.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 131.
 
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Abstract.tex")
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Introduction.tex"
-<logexample.pdf, id=1, 290.08376pt x 51.19125pt>
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\Abstract.tex")
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\Introduction.tex
+" <logexample.pdf, id=1, 290.08376pt x 51.19125pt>
 File: logexample.pdf Graphic file (type pdf)
  <use logexample.pdf>
 Package pdftex.def Info: logexample.pdf used on input line 10.
 (pdftex.def)             Requested size: 252.0pt x 44.47118pt.
- [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
+
+[1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
- <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/logexample.pdf>]
+ <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/logexample.pdf>]
+
 <ExampleOfLogChange_LPA.pdf, id=14, 495.8525pt x 181.67876pt>
 File: ExampleOfLogChange_LPA.pdf Graphic file (type pdf)
 
@@ -529,207 +531,189 @@ File: ExampleOfLogChange_LPA.pdf Graphic file (type pdf)
 Package pdftex.def Info: ExampleOfLogChange_LPA.pdf used on input line 41.
 (pdftex.def)             Requested size: 252.0pt x 92.33336pt.
 
-<LogGenalogyMethdology.pdf, id=15, 976.64874pt x 326.21875pt>
+<LogGenalogyMethdology.pdf, id=15, 976.64874pt x 253.94875pt>
 File: LogGenalogyMethdology.pdf Graphic file (type pdf)
 
 <use LogGenalogyMethdology.pdf>
-Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 50.
-(pdftex.def)             Requested size: 504.00053pt x 163.79594pt.
-LaTeX Font Info:    Try loading font information for U+msa on input line 78.
+Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 49.
+(pdftex.def)             Requested size: 504.0pt x 116.36742pt.
+LaTeX Font Info:    Try loading font information for U+msa on input line 77.
 
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 78.
+LaTeX Font Info:    Try loading font information for U+msb on input line 77.
 
 ("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\StudyResults.tex
+"
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 67.
-
-("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1pcr.fd"
+ ("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
-Overfull \hbox (6.93094pt too wide) in paragraph at lines 96--96
+) [2 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/ExampleOfLog
+Change_LPA.pdf>]
+Overfull \hbox (6.93094pt too wide) in paragraph at lines 95--95
  []|\OT1/ptm/b/n/8 ActiveMQ|
  []
 
 
-Overfull \hbox (2.29898pt too wide) in paragraph at lines 96--96
+Overfull \hbox (2.29898pt too wide) in paragraph at lines 95--95
  []|\OT1/ptm/b/n/8 Camel|
  []
 
 
-Overfull \hbox (8.70943pt too wide) in paragraph at lines 96--96
+Overfull \hbox (8.70943pt too wide) in paragraph at lines 95--95
  []|\OT1/ptm/b/n/8 CloudStack|
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 108--108
-[]|\OT1/ptm/m/n/8 % of logging-related
- []
-
-
-Overfull \hbox (1.47879pt too wide) in paragraph at lines 94--113
+Overfull \hbox (4.07294pt too wide) in paragraph at lines 93--112
  [][] 
  []
 
-[2 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ExampleOfLogChange_LPA.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 140.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 139.
 
-[3 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/LogGenalogyMethdology.pdf>]
-<NumberofCommits.pdf, id=34, 505.89pt x 382.42876pt>
+[3 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/LogGenalogyMet
+hdology.pdf>] <NumberofCommits.pdf, id=34, 505.89pt x 382.42876pt>
 File: NumberofCommits.pdf Graphic file (type pdf)
- <use NumberofCommits.pdf>
+
+<use NumberofCommits.pdf>
 Package pdftex.def Info: NumberofCommits.pdf used on input line 173.
-(pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
+(pdftex.def)             Requested size: 226.79846pt x 126.80394pt.
 
 <Daysbeforechange.pdf, id=36, 505.89pt x 382.42876pt>
 File: Daysbeforechange.pdf Graphic file (type pdf)
 
 <use Daysbeforechange.pdf>
 Package pdftex.def Info: Daysbeforechange.pdf used on input line 326.
-(pdftex.def)             Requested size: 226.79927pt x 151.20575pt.
+(pdftex.def)             Requested size: 226.79846pt x 126.80394pt.
 
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 339.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
 )
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\PredictionLogs.tex" [4 <C:/Users/S
-uhas/Dropbox/Log Genealogy/Paper/NumberofCommits.pdf> <C:/Users/Suhas/Dropbox/L
-og Genealogy/Paper/Daysbeforechange.pdf>]
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\PredictionLogs.t
+ex" [4 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/NumberofCo
+mmits.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/Daysbe
+forechange.pdf>]
 <ModelCreationLogGeanology.pdf, id=57, 940.51375pt x 181.67876pt>
 File: ModelCreationLogGeanology.pdf Graphic file (type pdf)
 
 <use ModelCreationLogGeanology.pdf>
-Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 57.
+Package pdftex.def Info: ModelCreationLogGeanology.pdf used on input line 58.
 (pdftex.def)             Requested size: 516.0pt x 99.67412pt.
 
 <Spearman.pdf, id=58, 411.5375pt x 382.42876pt>
 File: Spearman.pdf Graphic file (type pdf)
  <use Spearman.pdf>
-Package pdftex.def Info: Spearman.pdf used on input line 227.
-(pdftex.def)             Requested size: 239.39923pt x 222.46822pt.
+Package pdftex.def Info: Spearman.pdf used on input line 228.
+(pdftex.def)             Requested size: 239.39923pt x 172.81323pt.
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
-
-Underfull \hbox (badness 2326) in paragraph at lines 303--304
-\OT1/ptm/m/n/10 fu-ture. Pre-ci-sion is de-fined as the num-ber of log-ging
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 303--304
-
- []
-
-[5 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Spearman.pdf>] [6]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
-<BoxplotResults1.pdf, id=83, 2023.56pt x 722.7pt>
+ [5 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/Spearman.pdf>
+] [6]
+<BoxplotResults1.pdf, id=85, 2023.56pt x 722.7pt>
 File: BoxplotResults1.pdf Graphic file (type pdf)
  <use BoxplotResults1.pdf>
-Package pdftex.def Info: BoxplotResults1.pdf used on input line 361.
+Package pdftex.def Info: BoxplotResults1.pdf used on input line 362.
 (pdftex.def)             Requested size: 378.0pt x 134.99864pt.
 
-<BoxplotResults2.pdf, id=84, 411.5375pt x 382.42876pt>
+<BoxplotResults2.pdf, id=86, 411.5375pt x 382.42876pt>
 File: BoxplotResults2.pdf Graphic file (type pdf)
 
 <use BoxplotResults2.pdf>
-Package pdftex.def Info: BoxplotResults2.pdf used on input line 362.
+Package pdftex.def Info: BoxplotResults2.pdf used on input line 363.
 (pdftex.def)             Requested size: 125.99913pt x 142.37756pt.
- [7 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/ModelCreationLogGeanology.pdf>]
+ [7 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/ModelCreation
+LogGeanology.pdf>]
 
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 468.
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 465.
-
-
-Overfull \hbox (10.61888pt too wide) in paragraph at lines 489--498
- [][] 
- []
-
-<QP_Amq_Dxp.pdf, id=103, 411.5375pt x 382.42876pt>
+<QP_Amq_Dxp.pdf, id=105, 411.5375pt x 382.42876pt>
 File: QP_Amq_Dxp.pdf Graphic file (type pdf)
  <use QP_Amq_Dxp.pdf>
-Package pdftex.def Info: QP_Amq_Dxp.pdf used on input line 512.
+Package pdftex.def Info: QP_Amq_Dxp.pdf used on input line 515.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Camel_Dxp.pdf, id=104, 411.5375pt x 382.42876pt>
+<QP_Camel_Dxp.pdf, id=106, 411.5375pt x 382.42876pt>
 File: QP_Camel_Dxp.pdf Graphic file (type pdf)
  <use QP_Camel_Dxp.pdf>
-Package pdftex.def Info: QP_Camel_Dxp.pdf used on input line 515.
+Package pdftex.def Info: QP_Camel_Dxp.pdf used on input line 518.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Clo_Dxp.pdf, id=105, 411.5375pt x 382.42876pt>
+<QP_Clo_Dxp.pdf, id=107, 411.5375pt x 382.42876pt>
 File: QP_Clo_Dxp.pdf Graphic file (type pdf)
  <use QP_Clo_Dxp.pdf>
-Package pdftex.def Info: QP_Clo_Dxp.pdf used on input line 519.
+Package pdftex.def Info: QP_Clo_Dxp.pdf used on input line 522.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Lif_Dxp.pdf, id=106, 411.5375pt x 382.42876pt>
+<QP_Lif_Dxp.pdf, id=108, 411.5375pt x 382.42876pt>
 File: QP_Lif_Dxp.pdf Graphic file (type pdf)
  <use QP_Lif_Dxp.pdf>
-Package pdftex.def Info: QP_Lif_Dxp.pdf used on input line 522.
+Package pdftex.def Info: QP_Lif_Dxp.pdf used on input line 525.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 544.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 547.
 
-[8 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/BoxplotResults1.pdf> <C:/Users/S
-uhas/Dropbox/Log Genealogy/Paper/BoxplotResults2.pdf>]
+[8 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/BoxplotResults
+1.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/BoxplotRes
+ults2.pdf>]
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 577.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 581.
 
-<QP_Amq_Ow.pdf, id=122, 411.5375pt x 382.42876pt>
+<QP_Amq_Ow.pdf, id=124, 411.5375pt x 382.42876pt>
 File: QP_Amq_Ow.pdf Graphic file (type pdf)
  <use QP_Amq_Ow.pdf>
-Package pdftex.def Info: QP_Amq_Ow.pdf used on input line 582.
+Package pdftex.def Info: QP_Amq_Ow.pdf used on input line 586.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Camel_Ow.pdf, id=123, 411.5375pt x 382.42876pt>
+<QP_Camel_Ow.pdf, id=125, 411.5375pt x 382.42876pt>
 File: QP_Camel_Ow.pdf Graphic file (type pdf)
  <use QP_Camel_Ow.pdf>
-Package pdftex.def Info: QP_Camel_Ow.pdf used on input line 585.
+Package pdftex.def Info: QP_Camel_Ow.pdf used on input line 589.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Clo_Ow.pdf, id=124, 411.5375pt x 382.42876pt>
+<QP_Clo_Ow.pdf, id=126, 411.5375pt x 382.42876pt>
 File: QP_Clo_Ow.pdf Graphic file (type pdf)
  <use QP_Clo_Ow.pdf>
-Package pdftex.def Info: QP_Clo_Ow.pdf used on input line 589.
+Package pdftex.def Info: QP_Clo_Ow.pdf used on input line 593.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
 
-<QP_Lif_Ow.pdf, id=125, 411.5375pt x 382.42876pt>
+<QP_Lif_Ow.pdf, id=127, 411.5375pt x 382.42876pt>
 File: QP_Lif_Ow.pdf Graphic file (type pdf)
  <use QP_Lif_Ow.pdf>
-Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 592.
+Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 596.
 (pdftex.def)             Requested size: 123.48138pt x 114.74701pt.
- [9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas
-/Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Gene
-alogy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_
-Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Ow.pdf> <C:/Users/S
-uhas/Dropbox/Log Genealogy/Paper/QP_Camel_Ow.pdf> <C:/Users/Suhas/Dropbox/Log G
-enealogy/Paper/QP_Clo_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Li
-f_Ow.pdf>]
-
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 665.
 
 
-LaTeX Warning: \oval, \circle, or \line size unavailable on input line 721.
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 669.
 
-) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex" [10])
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex")
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl"
-Underfull \hbox (badness 8056) in paragraph at lines 80--84
+
+LaTeX Warning: \oval, \circle, or \line size unavailable on input line 725.
+
+) ("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\Relatedwork.te
+x" [9 <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Amq_Dxp.
+pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Camel_Dxp
+.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Clo_Dxp.
+pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Lif_Dxp.p
+df> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Amq_Ow.pdf
+> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Camel_Ow.pdf
+> <C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Clo_Ow.pdf> 
+<C:/Users/Suhas/Dropbox/Log Genealogy/SVN_Version/SANER_paper/QP_Lif_Ow.pdf>])
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\ThreatsToValidit
+y.tex")
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\Conclusion.tex")
+("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\template.bbl"
+[10]
+Underfull \hbox (badness 8056) in paragraph at lines 82--86
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
@@ -739,33 +723,33 @@ Underfull \hbox (badness 8056) in paragraph at lines 80--84
 ** WARNING: IEEEtran.bst: No hyphenation pattern has been
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
-[11]
-Underfull \hbox (badness 3209) in paragraph at lines 155--160
+
+Underfull \hbox (badness 3209) in paragraph at lines 168--173
 []\OT1/ptm/m/n/10 C. Tan-tithamtha-vorn, S. McIn-tosh, A. E. Has-san,
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 155--160
+Underfull \hbox (badness 1845) in paragraph at lines 168--173
 \OT1/ptm/m/n/10 and K. Mat-sumoto, ``An Em-pir-i-cal Com-par-i-son of
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 155--160
+Underfull \hbox (badness 2126) in paragraph at lines 168--173
 \OT1/ptm/m/n/10 Model Val-i-da-tion Tech-niques for De-fect Pre-dic-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--160
+Underfull \hbox (badness 10000) in paragraph at lines 168--173
 \OT1/ptm/m/n/10 Model,'' $http : / / sailhome . cs . queensu . ca / replication
  /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 155--160
+Underfull \hbox (badness 10000) in paragraph at lines 168--173
 $\OT1/ptm/m/n/10 kla / model-[]validation . pdf$, 2015, un-der Re-view at
  []
 
-)
+[11])
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -777,32 +761,34 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[12] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
+[12
+
+] ("C:\Users\Suhas\Dropbox\Log Genealogy\SVN_Version\SANER_paper\template.aux")
+ ) 
 Here is how much of TeX's memory you used:
- 7693 strings out of 493921
- 117276 string characters out of 3146880
- 255299 words of memory out of 3000000
- 10814 multiletter control sequences out of 15000+200000
+ 7699 strings out of 493921
+ 117969 string characters out of 3146880
+ 257299 words of memory out of 3000000
+ 10820 multiletter control sequences out of 15000+200000
  48475 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,49p,1575b,1112s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program F
-iles (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/Latex/
-fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/Latex/fonts/t
-ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/type1/pu
-blic/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/ams
-fonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm
-/cmr7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsy10.p
-fb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
-rogram Files (x86)/Latex/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><C:/
-Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files 
-(x86)/Latex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Latex/font
-s/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/tim
-es/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C
-:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 709941 bytes).
+{C:/Program Files (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Fil
+es (x86)/Latex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86
+)/Latex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex
+/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/pub
+lic/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/
+cmsy7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/latxfont/lc
+irclew.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:
+/Program Files (x86)/Latex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (
+x86)/Latex/fonts/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/font
+s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/time
+s/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template.pdf (12 pages, 720541 bytes).
 PDF statistics:
- 255 PDF objects out of 1000 (max. 8388607)
+ 257 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 104 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 110 words of extra memory for PDF output out of 10000 (max. 10000000)
 
