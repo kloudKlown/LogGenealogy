@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.11)  15 NOV 2015 07:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  15 NOV 2015 20:28
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -13,10 +13,10 @@ german-x-2013-05-26, nynorsk, oriya, panjabi, pinyin, polish, portuguese, roman
 ian, russian, sanskrit, serbian, slovak, slovenian, spanish, swedish, swissgerm
 an, tamil, telugu, turkish, turkmen, ukenglish, ukrainian, uppersorbian, usengl
 ishmax, welsh, loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\fix-cm.sty"
+("C:\Program Files (x86)\Latex\tex\latex\base\fix-cm.sty"
 Package: fix-cm 2014/09/29 v1.1s fixes to LaTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\ts1enc.def"
+("C:\Program Files (x86)\Latex\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 ))
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\IEEEtran.cls"
@@ -32,7 +32,7 @@ Document Class: IEEEtran 2015/08/26 V1.8b by Michael Shell
 \@IEEEtrantmptoksA=\toks14
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 503.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 -- Using 8.5in x 11in (letter) paper.
@@ -127,11 +127,11 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/it' in size <24> not available
 \c@IEEEbiography=\count93
 \@IEEEtranrubishbin=\box27
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\setup.tex"
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\multirow\multirow.sty"
+("C:\Program Files (x86)\Latex\tex\latex\multirow\multirow.sty"
 \bigstrutjot=\dimen126
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+("C:\Program Files (x86)\Latex\tex\latex\tools\longtable.sty"
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip44
 \LTright=\skip45
 \LTpre=\skip46
@@ -148,31 +148,31 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \c@LT@chunks=\count98
 \LT@p@ftn=\toks15
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
-Package: graphicx 2014/04/25 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\Latex\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+("C:\Program Files (x86)\Latex\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks16
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
-Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\Latex\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+("C:\Program Files (x86)\Latex\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+("C:\Program Files (x86)\Latex\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files (x86)\Latex\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+("C:\Program Files (x86)\Latex\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+("C:\Program Files (x86)\Latex\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count99
@@ -180,10 +180,10 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen128
 \Gin@req@width=\dimen129
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
+("C:\Program Files (x86)\Latex\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\relsize.sty"
+("C:\Program Files (x86)\Latex\tex\latex\ltxmisc\relsize.sty"
 Package: relsize 2003/07/04 ver 3.1
 )
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\booktabs.sty"
@@ -206,24 +206,24 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count103
 \@thisrulewidth=\dimen142
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip48
 
 For additional information on amsmath, use the `?' option.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks17
 \ex@=\dimen143
 ))
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen144
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count104
@@ -264,25 +264,25 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+("C:\Program Files (x86)\Latex\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks22
 \verbatim@line=\toks23
 \verbatim@in@stream=\read1
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+("C:\Program Files (x86)\Latex\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+("C:\Program Files (x86)\Latex\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\colortbl\colortbl.sty"
+("C:\Program Files (x86)\Latex\tex\latex\colortbl\colortbl.sty"
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\array.sty"
-Package: array 2008/09/09 v2.4c Tabular extension package (FMi)
+("C:\Program Files (x86)\Latex\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen152
 \extrarowheight=\dimen153
 \NC@list=\toks24
@@ -303,20 +303,20 @@ Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
 Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
 Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
+("C:\Program Files (x86)\Latex\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip54
 \bibsep=\skip55
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count117
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\subfig\subfig.sty"
+("C:\Program Files (x86)\Latex\tex\latex\subfig\subfig.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption.sty"
+("C:\Program Files (x86)\Latex\tex\latex\caption\caption.sty"
 Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\caption3.sty"
+("C:\Program Files (x86)\Latex\tex\latex\caption\caption3.sty"
 Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 57.
 \captionmargin=\dimen154
@@ -347,7 +347,7 @@ ference \hbox to\hsize {\normalfont \footnotesize \hfil \box \@tempboxa \hfil }
 \fi .
 \c@ContinuedFloat=\count118
 Package caption Info: longtable package is loaded.
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\caption\ltcaption.sty"
+("C:\Program Files (x86)\Latex\tex\latex\caption\ltcaption.sty"
 Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 ))
 \c@KVtest=\count119
@@ -364,17 +364,17 @@ Package: ltcaption 2013/02/03 v1.3-62 longtable captions (AR)
 \sf@top=\skip59
 \sf@bottom=\skip60
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
+("C:\Program Files (x86)\Latex\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count126
 \float@exts=\toks26
@@ -382,11 +382,11 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks27
 \@floatcapt=\box35
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\url\url.sty"
+("C:\Program Files (x86)\Latex\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\fancybox\fancybox.sty"
+("C:\Program Files (x86)\Latex\tex\latex\fancybox\fancybox.sty"
 Package: fancybox 2010/05/15 1.4
 
 Style option: `fancybox' v1.4 <2010/05/15> (tvz)
@@ -399,7 +399,7 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \EndVerbatimTokens=\toks31
 \Verbatim@Outfile=\write3
 \Verbatim@Infile=\read2
-) ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.sty"
+) ("C:\Program Files (x86)\Latex\tex\latex\listings\listings.sty"
 \lst@mode=\count127
 \lst@gtempboxa=\box38
 \lst@token=\toks32
@@ -413,18 +413,18 @@ Style option: `fancybox' v1.4 <2010/05/15> (tvz)
 \lst@lineno=\count132
 \lst@maxwidth=\dimen166
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+("C:\Program Files (x86)\Latex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 \c@lstnumber=\count133
 \lst@skipnumbers=\count134
 \lst@framebox=\box39
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\listings.cfg"
+("C:\Program Files (x86)\Latex\tex\latex\listings\listings.cfg"
 File: listings.cfg 2014/09/06 1.5e listings configuration
 ))
 Package: listings 2014/09/06 1.5e (Carsten Heinz)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\framed\framed.sty"
+("C:\Program Files (x86)\Latex\tex\latex\framed\framed.sty"
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \OuterFrameSep=\skip61
 \fb@frw=\dimen167
@@ -432,35 +432,35 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameRule=\dimen169
 \FrameSep=\dimen170
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\hhline.sty"
-Package: hhline 1994/05/23 v2.03 Table rule package (DPC)
+("C:\Program Files (x86)\Latex\tex\latex\tools\hhline.sty"
+Package: hhline 2014/10/28 v2.03 Table rule package (DPC)
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\pifont.sty"
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\pifont.sty"
 Package: pifont 2005/04/12 PSNFSS-v9.2a Pi font support (SPQR) 
 LaTeX Font Info:    Try loading font information for U+pzd on input line 63.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upzd.fd"
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\upzd.fd"
 File: upzd.fd 2001/06/04 font definitions for U/pzd.
 )
 LaTeX Font Info:    Try loading font information for U+psy on input line 64.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\upsy.fd"
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\upsy.fd"
 File: upsy.fd 2001/06/04 font definitions for U/psy.
 ))
 \qdx=\dimen171
 \qda=\dimen172
 \qdb=\dimen173
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
+("C:\Program Files (x86)\Latex\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+("C:\Program Files (x86)\Latex\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+("C:\Program Files (x86)\Latex\tex\latex\listings\lstlang2.sty"
 File: lstlang2.sty 2014/09/06 1.5e listings language file
 )
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+("C:\Program Files (x86)\Latex\tex\latex\listings\lstmisc.sty"
 File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
 )
 \@float@every@Code=\toks33
@@ -483,7 +483,7 @@ LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 83.
 LaTeX Font Info:    ... okay on input line 83.
 
 -- Lines per column: 56 (exact).
-("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
+("C:\Program Files (x86)\Latex\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count136
 \scratchdimen=\dimen174
@@ -505,7 +505,7 @@ Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count142
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 130.
 
- ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
+ ("C:\Program Files (x86)\Latex\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
@@ -518,7 +518,7 @@ File: logexample.pdf Graphic file (type pdf)
  <use logexample.pdf>
 Package pdftex.def Info: logexample.pdf used on input line 10.
 (pdftex.def)             Requested size: 252.0pt x 44.47118pt.
- [1{C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}
+ [1{C:/Users/Suhas/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
  <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/logexample.pdf>]
@@ -537,18 +537,18 @@ Package pdftex.def Info: LogGenalogyMethdology.pdf used on input line 50.
 (pdftex.def)             Requested size: 504.00053pt x 163.79594pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 78.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 78.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
+("C:\Program Files (x86)\Latex\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ))
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\StudyResults.tex"
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 67.
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1pcr.fd"
+("C:\Program Files (x86)\Latex\tex\latex\psnfss\ot1pcr.fd"
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
 Overfull \hbox (6.93094pt too wide) in paragraph at lines 96--96
@@ -621,7 +621,7 @@ Missing character: There is no ™ in font ptmr7t!
 Missing character: There is no â in font ptmr7t!
 Missing character: There is no € in font ptmr7t!
 Missing character: There is no ™ in font ptmr7t!
- [5 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Spearman.pdf>] [6]
+
 Underfull \hbox (badness 2326) in paragraph at lines 303--304
 \OT1/ptm/m/n/10 fu-ture. Pre-ci-sion is de-fined as the num-ber of log-ging
  []
@@ -630,6 +630,10 @@ Underfull \hbox (badness 2326) in paragraph at lines 303--304
 Underfull \hbox (badness 10000) in paragraph at lines 303--304
 
  []
+
+[5 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Spearman.pdf>] [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
 
 <BoxplotResults1.pdf, id=83, 2023.56pt x 722.7pt>
 File: BoxplotResults1.pdf Graphic file (type pdf)
@@ -711,7 +715,10 @@ Package pdftex.def Info: QP_Lif_Ow.pdf used on input line 592.
  [9 <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Dxp.pdf> <C:/Users/Suhas
 /Dropbox/Log Genealogy/Paper/QP_Camel_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Gene
 alogy/Paper/QP_Clo_Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_
-Dxp.pdf>]
+Dxp.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Ow.pdf> <C:/Users/S
+uhas/Dropbox/Log Genealogy/Paper/QP_Camel_Ow.pdf> <C:/Users/Suhas/Dropbox/Log G
+enealogy/Paper/QP_Clo_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Li
+f_Ow.pdf>]
 
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 665.
 
@@ -719,13 +726,10 @@ LaTeX Warning: \oval, \circle, or \line size unavailable on input line 665.
 LaTeX Warning: \oval, \circle, or \line size unavailable on input line 721.
 
 ) ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Relatedwork.tex")
-("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex" [10 <C:/Use
-rs/Suhas/Dropbox/Log Genealogy/Paper/QP_Amq_Ow.pdf> <C:/Users/Suhas/Dropbox/Log
- Genealogy/Paper/QP_Camel_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/Q
-P_Clo_Ow.pdf> <C:/Users/Suhas/Dropbox/Log Genealogy/Paper/QP_Lif_Ow.pdf>])
+("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex" [10])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl"
-Underfull \hbox (badness 8056) in paragraph at lines 78--82
+Underfull \hbox (badness 8056) in paragraph at lines 81--85
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
@@ -775,29 +779,28 @@ Before submitting the final camera ready copy, remember to:
 
 [12] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
 Here is how much of TeX's memory you used:
- 7689 strings out of 493921
- 117808 string characters out of 3144875
- 255298 words of memory out of 3000000
- 10810 multiletter control sequences out of 15000+200000
+ 7687 strings out of 493921
+ 117141 string characters out of 3146880
+ 255299 words of memory out of 3000000
+ 10808 multiletter control sequences out of 15000+200000
  48475 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,49p,1575b,1112s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program F
-iles (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/latxfont/lcirclew.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
-ts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
-urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/u
-tmbi8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program
- Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 710315 bytes).
+iles (x86)/Latex/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86)/Latex/
+fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/Latex/fonts/t
+ype1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/Latex/fonts/type1/pu
+blic/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm
+/cmr7.pfb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Program Files (x86)/Latex/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/P
+rogram Files (x86)/Latex/fonts/type1/public/amsfonts/latxfont/lcirclew.pfb><C:/
+Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files 
+(x86)/Latex/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/Latex/font
+s/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/tim
+es/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C
+:/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
+Output written on template.pdf (12 pages, 709323 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

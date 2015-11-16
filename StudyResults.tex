@@ -244,25 +244,25 @@ As we do not have change information for logging statements which are added near
 %	\end{tabular}
 %	\label{tba:frequencyofLogchanges}
 %\end{table}
-
-\begin{table}[tb]
-	\centering
-	\smaller
-	\caption{Distribution of changes to logging statemetns in the studied applications}
-	
-	\begin{tabular}{lrr}
-		\toprule
-		\textbf{Application} & Unchanged logging  & {Changed logging } \\ 	
-			& statements & statements\\
-		\midrule
-		ActiveMQ   &71.9 \%   & 28.0 \%     \\
-		Camel      & 64.79 \%  & 35.20 \%    \\
-		Cloudstack & 55.41 \%   & 44.58 \%    \\
-		Liferay    & 78.7 \%  & 21.2 \%  \\
-		\bottomrule
-	\end{tabular}
-	\label{tba:summaryofnewLogchange}
-\end{table}
+%
+%\begin{table}[tb]
+%	\centering
+%	\smaller
+%	\caption{Distribution of changes to logging statemetns in the studied applications}
+%	
+%	\begin{tabular}{lrr}
+%		\toprule
+%		\textbf{Application} & Unchanged logging  & {Changed logging } \\ 	
+%			& statements & statements\\
+%		\midrule
+%		ActiveMQ   &71.9 \%   & 28.0 \%     \\
+%		Camel      & 64.79 \%  & 35.20 \%    \\
+%		Cloudstack & 55.41 \%   & 44.58 \%    \\
+%		Liferay    & 78.7 \%  & 21.2 \%  \\
+%		\bottomrule
+%	\end{tabular}
+%	\label{tba:summaryofnewLogchange}
+%\end{table}
 
 
 %\begin{figure}[tb]
@@ -337,7 +337,9 @@ As we do not have change information for logging statements which are added near
 %=======
 
 \hypobox {Developers change 20\%-45\% of the logging statements in the studied applications. The median number of days between the addition of a logging statement and its first change is between 1 and 17.}
-Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement changes in each of the studied application. We observe that 28\%, 35.2\%, 44,6\% and 21.2\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
+We observe that 28\%, 35.2\%, 44,6\% and 21.2\% of the logging statements are changed in ActiveMQ, Camel, Cloudstack and Liferay, respectively, during their lifetime. This shows that logging statements change extensively throughout the lifetime of an application, which can affect log processing tools.
+
+%Table~\ref{tba:summaryofnewLogchange} shows the percentage of logging statement changes in each of the studied application. 
 
 
 %\begin{table}[t]

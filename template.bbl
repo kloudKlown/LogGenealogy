@@ -23,19 +23,22 @@
 
 \bibitem{ConsoleLogs}
 W.~Xu, L.~Huang, A.~Fox, D.~Patterson, and M.~I. Jordan, ``Detecting
-  large-scale system problems by mining console logs,'' in \emph{ACM SIGOPS
-  '09: Proceedings of the 22nd Symposium on Operating Systems Principles}, New
-  York, NY, USA, pp. 117--132.
+  large-scale system problems by mining console logs,'' in \emph{Proceedings of
+  the ACM SOPS 2009, 22nd symposium on Operating systems principle}, pp.
+  117--132.
 
 \bibitem{JGLouMining}
 J.-G. Lou, Q.~Fu, S.~Yang, Y.~Xu, and J.~Li, ``Mining invariants from console
-  logs for system problem detection.'' in \emph{USENIX Annual Technical
-  Conference}, 2010.
+  logs for system problem detection,'' in \emph{Proceedings of the 2010 USENIX
+  Conference on USENIX Annual Technical Conference}, ser. USENIXATC'10.\hskip
+  1em plus 0.5em minus 0.4em\relax Berkeley, CA, USA: USENIX Association, 2010,
+  pp. 24--24.
 
 \bibitem{QFuanomaly}
-Q.~F. J. L.~Y. Wang and J.~Li., ``Execution anomaly detection in distributed
-  systems through unstructured log analysis.'' in \emph{ICDM 09: In Proceedings
-  of 9th IEEE International Conference on Data Mining}.
+Q.~Fu, J.-G. Lou, Y.~Wang, and J.~Li, ``Execution anomaly detection in
+  distributed systems through unstructured log analysis,'' in \emph{ICDM'09,
+  Ninth IEEE International Conference on}.\hskip 1em plus 0.5em minus
+  0.4em\relax IEEE, 2009, pp. 149--158.
 
 \bibitem{Automatic}
 H.~Malik, H.~Hemmati, and A.~Hassan, ``Automatic detection of performance
@@ -104,14 +107,11 @@ M.~Mednis and M.~K. Aurich, ``Application of string similarity ratio and edit
   14--18, 2012.
 
 \bibitem{Albert2008424}
-\BIBentryALTinterwordspacing
 J.~Albert and E.~Aliu, ``Implementation of the random forest method for the
   imaging atmospheric cherenkov telescope \{MAGIC\},'' \emph{Nuclear
   Instruments and Methods in Physics Research Section A: Accelerators,
   Spectrometers, Detectors and Associated Equipment}, vol. 588, no.~3, pp. 424
-  -- 432, 2008. [Online]. Available:
-  \url{http://www.sciencedirect.com/science/article/pii/S0168900207024059}
-\BIBentrySTDinterwordspacing
+  -- 432, 2008.
 
 \bibitem{Characterizinglogs}
 D.~Yuan, S.~Park, and Y.~Zhou, ``Characterizing logging practices in

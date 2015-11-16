@@ -264,23 +264,23 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 %\item Predict new data by aggregating the prediction of the $M$ models generated.
 %\end{enumerate}  
 
-\begin{table}[t]
-	\centering
-	
-		\caption{Confusion Matrix}
-		\label{tba:confusion}
-		\resizebox*{\columnwidth}{.17\columnwidth}{
-	\begin{tabular}{|ll|l|l|}
-		\cline{1-4}
-		&                 & \multicolumn{2}{c|}{Classified}            \\ \cline{3-4} 
-		&                 & Logging statement changed         & Logging stsatement not changed     \\ \hline
-		\multicolumn{1}{|c|}{\multirow{2}{*}{Actual}} & Logging statement changed      & True positive (TP)  & False negative (FN) \\ \cline{2-2} 
-		\multicolumn{1}{|c|}{}                        & Logging statement not changed & False positive (FP) & True negative (TN)  \\ \hline
-	\end{tabular}}
-
-\end{table}
-
 %\begin{table}[t]
+%	\centering
+%	
+%		\caption{Confusion Matrix}
+%		\label{tba:confusion}
+%		\resizebox*{\columnwidth}{.17\columnwidth}{
+%	\begin{tabular}{|ll|l|l|}
+%		\cline{1-4}
+%		&                 & \multicolumn{2}{c|}{Classified}            \\ \cline{3-4} 
+%		&                 & Logging statement changed         & Logging stsatement not changed     \\ \hline
+%		\multicolumn{1}{|c|}{\multirow{2}{*}{Actual}} & Logging statement changed      & True positive (TP)  & False negative (FN) \\ \cline{2-2} 
+%		\multicolumn{1}{|c|}{}                        & Logging statement not changed & False positive (FP) & True negative (TN)  \\ \hline
+%	\end{tabular}}
+%
+%\end{table}
+%
+%%\begin{table}[t]
 %
 %	\begin{tabular}{|>{\raggedright}p{0.1\columnwidth}>{\raggedright}p{0.2\columnwidth}|l>{\raggedright}p{0.2\columnwidth}|}
 %		\hline 
@@ -298,7 +298,7 @@ After we eliminate the correlated metrics from our datasets, we construct the ra
 \subsection*{Step A1 - Model Validation}
 %\textbf{\noindent \textsl{(C3 - Model evaluation)}}
 
-After we build the random forest classifier, we evaluate the performance of our classifier using precision, recall, F-measure, AUC and Brier Score. These measures are functions of the confusion matrix as shown in Table~\ref{tba:confusion} and are explained below.
+After we build the random forest classifier, we evaluate the performance of our classifier using precision, recall, F-measure, AUC and Brier Score. These measures are functions of the confusion matrix and are explained below.
 
 \textsl{Precision (P)} measures the correctness of our classifier in predicting which logging statement will change in the future. Precision is defined as the number of logging statements which were correctly classified as changed over all logging statements classified to have changed as explained in Equation~\ref{f:precision}.   \\
 	 \begin{equation}
