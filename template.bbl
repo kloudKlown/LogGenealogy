@@ -36,20 +36,22 @@ J.-G. Lou, Q.~Fu, S.~Yang, Y.~Xu, and J.~Li, ``Mining invariants from console
 
 \bibitem{QFuanomaly}
 Q.~Fu, J.-G. Lou, Y.~Wang, and J.~Li, ``Execution anomaly detection in
-  distributed systems through unstructured log analysis,'' in \emph{ICDM'09,
-  Ninth IEEE International Conference on}.\hskip 1em plus 0.5em minus
-  0.4em\relax IEEE, 2009, pp. 149--158.
+  distributed systems through unstructured log analysis,'' in \emph{Proceedings
+  of the ICDM 2009, Ninth IEEE International Conference on Data Mining}.\hskip
+  1em plus 0.5em minus 0.4em\relax IEEE, 2009, pp. 149--158.
 
 \bibitem{Automatic}
 H.~Malik, H.~Hemmati, and A.~Hassan, ``Automatic detection of performance
-  deviations in the load testing of large scale systems,'' in \emph{Software
-  Engineering (ICSE), 2013 35th International Conference on}, May 2013, pp.
-  1012--1021.
+  deviations in the load testing of large scale systems,'' in \emph{Proceedings
+  of(ICSE) 2013, 35th International Conference on Software Engineering}, May
+  2013, pp. 1012--1021.
 
 \bibitem{Yuan}
+\BIBentryALTinterwordspacing
 D.~Yuan, J.~Zheng, S.~Park, Y.~Zhou, and S.~Savage, ``Improving software
-  diagnosability via log enhancement,'' \emph{ACM Transactions on Computer
-  Systems}, vol.~30, pp. 4:1--4:28, Feb. 2012.
+  diagnosability via log enhancement,'' pp. 3--14, 2011. [Online]. Available:
+  \url{http://doi.acm.org/10.1145/1950365.1950369}
+\BIBentrySTDinterwordspacing
 
 \bibitem{IanWCRE}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and
@@ -74,7 +76,7 @@ Xpolog. [Online]. Available: \url{http://www.xpolog.com/.}
 \bibitem{xu2013detecting}
 X.~Xu, I.~Weber, L.~Bass, L.~Zhu, H.~Wada, and F.~Teng, ``Detecting cloud
   provisioning errors using an annotated process model,'' in \emph{Proceedings
-  of the 8th Workshop on Middleware for Next Generation Internet
+  of MW4NG 2013, The 8th Workshop on Middleware for Next Generation Internet
   Computing}.\hskip 1em plus 0.5em minus 0.4em\relax ACM, 2013, p.~5.
 
 \bibitem{TanSalsa}
@@ -173,6 +175,16 @@ Q.~Fu, J.~Zhu, W.~Hu, J.-G. L.~R. Ding, Q.~Lin, D.~Zhang, and T.~Xie, ``Where
   do developers log? an empirical study on logging practices in industry,'' in
   \emph{ICSE Companion '14: Proceedings of the 36th International Conference on
   Software Engineering,}, pp. Pages 24--33.
+
+\bibitem{ZhuIcse15}
+\BIBentryALTinterwordspacing
+J.~Zhu, P.~He, Q.~Fu, H.~Zhang, M.~R. Lyu, and D.~Zhang, ``Learning to log:
+  Helping developers make informed logging decisions,'' in \emph{Proceedings of
+  the 37th International Conference on Software Engineering - Volume 1}, ser.
+  ICSE '15.\hskip 1em plus 0.5em minus 0.4em\relax Piscataway, NJ, USA: IEEE
+  Press, 2015, pp. 415--425. [Online]. Available:
+  \url{http://dl.acm.org/citation.cfm?id=2818754.2818807}
+\BIBentrySTDinterwordspacing
 
 \bibitem{PaperIanCIIII}
 W.~Shang, Z.~M. Jiang, B.~Adams, A.~E. Hassan, M.~W. Godfrey, M.~Nasser, and

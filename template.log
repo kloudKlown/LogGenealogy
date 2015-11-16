@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  15 NOV 2015 20:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2014.10.24)  15 NOV 2015 20:52
 entering extended mode
 **template.tex
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.tex"
@@ -729,7 +729,7 @@ LaTeX Warning: \oval, \circle, or \line size unavailable on input line 721.
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\ThreatsToValidity.tex" [10])
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\Conclusion.tex")
 ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.bbl"
-Underfull \hbox (badness 8056) in paragraph at lines 81--85
+Underfull \hbox (badness 8056) in paragraph at lines 83--87
 []\OT1/ptm/m/n/10 J. Tan, X. Pan, S. Kavulya, R. Gandhi, and
  []
 
@@ -740,28 +740,28 @@ Underfull \hbox (badness 8056) in paragraph at lines 81--85
 ** loaded for the language `English'. Using the pattern for
 ** the default language instead.
 [11]
-Underfull \hbox (badness 3209) in paragraph at lines 159--164
+Underfull \hbox (badness 3209) in paragraph at lines 161--166
 []\OT1/ptm/m/n/10 C. Tan-tithamtha-vorn, S. McIn-tosh, A. E. Has-san,
  []
 
 
-Underfull \hbox (badness 1845) in paragraph at lines 159--164
+Underfull \hbox (badness 1845) in paragraph at lines 161--166
 \OT1/ptm/m/n/10 and K. Mat-sumoto, ``An Em-pir-i-cal Com-par-i-son of
  []
 
 
-Underfull \hbox (badness 2126) in paragraph at lines 159--164
+Underfull \hbox (badness 2126) in paragraph at lines 161--166
 \OT1/ptm/m/n/10 Model Val-i-da-tion Tech-niques for De-fect Pre-dic-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--164
+Underfull \hbox (badness 10000) in paragraph at lines 161--166
 \OT1/ptm/m/n/10 Model,'' $http : / / sailhome . cs . queensu . ca / replication
  /$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 159--164
+Underfull \hbox (badness 10000) in paragraph at lines 161--166
 $\OT1/ptm/m/n/10 kla / model-[]validation . pdf$, 2015, un-der Re-view at
  []
 
@@ -779,10 +779,10 @@ Before submitting the final camera ready copy, remember to:
 
 [12] ("C:\Users\Suhas\Dropbox\Log Genealogy\Paper\template.aux") ) 
 Here is how much of TeX's memory you used:
- 7687 strings out of 493921
- 117141 string characters out of 3146880
+ 7690 strings out of 493921
+ 117192 string characters out of 3146880
  255299 words of memory out of 3000000
- 10808 multiletter control sequences out of 15000+200000
+ 10811 multiletter control sequences out of 15000+200000
  48475 words of font info for 98 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  46i,12n,49p,1575b,1112s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -800,7 +800,7 @@ Program Files (x86)/Latex/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files
 s/type1/urw/times/utmbi8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/tim
 es/utmr8a.pfb><C:/Program Files (x86)/Latex/fonts/type1/urw/times/utmr8a.pfb><C
 :/Program Files (x86)/Latex/fonts/type1/urw/times/utmri8a.pfb>
-Output written on template.pdf (12 pages, 709323 bytes).
+Output written on template.pdf (12 pages, 709757 bytes).
 PDF statistics:
  255 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

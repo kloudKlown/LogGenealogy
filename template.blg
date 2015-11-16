@@ -1,7 +1,7 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: template.aux
 The style file: IEEEtran.bst
 Database file #1: Logreference.bib
-Repeated entry---line 1144 of file Logreference.bib
+Repeated entry---line 1160 of file Logreference.bib
  : @misc{xpolog
  :             ,
 I'm skipping whatever remains of this entry
@@ -9,6 +9,7 @@ I'm skipping whatever remains of this entry
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 Warning--empty year in ConsoleLogs
+Warning--empty journal in Yuan
 Warning--empty year in Fu1
 Warning--empty year in IanGap
 
